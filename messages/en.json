@@ -1,0 +1,353 @@
+{
+  "nav": {
+    "home": "Home",
+    "problemesSolutions": "Problems & Solutions",
+    "expertise": "Expertise",
+    "contact": "Contact & Diagnostic",
+    "diagnostic": "Free Diagnostic",
+    "lang": "Language"
+  },
+  "hero": {
+    "badge": "Biosecurity Expertise Tunisia",
+    "title1": "You Clean.",
+    "title2": "You Disinfect.",
+    "title3": "And the Problem Returns.",
+    "subtitle": "Your disinfection fails because the problem is the sequence and method. Rediscover hygiene with Les Laboratoires N2K. A rigorous scientific approach for Tunisian livestock farming.",
+    "cta": "See why your disinfection fails",
+    "imageAlt": "Modern Tunisian poultry house interior, ready for cleaning with natural light"
+  },
+  "hub": {
+    "title": "The 3 Weak Links of your Profitability",
+    "subtitle": "Modern livestock farming doesn't tolerate improvisation. Choose the zone you want to secure.",
+    "zones": {
+      "batiment": {
+        "title": "Zone 01: The Building",
+        "description": "Eradicate biofilm on walls and equipment.",
+        "link": "Study the protocol"
+      },
+      "water": {
+        "title": "Zone 02: Water",
+        "description": "Decontamination of networks and healthy distribution.",
+        "link": "Study the protocol"
+      },
+      "air": {
+        "title": "Zone 03: Atmosphere",
+        "description": "Control of airborne microbial pressure.",
+        "link": "Study the protocol"
+      }
+    }
+  },
+  "problemesSolutions": {
+    "batiment": {
+      "pageTitle": "Zone 1: The Building",
+      "pageSubtitle": "Between two cycles: The window of opportunity to break the pathogen cycle.",
+      "problem": {
+        "title": "Biofilm — The Invisible Enemy",
+        "content": "Biofilm is a protective matrix that bacteria create on surfaces. It resists conventional disinfectants and reforms within 48h if the surface isn't treated in depth.",
+        "impact": "Impact: Up to 8% additional mortality per flock."
+      },
+      "protocol": {
+        "title": "N2K Building Protocol",
+        "step1": {
+          "name": "CLORAGRO",
+          "action": "Technical Cleaning",
+          "desc": "Radical destruction of organic biofilm. Essential preparation before disinfection."
+        },
+        "step2": {
+          "name": "OPTIMAGRO",
+          "action": "Total Disinfection",
+          "desc": "Full spectrum disinfection (Bactericidal, Virucidal, Fungicidal). Maximum persistence."
+        }
+      }
+    },
+    "water": {
+      "pageTitle": "Zone 2: Water",
+      "pageSubtitle": "Drinking network: The largest vector of contamination.",
+      "problem": {
+        "title": "Pipes — The Silent Vector",
+        "content": "The water reaching your drinkers travels through kilometers of piping where limescale and organic residues create ideal conditions for pathogens.",
+        "impact": "Impact: Up to +15% on the feed conversion ratio (FCR)."
+      },
+      "protocol": {
+        "title": "N2K Water Protocol",
+        "step1": {
+          "name": "BIONET",
+          "action": "Technical Cleaning",
+          "desc": "Technical cleaning of pipes. Stripping of organic and limescale deposits."
+        },
+        "step2": {
+          "name": "AQUACONTROL N2K",
+          "action": "Stabilization",
+          "desc": "Water quality stabilization. Constant control of microbial load."
+        }
+      }
+    },
+    "air": {
+      "pageTitle": "Zone 3: Atmosphere",
+      "pageSubtitle": "Aero-biocontamination: When air becomes a threat.",
+      "problem": {
+        "title": "Respiratory Pressure — The Forgotten Factor",
+        "content": "Ammonia and airborne microbial load attack the respiratory mucous membranes of animals.",
+        "impact": "Impact: Up to -12% on Average Daily Gain (ADG)."
+      },
+      "protocol": {
+        "title": "N2K Atmosphere Protocol",
+        "step1": {
+          "name": "AIRSAN N2K",
+          "action": "Load Reduction",
+          "desc": "Reduction of airborne microbial load and harmful gases (Ammonia)."
+        },
+        "step2": {
+          "name": "BIOACTIVE N2K",
+          "action": "Stabilization",
+          "desc": "Microbiological stabilization of the environment by positive competition."
+        }
+      }
+    }
+  },
+  "problems": {
+    "badge": "Sanitary Risks",
+    "title": "Your livestock is under",
+    "titleHighlight": "Constant Threat",
+    "subtitle": "Pathogens never sleep. Without a rigorous sequential protocol, your investment is at the mercy of invisible contamination.",
+    "building": {
+      "title": "Building & Biofilm",
+      "description": "Porous walls house bacterial colonies that resist conventional washing.",
+      "risk": "Risk Index",
+      "riskPercent": "85"
+    },
+    "water": {
+      "title": "Water Network",
+      "description": "Limescale and organic deposits in pipes are the #1 vectors of disease.",
+      "risk": "Disease Vector",
+      "riskPercent": "92"
+    },
+    "air": {
+      "title": "Air Quality",
+      "description": "Ammonia and dust saturate your animals' respiratory defenses.",
+      "risk": "Respiratory Impact",
+      "riskPercent": "78"
+    }
+  },
+  "protocol": {
+    "badge": "The N2K Method",
+    "title": "A 2-Phase Sequential Protocol",
+    "subtitle": "For total biosecurity, the sequence of actions is more critical than the products themselves.",
+    "phase1": {
+      "label": "Phase 01",
+      "name": "CLORAGRO",
+      "type": "Technical Cleaning & Decontamination",
+      "features": [
+        "Radical destruction of Biofilm",
+        "Elimination of fats and proteins",
+        "Optimal surface preparation"
+      ],
+      "badgeLabel": "Certified Efficiency",
+      "badge": "Critical Phase"
+    },
+    "phase2": {
+      "label": "Phase 02",
+      "name": "OPTIMAGRO",
+      "type": "Total Disinfection & Stabilization",
+      "features": [
+        "Full spectrum (Bact, Vir, Fung)",
+        "Extended 7-day persistence",
+        "Protection of new arrivals"
+      ],
+      "badgeLabel": "Maximum Security",
+      "badge": "Final Phase"
+    }
+  },
+  "authority": {
+    "imageAlt": "Dr. Mahmoud Nafeti in the laboratory",
+    "title": "The expertise of a",
+    "titleHighlight": "Doctor in Chemistry",
+    "titleEnd": "at your service.",
+    "doctor": {
+      "name": "Dr. Mahmoud Nafeti",
+      "description": "N2K Scientific Director, recognized expert in chemical formulation for industrial and poultry hygiene."
+    },
+    "techpark": {
+      "name": "Borj Cédria Technopark",
+      "description": "Our R&D laboratory is located in the heart of Tunisia's largest scientific innovation hub."
+    },
+    "quote": "« Biosecurity is not an expense, it's the life insurance of your profitability. »"
+  },
+  "cta": {
+    "title": "Ready to secure your next flock?",
+    "subtitle": "Join the farmers who have reduced their mortality by 35% thanks to the N2K method.",
+    "button": "Launch my Free Diagnostic",
+    "call": "Talk to an expert: +216 71 000 000"
+  },
+  "solutions": {
+    "pageTitle": "Our Scientific Solutions",
+    "pageSubtitle": "Exclusive formulations developed to address the most complex hygiene challenges in modern livestock farming.",
+    "disinfectants": "Biocide Products",
+    "disinfectantsDesc": "Certified formulations for terminal disinfection and downtime.",
+    "technical": "Technical Additives",
+    "technicalDesc": "Cleaning and decontamination solutions for water and air.",
+    "dosageGuide": "Interactive Dosage Guide",
+    "dosageDesc": "Simulate your microbial pressure level to obtain recommended dosages.",
+    "low": "Low",
+    "medium": "Medium",
+    "high": "High",
+    "critical": "Critical",
+    "category": "Category",
+    "recommendedDosage": "Recommended Dosage"
+  },
+  "diagnostic": {
+    "pageTitle": "Free Biosecurity Diagnostic",
+    "pageSubtitle": "Answer these few questions to receive a personalized technical recommendation within 24h.",
+    "step1": "Activity & Region",
+    "step2": "Farm Details",
+    "step3": "Problem Areas",
+    "step4": "Contact Info",
+    "region": "Governorate",
+    "regionPlaceholder": "Select your region",
+    "regions": [
+      "Ariana", "Béja", "Ben Arous", "Bizerte", "Gabès", "Gafsa", "Jendouba", 
+      "Kairouan", "Kasserine", "Kébili", "Kef", "Mahdia", "Manouba", 
+      "Médenine", "Monastir", "Nabeul", "Sfax", "Sidi Bouzid", "Siliana", 
+      "Sousse", "Tataouine", "Tozeur", "Tunis", "Zaghouan"
+    ],
+    "activityType": "Secteur of Activity",
+    "poultry": "Poultry Farming",
+    "agrifood": "Agri-food Industry",
+    "capacity": "Capacity (Heads / m²)",
+    "capacityPlaceholder": "e.g. 10000 birds",
+    "cycleInfo": "Number of cycles per year",
+    "problemType": "Which zones do you want to secure?",
+    "building": "Surfaces & Buildings",
+    "water": "Water Network",
+    "air": "Air Quality",
+    "multiple": "All zones",
+    "name": "Full Name",
+    "namePlaceholder": "Your full name",
+    "email": "Email Address",
+    "emailPlaceholder": "example@mail.com",
+    "phone": "Phone Number",
+    "phonePlaceholder": "XX XXX XXX",
+    "message": "Additional Information",
+    "messagePlaceholder": "Briefly describe your situation...",
+    "previous": "Previous",
+    "next": "Next",
+    "submit": "Submit my request",
+    "sending": "Sending..."
+  },
+  "expertise": {
+    "pageTitle": "Our Expertise",
+    "pageSubtitle": "A rigorous scientific approach, rooted in applied research at Borj Cédria Technology Park.",
+    "directorTitle": "Scientific Direction",
+    "directorName": "Dr. Mahmoud Nafeti",
+    "directorRole": "PhD in Chemistry — R&D Director",
+    "directorBio": "With a PhD in chemistry and over 15 years of field experience, Dr. Nafeti has developed a unique methodology that combines academic rigor with industrial pragmatism.",
+    "techparkTitle": "Borj Cédria Technology Park",
+    "techparkDesc": "Les Laboratoires N2K are located within the Borj Cédria Technopark, one of Tunisia's largest scientific hubs.",
+    "methodTitle": "Our Methodology",
+    "steps": {
+      "audit": {
+        "title": "Field Audit",
+        "desc": "Complete analysis of your farm: water, surfaces, air."
+      },
+      "diagnostic": {
+        "title": "Microbiological Diagnostic",
+        "desc": "Laboratory analysis to identify pathogenic strains."
+      },
+      "protocol": {
+        "title": "Custom Protocol",
+        "desc": "Personalized action plan with precise dosages and schedule."
+      },
+      "followup": {
+        "title": "Follow-up & Optimization",
+        "desc": "Regular controls to guarantee long-term effectiveness."
+      }
+    },
+    "cta": "Request a Certified Analysis",
+    "technicalExcellence": {
+      "title": "Scientific Excellence & Standards",
+      "subtitle": "Our commitment to quality is built on unwavering technical pillars.",
+      "items": {
+        "rd": {
+          "title": "R&D at Borj Cédria Technopark",
+          "content": "Our formulations are the result of applied research conducted in collaboration with Tunisian research centers. We test every product on bacterial strains isolated directly from local farms to ensure maximum effectiveness."
+        },
+        "compliance": {
+          "title": "Certification & Compliance",
+          "content": "All our biocide products comply with Tunisian and international sanitary safety standards. We provide complete Safety Data Sheets (SDS) and usage protocols validated by our scientific management."
+        },
+        "support": {
+          "title": "Field Technical Support",
+          "content": "N2K expertise doesn't stop at sales. We support our partners during biosecurity audits and train technical teams in good hygiene practices and sequential disinfection."
+        }
+      }
+    }
+  },
+  "contact": {
+    "pageTitle": "Contact an expert",
+    "pageSubtitle": "Request your Free Field Diagnostic.",
+    "form": {
+      "company": "Company / Farm",
+      "companyPlaceholder": "Name of your structure",
+      "phone": "Phone",
+      "phonePlaceholder": "+216 XX XXX XXX",
+      "message": "Message (optional)",
+      "messagePlaceholder": "Briefly describe your situation...",
+      "submit": "Submit my request",
+      "sending": "Sending..."
+    }
+  },
+  "footer": {
+    "brand": "Les Laboratoires N2K",
+    "tagline": "Scientific biosecurity expertise for Tunisian livestock farming. Borj Cédria Technopark.",
+    "expertise": "Our Expertise",
+    "expertiseLinks": {
+      "technical": "Technical Cleaning",
+      "soil": "Soil Disinfection",
+      "water": "Water Hygiene"
+    },
+    "support": "Help & Support",
+    "supportLinks": {
+      "contact": "Contact Expert",
+      "diagnostic": "Virtual Diagnostic",
+      "portal": "Client Portal"
+    },
+    "contactTitle": "Location & Contact",
+    "address": "Borj Cédria Technopark, Tunisia",
+    "copyright": "© 2024 Les Laboratoires N2K. All rights reserved.",
+    "legal": "Legal Notice",
+    "privacy": "Privacy Policy"
+  },
+  "blog": {
+    "pageTitle": "News & Field Results",
+    "pageSubtitle": "Discover our latest interventions, case studies and biosecurity advice.",
+    "noArticles": "No articles at the moment.",
+    "readMore": "Read more",
+    "backToBlog": "Back to news"
+  },
+  "merci": {
+    "title": "Request Sent!",
+    "subtitle": "Thank you for your trust. An N2K expert will analyze your data and contact you within 24h.",
+    "whatNext": "What to do in the meantime?",
+    "discoverProblems": "Deepen your knowledge",
+    "discoverLink": "Explore risk zones",
+    "urgent": "Urgent?",
+    "whatsapp": "Contact us on WhatsApp",
+    "backHome": "Back to home"
+  },
+  "common": {
+    "brandName": "Les Laboratoires N2K",
+    "notFound": "Page not found"
+  },
+  "meta": {
+    "homeTitle": "Les Laboratoires N2K — Poultry Biosecurity Tunisia",
+    "homeDescription": "Scientific biosecurity solutions. 48h sequential protocol CLORAGRO + OPTIMAGRO.",
+    "solutionsTitle": "Our Solutions — Les Laboratoires N2K",
+    "solutionsDescription": "Discover our certified products and techniques for total biosecurity.",
+    "problemsTitle": "Your Problems — Les Laboratoires N2K",
+    "problemsDescription": "Understand the threats: Biofilm, water contamination and airborne pressure.",
+    "expertiseTitle": "Our Expertise — Dr. Mahmoud Nafeti",
+    "expertiseDescription": "A rigorous scientific approach based on research at Borj Cédria Technopark.",
+    "diagnosticTitle": "Free Field Diagnostic — Les Laboratoires N2K",
+    "diagnosticDescription": "Fill out our form for a personalized analysis of your farm."
+  }
+}

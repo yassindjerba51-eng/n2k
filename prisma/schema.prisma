@@ -1,0 +1,63 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Lead {
+  id           String   @id @default(cuid())
+  name         String   @db.VarChar(255)
+  email        String   @db.VarChar(255)
+  phone        String   @db.VarChar(50)
+  region       String   @db.VarChar(255)
+  activityType String   @db.VarChar(100) @map("activity_type")
+  capacity     String   @db.VarChar(100)
+  cycleInfo    String?  @db.VarChar(100) @map("cycle_info")
+  problemType  String   @db.Text @map("problem_type")
+  message      String?  @db.Text
+  status       String   @default("NEW") @db.VarChar(50)
+  createdAt    DateTime @default(now()) @map("created_at")
+
+  @@map("leads")
+}
+
+model Product {
+  id             String  @id @default(cuid())
+  slug           String  @unique @db.VarChar(255)
+  name           String  @db.VarChar(255) // Brand name remains same across langs
+  isDisinfectant Boolean @default(false) @map("is_disinfectant")
+  category       Zone
+  step           Int     @default(1) // 1 (Nettoyage) or 2 (Désinfection/Stabilisation)
+  description    Json    // { "fr": "...", "en": "...", "ar": "..." }
+  dosage         String? @db.VarChar(255)
+  imageUrl       String? @db.VarChar(500) @map("image_url")
+  createdAt      DateTime @default(now()) @map("created_at")
+
+  @@map("products")
+}
+
+model BlogPost {
+  id          Int      @id @default(autoincrement())
+  slug        String   @unique @db.VarChar(255)
+  coverImage  String?  @db.VarChar(500) @map("cover_image")
+  tags        String   @db.Text
+  titleFr     String   @db.VarChar(500) @map("title_fr")
+  titleEn     String   @db.VarChar(500) @map("title_en")
+  titleAr     String   @db.VarChar(500) @map("title_ar")
+  contentFr   String   @db.LongText @map("content_fr")
+  contentEn   String   @db.LongText @map("content_en")
+  contentAr   String   @db.LongText @map("content_ar")
+  publishedAt DateTime @default(now()) @map("published_at")
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  @@map("blog_posts")
+}
+
+enum Zone {
+  BATIMENT
+  EAU
+  AMBIANCE
+}
