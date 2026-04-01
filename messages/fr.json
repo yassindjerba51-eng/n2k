@@ -107,9 +107,10 @@
   },
   "problems": {
     "badge": "Risques Sanitaires",
-    "title": "Votre élevage est sous",
-    "titleHighlight": "Menace Constante",
-    "subtitle": "Les pathogènes ne dorment jamais. Sans un protocole séquentiel rigoureux, votre investissement est à la merci d'une contamination invisible.",
+    "title": "Ce que vous ne voyez pas",
+    "titleHighlight": "vous coûte de l'argent",
+    "subtitle": "L'élevage moderne ne tolère pas l'improvisation. Chaque zone négligée est un foyer de prolifération qui réduit vos indices de consommation et augmente votre mortalité.",
+    "discoverLink": "Explorer les solutions",
     "building": {
       "title": "Bâtiment & Biofilm",
       "description": "Les parois poreuses abritent des colonies bactériennes qui résistent aux lavages classiques.",
@@ -159,25 +160,26 @@
     }
   },
   "authority": {
-    "imageAlt": "Dr. Mahmoud Nafeti au laboratoire",
-    "title": "L'expertise d'un",
-    "titleHighlight": "Docteur en Chimie",
-    "titleEnd": "à votre service.",
+    "imageAlt": "Laboratoire N2K au Borj Cédria Technopark",
+    "title": "Le Savoir-Faire de",
+    "titleHighlight": "Borj Cédria",
+    "titleEnd": "au Service de l'Élevage",
     "doctor": {
       "name": "Dr. Mahmoud Nafeti",
-      "description": "Directeur Scientifique N2K, expert reconnu en formulation chimique pour l'hygiène industrielle et avicole."
+      "description": "Expert de terrain reconnu, le Dr Nafeti dirige nos recherches pour adapter les standards mondiaux de biosécurité aux réalités climatiques et structurelles de la Tunisie."
     },
     "techpark": {
-      "name": "Borj Cédria Technopark",
-      "description": "Notre laboratoire R&D est implanté au cœur du plus grand pôle d'innovation scientifique de Tunisie."
+      "name": "Pôle Technologique Borj Cédria",
+      "description": "Implantés au cœur de l'innovation tunisienne, Les Laboratoires N2K bénéficient d'un écosystème scientifique de pointe pour garantir la qualité de chaque lot produit."
     },
-    "quote": "« La biosécurité n'est pas une dépense, c'est l'assurance-vie de votre rentabilité. »"
+    "quote": "« Notre mission n'est pas de vendre des bidons, mais d'assurer la réussite sanitaire de vos bandes. »",
+    "quoteAuthor": "— Dr. Mahmoud Nafeti"
   },
   "cta": {
-    "title": "Prêt à sécuriser votre prochaine bande ?",
-    "subtitle": "Rejoignez les exploitants qui ont réduit leur mortalité de 35% grâce à la méthode N2K.",
-    "button": "Lancer mon Diagnostic Gratuit",
-    "call": "Parler à un expert : +216 71 000 000"
+    "title": "Prêt à sécuriser votre prochain cycle ?",
+    "subtitle": "Ne laissez pas la chance décider de votre rentabilité. Nos experts se déplacent partout en Tunisie pour auditer votre protocole actuel.",
+    "button": "Demander un Diagnostic Terrain Gratuit",
+    "call": "Appeler un expert"
   },
   "solutions": {
     "pageTitle": "Nos Solutions Scientifiques",

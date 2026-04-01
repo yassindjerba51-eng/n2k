@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
-import { Menu } from "lucide-react";
+import { Menu, ArrowRight, PhoneCall, ChevronRight } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import LocaleSwitcher from "./LocaleSwitcher";
 
@@ -62,31 +62,64 @@ export default function Navbar({ locale }: { locale: string }) {
             <SheetTrigger className="p-2 -mr-2 text-primary focus:outline-none focus:ring-2 focus:ring-ring rounded-md">
               <Menu strokeWidth={2.5} />
             </SheetTrigger>
-            <SheetContent side={locale === "ar" ? "right" : "left"} className="w-[300px] sm:w-[400px]">
-              <div className="flex flex-col h-full py-6">
-                <div className="text-xl font-black text-primary font-heading mb-8">N2K</div>
-                <div className="flex flex-col gap-6 flex-1">
-                  {navLinks.map((link) => {
-                    const isActive = pathname === link.path;
-                    return (
-                      <Link
-                        key={link.name}
-                        href={link.path as any}
-                        className={`font-heading text-lg font-bold tracking-tight uppercase transition-colors ${
-                          isActive ? "text-secondary" : "text-foreground"
-                        }`}
-                      >
-                        {link.name}
-                      </Link>
-                    );
-                  })}
+            <SheetContent
+              side={locale === "ar" ? "right" : "left"}
+              className="w-[300px] sm:w-[400px] bg-[#000f22] border-none p-0"
+            >
+              <div className="flex flex-col h-full">
+                {/* Mobile Menu Header */}
+                <div className="px-6 pt-8 pb-6 border-b border-white/10">
+                  <div className="text-2xl font-black text-white font-heading tracking-tighter">
+                    Les Laboratoires N2K
+                  </div>
+                  <p className="text-white/40 text-xs font-body mt-1 tracking-wide">
+                    Biosécurité Avicole — Borj Cédria
+                  </p>
                 </div>
-                <div>
+
+                {/* Navigation Links */}
+                <div className="flex flex-col flex-1 px-6 py-8">
+                  <div className="flex flex-col gap-1">
+                    {navLinks.map((link) => {
+                      const isActive = pathname === link.path;
+                      return (
+                        <Link
+                          key={link.name}
+                          href={link.path as any}
+                          className={`flex items-center justify-between py-4 px-4 rounded-xl font-heading text-base font-bold tracking-tight uppercase transition-all ${
+                            isActive
+                              ? "text-white bg-white/10"
+                              : "text-white/60 hover:text-white hover:bg-white/5"
+                          }`}
+                        >
+                          <span>{link.name}</span>
+                          <ChevronRight className={`w-4 h-4 ${isActive ? "text-[#2BB673]" : "text-white/20"}`} />
+                        </Link>
+                      );
+                    })}
+                  </div>
+
+                  {/* Separator */}
+                  <div className="my-6 h-px bg-white/10"></div>
+
+                  {/* Phone Link */}
+                  <a
+                    href="tel:+21600000000"
+                    className="flex items-center gap-3 text-white/50 hover:text-white py-3 px-4 rounded-xl hover:bg-white/5 transition-all"
+                  >
+                    <PhoneCall className="w-5 h-5 text-[#2BB673]" />
+                    <span className="font-body text-sm">+216 00 000 000</span>
+                  </a>
+                </div>
+
+                {/* Bottom CTA */}
+                <div className="px-6 pb-8 mt-auto">
                   <Link
                     href="/contact"
-                    className="flex justify-center w-full btn-gradient text-on-primary px-6 py-4 rounded-xl text-md font-bold tracking-tight shadow-xl shadow-secondary/20"
+                    className="flex justify-center items-center gap-2 w-full bg-[#2BB673] hover:bg-[#2BB673]/90 text-white px-6 py-4 rounded-xl text-sm font-black tracking-tight shadow-lg shadow-[#2BB673]/20 transition-all uppercase"
                   >
                     {t("contact")}
+                    <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
               </div>
