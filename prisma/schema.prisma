@@ -32,7 +32,7 @@ model Product {
   isDisinfectant Boolean  @default(false) @map("is_disinfectant")
   category       Zone
   step           Int      @default(1)
-  description    String   @db.LongText
+  description    Json
   dosage         String?  @db.VarChar(255)
   imageUrl       String?  @map("image_url") @db.VarChar(500)
   createdAt      DateTime @default(now()) @map("created_at")
