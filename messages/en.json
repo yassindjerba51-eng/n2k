@@ -262,7 +262,19 @@
         "desc": "Regular controls to guarantee long-term effectiveness."
       }
     },
+    "heroBadge": "Les Laboratoires N2K — Our Expertise",
+    "specialistDesc": "A recognized specialist in industrial and poultry hygiene, he developed the N2K protocols specifically addressing the climatic and bacteriological challenges of North Africa.",
+    "methodSubtitle": "Expertise is nothing without rigor. We apply a 4-step monitoring protocol for each farm.",
     "cta": "Request a Certified Analysis",
+    "ctaSection": {
+      "title": "Tell us about your problem",
+      "subtitle": "We'll find the solution",
+      "desc": "Every farm is unique. Our experts analyze your specific situation and design a biosecurity protocol tailored to your field constraints, budget, and sanitary objectives.",
+      "button": "Consult an Expert",
+      "feature1": "Free field diagnostic",
+      "feature2": "Certified microbiological analysis",
+      "feature3": "Custom protocol within 48h"
+    },
     "technicalExcellence": {
       "title": "Scientific Excellence & Standards",
       "subtitle": "Our commitment to quality is built on unwavering technical pillars.",
@@ -349,5 +361,85 @@
     "expertiseDescription": "A rigorous scientific approach based on research at Borj Cédria Technopark.",
     "diagnosticTitle": "Free Field Diagnostic — Les Laboratoires N2K",
     "diagnosticDescription": "Fill out our form for a personalized analysis of your farm."
+  },
+  "solutionsPage": {
+    "badge": "Les Laboratoires N2K — Our Solutions",
+    "heroTitle": "A product's effectiveness doesn't depend on its composition alone,",
+    "heroTitleHighlight": "but on its integration into a rigorous protocol.",
+    "heroSubtitle": "Developed at the Borj Cédria Technology Park under the direction of Dr Mahmoud Naffeti, our formulations are designed for Tunisian field realities. Each protocol follows a precise sequence: Cleaning → Disinfection or Stabilization.",
+    "learnMore": "Learn more",
+    "step": "Step",
+    "batiment": {
+      "badge": "Zone 01 — Building",
+      "title": "Surfaces & Floors: Breaking the Pathogen Cycle",
+      "subtitle": "Biofilm is a microbial fortress. Disinfection applied directly on biofilm is a wasted investment. Our sequential protocols guarantee a truly sterile surface.",
+      "product1": {
+        "name": "CLORAGRO",
+        "type": "Disinfectant — Technical Cleaning",
+        "desc": "Ultra-powerful chlorinated alkaline designed to break down the organic matrix of biofilm and eliminate persistent fats in agricultural environments.",
+        "features": [
+          "Radical destruction of organic biofilm",
+          "Elimination of persistent fats and proteins",
+          "Optimal surface preparation before disinfection"
+        ]
+      },
+      "product2": {
+        "name": "OPTIMAGRO",
+        "type": "Disinfectant — Full Spectrum",
+        "desc": "Stabilized full-spectrum acid. Intervenes on a 'stripped' surface for surgical disinfection of residual pathogens.",
+        "features": [
+          "Full spectrum: Bactericidal, Virucidal, Fungicidal",
+          "Extended persistence up to 7 days",
+          "Maximum protection for new arrivals"
+        ]
+      },
+      "fieldReport": "The sequential application of CLORAGRO/OPTIMAGRO reduced microbial load by 99.8% at this pilot site.",
+      "fieldReportSource": "Field Report — Central Tunisia"
+    },
+    "eau": {
+      "badge": "Zone 02 — Water",
+      "title": "Drinking Network: The Main Contamination Vector",
+      "subtitle": "Water is the primary contamination vector in livestock farming. A clean network is the foundation of all zootechnical performance.",
+      "product1": {
+        "name": "BIONET",
+        "type": "Technical Cleaning — Curative",
+        "desc": "Technical cleaning of pipes. Stripping of organic and limescale deposits.",
+        "features": [
+          "Radical elimination of scale and mineral deposits",
+          "Descaling of the most complex pipework",
+          "Immediate shock action before animal placement"
+        ]
+      },
+      "product2": {
+        "name": "AQUACONTROL N2K",
+        "type": "Stabilization — Daily Maintenance",
+        "desc": "Water quality stabilization. Constant control of microbial load.",
+        "features": [
+          "Bacteriological stabilization of drinking water",
+          "Drastic reduction of cross-contamination risk",
+          "Full compatibility with automatic dosing systems"
+        ]
+      }
+    },
+    "ambiance": {
+      "badge": "Zone 03 — Atmosphere",
+      "title": "Aero-Biocontamination: When Air Becomes a Threat",
+      "subtitle": "Ammonia and airborne microbial load attack respiratory mucous membranes. Atmosphere control is an often-neglected performance lever.",
+      "product1": {
+        "name": "AIRSAN N2K",
+        "type": "High-Tech Nebulization",
+        "desc": "A fine solution that remains suspended to neutralize airborne pathogens without wetting the litter."
+      },
+      "product2": {
+        "name": "BIOACTIVE N2K",
+        "type": "Natural Stabilization",
+        "desc": "Innovative formula using positive competition to strengthen the microbiological balance of buildings."
+      },
+      "scienceNote": "Atmosphere control reduces respiratory pathologies by 15% in intensive farming.",
+      "scienceNoteLabel": "Scientific Analysis"
+    },
+    "authorityQuote": "\"A product without method is a cost. A product with our protocol is a profitable investment.\"",
+    "authorityQuoteAuthor": "— Dr Mahmoud Naffeti",
+    "authorityDesc": "Center of excellence in industrial and agricultural biosecurity at the heart of Borj Cédria Technopark."
   }
 }

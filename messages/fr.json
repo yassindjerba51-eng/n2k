@@ -264,7 +264,19 @@
         "desc": "Contrôles réguliers pour garantir l'efficacité dans la durée."
       }
     },
+    "heroBadge": "Les Laboratoires N2K — Notre Expertise",
+    "specialistDesc": "Spécialiste reconnu de l'hygiène industrielle et avicole, il a développé les protocoles N2K pour répondre spécifiquement aux défis climatiques et bactériologiques du Maghreb.",
+    "methodSubtitle": "L'expertise n'est rien sans rigueur. Nous appliquons un protocole de suivi en 4 étapes pour chaque exploitation.",
     "cta": "Demander une analyse certifiée",
+    "ctaSection": {
+      "title": "Exposez-nous votre problème",
+      "subtitle": "On pourra vous trouver la solution",
+      "desc": "Chaque exploitation est unique. Nos experts analysent votre situation spécifique et conçoivent un protocole de biosécurité adapté à vos contraintes terrain, votre budget et vos objectifs sanitaires.",
+      "button": "Consulter un Expert",
+      "feature1": "Diagnostic terrain gratuit",
+      "feature2": "Analyse microbiologique certifiée",
+      "feature3": "Protocole personnalisé sous 48h"
+    },
     "technicalExcellence": {
       "title": "Excellence Scientifique & Normes",
       "subtitle": "Notre engagement envers la qualité repose sur des piliers techniques inébranlables.",
@@ -351,5 +363,85 @@
     "expertiseDescription": "Une approche scientifique rigoureuse basée sur la recherche au Technopole de Borj Cédria.",
     "diagnosticTitle": "Diagnostic Terrain Gratuit — Les Laboratoires N2K",
     "diagnosticDescription": "Remplissez notre formulaire pour une analyse personnalisée de votre exploitation."
+  },
+  "solutionsPage": {
+    "badge": "Les Laboratoires N2K — Nos Solutions",
+    "heroTitle": "L'efficacité d'un produit ne dépend pas de sa composition seule,",
+    "heroTitleHighlight": "mais de son intégration dans un protocole rigoureux.",
+    "heroSubtitle": "Développées au Pôle Technologique de Borj Cédria sous la direction du Dr Mahmoud Naffeti, nos formulations sont conçues pour les réalités du terrain tunisien. Chaque protocole suit une séquence précise : Nettoyage → Désinfection ou Stabilisation.",
+    "learnMore": "En savoir plus",
+    "step": "Étape",
+    "batiment": {
+      "badge": "Zone 01 — Le Bâtiment",
+      "title": "Surfaces & Sols : Briser le cycle pathogène",
+      "subtitle": "Le biofilm est une forteresse microbienne. Une désinfection appliquée directement sur un biofilm est un investissement perdu. Nos protocoles séquentiels garantissent une surface réellement stérile.",
+      "product1": {
+        "name": "CLORAGRO",
+        "type": "Désinfectant — Nettoyage Technique",
+        "desc": "Alcalin chloré ultra-puissant conçu pour déstructurer la matrice organique du biofilm et éliminer les graisses persistantes en milieu agricole.",
+        "features": [
+          "Destruction radicale du biofilm organique",
+          "Élimination des graisses et protéines persistantes",
+          "Préparation de surface optimale avant désinfection"
+        ]
+      },
+      "product2": {
+        "name": "OPTIMAGRO",
+        "type": "Désinfectant — Spectre Complet",
+        "desc": "Acide stabilisé à spectre total. Intervient sur une surface « mise à nu » pour une désinfection chirurgicale des pathogènes résiduels.",
+        "features": [
+          "Spectre complet : Bactéricide, Virucide, Fongicide",
+          "Rémanence prolongée jusqu'à 7 jours",
+          "Protection maximale des nouveaux arrivants"
+        ]
+      },
+      "fieldReport": "L'application séquentielle CLORAGRO/OPTIMAGRO a réduit la charge microbienne de 99.8% sur ce site pilote.",
+      "fieldReportSource": "Rapport de terrain — Tunisie Centrale"
+    },
+    "eau": {
+      "badge": "Zone 02 — L'Eau",
+      "title": "Réseau de Boisson : Le vecteur principal de contamination",
+      "subtitle": "L'eau est le vecteur principal de contamination en élevage. Un réseau propre est la base de toute performance zootechnique.",
+      "product1": {
+        "name": "BIONET",
+        "type": "Nettoyage Technique — Curatif",
+        "desc": "Nettoyage technique des canalisations. Décapage des dépôts organiques et calcaire.",
+        "features": [
+          "Élimination radicale du tartre et des dépôts minéraux",
+          "Désincrustation des canalisations les plus complexes",
+          "Action choc immédiate avant mise en place des animaux"
+        ]
+      },
+      "product2": {
+        "name": "AQUACONTROL N2K",
+        "type": "Stabilisation — Maintien Quotidien",
+        "desc": "Stabilisation de la qualité de l'eau. Contrôle constant de la charge microbienne.",
+        "features": [
+          "Stabilisation bactériologique de l'eau de boisson",
+          "Réduction drastique du risque de contamination croisée",
+          "Compatibilité totale avec les systèmes de dosage automatique"
+        ]
+      }
+    },
+    "ambiance": {
+      "badge": "Zone 03 — L'Ambiance",
+      "title": "Aéro-Biocontamination : Quand l'air devient une menace",
+      "subtitle": "L'ammoniac et la charge microbienne aérienne attaquent les muqueuses respiratoires. Le contrôle de l'ambiance est un levier de performance souvent négligé.",
+      "product1": {
+        "name": "AIRSAN N2K",
+        "type": "Nébulisation High-Tech",
+        "desc": "Une solution fine qui reste en suspension pour neutraliser les pathogènes aériens sans mouiller les litières."
+      },
+      "product2": {
+        "name": "BIOACTIVE N2K",
+        "type": "Stabilisation Naturelle",
+        "desc": "Formule innovante exploitant la compétition positive pour renforcer l'équilibre microbiologique des bâtiments."
+      },
+      "scienceNote": "Le contrôle de l'ambiance réduit de 15% les pathologies respiratoires observées en élevage intensif.",
+      "scienceNoteLabel": "Analyse Scientifique"
+    },
+    "authorityQuote": "« Un produit sans méthode est un coût. Un produit avec notre protocole est un investissement rentable. »",
+    "authorityQuoteAuthor": "— Dr Mahmoud Naffeti",
+    "authorityDesc": "Pôle d'excellence en biosécurité industrielle et agricole au cœur du Technoparc de Borj Cédria."
   }
 }
