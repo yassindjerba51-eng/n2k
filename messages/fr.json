@@ -3,6 +3,7 @@
     "home": "Accueil",
     "problemesSolutions": "Problèmes & Solutions",
     "expertise": "Expertise",
+    "references": "Nos Références",
     "contact": "Contact & Diagnostic",
     "diagnostic": "Diagnostic Gratuit",
     "lang": "Langue"
@@ -362,7 +363,60 @@
     "expertiseTitle": "Notre Expertise — Dr. Mahmoud Nafeti",
     "expertiseDescription": "Une approche scientifique rigoureuse basée sur la recherche au Technopole de Borj Cédria.",
     "diagnosticTitle": "Diagnostic Terrain Gratuit — Les Laboratoires N2K",
-    "diagnosticDescription": "Remplissez notre formulaire pour une analyse personnalisée de votre exploitation."
+    "diagnosticDescription": "Remplissez notre formulaire pour une analyse personnalisée de votre exploitation.",
+    "referencesTitle": "Nos Références — Les Laboratoires N2K",
+    "referencesDescription": "Découvrez les acteurs majeurs de l'aviculture et de l'agroalimentaire qui font confiance aux protocoles N2K."
+  },
+  "references": {
+    "badge": "Les Laboratoires N2K — Nos Références",
+    "heroTitle": "Ils nous font confiance sur le terrain",
+    "heroSubtitle": "Les solutions développées par Les Laboratoires N2K sont utilisées et testées dans des conditions réelles par des acteurs majeurs du secteur avicole et agroalimentaire tunisien.",
+    "heroHighlight": "Utilisé dans des environnements où l'exigence sanitaire est maximale.",
+    "statsTitle": "L'impact N2K en chiffres",
+    "stat1Value": "13+",
+    "stat1Label": "Partenaires actifs",
+    "stat2Value": "2",
+    "stat2Label": "Groupes industriels majeurs",
+    "stat3Value": "100%",
+    "stat3Label": "Taux de renouvellement",
+    "stat4Value": "48h",
+    "stat4Label": "Protocole déployable",
+    "majorTitle": "Partenaires Stratégiques",
+    "majorSubtitle": "Des groupes leaders du secteur avicole et agroalimentaire tunisien nous accordent leur confiance pour sécuriser leurs cycles de production.",
+    "majorPartners": {
+      "mazraa": {
+        "name": "Groupe Mazraa",
+        "desc": "Leader national de la production avicole intégrée. Protocoles N2K déployés sur l'ensemble du parc de bâtiments d'élevage."
+      },
+      "chahia": {
+        "name": "Groupe Chahia",
+        "desc": "Acteur majeur de l'agroalimentaire tunisien. Nos solutions de nettoyage technique et de désinfection séquentielle garantissent la conformité sanitaire de leurs installations."
+      }
+    },
+    "networkTitle": "Réseau de confiance terrain",
+    "networkSubtitle": "Des exploitations agricoles aux laboratoires d'analyse, nos protocoles sont validés par un réseau étendu de professionnels exigeants.",
+    "partners": [
+      "Société Intégrale Agricole",
+      "Laboratoire des Abattoirs de Tunis",
+      "Oasis",
+      "Société Agricole",
+      "Société Gallus",
+      "Société Agricole Taïsir",
+      "Société MaraiiCap Bon",
+      "Société Shahiya",
+      "Société Al-Bajh",
+      "Société Sabar Aboulad",
+      "Société"
+    ],
+    "directorQuote": "Chaque partenaire est un terrain de validation. Nos protocoles n'existent pas en laboratoire — ils sont conçus, testés et optimisés directement sur le terrain tunisien.",
+    "directorName": "Naffati Mahmoud",
+    "directorRole": "Directeur Production & Innovation",
+    "ctaTitle": "Demandez votre essai terrain",
+    "ctaSubtitle": "Testez nos protocoles dans vos conditions réelles. Résultats mesurables sous 48h.",
+    "ctaButton": "Demander un essai terrain",
+    "ctaFeature1": "Essai terrain sans engagement",
+    "ctaFeature2": "Résultats mesurables en 48h",
+    "ctaFeature3": "Accompagnement expert dédié"
   },
   "solutionsPage": {
     "badge": "Les Laboratoires N2K — Nos Solutions",

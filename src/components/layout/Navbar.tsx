@@ -5,6 +5,7 @@ import { Link, usePathname } from "@/i18n/navigation";
 import { Menu, ArrowRight, PhoneCall, ChevronRight } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import LocaleSwitcher from "./LocaleSwitcher";
+import Image from "next/image";
 
 export default function Navbar({ locale }: { locale: string }) {
   const t = useTranslations("nav");
@@ -14,14 +15,24 @@ export default function Navbar({ locale }: { locale: string }) {
     { name: t("home"), path: "/" },
     { name: t("problemesSolutions"), path: "/problemes-solutions" },
     { name: t("expertise"), path: "/expertise" },
+    { name: t("references"), path: "/references" },
   ];
 
   return (
     <nav className="fixed top-0 w-full z-50 glass-nav transition-all duration-300 border-b border-border/50">
       <div className="flex justify-between items-center px-4 md:px-8 py-4 max-w-screen-2xl mx-auto">
         {/* Brand */}
-        <Link href="/" className="text-xl font-black tracking-tighter text-primary font-heading">
-          Les Laboratoires N2K
+        <Link href="/" className="flex items-center gap-2 shrink-0">
+          <Image
+            src="/images/n2k-logo.png"
+            alt="Les Laboratoires N2K"
+            width={40}
+            height={40}
+            className="w-10 h-10 object-contain"
+          />
+          <span className="text-lg font-black tracking-tighter text-primary font-heading hidden sm:inline">
+            Les Laboratoires N2K
+          </span>
         </Link>
 
         {/* Desktop Links */}
@@ -69,12 +80,23 @@ export default function Navbar({ locale }: { locale: string }) {
               <div className="flex flex-col h-full">
                 {/* Mobile Menu Header */}
                 <div className="px-6 pt-8 pb-6 border-b border-white/10">
-                  <div className="text-2xl font-black text-white font-heading tracking-tighter">
-                    Les Laboratoires N2K
+                  <div className="flex items-center gap-3">
+                    <Image
+                      src="/images/n2k-logo.png"
+                      alt="Les Laboratoires N2K"
+                      width={44}
+                      height={44}
+                      className="w-11 h-11 object-contain"
+                    />
+                    <div>
+                      <div className="text-xl font-black text-white font-heading tracking-tighter">
+                        Les Laboratoires N2K
+                      </div>
+                      <p className="text-white/40 text-xs font-body mt-0.5 tracking-wide">
+                        Biosécurité Avicole — Borj Cédria
+                      </p>
+                    </div>
                   </div>
-                  <p className="text-white/40 text-xs font-body mt-1 tracking-wide">
-                    Biosécurité Avicole — Borj Cédria
-                  </p>
                 </div>
 
                 {/* Navigation Links */}

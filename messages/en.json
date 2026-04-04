@@ -3,6 +3,7 @@
     "home": "Home",
     "problemesSolutions": "Problems & Solutions",
     "expertise": "Expertise",
+    "references": "References",
     "contact": "Contact & Diagnostic",
     "diagnostic": "Free Diagnostic",
     "lang": "Language"
@@ -360,7 +361,60 @@
     "expertiseTitle": "Our Expertise — Dr. Mahmoud Nafeti",
     "expertiseDescription": "A rigorous scientific approach based on research at Borj Cédria Technopark.",
     "diagnosticTitle": "Free Field Diagnostic — Les Laboratoires N2K",
-    "diagnosticDescription": "Fill out our form for a personalized analysis of your farm."
+    "diagnosticDescription": "Fill out our form for a personalized analysis of your farm.",
+    "referencesTitle": "Our References — Les Laboratoires N2K",
+    "referencesDescription": "Discover the major players in poultry and agri-food who trust N2K protocols."
+  },
+  "references": {
+    "badge": "Les Laboratoires N2K — Our References",
+    "heroTitle": "They trust us in the field",
+    "heroSubtitle": "Solutions developed by Les Laboratoires N2K are used and tested in real conditions by major players in the Tunisian poultry and agri-food sector.",
+    "heroHighlight": "Used in environments where sanitary requirements are at their highest.",
+    "statsTitle": "The N2K impact in numbers",
+    "stat1Value": "13+",
+    "stat1Label": "Active partners",
+    "stat2Value": "2",
+    "stat2Label": "Major industrial groups",
+    "stat3Value": "100%",
+    "stat3Label": "Renewal rate",
+    "stat4Value": "48h",
+    "stat4Label": "Deployable protocol",
+    "majorTitle": "Strategic Partners",
+    "majorSubtitle": "Leading groups in the Tunisian poultry and agri-food sector trust us to secure their production cycles.",
+    "majorPartners": {
+      "mazraa": {
+        "name": "Mazraa Group",
+        "desc": "National leader in integrated poultry production. N2K protocols deployed across all livestock buildings."
+      },
+      "chahia": {
+        "name": "Chahia Group",
+        "desc": "Major player in Tunisian agri-food. Our technical cleaning and sequential disinfection solutions ensure the sanitary compliance of their facilities."
+      }
+    },
+    "networkTitle": "Field trust network",
+    "networkSubtitle": "From farms to analysis laboratories, our protocols are validated by an extensive network of demanding professionals.",
+    "partners": [
+      "Soci\u00e9t\u00e9 Int\u00e9grale Agricole",
+      "Tunis Slaughterhouse Laboratory",
+      "Oasis",
+      "Soci\u00e9t\u00e9 Agricole",
+      "Soci\u00e9t\u00e9 Gallus",
+      "Soci\u00e9t\u00e9 Agricole Ta\u00efsir",
+      "Soci\u00e9t\u00e9 MaraiiCap Bon",
+      "Soci\u00e9t\u00e9 Shahiya",
+      "Soci\u00e9t\u00e9 Al-Bajh",
+      "Soci\u00e9t\u00e9 Sabar Aboulad",
+      "Soci\u00e9t\u00e9"
+    ],
+    "directorQuote": "Each partner is a validation ground. Our protocols don't exist in a lab — they are designed, tested, and optimized directly in the Tunisian field.",
+    "directorName": "Naffati Mahmoud",
+    "directorRole": "Production & Innovation Director",
+    "ctaTitle": "Request your field trial",
+    "ctaSubtitle": "Test our protocols in your real conditions. Measurable results within 48h.",
+    "ctaButton": "Request a field trial",
+    "ctaFeature1": "No-commitment field trial",
+    "ctaFeature2": "Measurable results in 48h",
+    "ctaFeature3": "Dedicated expert support"
   },
   "solutionsPage": {
     "badge": "Les Laboratoires N2K — Our Solutions",
