@@ -93,8 +93,8 @@ export default function Navbar({ locale }: { locale: string }) {
                       height={44}
                       className="w-11 h-11 object-contain"
                     />
-                    <div>
-                      <div className="text-xl font-black text-white font-heading tracking-tighter">
+                    <div className="min-w-0">
+                      <div className="text-[17px] font-black text-white font-heading tracking-tighter whitespace-nowrap overflow-hidden text-ellipsis">
                         Les Laboratoires N2K
                       </div>
                       <p className="text-white/40 text-xs font-body mt-0.5 tracking-wide">
@@ -114,7 +114,7 @@ export default function Navbar({ locale }: { locale: string }) {
                           key={link.name}
                           href={link.path as any}
                           onClick={() => setMobileOpen(false)}
-                          className={`flex items-center justify-between py-4 px-4 rounded-xl font-heading text-base font-bold tracking-tight uppercase transition-all ${
+                          className={`flex items-center justify-between py-3 px-3 rounded-xl font-heading text-sm sm:text-base font-bold tracking-tight uppercase transition-all ${
                             isActive
                               ? "text-white bg-white/10"
                               : "text-white/60 hover:text-white hover:bg-white/5"
