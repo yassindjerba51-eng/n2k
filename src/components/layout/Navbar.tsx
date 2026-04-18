@@ -18,6 +18,7 @@ export default function Navbar({ locale }: { locale: string }) {
     { name: t("home"), path: "/" },
     { name: t("problemesSolutions"), path: "/problemes-solutions" },
     { name: t("expertise"), path: "/expertise" },
+    { name: t("produits"), path: "/produits" },
     { name: t("references"), path: "/references" },
     { name: t("contactPageLink"), path: "/contact" },
   ];
