@@ -326,7 +326,7 @@
     "supportLinks": {
       "contact": "Contact Expert",
       "diagnostic": "Diagnostic Virtuel",
-      "portal": "Portail Client"
+      "about": "À propos"
     },
     "contactTitle": "Localisation & Contact",
     "address": "Borj Cédria Technopark, Tunisie",
@@ -369,7 +369,9 @@
     "referencesTitle": "Nos Références — Les Laboratoires N2K",
     "referencesDescription": "Découvrez les acteurs majeurs de l'aviculture et de l'agroalimentaire qui font confiance aux protocoles N2K.",
     "produitsTitle": "Nos Produits — Les Laboratoires N2K",
-    "produitsDescription": "Gamme complète de solutions professionnelles pour la biosécurité avicole et agroalimentaire."
+    "produitsDescription": "Gamme complète de solutions professionnelles pour la biosécurité avicole et agroalimentaire.",
+    "aboutTitle": "À Propos — Les Laboratoires N2K",
+    "aboutDescription": "Expertise en désinfection industrielle au Technopôle de Borj Cédria. Découvrez notre approche scientifique unique."
   },
   "references": {
     "badge": "Les Laboratoires N2K — Nos Références",
@@ -588,5 +590,125 @@
     "ctaButton": "Télécharger la Fiche Technique (PDF)",
     "relatedTitle": "Produits de la même zone",
     "metaSuffix": "Les Laboratoires N2K"
+  },
+  "about": {
+    "heroBadge": "Science de l'Hygiène",
+    "heroTitle": "Maîtrisez vos risques sanitaires avec des ",
+    "heroTitleHighlight": "solutions de désinfection",
+    "heroTitleEnd": " professionnelles.",
+    "heroSubtitle": "Plus qu'une simple application, nous déployons une ingénierie de l'hygiène adaptée aux contraintes réelles du terrain industriel et de l'élevage intensif.",
+    "heroCta1": "Demander un diagnostic",
+    "heroCta2": "Voir nos protocoles",
+    "specialistLabel": "Qui Sommes-Nous",
+    "specialistTitle": "Spécialiste en biotransformation & hygiène industrielle.",
+    "specialistDesc1": "Les Laboratoires N2K se positionnent à l'intersection de la recherche scientifique et de l'efficacité opérationnelle. Basés au Technopôle de Borj Cédria, nous comprenons les défis uniques de l'élevage intensif en Tunisie.",
+    "specialistDesc2": "Notre mission est de briser le cycle des contaminations en adressant les causes profondes, notamment le biofilm microbien, souvent ignoré par les solutions standards.",
+    "specialistBadge": "TUNISIE",
+    "specialistBadgeSub": "Expertise Borj Cédria",
+    "pillarsLabel": "Objectifs Stratégiques",
+    "pillarsTitle": "Les 4 Piliers N2K",
+    "pillars": {
+      "hygiene": {
+        "title": "Réduire la pression sanitaire",
+        "desc": "Élimination drastique des pathogènes pour limiter les épidémies en bâtiment."
+      },
+      "safety": {
+        "title": "Garantir un environnement sain",
+        "desc": "Protection du bien-être animal et de la sécurité des opérateurs de terrain."
+      },
+      "optimization": {
+        "title": "Optimiser les protocoles",
+        "desc": "Réduction des dosages inutiles et gain de temps lors des vides sanitaires."
+      },
+      "performance": {
+        "title": "Améliorer la performance",
+        "desc": "Corrélation directe entre hygiène maîtrisée et rentabilité de l'exploitation."
+      }
+    },
+    "domainsLabel": "Savoir-Faire",
+    "domainsTitle": "Domaines d'Expertise Technique",
+    "domains": {
+      "cleaning": {
+        "title": "Nettoyage Technique",
+        "desc": "La détergence est la base. Nos formulations ciblent les matières organiques les plus tenaces pour préparer la désinfection.",
+        "feature1": "Pouvoir mouillant supérieur",
+        "feature2": "Élimination des graisses"
+      },
+      "disinfection": {
+        "title": "Désinfection Pro",
+        "desc": "Spectre large : Virucide, Bactéricide, Fongicide. Efficacité prouvée contre les souches résistantes en milieu agricole.",
+        "feature1": "Normes EN certifiées",
+        "feature2": "Rémanence contrôlée"
+      },
+      "biofilm": {
+        "title": "Gestion du Biofilm",
+        "desc": "Notre différenciateur. Nous détruisons la matrice protectrice des bactéries pour une hygiène en profondeur des surfaces poreuses.",
+        "feature1": "Rupture de matrice",
+        "feature2": "Prévention des niches"
+      }
+    },
+    "methodologyLabel": "Notre Approche",
+    "methodologyTitle": "Méthodologie Opérationnelle",
+    "methodology": {
+      "step1": {
+        "title": "Diagnostic Terrain",
+        "desc": "Audit visuel et prélèvements pour identifier les points critiques de contamination."
+      },
+      "step2": {
+        "title": "Sélection Produits",
+        "desc": "Choix des molécules actives adaptées à la charge organique et au type de bâtiment."
+      },
+      "step3": {
+        "title": "Protocoles Précis",
+        "desc": "Rédaction de fiches techniques d'application : dosage, temps de contact, matériel."
+      },
+      "step4": {
+        "title": "Suivi & Optimisation",
+        "desc": "Contrôle de l'efficacité post-application et ajustement continu des process."
+      }
+    },
+    "resultsLabel": "Chiffres Clés",
+    "resultsTitle": "La preuve par les résultats",
+    "resultsDesc": "Données collectées lors de nos interventions en élevage avicole et industriel.",
+    "resultsStatTitle": "Réduction de la charge bactérienne",
+    "resultsStat": "Moyenne constatée après application du protocole \"N2K Bio-Shield\" sur des surfaces en béton poreux infestées de salmonelles.",
+    "resultsBefore": "AVANT",
+    "resultsAfter": "APRÈS",
+    "errorsLabel": "Attention",
+    "errorsTitle": "Erreurs fréquentes en désinfection",
+    "errorsSubtitle": "Ces pratiques courantes réduisent drastiquement l'efficacité de vos traitements.",
+    "errors": {
+      "underdosing": {
+        "title": "Sous-dosage systématique",
+        "desc": "Croire qu'on économise en diluant trop. Cela favorise les résistances microbiennes et rend le traitement inefficace."
+      },
+      "noDetergence": {
+        "title": "Négliger la détergence",
+        "desc": "Un désinfectant appliqué sur une surface sale est neutralisé instantanément par la matière organique."
+      },
+      "contactTime": {
+        "title": "Temps de contact insuffisant",
+        "desc": "Rincer trop vite. Chaque agent chimique a besoin de 15 à 30 minutes pour détruire la membrane cellulaire."
+      }
+    },
+    "protocolLabel": "Standard Opératoire",
+    "protocolTitle": "Le Protocole de Référence N2K",
+    "protocol": {
+      "step1": {
+        "title": "Détergence",
+        "desc": "Application d'un agent moussant alcalin. Pause 20 min. Décollement des graisses."
+      },
+      "step2": {
+        "title": "Rinçage Haute Pression",
+        "desc": "Élimination mécanique des résidus et du détergent. La surface doit être visuellement propre."
+      },
+      "step3": {
+        "title": "Désinfection",
+        "desc": "Application par pulvérisation ou thermonébulisation. Respect strict du dosage N2K."
+      }
+    },
+    "ctaTitle": "Optimisez votre protocole sanitaire dès aujourd'hui",
+    "ctaDesc": "Contactez nos ingénieurs pour un audit de terrain complet et une proposition technique chiffrée.",
+    "ctaButton": "Demander une expertise gratuite"
   }
 }

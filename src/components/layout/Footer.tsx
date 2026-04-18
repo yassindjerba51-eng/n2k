@@ -54,8 +54,8 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/diagnostic" className="text-secondary-light font-semibold cursor-pointer hover:underline decoration-secondary-light decoration-2 underline-offset-4 transition-colors">
-                {t("supportLinks.portal")}
+              <Link href="/a-propos" className="text-slate-400 hover:text-white hover:underline decoration-secondary-light decoration-2 underline-offset-4 transition-colors">
+                {t("supportLinks.about")}
               </Link>
             </li>
           </ul>

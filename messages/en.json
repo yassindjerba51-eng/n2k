@@ -326,7 +326,7 @@
     "supportLinks": {
       "contact": "Contact Expert",
       "diagnostic": "Virtual Diagnostic",
-      "portal": "Client Portal"
+      "about": "About"
     },
     "contactTitle": "Location & Contact",
     "address": "Borj Cédria Technopark, Tunisia",
@@ -369,7 +369,9 @@
     "referencesTitle": "Our References — Les Laboratoires N2K",
     "referencesDescription": "Discover the major players in poultry and agri-food who trust N2K protocols.",
     "produitsTitle": "Our Products — Les Laboratoires N2K",
-    "produitsDescription": "Complete range of professional biosecurity solutions for poultry and agri-food industries."
+    "produitsDescription": "Complete range of professional biosecurity solutions for poultry and agri-food industries.",
+    "aboutTitle": "About Us — Les Laboratoires N2K",
+    "aboutDescription": "Expertise in industrial disinfection at the Borj Cédria Technopark. Discover our unique scientific approach."
   },
   "references": {
     "badge": "Les Laboratoires N2K — Our References",
@@ -588,5 +590,125 @@
     "ctaButton": "Download Technical Sheet (PDF)",
     "relatedTitle": "Products in the same zone",
     "metaSuffix": "Les Laboratoires N2K"
+  },
+  "about": {
+    "heroBadge": "Hygiene Science",
+    "heroTitle": "Master your sanitary risks with ",
+    "heroTitleHighlight": "disinfection solutions",
+    "heroTitleEnd": " that work.",
+    "heroSubtitle": "More than just application, we deploy hygiene engineering adapted to the real constraints of industrial and intensive farming environments.",
+    "heroCta1": "Request a diagnostic",
+    "heroCta2": "View our protocols",
+    "specialistLabel": "About Us",
+    "specialistTitle": "Specialist in biotransformation & industrial hygiene.",
+    "specialistDesc1": "Les Laboratoires N2K stand at the intersection of scientific research and operational efficiency. Based at the Borj Cédria Technopark, we understand the unique challenges of intensive farming in Tunisia.",
+    "specialistDesc2": "Our mission is to break the cycle of contamination by addressing root causes, especially microbial biofilm, often overlooked by standard solutions.",
+    "specialistBadge": "TUNISIA",
+    "specialistBadgeSub": "Borj Cédria Expertise",
+    "pillarsLabel": "Strategic Objectives",
+    "pillarsTitle": "The 4 N2K Pillars",
+    "pillars": {
+      "hygiene": {
+        "title": "Reduce sanitary pressure",
+        "desc": "Drastic elimination of pathogens to limit epidemics in buildings."
+      },
+      "safety": {
+        "title": "Ensure a healthy environment",
+        "desc": "Protection of animal welfare and field operator safety."
+      },
+      "optimization": {
+        "title": "Optimize protocols",
+        "desc": "Reduction of unnecessary dosages and time savings during sanitary breaks."
+      },
+      "performance": {
+        "title": "Improve performance",
+        "desc": "Direct correlation between controlled hygiene and farm profitability."
+      }
+    },
+    "domainsLabel": "Know-How",
+    "domainsTitle": "Technical Expertise Domains",
+    "domains": {
+      "cleaning": {
+        "title": "Technical Cleaning",
+        "desc": "Detergence is the foundation. Our formulations target the toughest organic matter to prepare for disinfection.",
+        "feature1": "Superior wetting power",
+        "feature2": "Grease elimination"
+      },
+      "disinfection": {
+        "title": "Professional Disinfection",
+        "desc": "Broad spectrum: Virucidal, Bactericidal, Fungicidal. Proven efficacy against resistant strains in agricultural settings.",
+        "feature1": "EN standards certified",
+        "feature2": "Controlled persistence"
+      },
+      "biofilm": {
+        "title": "Biofilm Management",
+        "desc": "Our differentiator. We destroy the protective matrix of bacteria for deep hygiene of porous surfaces.",
+        "feature1": "Matrix disruption",
+        "feature2": "Niche prevention"
+      }
+    },
+    "methodologyLabel": "Our Approach",
+    "methodologyTitle": "Operational Methodology",
+    "methodology": {
+      "step1": {
+        "title": "Field Diagnostic",
+        "desc": "Visual audit and sampling to identify critical contamination points."
+      },
+      "step2": {
+        "title": "Product Selection",
+        "desc": "Choice of active molecules adapted to organic load and building type."
+      },
+      "step3": {
+        "title": "Precise Protocols",
+        "desc": "Writing application technical sheets: dosage, contact time, equipment."
+      },
+      "step4": {
+        "title": "Monitoring & Optimization",
+        "desc": "Post-application efficacy control and continuous process adjustment."
+      }
+    },
+    "resultsLabel": "Key Figures",
+    "resultsTitle": "Proof through results",
+    "resultsDesc": "Data collected from our interventions in poultry farming and industrial settings.",
+    "resultsStatTitle": "Bacterial load reduction",
+    "resultsStat": "Average observed after application of the N2K Bio-Shield protocol on porous concrete surfaces infested with salmonella.",
+    "resultsBefore": "BEFORE",
+    "resultsAfter": "AFTER",
+    "errorsLabel": "Warning",
+    "errorsTitle": "Common disinfection mistakes",
+    "errorsSubtitle": "These common practices drastically reduce the effectiveness of your treatments.",
+    "errors": {
+      "underdosing": {
+        "title": "Systematic under-dosing",
+        "desc": "Believing you save by over-diluting. This promotes microbial resistance and renders treatment ineffective."
+      },
+      "noDetergence": {
+        "title": "Neglecting detergence",
+        "desc": "A disinfectant applied to a dirty surface is instantly neutralized by organic matter."
+      },
+      "contactTime": {
+        "title": "Insufficient contact time",
+        "desc": "Rinsing too quickly. Each chemical agent needs 15 to 30 minutes to destroy the cell membrane."
+      }
+    },
+    "protocolLabel": "Operating Standard",
+    "protocolTitle": "The N2K Reference Protocol",
+    "protocol": {
+      "step1": {
+        "title": "Detergence",
+        "desc": "Application of an alkaline foaming agent. 20 min pause. Grease removal."
+      },
+      "step2": {
+        "title": "High Pressure Rinse",
+        "desc": "Mechanical removal of residues and detergent. The surface must be visually clean."
+      },
+      "step3": {
+        "title": "Disinfection",
+        "desc": "Application by spraying or thermal fogging. Strict compliance with N2K dosage."
+      }
+    },
+    "ctaTitle": "Optimize your sanitary protocol today.",
+    "ctaDesc": "Contact our engineers for a complete field audit and a detailed technical proposal.",
+    "ctaButton": "Request a free expertise"
   }
 }
