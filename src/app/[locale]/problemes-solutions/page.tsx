@@ -580,7 +580,7 @@ export default async function ProblemesSolutionsHub() {
             {tCta("subtitle")}
           </p>
           <Link
-            href="/contact"
+            href="/diagnostic"
             className="inline-flex items-center justify-center gap-3 bg-white text-n2k-secondary px-8 md:px-10 py-4 rounded-xl font-black text-sm md:text-base hover:scale-105 active:scale-95 transition-all shadow-ambient-lg w-full sm:w-auto font-heading group uppercase tracking-wider"
           >
             {tCta("button")}

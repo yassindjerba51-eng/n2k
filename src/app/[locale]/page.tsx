@@ -94,18 +94,18 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
                 </span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black font-heading text-n2k-primary leading-[1.05] tracking-tighter mb-8 break-words">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-black font-heading text-n2k-primary leading-[1.05] tracking-tighter mb-8 break-words">
                 {t("hero.title1")} <br />
                 {t("hero.title2")} <br />
                 <span className="text-n2k-secondary">{t("hero.title3")}</span>
               </h1>
 
-              <p className="font-body text-base md:text-lg text-n2k-on-surface-variant leading-relaxed max-w-xl mb-10">
+              <p className="font-body text-base md:text-lg text-n2k-on-surface-variant leading-relaxed max-w-full mb-10">
                 {t("hero.subtitle")}
               </p>
 
               <Link
-                href="/contact"
+                href="/diagnostic"
                 className="inline-flex items-center gap-3 bg-n2k-secondary hover:bg-n2k-secondary/90 text-white px-8 py-4 rounded-xl font-bold font-heading shadow-lg transition-all group text-sm md:text-base"
               >
                 {t("hero.cta")}
@@ -391,7 +391,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <Link
-              href="/contact"
+              href="/diagnostic"
               className="bg-white text-n2k-secondary px-8 md:px-10 py-4 rounded-xl font-black text-sm md:text-base hover:scale-105 active:scale-95 transition-all shadow-ambient-lg w-full sm:w-auto font-heading group uppercase tracking-wider"
             >
               <span className="flex items-center justify-center gap-3">

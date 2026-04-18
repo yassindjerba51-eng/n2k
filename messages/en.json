@@ -6,6 +6,7 @@
     "references": "References",
     "contact": "Contact & Diagnostic",
     "diagnostic": "Free Diagnostic",
+    "contactPageLink": "Contact Us",
     "lang": "Language"
   },
   "hero": {
@@ -111,6 +112,7 @@
     "title": "Your livestock is under",
     "titleHighlight": "Constant Threat",
     "subtitle": "Pathogens never sleep. Without a rigorous sequential protocol, your investment is at the mercy of invisible contamination.",
+    "discoverLink": "Explore solutions",
     "building": {
       "title": "Building & Biofilm",
       "description": "Porous walls house bacterial colonies that resist conventional washing.",
@@ -172,7 +174,8 @@
       "name": "Borj Cédria Technopark",
       "description": "Our R&D laboratory is located in the heart of Tunisia's largest scientific innovation hub."
     },
-    "quote": "« Biosecurity is not an expense, it's the life insurance of your profitability. »"
+    "quote": "« Biosecurity is not an expense, it's the life insurance of your profitability. »",
+    "quoteAuthor": "— Dr. Mahmoud Nafeti"
   },
   "cta": {
     "title": "Ready to secure your next flock?",
@@ -363,7 +366,9 @@
     "diagnosticTitle": "Free Field Diagnostic — Les Laboratoires N2K",
     "diagnosticDescription": "Fill out our form for a personalized analysis of your farm.",
     "referencesTitle": "Our References — Les Laboratoires N2K",
-    "referencesDescription": "Discover the major players in poultry and agri-food who trust N2K protocols."
+    "referencesDescription": "Discover the major players in poultry and agri-food who trust N2K protocols.",
+    "produitsTitle": "Our Products — Les Laboratoires N2K",
+    "produitsDescription": "Complete range of professional biosecurity solutions for poultry and agri-food industries."
   },
   "references": {
     "badge": "Les Laboratoires N2K — Our References",
@@ -495,5 +500,92 @@
     "authorityQuote": "\"A product without method is a cost. A product with our protocol is a profitable investment.\"",
     "authorityQuoteAuthor": "— Dr Mahmoud Naffeti",
     "authorityDesc": "Center of excellence in industrial and agricultural biosecurity at the heart of Borj Cédria Technopark."
+  },
+  "contactPage": {
+    "hero": {
+      "badge": "Direct Contact",
+      "title": "Contact the Field Experts",
+      "subtitle": "From the Borj Cédria Technology Park, our engineers and researchers deploy precision diagnostics for your environmental and industrial projects."
+    },
+    "form": {
+      "title": "Diagnostic Request",
+      "description": "Please provide the details of your technical needs to connect with our experts.",
+      "nameLabel": "Full Name",
+      "namePlaceholder": "John Doe",
+      "emailLabel": "Professional Email",
+      "emailPlaceholder": "john@company.com",
+      "subjectLabel": "Subject of Intervention",
+      "subjects": {
+        "batiment": "Building Zone",
+        "eau": "Water Analysis",
+        "ambiance": "Ambiance & Environment",
+        "autre": "Other Expertise"
+      },
+      "messageLabel": "Message / Technical Specifications",
+      "messagePlaceholder": "Detail your request...",
+      "submitButton": "Send Request",
+      "submitting": "Sending...",
+      "successTitle": "Request Sent",
+      "successMessage": "Our technical team has successfully received your request. We will contact you shortly.",
+      "sendAnother": "Send another message"
+    },
+    "leadership": {
+      "name": "Dr. Mahmoud Nafeti",
+      "role": "Director of Operations & Innovation",
+      "linkedin": "https://www.linkedin.com/company/laboratoires-n2k/",
+      "linkedinText": "LinkedIn Profile"
+    },
+    "info": {
+      "hq": {
+        "title": "Headquarters",
+        "address": "Borj Cédria Technology Park,\nInnovation Building,\nTunis, Tunisia"
+      },
+      "support": {
+        "title": "Technical Support",
+        "email": "contact@laboratoires-n2k.com",
+        "phone": "+216 71 000 000"
+      },
+      "hours": {
+        "title": "Business Hours",
+        "regular": "Mon - Fri : 08:00 - 17:00",
+        "urgent": "Urgent interventions 24/7 on request"
+      },
+      "map": {
+        "openBtn": "Open Map"
+      }
+    },
+    "accreditation": "Accredited laboratories for the precision and rigor of environmental analysis processes."
+  },
+  "products": {
+    "badge": "Product Catalog",
+    "heroTitle": "Professional Biosecurity Solutions",
+    "heroSubtitle": "A complete range of products formulated at the Borj Cédria Technopark, field-validated by leaders in the Tunisian poultry and agri-food industry.",
+    "zone01Name": "The Building",
+    "zone01Desc": "Disinfection and structural hygiene",
+    "zone02Name": "Water Piping",
+    "zone02Desc": "Treatment and purification of circuits",
+    "zone03Name": "The Atmosphere",
+    "zone03Desc": "Air treatment and odor control",
+    "catalogBadge": "Our Range",
+    "catalogTitle": "6 Products. 3 Zones. 1 Protocol.",
+    "catalogSubtitle": "Each product addresses a specific issue on your farm. Filter by zone to identify the right solution.",
+    "filterAll": "All products",
+    "viewProduct": "View technical sheet",
+    "backToCatalog": "Back to catalog",
+    "productZone": "Intervention zone",
+    "problemTitle": "The Identified Problem",
+    "solutionTitle": "The Solution",
+    "applicationsBadge": "Fields of Application",
+    "applicationsTitle": "Where to use this product?",
+    "applicationsSubtitle": "Sectors and environments validated by our field teams.",
+    "specsBadge": "Technical Data",
+    "specsTitle": "Technical Specifications",
+    "specsParameter": "Parameter",
+    "specsValue": "Value",
+    "ctaTitle": "Technical Sheet",
+    "ctaSubtitle": "Download the complete documentation to integrate this product into your biosecurity protocol.",
+    "ctaButton": "Download Technical Sheet (PDF)",
+    "relatedTitle": "Products in the same zone",
+    "metaSuffix": "Les Laboratoires N2K"
   }
 }

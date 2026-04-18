@@ -232,7 +232,7 @@ export default async function ExpertisePage({ params }: { params: Promise<{ loca
 
               {/* CTA Button */}
               <Link
-                href="/contact"
+                href="/diagnostic"
                 className="inline-flex items-center gap-3 bg-n2k-secondary text-white px-10 py-5 rounded-xl font-black font-heading text-lg shadow-lg transition-all group hover:opacity-90 hover:scale-[1.02] active:scale-95"
               >
                 <Phone className="w-5 h-5 shrink-0" />

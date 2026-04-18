@@ -25,6 +25,18 @@ model Lead {
   @@map("leads")
 }
 
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String   @db.VarChar(255)
+  email     String   @db.VarChar(255)
+  subject   String   @db.VarChar(255)
+  message   String   @db.Text
+  status    String   @default("NEW") @db.VarChar(50)
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("contact_messages")
+}
+
 model Product {
   id             String   @id @default(cuid())
   slug           String   @unique @db.VarChar(255)

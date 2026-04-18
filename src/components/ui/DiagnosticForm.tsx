@@ -84,7 +84,8 @@ export default function DiagnosticForm() {
       if (response.ok) {
         router.push("/merci");
       } else {
-        console.error("Failed to submit");
+        const errorText = await response.text();
+        console.error("Failed to submit:", response.status, errorText);
         setIsSubmitting(false);
       }
     } catch (error) {
@@ -144,19 +145,29 @@ export default function DiagnosticForm() {
                     className="grid grid-cols-1 md:grid-cols-2 gap-4"
                   >
                     <div>
-                      <RadioGroupItem value="Poultry" id="r-poultry" className="peer sr-only" />
+                      <RadioGroupItem value="Poultry" id="r-poultry" className="sr-only" />
                       <Label
                         htmlFor="r-poultry"
-                        className="flex flex-col items-center justify-between rounded-xl border-2 border-border bg-surface p-6 hover:bg-surface-high hover:text-primary peer-data-[state=checked]:border-secondary peer-data-[state=checked]:bg-secondary/10 peer-data-[state=checked]:text-secondary cursor-pointer transition-all"
+                        onClick={() => field.onChange("Poultry")}
+                        className={`flex flex-col items-center justify-between rounded-xl border-2 p-6 cursor-pointer transition-all ${
+                          field.value === "Poultry"
+                            ? "border-secondary bg-secondary/10 text-secondary"
+                            : "border-border bg-surface hover:bg-surface-high hover:text-primary"
+                        }`}
                       >
                         <span className="font-heading font-bold text-lg">{t("poultry")}</span>
                       </Label>
                     </div>
                     <div>
-                      <RadioGroupItem value="Agri-food" id="r-agrifood" className="peer sr-only" />
+                      <RadioGroupItem value="Agri-food" id="r-agrifood" className="sr-only" />
                       <Label
                         htmlFor="r-agrifood"
-                        className="flex flex-col items-center justify-between rounded-xl border-2 border-border bg-surface p-6 hover:bg-surface-high hover:text-primary peer-data-[state=checked]:border-secondary peer-data-[state=checked]:bg-secondary/10 peer-data-[state=checked]:text-secondary cursor-pointer transition-all"
+                        onClick={() => field.onChange("Agri-food")}
+                        className={`flex flex-col items-center justify-between rounded-xl border-2 p-6 cursor-pointer transition-all ${
+                          field.value === "Agri-food"
+                            ? "border-secondary bg-secondary/10 text-secondary"
+                            : "border-border bg-surface hover:bg-surface-high hover:text-primary"
+                        }`}
                       >
                         <span className="font-heading font-bold text-lg">{t("agrifood")}</span>
                       </Label>
@@ -230,13 +241,21 @@ export default function DiagnosticForm() {
                       <div key={opt.id}>
                         <Checkbox
                           id={`chk-${opt.id}`}
-                          className="peer sr-only"
+                          className="sr-only"
                           checked={field.value?.includes(opt.id)}
                           onCheckedChange={() => handleToggle(opt.id)}
                         />
                         <Label
                           htmlFor={`chk-${opt.id}`}
-                          className="flex flex-col items-start rounded-xl border-2 border-border bg-surface p-4 hover:bg-surface-high peer-data-[state=checked]:border-secondary peer-data-[state=checked]:bg-secondary/10 peer-data-[state=checked]:text-secondary cursor-pointer transition-all"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            handleToggle(opt.id);
+                          }}
+                          className={`flex flex-col items-start rounded-xl border-2 p-4 cursor-pointer transition-all ${
+                            field.value?.includes(opt.id)
+                              ? "border-secondary bg-secondary/10 text-secondary"
+                              : "border-border bg-surface hover:bg-surface-high hover:text-primary"
+                          }`}
                         >
                           {opt.icon}
                           <span className="font-heading font-bold">{opt.label}</span>

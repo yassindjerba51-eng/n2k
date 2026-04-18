@@ -85,6 +85,7 @@ export default async function LocaleLayout({
       <body
         className={`min-h-full flex flex-col ${isRTL ? "font-[var(--font-arabic)]" : "font-[var(--font-body)]"}`}
         style={{ fontFamily: isRTL ? "var(--font-arabic), sans-serif" : "var(--font-body), sans-serif" }}
+        suppressHydrationWarning
       >
         <NextIntlClientProvider messages={messages}>
           <Navbar locale={locale} />

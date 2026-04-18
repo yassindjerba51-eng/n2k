@@ -61,7 +61,7 @@ export default async function ReferencesPage({ params }: { params: Promise<{ loc
               </div>
 
               <Link
-                href="/contact"
+                href="/diagnostic"
                 className="inline-flex items-center gap-3 bg-n2k-secondary text-white px-8 py-4 rounded-xl font-bold font-heading shadow-lg transition-all group text-sm md:text-base hover:opacity-90 hover:scale-[1.02] active:scale-95"
               >
                 {t("ctaButton")}
@@ -268,7 +268,7 @@ export default async function ReferencesPage({ params }: { params: Promise<{ loc
                 </p>
 
                 <Link
-                  href="/contact"
+                  href="/diagnostic"
                   className="inline-flex items-center gap-3 bg-n2k-secondary text-white px-10 py-5 rounded-xl font-black font-heading text-lg shadow-lg transition-all group hover:opacity-90 hover:scale-[1.02] active:scale-95"
                 >
                   👉 {t("ctaButton")}

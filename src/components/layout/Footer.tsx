@@ -44,17 +44,17 @@ export default function Footer() {
           </h5>
           <ul className="space-y-4 font-body text-sm">
             <li>
-              <Link href="/contact" className="text-slate-400 hover:text-white hover:underline decoration-secondary-light decoration-2 underline-offset-4 transition-colors">
+              <Link href="/diagnostic" className="text-slate-400 hover:text-white hover:underline decoration-secondary-light decoration-2 underline-offset-4 transition-colors">
                 {t("supportLinks.contact")}
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="text-slate-400 hover:text-white hover:underline decoration-secondary-light decoration-2 underline-offset-4 transition-colors">
+              <Link href="/diagnostic" className="text-slate-400 hover:text-white hover:underline decoration-secondary-light decoration-2 underline-offset-4 transition-colors">
                 {t("supportLinks.diagnostic")}
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="text-secondary-light font-semibold cursor-pointer hover:underline decoration-secondary-light decoration-2 underline-offset-4 transition-colors">
+              <Link href="/diagnostic" className="text-secondary-light font-semibold cursor-pointer hover:underline decoration-secondary-light decoration-2 underline-offset-4 transition-colors">
                 {t("supportLinks.portal")}
               </Link>
             </li>

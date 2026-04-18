@@ -19,11 +19,6 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
-        source: "/:locale/diagnostic",
-        destination: "/:locale/contact",
-        permanent: true,
-      },
-      {
         source: "/:locale/problemes",
         destination: "/:locale/problemes-solutions",
         permanent: true,

@@ -1,0 +1,53 @@
+{
+  "version": 3,
+  "skills": {
+    "design-md": {
+      "source": "google-labs-code/stitch-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google-labs-code/stitch-skills.git",
+      "skillPath": "skills/design-md/SKILL.md",
+      "skillFolderHash": "be4509d7f3959c8920991c5df87667f13b24807c",
+      "installedAt": "2026-02-05T01:01:45.426Z",
+      "updatedAt": "2026-02-05T09:12:23.500Z"
+    },
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "c2f31172b6f256272305a5e6e7228b258446899f",
+      "installedAt": "2026-02-05T01:01:56.782Z",
+      "updatedAt": "2026-02-05T01:01:56.782Z"
+    },
+    "stitch-loop": {
+      "source": "google-labs-code/stitch-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google-labs-code/stitch-skills.git",
+      "skillPath": "skills/stitch-loop/SKILL.md",
+      "skillFolderHash": "61da6a8b5a2b332659eac40a869f8807e0f28c6e",
+      "installedAt": "2026-02-05T01:02:50.557Z",
+      "updatedAt": "2026-02-05T01:02:50.557Z"
+    },
+    "enhance-prompt": {
+      "source": "google-labs-code/stitch-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google-labs-code/stitch-skills.git",
+      "skillPath": "skills/enhance-prompt/SKILL.md",
+      "skillFolderHash": "a11a8be47c56a2e84bf4ff737c98364129a7a9a7",
+      "installedAt": "2026-02-05T01:04:04.132Z",
+      "updatedAt": "2026-02-05T01:04:04.132Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "codex",
+    "gemini-cli",
+    "github-copilot",
+    "kimi-cli",
+    "opencode",
+    "antigravity"
+  ]
+}

@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { Menu, ArrowRight, PhoneCall, ChevronRight } from "lucide-react";
@@ -10,12 +12,14 @@ import Image from "next/image";
 export default function Navbar({ locale }: { locale: string }) {
   const t = useTranslations("nav");
   const pathname = usePathname();
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const navLinks = [
     { name: t("home"), path: "/" },
     { name: t("problemesSolutions"), path: "/problemes-solutions" },
     { name: t("expertise"), path: "/expertise" },
     { name: t("references"), path: "/references" },
+    { name: t("contactPageLink"), path: "/contact" },
   ];
 
   return (
@@ -59,7 +63,7 @@ export default function Navbar({ locale }: { locale: string }) {
         <div className="hidden lg:flex items-center gap-4">
           <LocaleSwitcher locale={locale} />
           <Link
-            href="/contact"
+            href="/diagnostic"
             className="btn-gradient text-white px-6 py-2.5 rounded-lg text-sm font-bold tracking-tight shadow-lg hover:scale-105 active:scale-95 transition-all"
           >
             {t("contact")}
@@ -69,7 +73,7 @@ export default function Navbar({ locale }: { locale: string }) {
         {/* Mobile menu trigger */}
         <div className="lg:hidden flex items-center gap-4">
           <LocaleSwitcher locale={locale} />
-          <Sheet>
+          <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
             <SheetTrigger className="p-2 -mr-2 text-primary focus:outline-none focus:ring-2 focus:ring-ring rounded-md">
               <Menu strokeWidth={2.5} />
             </SheetTrigger>
@@ -108,6 +112,7 @@ export default function Navbar({ locale }: { locale: string }) {
                         <Link
                           key={link.name}
                           href={link.path as any}
+                          onClick={() => setMobileOpen(false)}
                           className={`flex items-center justify-between py-4 px-4 rounded-xl font-heading text-base font-bold tracking-tight uppercase transition-all ${
                             isActive
                               ? "text-white bg-white/10"
@@ -137,7 +142,8 @@ export default function Navbar({ locale }: { locale: string }) {
                 {/* Bottom CTA */}
                 <div className="px-6 pb-8 mt-auto">
                   <Link
-                    href="/contact"
+                    href="/diagnostic"
+                    onClick={() => setMobileOpen(false)}
                     className="flex justify-center items-center gap-2 w-full bg-[#2BB673] hover:bg-[#2BB673]/90 text-white px-6 py-4 rounded-xl text-sm font-black tracking-tight shadow-lg shadow-[#2BB673]/20 transition-all uppercase"
                   >
                     {t("contact")}

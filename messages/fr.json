@@ -6,6 +6,7 @@
     "references": "Nos Références",
     "contact": "Contact & Diagnostic",
     "diagnostic": "Diagnostic Gratuit",
+    "contactPageLink": "Nous contacter",
     "lang": "Langue"
   },
   "hero": {
@@ -365,7 +366,9 @@
     "diagnosticTitle": "Diagnostic Terrain Gratuit — Les Laboratoires N2K",
     "diagnosticDescription": "Remplissez notre formulaire pour une analyse personnalisée de votre exploitation.",
     "referencesTitle": "Nos Références — Les Laboratoires N2K",
-    "referencesDescription": "Découvrez les acteurs majeurs de l'aviculture et de l'agroalimentaire qui font confiance aux protocoles N2K."
+    "referencesDescription": "Découvrez les acteurs majeurs de l'aviculture et de l'agroalimentaire qui font confiance aux protocoles N2K.",
+    "produitsTitle": "Nos Produits — Les Laboratoires N2K",
+    "produitsDescription": "Gamme complète de solutions professionnelles pour la biosécurité avicole et agroalimentaire."
   },
   "references": {
     "badge": "Les Laboratoires N2K — Nos Références",
@@ -497,5 +500,92 @@
     "authorityQuote": "« Un produit sans méthode est un coût. Un produit avec notre protocole est un investissement rentable. »",
     "authorityQuoteAuthor": "— Dr Mahmoud Naffeti",
     "authorityDesc": "Pôle d'excellence en biosécurité industrielle et agricole au cœur du Technoparc de Borj Cédria."
+  },
+  "contactPage": {
+    "hero": {
+      "badge": "Contact Direct",
+      "title": "Contactez l'Expertise de Terrain",
+      "subtitle": "Depuis le Pôle Technologique de Borj Cédria, nos ingénieurs et chercheurs déploient un diagnostic de précision pour vos projets environnementaux et industriels."
+    },
+    "form": {
+      "title": "Demande de Diagnostic",
+      "description": "Veuillez renseigner les détails de votre besoin technique pour une mise en relation avec nos experts.",
+      "nameLabel": "Nom Complet",
+      "namePlaceholder": "Jean Dupont",
+      "emailLabel": "Email Professionnel",
+      "emailPlaceholder": "jean@entreprise.com",
+      "subjectLabel": "Sujet de l'Intervention",
+      "subjects": {
+        "batiment": "Zone Bâtiment",
+        "eau": "Analyse de l'Eau",
+        "ambiance": "Ambiance & Environnement",
+        "autre": "Autre Expertise"
+      },
+      "messageLabel": "Message / Spécifications Techniques",
+      "messagePlaceholder": "Détaillez votre demande...",
+      "submitButton": "Envoyer la demande",
+      "submitting": "Envoi en cours...",
+      "successTitle": "Demande Envoyée",
+      "successMessage": "Notre équipe technique a bien reçu votre demande. Nous vous contacterons dans les plus brefs délais.",
+      "sendAnother": "Envoyer un autre message"
+    },
+    "leadership": {
+      "name": "Dr. Mahmoud Nafeti",
+      "role": "Directeur des Opérations & Innovation",
+      "linkedin": "https://www.linkedin.com/company/laboratoires-n2k/",
+      "linkedinText": "Profil LinkedIn"
+    },
+    "info": {
+      "hq": {
+        "title": "Siège Social",
+        "address": "Pôle Technologique de Borj Cédria,\nBâtiment Innovation,\nTunis, Tunisie"
+      },
+      "support": {
+        "title": "Support Technique",
+        "email": "contact@laboratoires-n2k.com",
+        "phone": "+216 71 000 000"
+      },
+      "hours": {
+        "title": "Heures d'Ouverture",
+        "regular": "Lun - Ven : 08h00 - 17h00",
+        "urgent": "Interventions urgentes 24/7 sur demande"
+      },
+      "map": {
+        "openBtn": "Ouvrir"
+      }
+    },
+    "accreditation": "Laboratoires accrédités pour la précision et la rigueur des processus d'analyse environnementale."
+  },
+  "products": {
+    "badge": "Catalogue Produits",
+    "heroTitle": "Solutions Professionnelles de Biosécurité",
+    "heroSubtitle": "Une gamme complète de produits formulés au Technopole de Borj Cédria, validés sur le terrain par les leaders de l'industrie avicole et agroalimentaire tunisienne.",
+    "zone01Name": "Le Bâtiment",
+    "zone01Desc": "Désinfection et hygiène structurelle",
+    "zone02Name": "Canalisation d'Eau",
+    "zone02Desc": "Traitement et purification des circuits",
+    "zone03Name": "L'Ambiance",
+    "zone03Desc": "Traitement de l'air et contrôle des odeurs",
+    "catalogBadge": "Notre Gamme",
+    "catalogTitle": "6 Produits. 3 Zones. 1 Protocole.",
+    "catalogSubtitle": "Chaque produit répond à une problématique précise de votre exploitation. Filtrez par zone pour identifier la solution adaptée.",
+    "filterAll": "Tous les produits",
+    "viewProduct": "Voir la fiche technique",
+    "backToCatalog": "Retour au catalogue",
+    "productZone": "Zone d'intervention",
+    "problemTitle": "Le Problème Identifié",
+    "solutionTitle": "La Solution",
+    "applicationsBadge": "Champs d'Application",
+    "applicationsTitle": "Où utiliser ce produit ?",
+    "applicationsSubtitle": "Secteurs et environnements validés par nos équipes terrain.",
+    "specsBadge": "Données Techniques",
+    "specsTitle": "Caractéristiques Techniques",
+    "specsParameter": "Paramètre",
+    "specsValue": "Valeur",
+    "ctaTitle": "Fiche Technique",
+    "ctaSubtitle": "Téléchargez la documentation complète pour intégrer ce produit dans votre protocole de biosécurité.",
+    "ctaButton": "Télécharger la Fiche Technique (PDF)",
+    "relatedTitle": "Produits de la même zone",
+    "metaSuffix": "Les Laboratoires N2K"
   }
 }
