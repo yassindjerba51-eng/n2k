@@ -24,9 +24,7 @@ const zoneIcons: Record<string, React.ElementType> = {
   "03": Wind,
 };
 
-export async function generateStaticParams() {
-  return products.map((p) => ({ slug: p.slug }));
-}
+
 
 export async function generateMetadata({
   params,
