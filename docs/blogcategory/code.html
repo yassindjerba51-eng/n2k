@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hygiène Agroalimentaire - N2K Laboratoires</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&amp;family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#191c1e",
+                        "error": "#ba1a1a",
+                        "background": "#f7f9fb",
+                        "on-tertiary-fixed-variant": "#802a00",
+                        "on-primary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#314865",
+                        "primary": "#000f22",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#7afbb1",
+                        "outline-variant": "#c4c6ce",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#461300",
+                        "secondary": "#006d40",
+                        "primary-fixed": "#d2e4ff",
+                        "on-secondary-container": "#007444",
+                        "inverse-primary": "#b0c8eb",
+                        "secondary-fixed-dim": "#5cde97",
+                        "on-primary-fixed": "#001c37",
+                        "secondary-container": "#7afbb1",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#43474d",
+                        "tertiary-fixed": "#ffdbcf",
+                        "inverse-surface": "#2d3133",
+                        "on-secondary-fixed": "#002110",
+                        "on-background": "#191c1e",
+                        "on-tertiary-fixed": "#380d00",
+                        "surface-container-highest": "#e0e3e5",
+                        "surface-variant": "#e0e3e5",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-tint": "#49607e",
+                        "primary-fixed-dim": "#b0c8eb",
+                        "surface-bright": "#f7f9fb",
+                        "primary-container": "#0a2540",
+                        "surface-container-high": "#e6e8ea",
+                        "surface": "#f7f9fb",
+                        "on-secondary-fixed-variant": "#00522f",
+                        "inverse-on-surface": "#eff1f3",
+                        "surface-dim": "#d8dadc",
+                        "on-primary-container": "#768dad",
+                        "tertiary": "#220600",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb59a",
+                        "outline": "#74777e",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#eceef0",
+                        "on-tertiary-container": "#f1590d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar Shell -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-8 py-4 max-w-[1400px] mx-auto">
+<div class="font-['Montserrat'] font-black text-[#053564] dark:text-white tracking-tighter text-xl">
+                N2K LABORATOIRES
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-['Plus_Jakarta_Sans'] uppercase tracking-widest text-[11px] font-bold text-slate-600 dark:text-slate-400 hover:text-[#053564] dark:hover:text-white transition-colors" href="#">Expertise</a>
+<a class="font-['Plus_Jakarta_Sans'] uppercase tracking-widest text-[11px] font-bold text-slate-600 dark:text-slate-400 hover:text-[#053564] dark:hover:text-white transition-colors" href="#">Poultry</a>
+<a class="font-['Plus_Jakarta_Sans'] uppercase tracking-widest text-[11px] font-bold text-slate-600 dark:text-slate-400 hover:text-[#053564] dark:hover:text-white transition-colors" href="#">Slaughterhouse</a>
+<a class="font-['Plus_Jakarta_Sans'] uppercase tracking-widest text-[11px] font-bold text-[#2BB673] border-b-2 border-[#2BB673] pb-1" href="#">Food Industry</a>
+<a class="font-['Plus_Jakarta_Sans'] uppercase tracking-widest text-[11px] font-bold text-slate-600 dark:text-slate-400 hover:text-[#053564] dark:hover:text-white transition-colors" href="#">Resources</a>
+</div>
+<button class="bg-primary hover:opacity-90 text-white px-6 py-2 rounded-lg font-headline text-xs uppercase tracking-widest transition-all">
+                Request Analysis
+            </button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[870px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Laboratory Production" class="w-full h-full object-cover grayscale opacity-40" data-alt="wide shot of a clinical ultra-modern food production line with automated machinery and technicians in white PPE under bright clinical lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlGvM2exrRK_S42xzb6FkCgawFnP4bcFEclN-5jYvSvqSiPm2ZVgd6fH9U62GUYcaBYu_qeuRo-AvOimOhRygZ0fcqiZgmCC0W0viuKlBiHjkr32pFYwUfYEq8HLCg52IbGNYYxOXRaGDOWoXf3SIKhR899PfYk4v50zYR1nhKOrBsADlyQLydCktslVpfQCN4Opxce6JENLXH2mXi6Bhs2_Hx8QzjbbBlKOKCXgG6O_zfsB2TjpgOlKAivolzye4AHMhl--rgznc"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-[1400px] mx-auto px-8 w-full">
+<div class="max-w-3xl">
+<span class="inline-block px-3 py-1 bg-secondary text-on-secondary text-[10px] font-bold tracking-[0.2em] uppercase mb-6">Secteur Agroalimentaire</span>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold text-white leading-tight tracking-tighter mb-8">
+                        Hygiène Agroalimentaire : L'Excellence Technique au Service de la Qualité
+                    </h1>
+<p class="text-xl text-primary-fixed-dim leading-relaxed mb-10 max-w-2xl font-body">
+                        Maîtrisez la pression microbienne dans vos unités de production avec nos solutions de biochimie fonctionnelle.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-gradient-to-br from-primary to-primary-container text-white px-8 py-4 rounded-md font-headline font-bold text-sm tracking-wide shadow-xl flex items-center gap-3">
+                            Demander un audit d'hygiène
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Articles -->
+<section class="bg-surface-container-low py-24">
+<div class="max-w-[1400px] mx-auto px-8">
+<div class="mb-16 flex justify-between items-end">
+<div>
+<p class="label-md font-bold text-secondary tracking-widest uppercase mb-2">Focus Technique</p>
+<h3 class="font-headline text-4xl font-extrabold text-primary">Articles Vedettes</h3>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Featured Card 1 -->
+<article class="bg-surface-container-lowest group overflow-hidden transition-all duration-500 hover:-translate-y-2 flex flex-col h-full">
+<div class="h-64 overflow-hidden relative">
+<img alt="Biofilms analysis" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="microscopic view of biological culture in a petri dish in a professional laboratory setting with blue lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrlQjxRe_hKKzmkmtz-eKiJLXSeWDECeSsts5F3UmyCvBDWcfegIaUoWAXhxadSXQDSCBsvIOpAHojmE-ABZ8RUdWWpviZ9MtJn3pSBnRa_zAatC_vBONwYlF13viGXPo8GEY7uqszXh4D0v98KZIL587pNR97UnIJ0ZS0D7c1YjUy-kDO3RBURhNxItcCwxy0DqVpph4UCwRNql8yl_IKUhmggy0uFrrzS3Ukfwv5qvUV80U1an26dNtk4k3vp3fcN95J-2cHJhI"/>
+<div class="absolute top-4 left-4 bg-error text-white text-[10px] font-bold px-3 py-1 rounded-sm uppercase tracking-wider">Problématique</div>
+</div>
+<div class="p-8 flex-grow">
+<h4 class="font-headline text-xl font-bold text-primary mb-4 leading-snug">Biofilms Industriels : La menace invisible pour vos standards de qualité</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8">Comprendre les structures complexes des biofilms pour mieux les éradiquer de vos circuits.</p>
+<a class="text-secondary font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all" href="#">
+                                Lire l'étude technique <span class="material-symbols-outlined text-sm">east</span>
+</a>
+</div>
+</article>
+<!-- Featured Card 2 -->
+<article class="bg-surface-container-lowest group overflow-hidden transition-all duration-500 hover:-translate-y-2 flex flex-col h-full">
+<div class="h-64 overflow-hidden relative">
+<img alt="Chemical residue" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="close up of stainless steel industrial machinery surface with water droplets reflecting bright studio light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4Jfd7YKytJawNTtzRrXiRwlueDQpCw2bDdsz--qAmANjLfN0296Hnu6ZKJ9Y8m92VT5OEKVJ0ilUJ__p-AFzHkVIFzWXCqk-HFb-tjYxmi4sF2tGxU1osGyFBVfsglEPwKAnUbaSM5OJRsHVTWaa7ugmSxKRzas9kTOjAUO9fKK_R4ABml6_Z6oTpZT476ARBG-rj0GipgD6Dpol-qJbCgYm7rKi9Q5g6jWKYw7eFrh7f8pxJkIezty2WaC7I9bXoDieKh8D3dE8"/>
+<div class="absolute top-4 left-4 bg-on-tertiary-container text-white text-[10px] font-bold px-3 py-1 rounded-sm uppercase tracking-wider">Erreur Critique</div>
+</div>
+<div class="p-8 flex-grow">
+<h4 class="font-headline text-xl font-bold text-primary mb-4 leading-snug">Mauvais rinçage et résidus chimiques : Comment éviter les non-conformités</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8">Les risques croisés entre hygiène chimique et sécurité alimentaire : protocoles et contrôles.</p>
+<a class="text-secondary font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all" href="#">
+                                Consulter les risques <span class="material-symbols-outlined text-sm">east</span>
+</a>
+</div>
+</article>
+<!-- Featured Card 3 -->
+<article class="bg-surface-container-lowest group overflow-hidden transition-all duration-500 hover:-translate-y-2 flex flex-col h-full">
+<div class="h-64 overflow-hidden relative">
+<img alt="Automation hygiene" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="robotic arm on a food processing line with clean stainless steel components and sensors in a bright factory" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXrBUDLgQRgGCeDjpUpVerHwNQfJ6uBlvot-v2955-Z3G68s8KTIbjtLlMdrwTVTmMiTa1mO3PWvr4rGG-R4sUwjQ-PkzYxxTAR-PnFwAx1Xeud_EWy1U2rupW3gRIO4W7Nfqoua-1xX-blxvdVfNFgVH1H0oW2MYP0oklw-L9Ll-scC1ojJvm5KG-Hfw_A5LVpzVnRHhmvNDTUCcOltzGDojvOLQRGOyxsNL-XSDFwgFoK1hl9Qv8mMH2QQ5ytbR_SGpceeYyJIg"/>
+<div class="absolute top-4 left-4 bg-secondary text-white text-[10px] font-bold px-3 py-1 rounded-sm uppercase tracking-wider">Solution N2K</div>
+</div>
+<div class="p-8 flex-grow">
+<h4 class="font-headline text-xl font-bold text-primary mb-4 leading-snug">Automatisation de l'hygiène : Intégrer les solutions N2K dans vos NEP</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8">Optimisez vos systèmes Cleaning-in-Place (CIP) avec nos agents de nettoyage intelligents.</p>
+<a class="text-secondary font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all" href="#">
+                                Voir la solution <span class="material-symbols-outlined text-sm">east</span>
+</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- Article List Grid -->
+<section class="py-24 bg-surface">
+<div class="max-w-[1400px] mx-auto px-8">
+<div class="mb-12">
+<h3 class="font-headline text-3xl font-bold text-primary mb-4">Bibliothèque Technique</h3>
+<p class="text-on-surface-variant mb-8">Explorez nos dernières publications sur la science de l'hygiène industrielle.</p>
+<div class="flex flex-wrap gap-2 border-b border-outline-variant/30 pb-4">
+<button class="px-6 py-3 bg-surface-container-low border-b-2 border-secondary text-primary font-bold">Tous les articles</button>
+<button class="px-6 py-3 hover:bg-surface-container-low transition-colors text-on-surface-variant">Traçabilité</button>
+<button class="px-6 py-3 hover:bg-surface-container-low transition-colors text-on-surface-variant">Purification de l'Air</button>
+<button class="px-6 py-3 hover:bg-surface-container-low transition-colors text-on-surface-variant">Désinfection Durable</button>
+</div>
+</div>
+<div class="space-y-12">
+<div class="flex flex-col md:flex-row gap-8 items-center border-b border-outline-variant/30 pb-12">
+<div class="w-full md:w-1/3 aspect-video bg-surface-container-high overflow-hidden">
+<img alt="Traceability" class="w-full h-full object-cover" data-alt="barcode being scanned on a laboratory vial in a high-tech environment with shallow depth of field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDheGg4j-h1i9huGJBna3oqUo8LBHhCVsahVHoKTrcgMhsKJmSsrtxGSnrBuPIbmUOFtbYACITFNqoCvh-2Rtu5FGF569PDIsiSu-stlf3BJIGea6qaJCSZkT8TFzR0lCS-DtPoCR-acNmq2YNnIRmASPizxf3V02N5cUhO4_tw0vQEV4JoTCkGAWxCd8mzihz1y3hvSypFnVlGlraejUS2CFPjJSCNqlwFMnUkdF75Ci3hpFIIODaL8j_jN-u358iexL02ApI1Atw"/>
+</div>
+<div class="flex-1">
+<span class="text-[10px] font-bold text-on-surface-variant tracking-widest uppercase">Octobre 2024</span>
+<h5 class="font-headline text-2xl font-bold text-primary mt-2 mb-4">La Traçabilité des interventions : Un levier de performance sanitaire</h5>
+<p class="text-on-surface-variant mb-6 line-clamp-2">Comment digitaliser vos rapports d'hygiène pour assurer une transparence totale lors des audits réglementaires.</p>
+<a class="text-secondary font-bold text-xs uppercase tracking-widest flex items-center gap-2" href="#">Lire la suite <span class="material-symbols-outlined text-xs">open_in_new</span></a>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-center border-b border-outline-variant/30 pb-12">
+<div class="w-full md:w-1/3 aspect-video bg-surface-container-high overflow-hidden">
+<img alt="Air purification" class="w-full h-full object-cover" data-alt="ventilation system exhaust in a modern industrial facility with dramatic architectural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKk2R7m6GbX-_ttwc-ZP_jJKSH_y_-7cQB-frosMilsF7nr8xOzOatn1ndIMguJA4G8bLDikXPm90y05il48Cpr-e2lzGhUZCj1YT7KWHO68Hi-FIh-YJyuv7oyBEoQE-HFSC1eAfkkDBQrSm42HYT7O120k01RRemwZw1EjaTZyYGCUXADjFsFBBC-DRxPoAhDpOl4jzRY-Sy9XcKsrgGXX-aIjKLTknfMOymAIEhx2cfCDiQaz5mcKoWX-Y6hfC--thRYgWkRns"/>
+</div>
+<div class="flex-1">
+<span class="text-[10px] font-bold text-on-surface-variant tracking-widest uppercase">Septembre 2024</span>
+<h5 class="font-headline text-2xl font-bold text-primary mt-2 mb-4">Purification de l'air en zones de conditionnement</h5>
+<p class="text-on-surface-variant mb-6 line-clamp-2">Réduire la contamination aéroportée pour prolonger la DLC de vos produits sensibles sans conservateurs.</p>
+<a class="text-secondary font-bold text-xs uppercase tracking-widest flex items-center gap-2" href="#">Lire la suite <span class="material-symbols-outlined text-xs">open_in_new</span></a>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-center border-b border-outline-variant/30 pb-12">
+<div class="w-full md:w-1/3 aspect-video bg-surface-container-high overflow-hidden">
+<img alt="Sustainable disinfection" class="w-full h-full object-cover" data-alt="macro shot of plant-based chemical solution being tested in a laboratory flask on a clean white surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmVBel6i7JsuoBJDyavj6BjW5hQU2rU5aQ8dhGhIgBvICgfrfwyYg7240bEvChQun5CKc_w1-O6QRGChBjJo1GfIwI5E82DiASv_6-49Wk7GsAsobCYZX8z0CfnjIHRrQaNV5vBuGfio8JlLBvMTgXRpr3hJ6B9SzbjA4_XQwajtpZORl8CpeK1k5OQBwxBm_YOE6zSVEnoevnKlmpnsUCXo1jeg7iW9KCJX-H8JM7ZqiCeQecCj4iTau_G888Y9y41a8BKSv8QQ0"/>
+</div>
+<div class="flex-1">
+<span class="text-[10px] font-bold text-on-surface-variant tracking-widest uppercase">Août 2024</span>
+<h5 class="font-headline text-2xl font-bold text-primary mt-2 mb-4">Désinfection durable : Réconcilier efficacité et écologie</h5>
+<p class="text-on-surface-variant mb-6 line-clamp-2">L'émergence des molécules biosourcées dans l'industrie agroalimentaire : opportunités et limites techniques.</p>
+<a class="text-secondary font-bold text-xs uppercase tracking-widest flex items-center gap-2" href="#">Lire la suite <span class="material-symbols-outlined text-xs">open_in_new</span></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Mid-page CTA -->
+<section class="py-20 bg-primary-container text-white relative overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+<img alt="Laboratory pattern" class="w-full h-full object-cover" data-alt="abstract pattern of industrial chemical containers and piping in a high contrast blue-toned photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR1ioPHxQDDJDnCxaIK7JBldTGy85Pv6zmOWXaJzsOVNJ6TcZ7Tl8nq9VvnOrOWitafpWrh_WzIDGFi6KDsWO0HsV1nVzJIWyfA6xbYxAl1JXAUc9BnSQDe1-xqqTYo94vpSW6B_7fm-QEp7xyR1vnAnEZVus2MprSLw7MwjpSbqagzSWpzSJn-yDq52pFyCtT6NDM7q_EnDtLvzJy-41Gh51lbCrybEu8l78kNRplxzaY_FwpQ2kQ9Tw1CVVosGeoFZUO-RVahA4"/>
+</div>
+<div class="max-w-[1400px] mx-auto px-8 relative z-10 text-center">
+<h3 class="font-headline text-4xl font-bold mb-6">Faites face à vos défis sanitaires avec un expert.</h3>
+<p class="text-on-primary-container text-lg mb-10 max-w-2xl mx-auto">Nos ingénieurs conseil interviennent sur site pour optimiser vos protocoles et réduire vos coûts opérationnels.</p>
+<button class="bg-secondary text-white px-10 py-4 rounded-md font-headline font-bold uppercase tracking-widest hover:brightness-110 transition-all">
+                    Demander un diagnostic
+                </button>
+</div>
+</section>
+<!-- Proof Section -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-[1400px] mx-auto px-8">
+<div class="editorial-grid gap-16 items-center">
+<div class="col-span-12 md:col-span-8">
+<div class="bg-surface-container-lowest p-12 shadow-sm">
+<h4 class="font-headline text-2xl font-bold text-primary mb-6">Au Cœur de l'Innovation à Borj Cédria</h4>
+<p class="text-on-surface-variant leading-relaxed mb-8">
+                                Basés au Technopole de Borj Cédria, les Laboratoires N2K bénéficient d'un écosystème de recherche de pointe. Notre engagement pour la sécurité industrielle se traduit par des investissements constants en R&amp;D, nous permettant de développer des solutions exclusives pour le marché africain et international.
+                            </p>
+<div class="flex items-center gap-6">
+<div class="text-center">
+<p class="text-3xl font-headline font-black text-secondary">ISO</p>
+<p class="text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">Certifications</p>
+</div>
+<div class="w-px h-10 bg-outline-variant"></div>
+<div class="text-center">
+<p class="text-3xl font-headline font-black text-secondary">15+</p>
+<p class="text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">Années d'Expertise</p>
+</div>
+<div class="w-px h-10 bg-outline-variant"></div>
+<div class="text-center">
+<p class="text-3xl font-headline font-black text-secondary">24/7</p>
+<p class="text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">Support Critique</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4">
+<div class="aspect-square relative">
+<img alt="Technopark Borj Cedria" class="w-full h-full object-cover" data-alt="aerial view of a modern glass science park building surrounded by landscaping under a clear sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr08_L32x2H31Gm0GFPphkgdYeVTMg27dlJIUnLQA0pL5dOFXWAZ_kOHS7NCByRX9X14zgFrM_bubxBgozH4h7v1XGRLYGMs5E2S4r2s6Ha6nhc34ClArcnQjfuYI7T1ojqtyDWAqh-efsT0eroeSNHqOKVhx5iHePWoON3lm_7h6EBJL2iXlyW5DaBmEyU_Oe7nSplaVNxkxAxy8OaMQnObipkoJf6_2FHkfGiAoqu-Orjl6N27FP_Qc13B-cj2CkIuE_JHOQwtU"/>
+<div class="absolute -bottom-6 -left-6 bg-secondary p-8 hidden lg:block">
+<span class="material-symbols-outlined text-white text-5xl">science</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-32 bg-surface text-center">
+<div class="max-w-4xl mx-auto px-8">
+<h2 class="font-headline text-5xl md:text-6xl font-black text-primary mb-8 tracking-tighter">Passez à l'hygiène de précision.</h2>
+<p class="text-xl text-on-surface-variant mb-12">Contactez nos spécialistes pour une étude personnalisée de vos flux de production.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-primary text-white px-12 py-5 rounded-full font-headline font-bold text-sm tracking-widest uppercase hover:bg-secondary transition-colors">
+                        Parler à un expert
+                    </button>
+<button class="border-2 border-primary text-primary px-12 py-5 rounded-full font-headline font-bold text-sm tracking-widest uppercase hover:bg-primary-fixed transition-colors">
+                        Nos catalogues produits
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-[#053564] dark:bg-slate-950 text-white w-full border-t border-white/10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-8 py-16 max-w-[1400px] mx-auto font-['Inter'] text-sm leading-relaxed">
+<div class="space-y-6">
+<div class="font-['Montserrat'] font-bold text-white text-lg uppercase tracking-tighter">
+                    N2K Laboratoires
+                </div>
+<p class="text-slate-300 max-w-xs">
+                    Expertise de pointe en hygiène industrielle et biochimie fonctionnelle pour les secteurs de l'agroalimentaire et de l'élevage.
+                </p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-4">
+<h6 class="font-bold text-white uppercase tracking-widest text-[10px]">Solutions</h6>
+<ul class="space-y-2">
+<li><a class="text-slate-300 hover:text-[#2BB673] transition-colors hover:underline decoration-[#2BB673] decoration-2 underline-offset-4" href="#">Technical Specifications</a></li>
+<li><a class="text-slate-300 hover:text-[#2BB673] transition-colors hover:underline decoration-[#2BB673] decoration-2 underline-offset-4" href="#">ISO Standards</a></li>
+<li><a class="text-slate-300 hover:text-[#2BB673] transition-colors hover:underline decoration-[#2BB673] decoration-2 underline-offset-4" href="#">Safety Protocols</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h6 class="font-bold text-white uppercase tracking-widest text-[10px]">Contact</h6>
+<ul class="space-y-2">
+<li><a class="text-slate-300 hover:text-[#2BB673] transition-colors hover:underline decoration-[#2BB673] decoration-2 underline-offset-4" href="#">Contact Lab</a></li>
+<li><a class="text-slate-300 hover:text-[#2BB673] transition-colors hover:underline decoration-[#2BB673] decoration-2 underline-offset-4" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="space-y-6">
+<h6 class="font-bold text-white uppercase tracking-widest text-[10px]">Siège Social</h6>
+<p class="text-slate-300">
+                    Technopole de Borj Cédria<br/>
+                    Route de Soliman, BP 95<br/>
+                    2050 Hammam-Lif, Tunisie
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-secondary transition-all" href="#">
+<span class="material-symbols-outlined text-lg">share</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-secondary transition-all" href="#">
+<span class="material-symbols-outlined text-lg">mail</span>
+</a>
+</div>
+</div>
+</div>
+<div class="max-w-[1400px] mx-auto px-8 py-8 border-t border-white/5 text-center text-slate-500 text-xs tracking-wide">
+            © 2024 Les Laboratoires N2K. Scientific Precision in Industrial Hygiene.
+        </div>
+</footer>
+</body></html>

@@ -2,9 +2,16 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { ArrowLeft, Calendar } from "lucide-react";
+import { Calendar, Clock, ArrowRight, Download, Beaker } from "lucide-react";
 import { prisma } from "@/lib/prisma";
 import SchemaOrg from "@/components/seo/SchemaOrg";
+
+function calculateReadingTime(text: string): number {
+  const wordsPerMinute = 200;
+  const noOfWords = text.split(/\s+/g).length;
+  const minutes = noOfWords / wordsPerMinute;
+  return Math.ceil(minutes);
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
@@ -40,8 +47,18 @@ export default async function BlogPostPage({ params }: { params: Promise<{ local
     notFound();
   }
 
+  // Fetch related posts
+  const relatedPosts = await prisma.blogPost.findMany({
+    where: { 
+      NOT: { id: post.id }
+    },
+    take: 2,
+    orderBy: { publishedAt: 'desc' }
+  });
+
   const title = locale === "ar" ? post.titleAr : locale === "en" ? post.titleEn : post.titleFr;
   const content = locale === "ar" ? post.contentAr : locale === "en" ? post.contentEn : post.contentFr;
+  const readingTime = calculateReadingTime(content || "");
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -57,57 +74,135 @@ export default async function BlogPostPage({ params }: { params: Promise<{ local
   };
 
   return (
-    <div className="bg-surface min-h-screen pb-32">
+    <main className="bg-n2k-surface min-h-screen">
       <SchemaOrg schema={articleSchema} />
-      {/* Article Header */}
-      <section className="bg-primary pt-32 pb-48 relative overflow-hidden">
-        <div className="max-w-4xl mx-auto px-4 md:px-8 relative z-20 text-center">
-          <Link
-            href="/blog"
-            className="inline-flex items-center gap-2 text-secondary-container hover:text-secondary-light font-heading font-bold uppercase tracking-widest text-xs mb-10 transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4 rtl:rotate-180" />
-            {t("backToBlog")}
-          </Link>
-          <div className="flex items-center justify-center gap-6 text-on-primary-container font-heading font-bold text-sm tracking-wider uppercase mb-6">
-            <span className="flex items-center gap-2">
-              <Calendar className="w-4 h-4" />
-              {post.publishedAt ? new Date(post.publishedAt).toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' }) : ""}
+
+      {/* ====== IMMERSIVE HERO ====== */}
+      <section className="relative w-full h-[600px] flex items-end overflow-hidden bg-n2k-primary">
+        <div className="absolute inset-0 z-0 opacity-40 mix-blend-overlay">
+          <Image
+            src={post.coverImage || "https://lh3.googleusercontent.com/aida-public/AB6AXuBrsjrv5zkdj5tGLBU9nqCJZve1PVKEir9StbXH9grZi6zZWsMx9uqrFopawSiwDoCzn2hvDCxYP6PspcSSpSBRQfqQUYYp8uylrrlPy-LHE_rBIKZicNuxu3VbVPbI1TNOXZu60lSNCfF6oBheunFeafq7cDYSbkit3AXdJXwGo6uBrsI1oUY4jI062uqS7kdzRbA5roW7shMURpnVImmd_1HpEOX4b5qMcpBA6Xfv5QfBjMoh21BPATL4XZbBSK6dj9XowDwxC4M"}
+            alt={title || "Blog cover"}
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-n2k-primary via-n2k-primary/40 to-transparent z-10"></div>
+        
+        <div className="relative w-full max-w-[1400px] mx-auto px-6 md:px-10 pb-24 grid grid-cols-12 z-20">
+          <div className="col-span-12 md:col-span-10 lg:col-span-8">
+            <span className="inline-block py-1 px-3 bg-n2k-secondary text-white font-heading text-[10px] uppercase tracking-widest font-bold mb-6">
+              {post.tags ? post.tags.split(',')[0] : t("featuredBadge")}
             </span>
+            <h1 className="font-heading text-4xl md:text-6xl font-black text-white tracking-tighter mb-8 leading-[1.1]">
+              {title}
+            </h1>
+            <div className="flex items-center space-x-6 rtl:space-x-reverse text-white/70 font-heading text-xs uppercase tracking-wider font-bold">
+              <span className="flex items-center gap-2">
+                <Calendar className="w-4 h-4" />
+                {post.publishedAt ? new Date(post.publishedAt).toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' }) : ""}
+              </span>
+              <span className="flex items-center gap-2">
+                <Clock className="w-4 h-4" />
+                {t("readingTime", { minutes: readingTime })}
+              </span>
+            </div>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black font-heading tracking-tight text-white leading-tight">
-            {title}
-          </h1>
-        </div>
-        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-surface to-transparent z-10"></div>
-      </section>
-
-      {/* Featured Image */}
-      {post.coverImage && (
-        <section className="max-w-5xl mx-auto px-4 md:px-8 -mt-32 relative z-30 mb-20 animate-fade-in-up">
-          <div className="rounded-3xl overflow-hidden shadow-ambient-lg border-8 border-surface-lowest ghost-border">
-            <Image
-              src={post.coverImage || "https://lh3.googleusercontent.com/aida-public/AB6AXuDKsx2Rlc4yFz407q19RlBlyWgJugENsJ1pwTWzcckhnuckDWRnFkxzLn4NPQ2b8IRCtnmSmSy2IZkKLXPjW9LLqOpPENRw1ldLOazcAwYTYjMwgc-lXdHbUoD2ADfDCV40rdSI68-FbrNyJAtqgn7T5T5r8-0RJNgCvZq2qoBjJJwdIC79eT0ukjaoGFSJ4hBdRZrQbOGlA0Ftht_TqiQzopgVoTF17EYhhftloNtRura3f4GsaMHc5CYlaqGy5U31aKXnJtgLWLA"}
-              alt={title || "Blog cover"}
-              width={1200}
-              height={600}
-              className="w-full h-[400px] md:h-[600px] object-cover"
-              priority
-              sizes="(max-width: 1024px) 100vw, 80vw"
-            />
-          </div>
-        </section>
-      )}
-
-      {/* Article Content */}
-      <section className="max-w-3xl mx-auto px-4 md:px-8 relative z-20">
-        <div className="bg-surface-lowest p-8 md:p-14 rounded-3xl shadow-sm ghost-border prose prose-lg prose-slate max-w-none font-body prose-headings:font-heading prose-headings:font-black prose-headings:text-primary prose-a:text-secondary hover:prose-a:text-secondary-light">
-          {/* Extremely simple markdown/newline rendering for MVP */}
-          {content?.split('\n').map((paragraph: any, index: any) => (
-             <p key={index}>{paragraph}</p>
-          ))}
         </div>
       </section>
-    </div>
+
+      {/* ====== ARTICLE CONTENT ====== */}
+      <article className="max-w-[1400px] mx-auto px-6 md:px-10 mt-24 grid grid-cols-12 gap-12">
+        {/* Main Column */}
+        <div className="col-span-12 lg:col-span-8 space-y-16">
+          <div 
+          className="blog-content max-w-none"
+          dangerouslySetInnerHTML={{ __html: content || "" }}
+        />
+
+          {/* Mid-page CTA */}
+          <section className="bg-n2k-secondary p-10 md:p-12 rounded-xl text-white relative overflow-hidden group shadow-ambient">
+            <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:scale-110 transition-transform duration-500 rtl:left-0 rtl:right-auto">
+              <Beaker size={140} />
+            </div>
+            <div className="relative z-10 max-w-xl">
+              <h3 className="font-heading text-3xl font-black mb-4 leading-tight">
+                {t("midCtaTitle")}
+              </h3>
+              <p className="text-white/80 text-lg mb-8">
+                {t("midCtaSubtitle")}
+              </p>
+              <Link
+                href="/contact"
+                className="inline-block bg-n2k-surface-lowest text-n2k-secondary font-bold px-8 py-4 rounded-lg uppercase tracking-widest text-sm hover:shadow-xl transition-all active:scale-95"
+              >
+                {t("midCtaButton")}
+              </Link>
+            </div>
+          </section>
+        </div>
+
+        {/* Sidebar */}
+        <aside className="col-span-12 lg:col-span-4 space-y-12">
+          <div className="lg:sticky lg:top-32">
+            <h3 className="font-heading text-xs font-black uppercase tracking-[0.2em] text-n2k-on-surface-variant mb-8">
+              {t("sidebarTitle")}
+            </h3>
+            
+            <div className="space-y-8">
+              {relatedPosts.map((related: any) => {
+                const rTitle = locale === 'ar' ? related.titleAr : locale === 'en' ? related.titleEn : related.titleFr;
+                return (
+                  <Link 
+                    key={related.id} 
+                    href={`/blog/${related.slug}`}
+                    className="group block cursor-pointer"
+                  >
+                    <div className="aspect-video mb-4 overflow-hidden rounded-lg bg-n2k-surface-low relative">
+                      <Image
+                        src={related.coverImage || "https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=800"}
+                        alt={rTitle || "Related post"}
+                        fill
+                        className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                    <span className="text-[10px] font-heading uppercase tracking-widest text-n2k-secondary font-bold">
+                      {related.tags?.split(',')[0] || t("featuredBadge")}
+                    </span>
+                    <h4 className="font-heading font-bold text-lg leading-tight mt-2 group-hover:text-n2k-secondary transition-colors">
+                      {rTitle}
+                    </h4>
+                  </Link>
+                );
+              })}
+            </div>
+
+            {/* Whitepaper CTA */}
+            <div className="mt-16 pt-12 border-t border-n2k-outline-variant/30">
+              <div className="bg-n2k-surface-high p-8 rounded-lg shadow-sm border border-n2k-outline-variant/20">
+                <Download className="text-n2k-primary mb-4" />
+                <h5 className="font-heading font-bold text-sm uppercase tracking-tight mb-2 text-n2k-primary">
+                  {t("downloadWhitepaper")}
+                </h5>
+                <p className="text-xs text-n2k-on-surface-variant mb-6">
+                  Protocole de décontamination N2K-v4.2. (PDF, 4.2 MB)
+                </p>
+                <a 
+                  href="#" 
+                  className="inline-flex items-center gap-2 text-xs font-bold text-n2k-secondary uppercase tracking-widest group"
+                >
+                  {t("downloadProtocol")}
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform rtl:rotate-180" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </article>
+
+      {/* Final CTA Spacer */}
+      <div className="pb-24"></div>
+    </main>
   );
 }

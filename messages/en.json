@@ -8,6 +8,7 @@
     "contact": "Contact & Diagnostic",
     "diagnostic": "Free Diagnostic",
     "contactPageLink": "Contact Us",
+    "blog": "Blog",
     "lang": "Language"
   },
   "hero": {
@@ -102,8 +103,8 @@
         },
         "step2": {
           "name": "BIOACTIVE N2K",
-          "action": "Stabilization",
-          "desc": "Microbiological stabilization of the environment by positive competition."
+          "action": "Enzymatic Cleaning",
+          "desc": "Enzymatic degradation of organic matter (grease, proteins, biofilms) for deep cleaning."
         }
       }
     }
@@ -339,7 +340,39 @@
     "pageSubtitle": "Discover our latest interventions, case studies and biosecurity advice.",
     "noArticles": "No articles at the moment.",
     "readMore": "Read more",
-    "backToBlog": "Back to news"
+    "backToBlog": "Back to news",
+    "heroBadge": "Agri-Food Sector",
+    "heroTitle": "Industrial Hygiene: Technical Excellence at the Service of Quality",
+    "heroSubtitle": "Master microbial pressure in your production units with our functional biochemistry solutions.",
+    "heroCta": "Request a hygiene audit",
+    "featuredBadge": "Technical Focus",
+    "featuredTitle": "Featured Articles",
+    "readStudy": "Read the technical study",
+    "libraryTitle": "Technical Library",
+    "librarySubtitle": "Explore our latest publications on the science of industrial hygiene.",
+    "filterAll": "All articles",
+    "filterTraceability": "Traceability",
+    "filterAirPurification": "Air Purification",
+    "filterSustainableDisinfection": "Sustainable Disinfection",
+    "tagProblematique": "Problem",
+    "tagErreurCritique": "Critical Error",
+    "tagSolutionN2K": "N2K Solution",
+    "readArticle": "Read more",
+    "ctaTitle": "Face your sanitary challenges with an expert.",
+    "ctaSubtitle": "Our consulting engineers intervene on-site to optimize your protocols and reduce your operational costs.",
+    "ctaButton": "Request a diagnostic",
+    "finalCtaTitle": "Switch to precision hygiene.",
+    "finalCtaSubtitle": "Contact our specialists for a personalized study of your production flows.",
+    "finalCta1": "Speak with an expert",
+    "finalCta2": "Product catalogs",
+    "readingTime": "{minutes} min read",
+    "sidebarTitle": "Technical Deep-Dive",
+    "relatedTitle": "Related Articles",
+    "downloadWhitepaper": "Technical Whitepaper",
+    "downloadProtocol": "Download Protocol",
+    "midCtaTitle": "Recurring contamination issues?",
+    "midCtaSubtitle": "Request a full audit of your facilities by our biosecurity experts.",
+    "midCtaButton": "Request Field Audit"
   },
   "merci": {
     "title": "Request Sent!",
@@ -371,7 +404,9 @@
     "produitsTitle": "Our Products — Les Laboratoires N2K",
     "produitsDescription": "Complete range of professional biosecurity solutions for poultry and agri-food industries.",
     "aboutTitle": "About Us — Les Laboratoires N2K",
-    "aboutDescription": "Expertise in industrial disinfection at the Borj Cédria Technopark. Discover our unique scientific approach."
+    "aboutDescription": "Expertise in industrial disinfection at the Borj Cédria Technopark. Discover our unique scientific approach.",
+    "blogTitle": "Blog — Les Laboratoires N2K",
+    "blogDescription": "Discover our latest technical publications, case studies and advice on industrial hygiene and biosecurity."
   },
   "references": {
     "badge": "Les Laboratoires N2K — Our References",
@@ -494,8 +529,8 @@
       },
       "product2": {
         "name": "BIOACTIVE N2K",
-        "type": "Natural Stabilization",
-        "desc": "Innovative formula using positive competition to strengthen the microbiological balance of buildings."
+        "type": "Enzymatic Cleaner",
+        "desc": "Concentrated enzymatic cleaner based on proteases, lipases and amylases. Degrades organic matter to prepare surfaces for disinfection."
       },
       "scienceNote": "Atmosphere control reduces respiratory pathologies by 15% in intensive farming.",
       "scienceNoteLabel": "Scientific Analysis"

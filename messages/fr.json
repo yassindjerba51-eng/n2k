@@ -8,6 +8,7 @@
     "contact": "Contact & Diagnostic",
     "diagnostic": "Diagnostic Gratuit",
     "contactPageLink": "Nous contacter",
+    "blog": "Blog",
     "lang": "Langue"
   },
   "hero": {
@@ -102,8 +103,8 @@
         },
         "step2": {
           "name": "BIOACTIVE N2K",
-          "action": "Stabilisation",
-          "desc": "Stabilisation microbiologique de l'environnement par compétition positive."
+          "action": "Nettoyage Enzymatique",
+          "desc": "Dégradation enzymatique des matières organiques (graisses, protéines, biofilms) pour un nettoyage en profondeur."
         }
       }
     }
@@ -339,7 +340,39 @@
     "pageSubtitle": "Découvrez nos dernières interventions, études de cas et conseils en biosécurité.",
     "noArticles": "Aucun article pour le moment.",
     "readMore": "Lire l'article",
-    "backToBlog": "Retour aux articles"
+    "backToBlog": "Retour aux articles",
+    "heroBadge": "Secteur Agroalimentaire",
+    "heroTitle": "Hygiène Industrielle : L'Excellence Technique au Service de la Qualité",
+    "heroSubtitle": "Maîtrisez la pression microbienne dans vos unités de production avec nos solutions de biochimie fonctionnelle.",
+    "heroCta": "Demander un audit d'hygiène",
+    "featuredBadge": "Focus Technique",
+    "featuredTitle": "Articles Vedettes",
+    "readStudy": "Lire l'étude technique",
+    "libraryTitle": "Bibliothèque Technique",
+    "librarySubtitle": "Explorez nos dernières publications sur la science de l'hygiène industrielle.",
+    "filterAll": "Tous les articles",
+    "filterTraceability": "Traçabilité",
+    "filterAirPurification": "Purification de l'Air",
+    "filterSustainableDisinfection": "Désinfection Durable",
+    "tagProblematique": "Problématique",
+    "tagErreurCritique": "Erreur Critique",
+    "tagSolutionN2K": "Solution N2K",
+    "readArticle": "Lire la suite",
+    "ctaTitle": "Faites face à vos défis sanitaires avec un expert.",
+    "ctaSubtitle": "Nos ingénieurs conseil interviennent sur site pour optimiser vos protocoles et réduire vos coûts opérationnels.",
+    "ctaButton": "Demander un diagnostic",
+    "finalCtaTitle": "Passez à l'hygiène de précision.",
+    "finalCtaSubtitle": "Contactez nos spécialistes pour une étude personnalisée de vos flux de production.",
+    "finalCta1": "Parler à un expert",
+    "finalCta2": "Nos catalogues produits",
+    "readingTime": "{minutes} min de lecture",
+    "sidebarTitle": "Approfondissement Technique",
+    "relatedTitle": "Articles Similaires",
+    "downloadWhitepaper": "Livre Blanc Technique",
+    "downloadProtocol": "Télécharger le protocole",
+    "midCtaTitle": "Problèmes de contamination récurrents ?",
+    "midCtaSubtitle": "Demandez un audit complet de vos installations par nos experts en biosécurité.",
+    "midCtaButton": "Demander un Audit Terrain"
   },
   "merci": {
     "title": "Demande Envoyée !",
@@ -371,7 +404,9 @@
     "produitsTitle": "Nos Produits — Les Laboratoires N2K",
     "produitsDescription": "Gamme complète de solutions professionnelles pour la biosécurité avicole et agroalimentaire.",
     "aboutTitle": "À Propos — Les Laboratoires N2K",
-    "aboutDescription": "Expertise en désinfection industrielle au Technopôle de Borj Cédria. Découvrez notre approche scientifique unique."
+    "aboutDescription": "Expertise en désinfection industrielle au Technopôle de Borj Cédria. Découvrez notre approche scientifique unique.",
+    "blogTitle": "Blog — Les Laboratoires N2K",
+    "blogDescription": "Découvrez nos dernières publications techniques, études de cas et conseils en hygiène industrielle et biosécurité."
   },
   "references": {
     "badge": "Les Laboratoires N2K — Nos Références",
@@ -494,8 +529,8 @@
       },
       "product2": {
         "name": "BIOACTIVE N2K",
-        "type": "Stabilisation Naturelle",
-        "desc": "Formule innovante exploitant la compétition positive pour renforcer l'équilibre microbiologique des bâtiments."
+        "type": "Nettoyant Enzymatique",
+        "desc": "Nettoyant enzymatique concentré à base de protéases, lipases et amylases. Dégrade les matières organiques pour préparer les surfaces à la désinfection."
       },
       "scienceNote": "Le contrôle de l'ambiance réduit de 15% les pathologies respiratoires observées en élevage intensif.",
       "scienceNoteLabel": "Analyse Scientifique"

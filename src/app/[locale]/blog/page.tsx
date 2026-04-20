@@ -2,7 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { prisma } from "@/lib/prisma";
-import { Calendar, User } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -11,6 +11,27 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: `${t("blogTitle")} | ${t("homeTitle")}`,
     description: t("blogDescription"),
   };
+}
+
+// Default hero image for the blog
+const HERO_IMAGE = "https://lh3.googleusercontent.com/aida-public/AB6AXuAlGvM2exrRK_S42xzb6FkCgawFnP4bcFEclN-5jYvSvqSiPm2ZVgd6fH9U62GUYcaBYu_qeuRo-AvOimOhRygZ0fcqiZgmCC0W0viuKlBiHjkr32pFYwUfYEq8HLCg52IbGNYYxOXRaGDOWoXf3SIKhR899PfYk4v50zYR1nhKOrBsADlyQLydCktslVpfQCN4Opxce6JENLXH2mXi6Bhs2_Hx8QzjbbBlKOKCXgG6O_zfsB2TjpgOlKAivolzye4AHMhl--rgznc";
+
+// Fallback placeholder images for cards
+const CARD_IMAGES = [
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuBrlQjxRe_hKKzmkmtz-eKiJLXSeWDECeSsts5F3UmyCvBDWcfegIaUoWAXhxadSXQDSCBsvIOpAHojmE-ABZ8RUdWWpviZ9MtJn3pSBnRa_zAatC_vBONwYlF13viGXPo8GEY7uqszXh4D0v98KZIL587pNR97UnIJ0ZS0D7c1YjUy-kDO3RBURhNxItcCwxy0DqVpph4UCwRNql8yl_IKUhmggy0uFrrzS3Ukfwv5qvUV80U1an26dNtk4k3vp3fcN95J-2cHJhI",
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuD4Jfd7YKytJawNTtzRrXiRwlueDQpCw2bDdsz--qAmANjLfN0296Hnu6ZKJ9Y8m92VT5OEKVJ0ilUJ__p-AFzHkVIFzWXCqk-HFb-tjYxmi4sF2tGxU1osGyFBVfsglEPwKAnUbaSM5OJRsHVTWaa7ugmSxKRzas9kTOjAUO9fKK_R4ABml6_Z6oTpZT476ARBG-rj0GipgD6Dpol-qJbCgYm7rKi9Q5g6jWKYw7eFrh7f8pxJkIezty2WaC7I9bXoDieKh8D3dE8",
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuBXrBUDLgQRgGCeDjpUpVerHwNQfJ6uBlvot-v2955-Z3G68s8KTIbjtLlMdrwTVTmMiTa1mO3PWvr4rGG-R4sUwjQ-PkzYxxTAR-PnFwAx1Xeud_EWy1U2rupW3gRIO4W7Nfqoua-1xX-blxvdVfNFgVH1H0oW2MYP0oklw-L9Ll-scC1ojJvm5KG-Hfw_A5LVpzVnRHhmvNDTUCcOltzGDojvOLQRGOyxsNL-XSDFwgFoK1hl9Qv8mMH2QQ5ytbR_SGpceeYyJIg",
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuDheGg4j-h1i9huGJBna3oqUo8LBHhCVsahVHoKTrcgMhsKJmSsrtxGSnrBuPIbmUOFtbYACITFNqoCvh-2Rtu5FGF569PDIsiSu-stlf3BJIGea6qaJCSZkT8TFzR0lCS-DtPoCR-acNmq2YNnIRmASPizxf3V02N5cUhO4_tw0vQEV4JoTCkGAWxCd8mzihz1y3hvSypFnVlGlraejUS2CFPjJSCNqlwFMnUkdF75Ci3hpFIIODaL8j_jN-u358iexL02ApI1Atw",
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuAKk2R7m6GbX-_ttwc-ZP_jJKSH_y_-7cQB-frosMilsF7nr8xOzOatn1ndIMguJA4G8bLDikXPm90y05il48Cpr-e2lzGhUZCj1YT7KWHO68Hi-FIh-YJyuv7oyBEoQE-HFSC1eAfkkDBQrSm42HYT7O120k01RRemwZw1EjaTZyYGCUXADjFsFBBC-DRxPoAhDpOl4jzRY-Sy9XcKsrgGXX-aIjKLTknfMOymAIEhx2cfCDiQaz5mcKoWX-Y6hfC--thRYgWkRns",
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuBmVBel6i7JsuoBJDyavj6BjW5hQU2rU5aQ8dhGhIgBvICgfrfwyYg7240bEvChQun5CKc_w1-O6QRGChBjJo1GfIwI5E82DiASv_6-49Wk7GsAsobCYZX8z0CfnjIHRrQaNV5vBuGfio8JlLBvMTgXRpr3hJ6B9SzbjA4_XQwajtpZORl8CpeK1k5OQBwxBm_YOE6zSVEnoevnKlmpnsUCXo1jeg7iW9KCJX-H8JM7ZqiCeQecCj4iTau_G888Y9y41a8BKSv8QQ0",
+];
+
+const CTA_BG_IMAGE = "https://lh3.googleusercontent.com/aida-public/AB6AXuCR1ioPHxQDDJDnCxaIK7JBldTGy85Pv6zmOWXaJzsOVNJ6TcZ7Tl8nq9VvnOrOWitafpWrh_WzIDGFi6KDsWO0HsV1nVzJIWyfA6xbYxAl1JXAUc9BnSQDe1-xqqTYo94vpSW6B_7fm-QEp7xyR1vnAnEZVus2MprSLw7MwjpSbqagzSWpzSJn-yDq52pFyCtT6NDM7q_EnDtLvzJy-41Gh51lbCrybEu8l78kNRplxzaY_FwpQ2kQ9Tw1CVVosGeoFZUO-RVahA4";
+
+function getPostField(post: any, field: string, locale: string): string {
+  if (locale === "ar") return post[`${field}Ar`] || post[`${field}Fr`] || "";
+  if (locale === "en") return post[`${field}En`] || post[`${field}Fr`] || "";
+  return post[`${field}Fr`] || "";
 }
 
 export default async function BlogIndexPage({ params }: { params: Promise<{ locale: string }> }) {
@@ -22,73 +43,321 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ loca
     orderBy: { publishedAt: "desc" },
   });
 
+  // Split: first 3 are featured, rest are in the list
+  const featuredPosts = posts.slice(0, 3);
+  const remainingPosts = posts.slice(3);
+
   return (
-    <div className="bg-surface min-h-[calc(100vh-80px)] pb-32">
-      {/* Header */}
-      <section className="bg-surface-low text-primary py-24 relative overflow-hidden border-b border-border/50">
-        <div className="max-w-screen-2xl mx-auto px-4 md:px-8 relative z-10 text-center">
-          <h1 className="text-5xl md:text-6xl font-black font-heading tracking-tight mb-8">
-             {t("pageTitle")}
-          </h1>
-          <p className="text-xl text-on-surface-variant leading-relaxed font-body max-w-3xl mx-auto">
-            {t("pageSubtitle")}
-          </p>
+    <div className="bg-n2k-surface min-h-screen">
+      {/* ===== Hero Section ===== */}
+      <section className="relative h-[600px] md:h-[870px] flex items-center overflow-hidden">
+        {/* Background image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src={HERO_IMAGE}
+            alt={t("heroTitle")}
+            fill
+            className="object-cover grayscale opacity-40"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-n2k-primary via-n2k-primary/90 to-transparent" />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-8 w-full">
+          <div className="max-w-3xl">
+            <span className="inline-block px-3 py-1 bg-n2k-secondary text-n2k-on-secondary text-[10px] font-bold tracking-[0.2em] uppercase mb-6 font-heading">
+              {t("heroBadge")}
+            </span>
+            <h1 className="font-heading text-4xl sm:text-5xl md:text-7xl font-extrabold text-white leading-tight tracking-tighter mb-8">
+              {t("heroTitle")}
+            </h1>
+            <p className="text-lg md:text-xl text-n2k-on-primary-container leading-relaxed mb-10 max-w-2xl">
+              {t("heroSubtitle")}
+            </p>
+            <Link
+              href="/diagnostic"
+              className="inline-flex items-center gap-3 bg-gradient-to-br from-n2k-primary to-n2k-primary-container text-white px-8 py-4 rounded-md font-heading font-bold text-sm tracking-wide shadow-xl hover:shadow-2xl transition-all hover:scale-[1.02] active:scale-[0.98]"
+            >
+              {t("heroCta")}
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Blog Grid */}
-      <section className="max-w-screen-2xl mx-auto px-4 md:px-8 py-20 relative z-20">
-        {posts.length === 0 ? (
-          <div className="text-center text-on-surface-variant font-body py-20 bg-surface-lowest rounded-3xl ghost-border">
-            {t("noArticles")}
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {posts.map((post: any) => {
-              // Dynamic locale selection logic
-              const title = locale === "ar" ? post.titleAr : locale === "en" ? post.titleEn : post.titleFr;
-              const excerpt = locale === "ar" ? post.contentAr.substring(0, 150) : locale === "en" ? post.contentEn.substring(0, 150) : post.contentFr.substring(0, 150);
+      {/* ===== Featured Articles ===== */}
+      {featuredPosts.length > 0 && (
+        <section className="bg-n2k-surface-low py-16 md:py-24">
+          <div className="max-w-[1400px] mx-auto px-6 md:px-8">
+            {/* Section header */}
+            <div className="mb-12 md:mb-16">
+              <p className="label-md font-bold text-n2k-secondary-light tracking-widest uppercase mb-2">
+                {t("featuredBadge")}
+              </p>
+              <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-n2k-primary">
+                {t("featuredTitle")}
+              </h2>
+            </div>
 
-              return (
-                <Link
-                  key={post.id}
-                  href={`/blog/${post.slug}`}
-                  className="bg-surface-lowest rounded-3xl overflow-hidden shadow-ambient hover:-translate-y-2 transition-transform duration-300 ghost-border flex flex-col group"
-                >
-                  <div className="relative h-64 overflow-hidden">
-                    <Image
-                      src={post.imageUrl || "https://lh3.googleusercontent.com/aida-public/AB6AXuDKsx2Rlc4yFz407q19RlBlyWgJugENsJ1pwTWzcckhnuckDWRnFkxzLn4NPQ2b8IRCtnmSmSy2IZkKLXPjW9LLqOpPENRw1ldLOazcAwYTYjMwgc-lXdHbUoD2ADfDCV40rdSI68-FbrNyJAtqgn7T5T5r8-0RJNgCvZq2qoBjJJwdIC79eT0ukjaoGFSJ4hBdRZrQbOGlA0Ftht_TqiQzopgVoTF17EYhhftloNtRura3f4GsaMHc5CYlaqGy5U31aKXnJtgLWLA"}
-                      alt={title || "Blog post cover"}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="p-8 flex flex-col flex-1">
-                    <div className="flex items-center gap-4 text-xs font-bold font-heading text-secondary uppercase tracking-widest mb-4">
+            {/* Featured cards grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {featuredPosts.map((post: any, index: number) => {
+                const title = getPostField(post, "title", locale);
+                const content = getPostField(post, "content", locale);
+                const excerpt = content.replace(/<[^>]*>/g, "").substring(0, 150);
+                const tagColors = [
+                  "bg-n2k-red",
+                  "bg-n2k-orange",
+                  "bg-n2k-secondary",
+                ];
+                const tagLabels = [
+                  t("tagProblematique"),
+                  t("tagErreurCritique"),
+                  t("tagSolutionN2K"),
+                ];
+
+                return (
+                  <Link
+                    key={post.id}
+                    href={`/blog/${post.slug}`}
+                    className="bg-n2k-surface-lowest group overflow-hidden transition-all duration-500 hover:-translate-y-2 flex flex-col h-full shadow-ambient"
+                  >
+                    <div className="h-64 overflow-hidden relative">
+                      <Image
+                        src={post.coverImage || CARD_IMAGES[index % CARD_IMAGES.length]}
+                        alt={title || "Blog post"}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                      <div className={`absolute top-4 left-4 ${tagColors[index % 3]} text-white text-[10px] font-bold px-3 py-1 uppercase tracking-wider font-heading`}>
+                        {tagLabels[index % 3]}
+                      </div>
+                    </div>
+                    <div className="p-6 md:p-8 flex-grow flex flex-col">
+                      <h3 className="font-heading text-xl font-bold text-n2k-primary mb-4 leading-snug group-hover:text-n2k-secondary transition-colors">
+                        {title}
+                      </h3>
+                      <p className="text-n2k-on-surface-variant text-sm leading-relaxed mb-8 line-clamp-3">
+                        {excerpt}
+                      </p>
+                      <span className="mt-auto text-n2k-secondary-light font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all">
+                        {t("readStudy")}
+                        <ArrowRight className="w-4 h-4" />
+                      </span>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ===== Article List (Remaining posts) ===== */}
+      {remainingPosts.length > 0 && (
+        <section className="py-16 md:py-24 bg-n2k-surface">
+          <div className="max-w-[1400px] mx-auto px-6 md:px-8">
+            {/* Section header */}
+            <div className="mb-12">
+              <h3 className="font-heading text-2xl md:text-3xl font-bold text-n2k-primary mb-4">
+                {t("libraryTitle")}
+              </h3>
+              <p className="text-n2k-on-surface-variant mb-8">
+                {t("librarySubtitle")}
+              </p>
+              <div className="flex flex-wrap gap-2 border-b border-n2k-outline-variant/30 pb-4">
+                <button className="px-6 py-3 bg-n2k-surface-low border-b-2 border-n2k-secondary-light text-n2k-primary font-bold text-sm">
+                  {t("filterAll")}
+                </button>
+                <button className="px-6 py-3 hover:bg-n2k-surface-low transition-colors text-n2k-on-surface-variant text-sm">
+                  {t("filterTraceability")}
+                </button>
+                <button className="px-6 py-3 hover:bg-n2k-surface-low transition-colors text-n2k-on-surface-variant text-sm">
+                  {t("filterAirPurification")}
+                </button>
+                <button className="px-6 py-3 hover:bg-n2k-surface-low transition-colors text-n2k-on-surface-variant text-sm">
+                  {t("filterSustainableDisinfection")}
+                </button>
+              </div>
+            </div>
+
+            {/* Article list rows */}
+            <div className="space-y-12">
+              {remainingPosts.map((post: any, index: number) => {
+                const title = getPostField(post, "title", locale);
+                const content = getPostField(post, "content", locale);
+                const excerpt = content.replace(/<[^>]*>/g, "").substring(0, 200);
+
+                return (
+                  <Link
+                    key={post.id}
+                    href={`/blog/${post.slug}`}
+                    className="flex flex-col md:flex-row gap-6 md:gap-8 items-center border-b border-n2k-outline-variant/30 pb-12 group"
+                  >
+                    {/* Thumbnail */}
+                    <div className="w-full md:w-1/3 aspect-video bg-n2k-surface-high overflow-hidden relative">
+                      <Image
+                        src={post.coverImage || CARD_IMAGES[(index + 3) % CARD_IMAGES.length]}
+                        alt={title || "Article"}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+
+                    {/* Content */}
+                    <div className="flex-1">
                       {post.publishedAt && (
-                        <span className="flex items-center gap-1.5">
-                          <Calendar className="w-4 h-4" />
-                          {new Date(post.publishedAt).toLocaleDateString(locale)}
+                        <span className="text-[10px] font-bold text-n2k-on-surface-variant tracking-widest uppercase">
+                          {new Date(post.publishedAt).toLocaleDateString(locale, { month: "long", year: "numeric" })}
                         </span>
                       )}
+                      <h4 className="font-heading text-xl md:text-2xl font-bold text-n2k-primary mt-2 mb-4 group-hover:text-n2k-secondary transition-colors">
+                        {title}
+                      </h4>
+                      <p className="text-n2k-on-surface-variant mb-6 line-clamp-2">
+                        {excerpt}
+                      </p>
+                      <span className="text-n2k-secondary-light font-bold text-xs uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all">
+                        {t("readArticle")}
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </span>
                     </div>
-                    <h2 className="text-2xl font-black font-heading text-primary leading-tight mb-4 group-hover:text-secondary transition-colors">
-                      {title}
-                    </h2>
-                    <p className="text-on-surface-variant font-body mb-8 line-clamp-3">
-                      {excerpt}...
-                    </p>
-                    <div className="mt-auto border-t border-border pt-6 flex items-center justify-between font-heading font-bold text-sm">
-                       <span className="text-primary group-hover:text-secondary transition-colors flex items-center gap-2">
-                        {t("readMore")}
-                       </span>
-                    </div>
-                  </div>
-                </Link>
-              );
-            })}
+                  </Link>
+                );
+              })}
+            </div>
           </div>
-        )}
+        </section>
+      )}
+
+      {/* ===== Empty State ===== */}
+      {posts.length === 0 && (
+        <section className="py-20 bg-n2k-surface">
+          <div className="max-w-[1400px] mx-auto px-6 md:px-8">
+            <div className="text-center text-n2k-on-surface-variant py-20 bg-n2k-surface-lowest rounded-md ghost-border">
+              {t("noArticles")}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ===== Mid-page CTA ===== */}
+      <section className="py-16 md:py-20 bg-n2k-primary-container text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <Image
+            src={CTA_BG_IMAGE}
+            alt=""
+            fill
+            className="object-cover"
+          />
+        </div>
+        <div className="max-w-[1400px] mx-auto px-6 md:px-8 relative z-10 text-center">
+          <h3 className="font-heading text-3xl md:text-4xl font-bold mb-6">
+            {t("ctaTitle")}
+          </h3>
+          <p className="text-n2k-on-primary-container text-base md:text-lg mb-10 max-w-2xl mx-auto">
+            {t("ctaSubtitle")}
+          </p>
+          <Link
+            href="/diagnostic"
+            className="inline-block bg-n2k-secondary text-white px-10 py-4 rounded-md font-heading font-bold uppercase tracking-widest hover:brightness-110 transition-all text-sm"
+          >
+            {t("ctaButton")}
+          </Link>
+        </div>
+      </section>
+
+      {/* ===== Proof Section ===== */}
+      <section className="py-16 md:py-24 bg-n2k-surface-low">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+            {/* Text block */}
+            <div className="lg:col-span-8">
+              <div className="bg-n2k-surface-lowest p-8 md:p-12 shadow-ambient">
+                <h4 className="font-heading text-xl md:text-2xl font-bold text-n2k-primary mb-6">
+                  {locale === "ar"
+                    ? "في قلب الابتكار في برج السدرية"
+                    : locale === "en"
+                    ? "At the Heart of Innovation at Borj Cédria"
+                    : "Au Cœur de l'Innovation à Borj Cédria"}
+                </h4>
+                <p className="text-n2k-on-surface-variant leading-relaxed mb-8">
+                  {locale === "ar"
+                    ? "مختبرات N2K تستفيد من منظومة بحثية متقدمة في القطب التكنولوجي ببرج السدرية. التزامنا بالسلامة الصناعية يتجسد في استثمارات مستمرة في البحث والتطوير."
+                    : locale === "en"
+                    ? "Based at the Borj Cédria Technopark, Les Laboratoires N2K benefit from a cutting-edge research ecosystem. Our commitment to industrial safety translates into constant R&D investments."
+                    : "Basés au Technopole de Borj Cédria, les Laboratoires N2K bénéficient d'un écosystème de recherche de pointe. Notre engagement pour la sécurité industrielle se traduit par des investissements constants en R&D."}
+                </p>
+
+                {/* Stats row */}
+                <div className="flex items-center gap-6 flex-wrap">
+                  <div className="text-center">
+                    <p className="text-2xl md:text-3xl font-heading font-black text-n2k-secondary-light">ISO</p>
+                    <p className="text-[10px] font-bold uppercase tracking-wider text-n2k-on-surface-variant">
+                      {locale === "ar" ? "شهادات" : "Certifications"}
+                    </p>
+                  </div>
+                  <div className="w-px h-10 bg-n2k-outline-variant" />
+                  <div className="text-center">
+                    <p className="text-2xl md:text-3xl font-heading font-black text-n2k-secondary-light">15+</p>
+                    <p className="text-[10px] font-bold uppercase tracking-wider text-n2k-on-surface-variant">
+                      {locale === "ar" ? "سنوات الخبرة" : locale === "en" ? "Years of Expertise" : "Années d'Expertise"}
+                    </p>
+                  </div>
+                  <div className="w-px h-10 bg-n2k-outline-variant" />
+                  <div className="text-center">
+                    <p className="text-2xl md:text-3xl font-heading font-black text-n2k-secondary-light">24/7</p>
+                    <p className="text-[10px] font-bold uppercase tracking-wider text-n2k-on-surface-variant">
+                      {locale === "ar" ? "دعم طارئ" : locale === "en" ? "Critical Support" : "Support Critique"}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Image */}
+            <div className="lg:col-span-4">
+              <div className="aspect-square relative">
+                <Image
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr08_L32x2H31Gm0GFPphkgdYeVTMg27dlJIUnLQA0pL5dOFXWAZ_kOHS7NCByRX9X14zgFrM_bubxBgozH4h7v1XGRLYGMs5E2S4r2s6Ha6nhc34ClArcnQjfuYI7T1ojqtyDWAqh-efsT0eroeSNHqOKVhx5iHePWoON3lm_7h6EBJL2iXlyW5DaBmEyU_Oe7nSplaVNxkxAxy8OaMQnObipkoJf6_2FHkfGiAoqu-Orjl6N27FP_Qc13B-cj2CkIuE_JHOQwtU"
+                  alt="Technopark Borj Cédria"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute -bottom-4 -left-4 bg-n2k-secondary p-6 hidden lg:flex items-center justify-center">
+                  <span className="material-symbols-outlined text-white text-4xl">science</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== Final CTA ===== */}
+      <section className="py-20 md:py-32 bg-n2k-surface text-center">
+        <div className="max-w-4xl mx-auto px-6 md:px-8">
+          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl font-black text-n2k-primary mb-8 tracking-tighter">
+            {t("finalCtaTitle")}
+          </h2>
+          <p className="text-lg md:text-xl text-n2k-on-surface-variant mb-12">
+            {t("finalCtaSubtitle")}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/diagnostic"
+              className="bg-n2k-primary text-white px-10 md:px-12 py-4 md:py-5 rounded-full font-heading font-bold text-sm tracking-widest uppercase hover:bg-n2k-secondary transition-colors"
+            >
+              {t("finalCta1")}
+            </Link>
+            <Link
+              href="/produits"
+              className="border-2 border-n2k-primary text-n2k-primary px-10 md:px-12 py-4 md:py-5 rounded-full font-heading font-bold text-sm tracking-widest uppercase hover:bg-n2k-surface-low transition-colors"
+            >
+              {t("finalCta2")}
+            </Link>
+          </div>
+        </div>
       </section>
     </div>
   );

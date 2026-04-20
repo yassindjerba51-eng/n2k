@@ -288,3 +288,41 @@ section + section {
 .stagger-children > *:nth-child(2) { animation-delay: 0.2s; }
 .stagger-children > *:nth-child(3) { animation-delay: 0.3s; }
 .stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
+
+/* ===== Blog Article Typography ===== */
+.blog-content h2 {
+  @apply font-heading text-2xl font-bold text-n2k-primary mb-8 mt-16 flex items-center gap-4;
+}
+
+.blog-content h2::before {
+  content: '';
+  @apply w-12 h-px bg-n2k-secondary block;
+}
+
+.blog-content p {
+  @apply text-n2k-on-surface-variant leading-relaxed text-lg mb-6;
+}
+
+.blog-content ul {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 list-none p-0;
+}
+
+.blog-content li {
+  @apply flex items-start gap-3 bg-n2k-surface-low p-4 rounded shadow-sm text-n2k-on-surface-variant text-sm font-medium;
+}
+
+.blog-content li::before {
+  content: 'warning';
+  font-family: 'Material Symbols Outlined';
+  @apply text-n2k-red text-xl leading-none;
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.blog-content strong {
+  @apply text-n2k-primary font-bold;
+}
+
+/* RTL Adjustments */
+[dir="rtl"] .blog-content h2::before {
+  @apply order-last;
+}

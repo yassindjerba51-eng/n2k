@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#314865",
+                    "inverse-surface": "#2d3133",
+                    "primary-fixed-dim": "#b0c8eb",
+                    "on-tertiary-fixed-variant": "#802a00",
+                    "on-secondary-fixed-variant": "#00522f",
+                    "primary": "#000f22",
+                    "on-secondary": "#ffffff",
+                    "tertiary": "#220600",
+                    "secondary": "#006d40",
+                    "outline-variant": "#c4c6ce",
+                    "error-container": "#ffdad6",
+                    "secondary-container": "#7afbb1",
+                    "on-surface-variant": "#43474d",
+                    "on-background": "#191c1e",
+                    "tertiary-container": "#461300",
+                    "on-primary-container": "#768dad",
+                    "tertiary-fixed-dim": "#ffb59a",
+                    "inverse-primary": "#b0c8eb",
+                    "surface-bright": "#f7f9fb",
+                    "surface-container-high": "#e6e8ea",
+                    "surface": "#f7f9fb",
+                    "on-primary": "#ffffff",
+                    "surface-dim": "#d8dadc",
+                    "secondary-fixed": "#7afbb1",
+                    "on-primary-fixed": "#001c37",
+                    "surface-variant": "#e0e3e5",
+                    "on-tertiary": "#ffffff",
+                    "on-surface": "#191c1e",
+                    "on-error": "#ffffff",
+                    "primary-fixed": "#d2e4ff",
+                    "primary-container": "#0a2540",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-on-surface": "#eff1f3",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#49607e",
+                    "background": "#f7f9fb",
+                    "surface-container": "#eceef0",
+                    "tertiary-fixed": "#ffdbcf",
+                    "surface-container-low": "#f2f4f6",
+                    "surface-container-highest": "#e0e3e5",
+                    "secondary-fixed-dim": "#5cde97",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed": "#002110",
+                    "on-tertiary-container": "#f1590d",
+                    "on-tertiary-fixed": "#380d00",
+                    "outline": "#74777e",
+                    "on-secondary-container": "#007444"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-asymmetry {
+            padding-left: calc(8% + 2rem);
+            padding-right: 8%;
+        }
+        .clinical-shadow {
+            box-shadow: 0 24px 48px -12px rgba(10, 37, 64, 0.06);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-md shadow-[0_24px_48px_-12px_rgba(10,37,64,0.06)]">
+<div class="flex justify-between items-center px-12 h-20 w-full max-w-screen-2xl mx-auto">
+<div class="font-['Plus_Jakarta_Sans'] text-xl font-black tracking-tighter text-slate-900 dark:text-slate-100">
+                Les Laboratoires N2K
+            </div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="font-['Plus_Jakarta_Sans'] uppercase tracking-widest text-[10px] font-bold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-all" href="#">Research</a>
+<a class="font-['Plus_Jakarta_Sans'] uppercase tracking-widest text-[10px] font-bold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-all" href="#">Analyses</a>
+<a class="font-['Plus_Jakarta_Sans'] uppercase tracking-widest text-[10px] font-bold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-all" href="#">Laboratory</a>
+<a class="font-['Plus_Jakarta_Sans'] uppercase tracking-widest text-[10px] font-bold text-emerald-800 dark:text-emerald-400 border-b-2 border-emerald-800 dark:border-emerald-400 pb-1" href="#">Insights</a>
+<a class="font-['Plus_Jakarta_Sans'] uppercase tracking-widest text-[10px] font-bold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-all" href="#">About</a>
+</nav>
+<button class="bg-primary hover:opacity-80 transition-opacity duration-300 text-on-primary px-6 py-2.5 rounded-lg text-xs font-bold uppercase tracking-widest scale-95 active:scale-90 transition-transform">
+                Request a Quote
+            </button>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative w-full h-[600px] flex items-end overflow-hidden bg-primary-container">
+<div class="absolute inset-0 opacity-40 mix-blend-overlay">
+<img alt="" class="w-full h-full object-cover" data-alt="Close-up of high-tech laboratory stainless steel equipment with soft blue overhead lighting and professional industrial atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrsjrv5zkdj5tGLBU9nqCJZve1PVKEir9StbXH9grZi6zZWsMx9uqrFopawSiwDoCzn2hvDCxYP6PspcSSpSBRQfqQUYYp8uylrrlPy-LHE_rBIKZicNuxu3VbVPbI1TNOXZu60lSNCfF6oBheunFeafq7cDYSbkit3AXdJXwGo6uBrsI1oUY4jI062uqS7kdzRbA5roW7shMURpnVImmd_1HpEOX4b5qMcpBA6Xfv5QfBjMoh21BPATL4XZbBSK6dj9XowDwxC4M"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/40 to-transparent"></div>
+<div class="relative w-full max-w-screen-2xl mx-auto px-12 pb-24 grid grid-cols-12">
+<div class="col-span-12 md:col-span-10 lg:col-span-8">
+<span class="inline-block py-1 px-3 bg-secondary text-on-secondary font-label text-[10px] uppercase tracking-widest font-bold mb-6">
+                        Expertise Terrain
+                    </span>
+<h1 class="font-headline text-4xl md:text-6xl font-extrabold text-on-primary tracking-tighter mb-8 leading-[1.1]">
+                        Maîtriser le Biofilm en Élevage : Plus qu'un Nettoyage, un Protocole
+                    </h1>
+<div class="flex items-center space-x-6 text-on-primary/70 font-label text-xs uppercase tracking-wider">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+                            14 Octobre 2024
+                        </span>
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">timer</span>
+                            8 min de lecture
+                        </span>
+</div>
+</div>
+</div>
+</section>
+<!-- Article Content -->
+<article class="max-w-screen-2xl mx-auto px-12 mt-24 grid grid-cols-12 gap-12">
+<!-- Main Column -->
+<div class="col-span-12 lg:col-span-8 space-y-16">
+<!-- The Problem -->
+<section>
+<h2 class="font-headline text-2xl font-bold text-primary mb-8 flex items-center gap-4">
+<span class="w-12 h-px bg-secondary"></span>
+                        The Problem: L'Impact Invisible
+                    </h2>
+<div class="bg-surface-container-low p-10 rounded-xl space-y-6 border-l-4 border-primary">
+<p class="text-on-surface leading-relaxed text-lg">
+                            Le biofilm n'est pas simplement une couche de saleté. C'est une structure biologique complexe, une véritable forteresse microscopique qui protège les pathogènes contre vos protocoles de désinfection classiques. En élevage, cette négligence se traduit par une baisse radicale de la performance zootechnique.
+                        </p>
+<ul class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+<li class="flex items-start gap-3 bg-surface-container-lowest p-4 rounded shadow-sm">
+<span class="material-symbols-outlined text-error" data-weight="fill">warning</span>
+<span class="text-sm font-medium">Augmentation de 15% de la mortalité précoce</span>
+</li>
+<li class="flex items-start gap-3 bg-surface-container-lowest p-4 rounded shadow-sm">
+<span class="material-symbols-outlined text-error" data-weight="fill">warning</span>
+<span class="text-sm font-medium">Surconsommation de traitements antibiotiques</span>
+</li>
+</ul>
+</div>
+</section>
+<!-- Technical Illustration Image -->
+<figure class="rounded-xl overflow-hidden shadow-2xl">
+<img alt="" class="w-full h-[400px] object-cover" data-alt="Professional technician in full white protective gear PPE inspecting industrial farming equipment with a focused technical gaze" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-WM7QG06EdN8VJ6yjXuX26pHaseSMc9Yl8lDaLZKLCdIPZlT58t6uTA810BzCgWn_yhzuIAY0TkZ5w9zncv13SCjVPs9IiSgtsqyLVOE-E069cAKKuiJL5I4xAPo_SHK0j9Ue7xLnXvNX0ZmstyFr-iEPtoLFGIsjkhrssGjxVtg9kXOcmmlecZfiy3kyAtmSt1J2Bk6nilAllx4Bua5bYDAyHJwuRY2bEBmw6ez6tqvh2KV8Pfa_7OjxkFU72_nx9ZhtURQOWBc"/>
+<figcaption class="bg-surface-container-highest px-6 py-4 text-xs font-label uppercase tracking-widest text-on-surface-variant italic">
+                        Inspection technique d'une rampe d'abreuvement après traitement enzymatique.
+                    </figcaption>
+</figure>
+<!-- The Science -->
+<section class="space-y-6">
+<h2 class="font-headline text-2xl font-bold text-primary flex items-center gap-4">
+<span class="w-12 h-px bg-secondary"></span>
+                        The Science: Pourquoi les standards échouent
+                    </h2>
+<div class="prose prose-slate max-w-none text-on-surface text-lg leading-relaxed space-y-6">
+<p>
+                            La majorité des désinfectants agissent par contact. Cependant, 90% de la biomasse bactérienne réside au sein de la matrice extracellulaire polymérique (EPS). Sans une phase de déstructuration chimique préalable, vos produits actifs glissent sur le biofilm sans l'atteindre.
+                        </p>
+<p>
+                            Nos recherches au sein du <strong class="text-primary">Borj Cédria Technology Park</strong> démontrent que seule une alternance de pH et l'usage de surfactants spécifiques permettent de fragiliser cette gaine protectrice. L'utilisation systématique de l'eau chaude n'est pas une option, c'est une exigence thermodynamique pour la solubilisation des graisses complexes.
+                        </p>
+</div>
+</section>
+<!-- Mid-page CTA -->
+<section class="bg-secondary p-12 rounded-xl text-on-secondary relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-8 opacity-10 group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-9xl">biotech</span>
+</div>
+<div class="relative z-10 max-w-xl">
+<h3 class="font-headline text-3xl font-extrabold mb-4 leading-tight">Problèmes de contamination récurrents ?</h3>
+<p class="text-on-secondary/80 text-lg mb-8">Demandez un audit complet de vos installations par nos experts en biosécurité. Une analyse précise pour des solutions durables.</p>
+<button class="bg-surface-container-lowest text-secondary font-bold px-8 py-4 rounded-lg uppercase tracking-widest text-sm hover:shadow-xl transition-all active:scale-95">
+                            Demander un Audit Terrain
+                        </button>
+</div>
+</section>
+<!-- The Protocol -->
+<section class="space-y-10">
+<h2 class="font-headline text-2xl font-bold text-primary flex items-center gap-4">
+<span class="w-12 h-px bg-secondary"></span>
+                        The Protocol: Étapes Clés
+                    </h2>
+<div class="grid grid-cols-1 gap-6">
+<!-- Step 1 -->
+<div class="flex gap-8 group">
+<div class="flex-none w-16 h-16 bg-surface-container-highest flex items-center justify-center text-primary font-headline text-2xl font-black rounded-full transition-colors group-hover:bg-secondary group-hover:text-on-secondary">
+                                01
+                            </div>
+<div class="space-y-2 pt-2">
+<h4 class="font-headline font-bold text-lg text-primary uppercase tracking-tight">Décapage Alcalin</h4>
+<p class="text-on-surface-variant">Application d'une mousse haute adhérence (T=15min) pour saponifier les matières organiques et graisses.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex gap-8 group">
+<div class="flex-none w-16 h-16 bg-surface-container-highest flex items-center justify-center text-primary font-headline text-2xl font-black rounded-full transition-colors group-hover:bg-secondary group-hover:text-on-secondary">
+                                02
+                            </div>
+<div class="space-y-2 pt-2">
+<h4 class="font-headline font-bold text-lg text-primary uppercase tracking-tight">Rinçage Dynamique</h4>
+<p class="text-on-surface-variant">Usage de la pression mécanique (150 bars) pour l'évacuation physique des débris décollés.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex gap-8 group">
+<div class="flex-none w-16 h-16 bg-surface-container-highest flex items-center justify-center text-primary font-headline text-2xl font-black rounded-full transition-colors group-hover:bg-secondary group-hover:text-on-secondary">
+                                03
+                            </div>
+<div class="space-y-2 pt-2">
+<h4 class="font-headline font-bold text-lg text-primary uppercase tracking-tight">Oxydation Ciblée</h4>
+<p class="text-on-surface-variant">Désinfection finale via acide peracétique ou glutaraldéhyde sur surfaces sèches uniquement.</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Sidebar / Related -->
+<aside class="col-span-12 lg:col-span-4 space-y-12">
+<div class="sticky top-32">
+<h3 class="font-headline text-xs font-black uppercase tracking-[0.2em] text-on-surface-variant mb-8">
+                        Technical Deep-Dive
+                    </h3>
+<div class="space-y-8">
+<!-- Related Card 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-video mb-4 overflow-hidden rounded-lg bg-surface-container">
+<img alt="" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Modern laboratory research tools and petri dishes on a clean white surface with natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHJKP5ok14DmvvE1Rn9ahZSDfVXGD_gW_D-Fp5jlCOxCd34iCPNU46fzNt1BL67uPM9og10T_LrgstXHFlRW6RLp_I1JHyTM3bMhFlBrbPCg_Vk6E9UJ-cP44ya4qwLIMawVEz-OjiF5PDCyipZlQykQwPvVed1O1QnynkcF1drS0kfbsTJjUmEWdD8mFoMJLk1eFQjZ9QV43V7_CcwQHaUHpbwv9ZCIK7Mtdh2FvF6ayfdnze1T-TSH0JB7wtoL5g5TFRb5kZpnI"/>
+</div>
+<span class="text-[10px] font-label uppercase tracking-widest text-secondary font-bold">Analyses</span>
+<h4 class="font-headline font-bold text-lg leading-tight mt-2 group-hover:text-secondary transition-colors">Interpréter vos analyses d'eau : Guide Pratique</h4>
+</div>
+<!-- Related Card 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-video mb-4 overflow-hidden rounded-lg bg-surface-container">
+<img alt="" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Large industrial scale facility showing complex piping and high-end engineering systems in a warehouse" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3lqStMgjTSAD5eclkyFBe6CFPYbR0KoqlxYvfUiLFgT-CTG0sGmlCAmM2HBw9plTlXc9joWAs-CMgDy3La8tFBHgUFVcVspCWz3r3gvIPsm8StCML1IYsw97lMCGGnStXIbLqev-rfi_0XLpYhlGnKQy1pVbMe_zMw21bfRtA5esw85e2LLaIUoBIEr97JulCNUAWU-NJIVRTDJ7F-yscYAQxrc8_uT8WaWb2Y9jU7oTnkFeIoFQsuC_bwX-lKVj2DvtY1F9kI7Y"/>
+</div>
+<span class="text-[10px] font-label uppercase tracking-widest text-secondary font-bold">Biosécurité</span>
+<h4 class="font-headline font-bold text-lg leading-tight mt-2 group-hover:text-secondary transition-colors">Automatisation du nettoyage : ROI et Performance</h4>
+</div>
+</div>
+<div class="mt-16 pt-12 border-t border-outline-variant/30">
+<div class="bg-surface-container-high p-8 rounded-lg">
+<span class="material-symbols-outlined text-primary mb-4" style="font-variation-settings: 'FILL' 1;">description</span>
+<h5 class="font-headline font-bold text-sm uppercase tracking-tight mb-2 text-primary">Technical Whitepaper</h5>
+<p class="text-xs text-on-surface-variant mb-6">Protocole de décontamination N2K-v4.2. (PDF, 4.2 MB)</p>
+<a class="inline-flex items-center gap-2 text-xs font-bold text-secondary uppercase tracking-widest group" href="#">
+                                Download Protocol
+                                <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</aside>
+</article>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-24 bg-slate-100 dark:bg-slate-900">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 px-12 py-16 w-full max-w-screen-2xl mx-auto">
+<div>
+<div class="font-['Plus_Jakarta_Sans'] font-bold text-lg text-emerald-900 dark:text-emerald-100 mb-6">
+                    Les Laboratoires N2K
+                </div>
+<p class="font-['Plus_Jakarta_Sans'] text-sm leading-relaxed text-slate-500 dark:text-slate-400 max-w-md mb-8">
+                    © 2024 Les Laboratoires N2K. Borj Cédria Technology Park. All technical specifications subject to ISO 17025. Expertises en biosécurité industrielle et animale.
+                </p>
+<div class="flex gap-4">
+<span class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center cursor-pointer hover:opacity-75 transition-opacity">
+<span class="material-symbols-outlined text-sm">science</span>
+</span>
+<span class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center cursor-pointer hover:opacity-75 transition-opacity">
+<span class="material-symbols-outlined text-sm">public</span>
+</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="flex flex-col space-y-4">
+<h6 class="font-['Plus_Jakarta_Sans'] font-bold text-xs uppercase tracking-widest text-slate-900 dark:text-slate-100">Legal</h6>
+<a class="text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 text-sm" href="#">Privacy Protocol</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 text-sm" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col space-y-4">
+<h6 class="font-['Plus_Jakarta_Sans'] font-bold text-xs uppercase tracking-widest text-slate-900 dark:text-slate-100">Resources</h6>
+<a class="text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 text-sm" href="#">Scientific Publications</a>
+<a class="text-emerald-700 dark:text-emerald-300 underline underline-offset-4 text-sm" href="#">Accreditation Details</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

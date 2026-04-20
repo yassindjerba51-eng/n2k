@@ -15,11 +15,12 @@ export default function Navbar({ locale }: { locale: string }) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const navLinks = [
-    { name: t("home"), path: "/" },
+    { name: t("home"), path: "/", mobileOnly: true },
     { name: t("problemesSolutions"), path: "/problemes-solutions" },
     { name: t("expertise"), path: "/expertise" },
     { name: t("produits"), path: "/produits" },
     { name: t("references"), path: "/references" },
+    { name: t("blog"), path: "/blog" },
     { name: t("contactPageLink"), path: "/contact" },
   ];
 
@@ -42,7 +43,7 @@ export default function Navbar({ locale }: { locale: string }) {
 
         {/* Desktop Links */}
         <div className="hidden lg:flex items-center gap-8">
-          {navLinks.map((link) => {
+          {navLinks.filter((link) => !link.mobileOnly).map((link) => {
             const isActive = pathname === link.path;
             return (
               <Link

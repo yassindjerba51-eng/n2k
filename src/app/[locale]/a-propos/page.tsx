@@ -69,50 +69,59 @@ export default async function AboutPage({
     <div className="bg-n2k-surface min-h-screen">
 
       {/* ====== HERO SECTION ====== */}
-      <section className="relative min-h-[600px] md:min-h-[720px] flex items-center overflow-hidden">
-        {/* Background image */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoZHMeNLkkHSznJxWTYIy3Zw9A4ZR9svU260XQuOHY_lmDpwtwfrKmmN7uIpk2JU6LDzG9loDrBtYTRI2s3Q6UGgxot7cTwf18R24tMd4fw0ubTLVWlSR0xBU65k15B2NCvV91zFNsOMOl-2EKZkQdWyPyH3XWj9cZW-E5XipdgSKay62ZEOY-ht3XVBi8QkPXyVJPf7cGd6syITUZrqK3YFC4ViZ6eUFXiuWsrm2H1Ja56s2MGdCkL4iffwpAyQoO0l2wTUQwxiM"
-            alt=""
-            fill
-            className="object-cover grayscale-[0.5] opacity-20"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-n2k-primary via-n2k-primary/95 to-transparent" />
-        </div>
+      <section className="bg-n2k-surface-low relative overflow-hidden">
+        <div className="max-w-[1400px] mx-auto px-4 md:px-8 py-16 md:py-24 lg:py-32">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+            {/* Left Column — Content */}
+            <div className="lg:col-span-8">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="w-8 h-px bg-n2k-secondary shrink-0" />
+                <span className="text-xs font-black tracking-[0.2em] text-n2k-secondary uppercase">
+                  {t("heroBadge")}
+                </span>
+              </div>
 
-        <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-10 py-20 md:py-28">
-          <div className="max-w-3xl">
-            {/* Badge */}
-            <span className="inline-block bg-n2k-secondary text-white px-4 py-1 text-xs font-bold tracking-[0.1em] uppercase mb-6">
-              {t("heroBadge")}
-            </span>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black font-heading text-n2k-primary leading-[1.1] tracking-tighter mb-8">
+                {t("heroTitle")}
+                <br />
+                <span className="text-n2k-secondary">
+                  {t("heroTitleHighlight")}
+                </span>
+                {t("heroTitleEnd")}
+              </h1>
 
-            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight tracking-tighter mb-8">
-              {t("heroTitle")}
-              <span className="text-n2k-secondary-container">{t("heroTitleHighlight")}</span>
-              {t("heroTitleEnd")}
-            </h1>
+              <p className="font-body text-base md:text-lg text-n2k-on-surface-variant leading-relaxed max-w-2xl mb-10">
+                {t("heroSubtitle")}
+              </p>
 
-            <p className="text-xl text-n2k-on-primary-container max-w-2xl mb-10 leading-relaxed">
-              {t("heroSubtitle")}
-            </p>
+              <div className="flex flex-wrap gap-4">
+                <Link
+                  href="/contact"
+                  className="bg-n2k-secondary text-white px-8 py-4 font-heading font-bold rounded-lg shadow-xl hover:bg-[#007444] transition-all flex items-center gap-2"
+                >
+                  {t("heroCta1")}
+                  <span className="material-symbols-outlined text-xl">analytics</span>
+                </Link>
+                <Link
+                  href="/produits"
+                  className="border border-n2k-outline-variant/30 text-n2k-primary px-8 py-4 font-heading font-bold rounded-lg hover:bg-n2k-surface transition-all"
+                >
+                  {t("heroCta2")}
+                </Link>
+              </div>
+            </div>
 
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="/contact"
-                className="bg-n2k-secondary text-white px-8 py-4 font-heading font-bold rounded-lg shadow-xl hover:bg-[#007444] transition-all flex items-center gap-2"
-              >
-                {t("heroCta1")}
-                <span className="material-symbols-outlined text-xl">analytics</span>
-              </Link>
-              <Link
-                href="/produits"
-                className="border border-n2k-outline-variant/30 text-white px-8 py-4 font-heading font-bold rounded-lg hover:bg-white/10 transition-all"
-              >
-                {t("heroCta2")}
-              </Link>
+            {/* Right Column — Hero Image */}
+            <div className="lg:col-span-4 hidden lg:flex items-center justify-center">
+              <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-ambient-lg ghost-border">
+                <Image
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoZHMeNLkkHSznJxWTYIy3Zw9A4ZR9svU260XQuOHY_lmDpwtwfrKmmN7uIpk2JU6LDzG9loDrBtYTRI2s3Q6UGgxot7cTwf18R24tMd4fw0ubTLVWlSR0xBU65k15B2NCvV91zFNsOMOl-2EKZkQdWyPyH3XWj9cZW-E5XipdgSKay62ZEOY-ht3XVBi8QkPXyVJPf7cGd6syITUZrqK3YFC4ViZ6eUFXiuWsrm2H1Ja56s2MGdCkL4iffwpAyQoO0l2wTUQwxiM"
+                  alt={t("heroBadge")}
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
             </div>
           </div>
         </div>

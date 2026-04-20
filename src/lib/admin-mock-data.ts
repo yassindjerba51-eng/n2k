@@ -370,11 +370,11 @@ export const mockProducts: MockProduct[] = [
     category: "AMBIANCE",
     step: 2,
     description: {
-      fr: "Stabilisation microbiologique de l'environnement par compétition positive.",
-      en: "Microbiological stabilization of the environment by positive competition.",
-      ar: "الاستقرار الميكروبيولوجي للبيئة من خلال التنافس الإيجابي.",
+      fr: "Nettoyant enzymatique concentré. Dégradation des matières organiques (graisses, protéines, biofilms) avant désinfection.",
+      en: "Concentrated enzymatic cleaner. Degradation of organic matter (grease, proteins, biofilms) before disinfection.",
+      ar: "منظف إنزيمي مركز. تحلل المواد العضوية (الدهون، البروتينات، الأغشية الحيوية) قبل التطهير.",
     },
-    dosage: "Pulvérisation hebdomadaire",
+    dosage: "1 à 3 % (standard) / 5 à 10 % (fort)",
     imageUrl: null,
   },
 ];
@@ -495,9 +495,9 @@ export const mockProtocols: MockProtocol[] = [
       ar: "تقليل الحمل المحمول جواً",
     },
     step2Label: {
-      fr: "Stabilisation par compétition positive",
-      en: "Stabilization by positive competition",
-      ar: "الاستقرار عن طريق التنافس الإيجابي",
+      fr: "Nettoyage enzymatique des matières organiques",
+      en: "Enzymatic cleaning of organic matter",
+      ar: "التنظيف الإنزيمي للمواد العضوية",
     },
     productSlugs: ["airsan-n2k", "bioactive-n2k"],
     isActive: true,
