@@ -37,7 +37,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
     "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDKsx2Rlc4yFz407q19RlBlyWgJugENsJ1pwTWzcckhnuckDWRnFkxzLn4NPQ2b8IRCtnmSmSy2IZkKLXPjW9LLqOpPENRw1ldLOazcAwYTYjMwgc-lXdHbUoD2ADfDCV40rdSI68-FbrNyJAtqgn7T5T5r8-0RJNgCvZq2qoBjJJwdIC79eT0ukjaoGFSJ4hBdRZrQbOGlA0Ftht_TqiQzopgVoTF17EYhhftloNtRura3f4GsaMHc5CYlaqGy5U31aKXnJtgLWLA",
     "@id": "https://n2k-laboratoires.tn",
     "url": "https://n2k-laboratoires.tn",
-    "telephone": "+21600000000",
+    "telephone": "+21621444765",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Borj Cédria Technopark",
@@ -166,17 +166,9 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
                 {t("problems.building.description")}
               </p>
               <div className="mt-auto">
-                <div className="flex justify-between items-end mb-2">
-                  <span className="text-xs font-bold uppercase tracking-wider text-n2k-orange">
-                    {t("problems.building.risk")}
-                  </span>
-                  <span className="text-xs font-black text-white">
-                    {t("problems.building.riskPercent")}%
-                  </span>
-                </div>
-                <div className="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
-                  <div className="h-full bg-n2k-orange rounded-full transition-all duration-1000 ease-out" style={{ width: `${parseInt(t("problems.building.riskPercent")) || 85}%` }} />
-                </div>
+                <span className="text-xs font-bold uppercase tracking-wider text-n2k-orange">
+                  {t("problems.building.risk")}
+                </span>
               </div>
             </div>
 
@@ -192,17 +184,9 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
                 {t("problems.water.description")}
               </p>
               <div className="mt-auto">
-                <div className="flex justify-between items-end mb-2">
-                  <span className="text-xs font-bold uppercase tracking-wider text-n2k-orange">
-                    {t("problems.water.risk")}
-                  </span>
-                  <span className="text-xs font-black text-white">
-                    {t("problems.water.riskPercent")}%
-                  </span>
-                </div>
-                <div className="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
-                  <div className="h-full bg-n2k-orange rounded-full transition-all duration-1000 ease-out" style={{ width: `${parseInt(t("problems.water.riskPercent")) || 92}%` }} />
-                </div>
+                <span className="text-xs font-bold uppercase tracking-wider text-n2k-orange">
+                  {t("problems.water.risk")}
+                </span>
               </div>
             </div>
 
@@ -218,17 +202,9 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
                 {t("problems.air.description")}
               </p>
               <div className="mt-auto">
-                <div className="flex justify-between items-end mb-2">
-                  <span className="text-xs font-bold uppercase tracking-wider text-n2k-orange">
-                    {t("problems.air.risk")}
-                  </span>
-                  <span className="text-xs font-black text-white">
-                    {t("problems.air.riskPercent")}%
-                  </span>
-                </div>
-                <div className="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
-                  <div className="h-full bg-n2k-orange rounded-full transition-all duration-1000 ease-out" style={{ width: `${parseInt(t("problems.air.riskPercent")) || 78}%` }} />
-                </div>
+                <span className="text-xs font-bold uppercase tracking-wider text-n2k-orange">
+                  {t("problems.air.risk")}
+                </span>
               </div>
             </div>
           </div>
@@ -251,57 +227,89 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             </p>
           </div>
 
-          {/* Protocol Cards — Side by Side */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            {protocolPhases.map((phase, idx) => {
-              const colorClass = phase.color === "secondary" ? "text-n2k-secondary" : "text-n2k-primary";
-              const bgColorClass = phase.color === "secondary" ? "bg-n2k-secondary" : "bg-n2k-primary";
-              const containerBgClass = phase.color === "secondary" ? "bg-n2k-secondary/10" : "bg-n2k-primary/10";
-
+          {/* Protocol Cards — Three steps: Phase 01 / Rinsing / Phase 02 */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-start">
+            {/* Phase 01 — CLORAGRO */}
+            {protocolPhases[0] && ((): React.ReactNode => {
+              const phase = protocolPhases[0];
               return (
-                <div key={idx} className="bg-n2k-surface-lowest rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-ambient hover:shadow-ambient-lg transition-all duration-500 ghost-border relative overflow-hidden group">
-                  {/* Phase Badge */}
-                  <div className={`absolute top-0 right-0 ${bgColorClass} text-white px-6 py-1.5 rounded-es-2xl font-black uppercase tracking-widest text-[10px] font-heading`}>
+                <div className="bg-n2k-surface-lowest rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-ambient hover:shadow-ambient-lg transition-all duration-500 ghost-border relative overflow-hidden group">
+                  <div className="absolute top-0 right-0 bg-n2k-secondary text-white px-6 py-1.5 rounded-es-2xl font-black uppercase tracking-widest text-[10px] font-heading">
                     {phase.label}
                   </div>
-
-                  {/* Header */}
                   <div className="flex items-center gap-4 mb-8 mt-2">
-                    <div className={`w-14 h-14 shrink-0 ${containerBgClass} rounded-2xl flex items-center justify-center transition-transform group-hover:scale-110 duration-500`}>
-                      <phase.icon className={`${colorClass} w-7 h-7`} strokeWidth={1.5} />
+                    <div className="w-14 h-14 shrink-0 bg-n2k-secondary/10 rounded-2xl flex items-center justify-center transition-transform group-hover:scale-110 duration-500">
+                      <Microscope className="text-n2k-secondary w-7 h-7" strokeWidth={1.5} />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-black font-heading text-n2k-primary">
-                        {phase.name}
-                      </h3>
-                      <p className={`${colorClass} font-bold uppercase tracking-widest text-[11px] font-heading`}>
-                        {phase.type}
-                      </p>
+                      <h3 className="text-2xl font-black font-heading text-n2k-primary">{phase.name}</h3>
+                      <p className="text-n2k-secondary font-bold uppercase tracking-widest text-[11px] font-heading">{phase.type}</p>
                     </div>
                   </div>
-
-                  {/* Features */}
                   <ul className="space-y-4 mb-8 font-body text-sm">
                     {phase.features.map((feature, fIdx) => (
                       <li key={fIdx} className="flex items-start gap-3 text-n2k-on-surface-variant leading-snug">
-                        <CheckCircle className={`${colorClass} shrink-0 w-5 h-5 mt-0.5`} />
+                        <CheckCircle className="text-n2k-secondary shrink-0 w-5 h-5 mt-0.5" />
                         <span>{feature}</span>
                       </li>
                     ))}
                   </ul>
-
-                  {/* Bottom Badge */}
                   <div className="p-4 bg-n2k-surface-low rounded-xl flex flex-wrap items-center justify-between gap-3">
-                    <span className="text-xs font-bold text-n2k-primary font-heading uppercase tracking-wider">
-                      {phase.badgeLabel}
-                    </span>
-                    <span className={`${bgColorClass} text-white text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-widest`}>
-                      {phase.badge}
-                    </span>
+                    <span className="text-xs font-bold text-n2k-primary font-heading uppercase tracking-wider">{phase.badgeLabel}</span>
+                    <span className="bg-n2k-secondary text-white text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-widest">{phase.badge}</span>
                   </div>
                 </div>
               );
-            })}
+            })()}
+
+            {/* Mandatory Rinsing Step */}
+            <div className="bg-blue-50 border-2 border-blue-200 rounded-2xl md:rounded-3xl p-6 md:p-8 flex flex-col items-center justify-center text-center gap-4 shadow-sm">
+              <div className="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center">
+                <Droplets className="w-7 h-7 text-blue-600" />
+              </div>
+              <div>
+                <p className="font-black font-heading text-blue-800 text-base uppercase tracking-wider mb-2">Rinçage obligatoire</p>
+                <p className="text-blue-700 text-sm font-body leading-relaxed">
+                  Rinçage complet à l&apos;eau potable de toutes les surfaces. Exigence chimique et réglementaire — non optionnelle.
+                </p>
+              </div>
+              <span className="text-[10px] font-black px-3 py-1 rounded-full bg-blue-600 text-white uppercase tracking-widest">
+                Étape intermédiaire
+              </span>
+            </div>
+
+            {/* Phase 02 — OPTIMAGRO */}
+            {protocolPhases[1] && ((): React.ReactNode => {
+              const phase = protocolPhases[1];
+              return (
+                <div className="bg-n2k-surface-lowest rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-ambient hover:shadow-ambient-lg transition-all duration-500 ghost-border relative overflow-hidden group">
+                  <div className="absolute top-0 right-0 bg-n2k-primary text-white px-6 py-1.5 rounded-es-2xl font-black uppercase tracking-widest text-[10px] font-heading">
+                    {phase.label}
+                  </div>
+                  <div className="flex items-center gap-4 mb-8 mt-2">
+                    <div className="w-14 h-14 shrink-0 bg-n2k-primary/10 rounded-2xl flex items-center justify-center transition-transform group-hover:scale-110 duration-500">
+                      <ShieldCheck className="text-n2k-primary w-7 h-7" strokeWidth={1.5} />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-black font-heading text-n2k-primary">{phase.name}</h3>
+                      <p className="text-n2k-primary font-bold uppercase tracking-widest text-[11px] font-heading">{phase.type}</p>
+                    </div>
+                  </div>
+                  <ul className="space-y-4 mb-8 font-body text-sm">
+                    {phase.features.map((feature, fIdx) => (
+                      <li key={fIdx} className="flex items-start gap-3 text-n2k-on-surface-variant leading-snug">
+                        <CheckCircle className="text-n2k-primary shrink-0 w-5 h-5 mt-0.5" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="p-4 bg-n2k-surface-low rounded-xl flex flex-wrap items-center justify-between gap-3">
+                    <span className="text-xs font-bold text-n2k-primary font-heading uppercase tracking-wider">{phase.badgeLabel}</span>
+                    <span className="bg-n2k-primary text-white text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-widest">{phase.badge}</span>
+                  </div>
+                </div>
+              );
+            })()}
           </div>
         </div>
       </section>
@@ -400,7 +408,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
               </span>
             </Link>
             <a
-              href="tel:+21600000000"
+              href="tel:+21621444765"
               className="flex items-center gap-3 font-bold text-sm md:text-base border-b-2 border-white/20 pb-2 hover:border-white transition-all font-heading"
             >
               <PhoneCall className="w-5 h-5 shrink-0" />

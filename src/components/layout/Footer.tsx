@@ -64,12 +64,30 @@ export default function Footer() {
           <h5 className="text-white font-bold mb-6 uppercase tracking-widest text-xs font-heading">
             {t("contactTitle")}
           </h5>
-          <p className="font-body text-sm text-slate-400 mb-4">{t("address")}</p>
-          <div className="flex gap-4">
-            <MapPin className="text-secondary-light w-5 h-5" />
-            <Mail className="text-slate-400 cursor-pointer hover:text-white transition-colors w-5 h-5" />
-            <PhoneCall className="text-slate-400 cursor-pointer hover:text-white transition-colors w-5 h-5" />
-          </div>
+          <ul className="space-y-3 font-body text-sm text-slate-400">
+            <li className="flex items-start gap-2">
+              <MapPin className="text-secondary-light w-4 h-4 mt-0.5 shrink-0" />
+              <span>Pôle Technologique Borj Cédria, Soliman, Nabeul</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <Mail className="text-secondary-light w-4 h-4 shrink-0" />
+              <a href="mailto:contact@n2k-tunisie.com" className="hover:text-white transition-colors">
+                contact@n2k-tunisie.com
+              </a>
+            </li>
+            <li className="flex items-center gap-2">
+              <PhoneCall className="text-secondary-light w-4 h-4 shrink-0" />
+              <a href="tel:+21621444765" className="hover:text-white transition-colors">
+                (+216) 21 444 765
+              </a>
+            </li>
+            <li className="flex items-center gap-2">
+              <PhoneCall className="text-slate-600 w-4 h-4 shrink-0" />
+              <a href="tel:+21658864370" className="hover:text-white transition-colors">
+                (+216) 58 864 370
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
       <div className="max-w-screen-2xl mx-auto px-8 mt-16 pt-8 border-t border-slate-900 text-center">
@@ -77,8 +95,8 @@ export default function Footer() {
           {t("copyright")}
         </p>
         <div className="mt-4 flex justify-center gap-6 text-xs text-slate-600">
-          <Link href="#" className="hover:text-slate-400 transition-colors">{t("legal")}</Link>
-          <Link href="#" className="hover:text-slate-400 transition-colors">{t("privacy")}</Link>
+          <Link href="/mentions-legales" className="hover:text-slate-400 transition-colors">{t("legal")}</Link>
+          <Link href="/confidentialite" className="hover:text-slate-400 transition-colors">{t("privacy")}</Link>
         </div>
       </div>
     </footer>

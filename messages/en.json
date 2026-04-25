@@ -80,7 +80,7 @@
           "desc": "Technical cleaning of pipes. Stripping of organic and limescale deposits."
         },
         "step2": {
-          "name": "AQUACONTROL N2K",
+          "name": "AQUACONTROL",
           "action": "Stabilization",
           "desc": "Water quality stabilization. Constant control of microbial load."
         }
@@ -97,12 +97,12 @@
       "protocol": {
         "title": "N2K Atmosphere Protocol",
         "step1": {
-          "name": "AIRSAN N2K",
+          "name": "AIRSAN",
           "action": "Load Reduction",
           "desc": "Reduction of airborne microbial load and harmful gases (Ammonia)."
         },
         "step2": {
-          "name": "BIOACTIVE N2K",
+          "name": "BIOACTIVE",
           "action": "Enzymatic Cleaning",
           "desc": "Enzymatic degradation of organic matter (grease, proteins, biofilms) for deep cleaning."
         }
@@ -164,12 +164,12 @@
     }
   },
   "authority": {
-    "imageAlt": "Dr. Mahmoud Nafeti in the laboratory",
+    "imageAlt": "Dr. Mahmoud Naffeti in the laboratory",
     "title": "The expertise of a",
     "titleHighlight": "Doctor in Chemistry",
     "titleEnd": "at your service.",
     "doctor": {
-      "name": "Dr. Mahmoud Nafeti",
+      "name": "Dr. Mahmoud Naffeti",
       "description": "N2K Scientific Director, recognized expert in chemical formulation for industrial and poultry hygiene."
     },
     "techpark": {
@@ -177,7 +177,7 @@
       "description": "Our R&D laboratory is located in the heart of Tunisia's largest scientific innovation hub."
     },
     "quote": "« Biosecurity is not an expense, it's the life insurance of your profitability. »",
-    "quoteAuthor": "— Dr. Mahmoud Nafeti"
+    "quoteAuthor": "— Dr. Mahmoud Naffeti"
   },
   "cta": {
     "title": "Ready to secure your next flock?",
@@ -211,10 +211,30 @@
     "region": "Governorate",
     "regionPlaceholder": "Select your region",
     "regions": [
-      "Ariana", "Béja", "Ben Arous", "Bizerte", "Gabès", "Gafsa", "Jendouba", 
-      "Kairouan", "Kasserine", "Kébili", "Kef", "Mahdia", "Manouba", 
-      "Médenine", "Monastir", "Nabeul", "Sfax", "Sidi Bouzid", "Siliana", 
-      "Sousse", "Tataouine", "Tozeur", "Tunis", "Zaghouan"
+      "Ariana",
+      "Béja",
+      "Ben Arous",
+      "Bizerte",
+      "Gabès",
+      "Gafsa",
+      "Jendouba",
+      "Kairouan",
+      "Kasserine",
+      "Kébili",
+      "Kef",
+      "Mahdia",
+      "Manouba",
+      "Médenine",
+      "Monastir",
+      "Nabeul",
+      "Sfax",
+      "Sidi Bouzid",
+      "Siliana",
+      "Sousse",
+      "Tataouine",
+      "Tozeur",
+      "Tunis",
+      "Zaghouan"
     ],
     "activityType": "Secteur of Activity",
     "poultry": "Poultry Farming",
@@ -244,9 +264,9 @@
     "pageTitle": "Our Expertise",
     "pageSubtitle": "A rigorous scientific approach, rooted in applied research at Borj Cédria Technology Park.",
     "directorTitle": "Scientific Direction",
-    "directorName": "Dr. Mahmoud Nafeti",
+    "directorName": "Dr. Mahmoud Naffeti",
     "directorRole": "PhD in Chemistry — R&D Director",
-    "directorBio": "With a PhD in chemistry and over 15 years of field experience, Dr. Nafeti has developed a unique methodology that combines academic rigor with industrial pragmatism.",
+    "directorBio": "With a PhD in chemistry and over 15 years of field experience, Dr. Naffeti has developed a unique methodology that combines academic rigor with industrial pragmatism.",
     "techparkTitle": "Borj Cédria Technology Park",
     "techparkDesc": "Les Laboratoires N2K are located within the Borj Cédria Technopark, one of Tunisia's largest scientific hubs.",
     "methodTitle": "Our Methodology",
@@ -330,7 +350,7 @@
       "about": "About"
     },
     "contactTitle": "Location & Contact",
-    "address": "Borj Cédria Technopark, Tunisia",
+    "address": "Borj Cédria Technology Park, Soliman, Nabeul",
     "copyright": "© 2024 Les Laboratoires N2K. All rights reserved.",
     "legal": "Legal Notice",
     "privacy": "Privacy Policy"
@@ -395,7 +415,7 @@
     "solutionsDescription": "Discover our certified products and techniques for total biosecurity.",
     "problemsTitle": "Your Problems — Les Laboratoires N2K",
     "problemsDescription": "Understand the threats: Biofilm, water contamination and airborne pressure.",
-    "expertiseTitle": "Our Expertise — Dr. Mahmoud Nafeti",
+    "expertiseTitle": "Our Expertise — Dr. Mahmoud Naffeti",
     "expertiseDescription": "A rigorous scientific approach based on research at Borj Cédria Technopark.",
     "diagnosticTitle": "Free Field Diagnostic — Les Laboratoires N2K",
     "diagnosticDescription": "Fill out our form for a personalized analysis of your farm.",
@@ -437,20 +457,20 @@
     "networkTitle": "Field trust network",
     "networkSubtitle": "From farms to analysis laboratories, our protocols are validated by an extensive network of demanding professionals.",
     "partners": [
-      "Soci\u00e9t\u00e9 Int\u00e9grale Agricole",
+      "Société Intégrale Agricole",
       "Tunis Slaughterhouse Laboratory",
       "Oasis",
-      "Soci\u00e9t\u00e9 Agricole",
-      "Soci\u00e9t\u00e9 Gallus",
-      "Soci\u00e9t\u00e9 Agricole Ta\u00efsir",
-      "Soci\u00e9t\u00e9 MaraiiCap Bon",
-      "Soci\u00e9t\u00e9 Shahiya",
-      "Soci\u00e9t\u00e9 Al-Bajh",
-      "Soci\u00e9t\u00e9 Sabar Aboulad",
-      "Soci\u00e9t\u00e9"
+      "Société Agricole",
+      "Société Gallus",
+      "Société Agricole Taïsir",
+      "Société MaraiiCap Bon",
+      "Société Shahiya",
+      "Société Al-Bajh",
+      "Société Sabar Aboulad",
+      "Société"
     ],
     "directorQuote": "Each partner is a validation ground. Our protocols don't exist in a lab — they are designed, tested, and optimized directly in the Tunisian field.",
-    "directorName": "Naffati Mahmoud",
+    "directorName": "Naffeti Mahmoud",
     "directorRole": "Production & Innovation Director",
     "ctaTitle": "Request your field trial",
     "ctaSubtitle": "Test our protocols in your real conditions. Measurable results within 48h.",
@@ -513,7 +533,7 @@
         ]
       },
       "product2": {
-        "name": "AQUACONTROL N2K",
+        "name": "AQUACONTROL",
         "type": "Stabilization — Daily Maintenance",
         "desc": "Water quality stabilization. Constant control of microbial load.",
         "features": [
@@ -528,12 +548,12 @@
       "title": "Aero-Biocontamination: When Air Becomes a Threat",
       "subtitle": "Ammonia and airborne microbial load attack respiratory mucous membranes. Atmosphere control is an often-neglected performance lever.",
       "product1": {
-        "name": "AIRSAN N2K",
+        "name": "AIRSAN",
         "type": "High-Tech Nebulization",
         "desc": "A fine solution that remains suspended to neutralize airborne pathogens without wetting the litter."
       },
       "product2": {
-        "name": "BIOACTIVE N2K",
+        "name": "BIOACTIVE",
         "type": "Enzymatic Cleaner",
         "desc": "Concentrated enzymatic cleaner based on proteases, lipases and amylases. Degrades organic matter to prepare surfaces for disinfection."
       },
@@ -573,7 +593,7 @@
       "sendAnother": "Send another message"
     },
     "leadership": {
-      "name": "Dr. Mahmoud Nafeti",
+      "name": "Dr. Mahmoud Naffeti",
       "role": "Director of Operations & Innovation",
       "linkedin": "https://www.linkedin.com/company/laboratoires-n2k/",
       "linkedinText": "LinkedIn Profile"
@@ -581,12 +601,13 @@
     "info": {
       "hq": {
         "title": "Headquarters",
-        "address": "Borj Cédria Technology Park,\nInnovation Building,\nTunis, Tunisia"
+        "address": "Borj Cédria Technology Park\nSoliman, Nabeul"
       },
       "support": {
         "title": "Technical Support",
-        "email": "contact@laboratoires-n2k.com",
-        "phone": "+216 71 000 000"
+        "email": "contact@n2k-tunisie.com",
+        "phone": "(+216) 21 444 765",
+        "phone2": "(+216) 58 864 370"
       },
       "hours": {
         "title": "Business Hours",

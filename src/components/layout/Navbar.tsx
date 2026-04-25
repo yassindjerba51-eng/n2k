@@ -19,7 +19,6 @@ export default function Navbar({ locale }: { locale: string }) {
     { name: t("problemesSolutions"), path: "/problemes-solutions" },
     { name: t("expertise"), path: "/expertise" },
     { name: t("produits"), path: "/produits" },
-    { name: t("references"), path: "/references" },
     { name: t("blog"), path: "/blog" },
     { name: t("contactPageLink"), path: "/contact" },
   ];
@@ -133,11 +132,18 @@ export default function Navbar({ locale }: { locale: string }) {
 
                   {/* Phone Link */}
                   <a
-                    href="tel:+21600000000"
+                    href="tel:+21621444765"
                     className="flex items-center gap-3 text-white/50 hover:text-white py-3 px-4 rounded-xl hover:bg-white/5 transition-all"
                   >
                     <PhoneCall className="w-5 h-5 text-[#2BB673]" />
-                    <span className="font-body text-sm">+216 00 000 000</span>
+                    <span className="font-body text-sm">(+216) 21 444 765</span>
+                  </a>
+                  <a
+                    href="tel:+21658864370"
+                    className="flex items-center gap-3 text-white/50 hover:text-white py-3 px-4 rounded-xl hover:bg-white/5 transition-all"
+                  >
+                    <PhoneCall className="w-5 h-5 text-[#2BB673]" />
+                    <span className="font-body text-sm">(+216) 58 864 370</span>
                   </a>
                 </div>
 

@@ -111,16 +111,16 @@ export default async function ProblemesSolutionsHub() {
             dark
           />
 
-          {/* Field Report */}
-          <div className="p-6 md:p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 mt-8 mb-8">
+          {/* Rinçage obligatoire — étape intermédiaire du protocole */}
+          <div className="p-6 md:p-8 bg-blue-900/30 backdrop-blur-sm rounded-2xl border border-blue-300/20 mt-8 mb-8">
             <div className="flex items-start gap-4">
-              <Quote className="w-8 h-8 text-n2k-secondary shrink-0 mt-1" />
+              <Microscope className="w-8 h-8 text-blue-200 shrink-0 mt-1" />
               <div>
-                <p className="text-white font-bold font-heading text-base md:text-lg leading-relaxed italic">
-                  {t("batiment.fieldReport")}
-                </p>
-                <p className="text-white text-sm mt-3 font-heading font-bold">
-                  {t("batiment.fieldReportSource")}
+                <span className="text-xs font-black uppercase tracking-[0.15em] text-blue-200 font-heading mb-2 block">
+                  Rinçage obligatoire — Étape intermédiaire
+                </span>
+                <p className="text-white font-body text-sm md:text-base leading-relaxed">
+                  Après application de CLORAGRO, un rinçage complet à l&apos;eau potable de toutes les surfaces est obligatoire avant l&apos;application d&apos;OPTIMAGRO (Phase 02). Cette exigence est chimique et réglementaire — elle n&apos;est pas optionnelle.
                 </p>
               </div>
             </div>
@@ -210,24 +210,7 @@ export default async function ProblemesSolutionsHub() {
             sectorLabels={sectorLabels}
           />
 
-          {/* Science Note */}
-          <div className="p-6 md:p-8 bg-n2k-surface-lowest rounded-2xl shadow-ambient ghost-border mt-8 mb-8">
-            <div className="flex items-start gap-4">
-              <div className="w-10 h-10 shrink-0 bg-n2k-orange/10 rounded-xl flex items-center justify-center">
-                <Microscope className="w-5 h-5 text-n2k-orange" />
-              </div>
-              <div>
-                <span className="text-xs font-black uppercase tracking-[0.15em] text-n2k-orange font-heading mb-2 block">
-                  {t("ambiance.scienceNoteLabel")}
-                </span>
-                <p className="text-n2k-on-surface font-body text-sm md:text-base leading-relaxed font-medium">
-                  {t("ambiance.scienceNote")}
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Learn More CTA */}
+{/* Learn More CTA */}
           <div className="flex justify-center lg:justify-start">
             <Link
               href={"/problemes-solutions/air" as any}
