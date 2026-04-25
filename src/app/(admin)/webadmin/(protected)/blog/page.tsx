@@ -1,282 +1,258 @@
 "use client";
 
-import { useState } from "react";
-import { mockBlogPosts, type MockBlogPost } from "@/lib/admin-mock-data";
+import { useEffect, useState, useCallback } from "react";
+import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { Separator } from "@/components/ui/separator";
 import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogDescription,
-} from "@/components/ui/dialog";
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
 import {
   Calendar,
   Pencil,
   Plus,
   Trash2,
-  Image as ImageIcon,
-  Tag,
-  CheckCircle2,
+  Star,
+  Loader2,
+  FolderOpen,
   ExternalLink,
+  FileText,
 } from "lucide-react";
 import Image from "next/image";
 
-export default function BlogPage() {
-  const [editingPost, setEditingPost] = useState<MockBlogPost | null>(null);
-  const [isCreating, setIsCreating] = useState(false);
+type BlogCategory = {
+  id: number;
+  nameFr: string;
+};
+
+type BlogPost = {
+  id: number;
+  slug: string;
+  coverImage: string | null;
+  featured: boolean;
+  titleFr: string;
+  titleEn: string;
+  titleAr: string;
+  publishedAt: string;
+  categories: BlogCategory[];
+};
+
+export default function BlogAdminPage() {
+  const [posts, setPosts] = useState<BlogPost[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [deleteTarget, setDeleteTarget] = useState<BlogPost | null>(null);
+
+  const fetchPosts = useCallback(async () => {
+    try {
+      const res = await fetch("/api/blog");
+      const data = await res.json();
+      if (data.success) setPosts(data.posts);
+    } catch {
+      setError("Erreur lors du chargement des articles");
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    fetchPosts();
+  }, [fetchPosts]);
+
+  const handleDelete = async () => {
+    if (!deleteTarget) return;
+    try {
+      const res = await fetch(`/api/blog/${deleteTarget.id}`, { method: "DELETE" });
+      if (res.ok) {
+        setDeleteTarget(null);
+        fetchPosts();
+      }
+    } catch {
+      setError("Erreur lors de la suppression");
+    }
+  };
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center py-20">
+        <Loader2 className="w-6 h-6 animate-spin text-slate-400" />
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-6">
-      {/* Page Header */}
+      {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-slate-900 tracking-tight">
-            Blog
-          </h1>
+          <h1 className="text-2xl font-bold text-slate-900 tracking-tight">Blog</h1>
           <p className="text-sm text-slate-500 mt-1">
-            Articles scientifiques du Dr Mahmoud Nafeti
+            {posts.length} articles publiés
           </p>
         </div>
-        <Button
-          className="bg-[#0A2540] hover:bg-[#0A2540]/90"
-          onClick={() => setIsCreating(true)}
+        <Link
+          href="/webadmin/blog/new"
+          className="inline-flex items-center justify-center gap-1.5 rounded-lg bg-[#0A2540] hover:bg-[#0A2540]/90 text-white text-sm font-medium whitespace-nowrap h-8 px-3 transition-colors"
         >
-          <Plus className="w-4 h-4 me-1.5" />
+          <Plus className="w-4 h-4" />
           Nouvel article
-        </Button>
+        </Link>
       </div>
 
-      {/* Blog Posts Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-        {mockBlogPosts.map((post) => (
-          <Card
-            key={post.id}
-            className="border-slate-200/80 shadow-sm bg-white hover:shadow-md transition-shadow overflow-hidden group"
-          >
-            {/* Cover Image */}
-            {post.coverImage && (
-              <div className="relative h-40 bg-slate-100 overflow-hidden">
-                <Image
-                  src={post.coverImage}
-                  alt={post.titleFr}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                <div className="absolute bottom-2.5 start-3 flex items-center gap-1.5">
-                  <Badge className="bg-white/90 text-slate-700 backdrop-blur-sm text-[10px] font-semibold border-0">
-                    <Calendar className="w-3 h-3 me-1" />
-                    {new Date(post.publishedAt).toLocaleDateString("fr-FR", {
-                      day: "numeric",
-                      month: "short",
-                      year: "numeric",
-                    })}
-                  </Badge>
+      {error && (
+        <div className="bg-red-50 border border-red-200 text-red-700 text-sm px-4 py-3 rounded-lg">
+          {error}
+        </div>
+      )}
+
+      {/* Posts Grid */}
+      {posts.length === 0 ? (
+        <Card className="border-slate-200/80 shadow-sm bg-white">
+          <CardContent className="flex flex-col items-center justify-center py-16 text-slate-400">
+            <FolderOpen className="w-10 h-10 mb-3 text-slate-300" />
+            <p className="text-sm font-medium">Aucun article</p>
+          </CardContent>
+        </Card>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+          {posts.map((post) => (
+            <Card
+              key={post.id}
+              className="border-slate-200/80 shadow-sm bg-white overflow-hidden hover:shadow-md transition-shadow group"
+            >
+              {/* Cover Image */}
+              <div className="relative h-44 bg-slate-100 overflow-hidden">
+                {post.coverImage ? (
+                  <Image
+                    src={post.coverImage}
+                    alt={post.titleFr}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center">
+                    <FileText className="w-8 h-8 text-slate-300" />
+                  </div>
+                )}
+                {/* Date badge */}
+                <div className="absolute bottom-3 left-3 bg-slate-900/70 backdrop-blur-sm text-white text-[11px] font-medium px-2.5 py-1 rounded-md flex items-center gap-1.5">
+                  <Calendar className="w-3 h-3" />
+                  {new Date(post.publishedAt).toLocaleDateString("fr-FR", {
+                    day: "numeric",
+                    month: "short",
+                    year: "numeric",
+                  })}
                 </div>
-              </div>
-            )}
-
-            <CardContent className="p-4">
-              {/* Title */}
-              <h3 className="font-semibold text-slate-900 text-sm leading-snug line-clamp-2 mb-2">
-                {post.titleFr}
-              </h3>
-
-              {/* Content preview */}
-              <p className="text-xs text-slate-500 line-clamp-2 mb-3 leading-relaxed">
-                {post.contentFr}
-              </p>
-
-              {/* Tags */}
-              <div className="flex flex-wrap gap-1.5 mb-3">
-                {post.tags.split(", ").map((tag) => (
-                  <Badge
-                    key={tag}
-                    variant="outline"
-                    className="text-[10px] px-1.5 py-0 bg-slate-50 text-slate-500 border-slate-200"
-                  >
-                    <Tag className="w-2.5 h-2.5 me-0.5" />
-                    {tag}
-                  </Badge>
-                ))}
+                {/* Featured star */}
+                {post.featured && (
+                  <div className="absolute top-3 right-3 bg-amber-400 text-white w-7 h-7 rounded-full flex items-center justify-center shadow-md">
+                    <Star className="w-3.5 h-3.5 fill-white" />
+                  </div>
+                )}
               </div>
 
-              {/* Multilingual indicators */}
-              <div className="flex items-center gap-1.5 mb-3">
-                <span className="text-[10px] font-medium text-slate-400 uppercase tracking-wider">Langues :</span>
-                {["FR", "EN", "AR"].map((lang) => (
-                  <span
-                    key={lang}
-                    className="flex items-center justify-center w-6 h-5 rounded bg-emerald-50 text-emerald-700 text-[9px] font-bold"
-                  >
-                    {lang}
-                  </span>
-                ))}
-              </div>
+              <CardContent className="pt-4 space-y-3">
+                {/* Title */}
+                <h3 className="font-semibold text-slate-900 leading-snug line-clamp-2 text-[15px]">
+                  {post.titleFr}
+                </h3>
 
-              {/* Actions */}
-              <Separator className="mb-3" />
-              <div className="flex items-center justify-between">
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="text-xs text-slate-500 hover:text-slate-800 h-7"
-                  onClick={() => setEditingPost(post)}
-                >
-                  <Pencil className="w-3 h-3 me-1" />
-                  Modifier
-                </Button>
-                <div className="flex items-center gap-1">
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    className="text-xs text-slate-500 hover:text-slate-800 h-7 w-7 p-0"
-                  >
-                    <ExternalLink className="w-3 h-3" />
-                  </Button>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    className="text-xs text-red-500 hover:text-red-700 hover:bg-red-50 h-7 w-7 p-0"
-                  >
-                    <Trash2 className="w-3 h-3" />
-                  </Button>
+                {/* Categories */}
+                {post.categories?.length > 0 && (
+                  <div className="flex flex-wrap gap-1">
+                    {post.categories.map((cat) => (
+                      <Badge
+                        key={cat.id}
+                        variant="outline"
+                        className="text-[10px] bg-teal-50 text-teal-700 border-teal-200"
+                      >
+                        {cat.nameFr}
+                      </Badge>
+                    ))}
+                  </div>
+                )}
+
+                {/* Language indicators */}
+                <div className="flex items-center gap-2 text-[10px]">
+                  <span className="text-slate-400">LANGUES :</span>
+                  {post.titleFr && (
+                    <span className="bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded font-semibold">
+                      FR
+                    </span>
+                  )}
+                  {post.titleEn && (
+                    <span className="bg-green-100 text-green-700 px-1.5 py-0.5 rounded font-semibold">
+                      EN
+                    </span>
+                  )}
+                  {post.titleAr && (
+                    <span className="bg-orange-100 text-orange-700 px-1.5 py-0.5 rounded font-semibold">
+                      AR
+                    </span>
+                  )}
                 </div>
-              </div>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
 
-      {/* Edit/Create Blog Post Dialog */}
-      <Dialog
-        open={!!editingPost || isCreating}
-        onOpenChange={() => {
-          setEditingPost(null);
-          setIsCreating(false);
-        }}
-      >
-        <DialogContent className="max-w-3xl max-h-[85vh] overflow-y-auto">
-          <DialogHeader>
-            <DialogTitle>
-              {editingPost ? `Modifier — ${editingPost.titleFr}` : "Nouvel article"}
-            </DialogTitle>
-            <DialogDescription>
-              Éditez le contenu dans les trois langues (FR, EN, AR)
-            </DialogDescription>
-          </DialogHeader>
+                {/* Actions */}
+                <div className="flex items-center justify-between pt-2 border-t border-slate-100">
+                  <Link
+                    href={`/webadmin/blog/${post.id}/edit`}
+                    className="inline-flex items-center gap-1.5 text-xs text-slate-500 hover:text-slate-800 font-medium transition-colors"
+                  >
+                    <Pencil className="w-3.5 h-3.5" />
+                    Modifier
+                  </Link>
+                  <div className="flex items-center gap-1">
+                    <Link
+                      href={`/fr/blog/${post.slug}`}
+                      target="_blank"
+                      className="inline-flex items-center justify-center w-7 h-7 rounded-md text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
+                    >
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </Link>
+                    <button
+                      onClick={() => setDeleteTarget(post)}
+                      className="inline-flex items-center justify-center w-7 h-7 rounded-md text-red-400 hover:text-red-600 hover:bg-red-50 transition-colors"
+                    >
+                      <Trash2 className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      )}
 
-          <div key={editingPost?.id ?? "new-post"} className="space-y-6 mt-4">
-            {/* Metadata */}
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <Label className="text-xs text-slate-500">Slug</Label>
-                <Input
-                  defaultValue={editingPost?.slug ?? ""}
-                  placeholder="mon-article-titre"
-                  className="bg-white"
-                />
-              </div>
-              <div>
-                <Label className="text-xs text-slate-500">Tags (séparés par des virgules)</Label>
-                <Input
-                  defaultValue={editingPost?.tags ?? ""}
-                  placeholder="tag1, tag2, tag3"
-                  className="bg-white"
-                />
-              </div>
-            </div>
-
-            <div>
-              <Label className="text-xs text-slate-500">Image de couverture (URL)</Label>
-              <Input
-                defaultValue={editingPost?.coverImage ?? ""}
-                placeholder="https://images.unsplash.com/..."
-                className="bg-white"
-              />
-            </div>
-
-            <Separator />
-
-            {/* Titles - multilingual */}
-            <div className="space-y-3">
-              <h4 className="text-sm font-semibold text-slate-700">Titres</h4>
-              <div>
-                <Label className="text-xs text-slate-500">Français</Label>
-                <Input defaultValue={editingPost?.titleFr ?? ""} className="bg-white" />
-              </div>
-              <div>
-                <Label className="text-xs text-slate-500">English</Label>
-                <Input defaultValue={editingPost?.titleEn ?? ""} className="bg-white" />
-              </div>
-              <div>
-                <Label className="text-xs text-slate-500">العربية</Label>
-                <Input defaultValue={editingPost?.titleAr ?? ""} className="bg-white" dir="rtl" />
-              </div>
-            </div>
-
-            <Separator />
-
-            {/* Content - multilingual */}
-            <div className="space-y-3">
-              <h4 className="text-sm font-semibold text-slate-700">Contenu</h4>
-              <div>
-                <Label className="text-xs text-slate-500">Français</Label>
-                <Textarea
-                  defaultValue={editingPost?.contentFr ?? ""}
-                  className="bg-white min-h-[100px]"
-                />
-              </div>
-              <div>
-                <Label className="text-xs text-slate-500">English</Label>
-                <Textarea
-                  defaultValue={editingPost?.contentEn ?? ""}
-                  className="bg-white min-h-[100px]"
-                />
-              </div>
-              <div>
-                <Label className="text-xs text-slate-500">العربية</Label>
-                <Textarea
-                  defaultValue={editingPost?.contentAr ?? ""}
-                  className="bg-white min-h-[100px]"
-                  dir="rtl"
-                />
-              </div>
-            </div>
-
-            {/* Actions */}
-            <div className="flex justify-end gap-2 pt-2">
-              <Button
-                variant="outline"
-                onClick={() => {
-                  setEditingPost(null);
-                  setIsCreating(false);
-                }}
-              >
-                Annuler
-              </Button>
-              <Button
-                className="bg-[#0A2540] hover:bg-[#0A2540]/90"
-                onClick={() => {
-                  setEditingPost(null);
-                  setIsCreating(false);
-                }}
-              >
-                <CheckCircle2 className="w-4 h-4 me-1.5" />
-                {editingPost ? "Enregistrer" : "Publier"}
-              </Button>
-            </div>
-          </div>
-        </DialogContent>
-      </Dialog>
+      {/* Delete Confirmation */}
+      <AlertDialog open={!!deleteTarget} onOpenChange={() => setDeleteTarget(null)}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Supprimer cet article ?</AlertDialogTitle>
+            <AlertDialogDescription>
+              L&apos;article <strong>{deleteTarget?.titleFr}</strong> sera
+              définitivement supprimé. Cette action est irréversible.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>Annuler</AlertDialogCancel>
+            <AlertDialogAction
+              className="bg-red-600 hover:bg-red-700"
+              onClick={handleDelete}
+            >
+              Supprimer
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 }

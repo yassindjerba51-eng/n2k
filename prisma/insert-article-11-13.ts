@@ -296,7 +296,6 @@ If you apply a disinfectant to a dirty surface, the active organic matter (blood
       contentFr: contentFr11,
       contentEn: contentEn11,
       contentAr: contentAr11,
-      tags: "tests microbiologiques, non-conformité, nettoyage, industrie agroalimentaire, atpmétrie",
       coverImage: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200",
       publishedAt: new Date("2024-12-10"),
     },
@@ -308,7 +307,6 @@ If you apply a disinfectant to a dirty surface, the active organic matter (blood
       contentFr: contentFr11,
       contentEn: contentEn11,
       contentAr: contentAr11,
-      tags: "tests microbiologiques, non-conformité, nettoyage, industrie agroalimentaire, atpmétrie",
       coverImage: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200",
       publishedAt: new Date("2024-12-10"),
     }
@@ -324,7 +322,6 @@ If you apply a disinfectant to a dirty surface, the active organic matter (blood
       contentFr: contentFr12,
       contentEn: contentEn12,
       contentAr: contentAr12,
-      tags: "biofilm, lignes de production, agroalimentaire, risque sanitaire, nettoyage enzymatique",
       coverImage: "https://images.unsplash.com/photo-1615811361523-6bd03d7748e7?q=80&w=1200",
       publishedAt: new Date("2024-12-15"),
     },
@@ -336,7 +333,6 @@ If you apply a disinfectant to a dirty surface, the active organic matter (blood
       contentFr: contentFr12,
       contentEn: contentEn12,
       contentAr: contentAr12,
-      tags: "biofilm, lignes de production, agroalimentaire, risque sanitaire, nettoyage enzymatique",
       coverImage: "https://images.unsplash.com/photo-1615811361523-6bd03d7748e7?q=80&w=1200",
       publishedAt: new Date("2024-12-15"),
     }
@@ -352,7 +348,6 @@ If you apply a disinfectant to a dirty surface, the active organic matter (blood
       contentFr: contentFr13,
       contentEn: contentEn13,
       contentAr: contentAr13,
-      tags: "nettoyage, désinfection, usine agroalimentaire, hygiène industrielle, protocole séquentiel",
       coverImage: "https://images.unsplash.com/photo-1584820927498-cafe2c15a45b?q=80&w=1200",
       publishedAt: new Date("2024-12-20"),
     },
@@ -364,7 +359,6 @@ If you apply a disinfectant to a dirty surface, the active organic matter (blood
       contentFr: contentFr13,
       contentEn: contentEn13,
       contentAr: contentAr13,
-      tags: "nettoyage, désinfection, usine agroalimentaire, hygiène industrielle, protocole séquentiel",
       coverImage: "https://images.unsplash.com/photo-1584820927498-cafe2c15a45b?q=80&w=1200",
       publishedAt: new Date("2024-12-20"),
     }

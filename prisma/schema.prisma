@@ -52,19 +52,50 @@ model Product {
   @@map("products")
 }
 
+model BlogCategory {
+  id          Int        @id @default(autoincrement())
+  slugFr      String     @unique @map("slug_fr") @db.VarChar(255)
+  slugEn      String     @unique @map("slug_en") @db.VarChar(255)
+  slugAr      String     @unique @map("slug_ar") @db.VarChar(255)
+  nameFr      String     @map("name_fr") @db.VarChar(255)
+  nameEn      String     @map("name_en") @db.VarChar(255)
+  nameAr      String     @map("name_ar") @db.VarChar(255)
+  titleFr     String     @map("title_fr") @db.VarChar(500)
+  titleEn     String     @map("title_en") @db.VarChar(500)
+  titleAr     String     @map("title_ar") @db.VarChar(500)
+  subtitleFr  String?    @map("subtitle_fr") @db.VarChar(500)
+  subtitleEn  String?    @map("subtitle_en") @db.VarChar(500)
+  subtitleAr  String?    @map("subtitle_ar") @db.VarChar(500)
+  headerImage String?    @map("header_image") @db.VarChar(500)
+  createdAt   DateTime   @default(now()) @map("created_at")
+  posts       BlogPost[] @relation("BlogPostCategories")
+
+  @@map("blog_categories")
+}
+
 model BlogPost {
-  id          Int      @id @default(autoincrement())
-  slug        String   @unique @db.VarChar(255)
-  coverImage  String?  @map("cover_image") @db.VarChar(500)
-  tags        String   @db.Text
-  titleFr     String   @map("title_fr") @db.VarChar(500)
-  titleEn     String   @map("title_en") @db.VarChar(500)
-  titleAr     String   @map("title_ar") @db.VarChar(500)
-  contentFr   String   @map("content_fr") @db.LongText
-  contentEn   String   @map("content_en") @db.LongText
-  contentAr   String   @map("content_ar") @db.LongText
-  publishedAt DateTime @default(now()) @map("published_at")
-  createdAt   DateTime @default(now()) @map("created_at")
+  id           Int            @id @default(autoincrement())
+  slug         String         @unique @db.VarChar(255)
+  slugFr       String         @unique @default("") @map("slug_fr") @db.VarChar(255)
+  slugEn       String         @unique @default("") @map("slug_en") @db.VarChar(255)
+  slugAr       String         @unique @default("") @map("slug_ar") @db.VarChar(255)
+  coverImage   String?        @map("cover_image") @db.VarChar(500)
+  featured     Boolean        @default(false)
+  titleFr      String         @map("title_fr") @db.VarChar(500)
+  titleEn      String         @map("title_en") @db.VarChar(500)
+  titleAr      String         @map("title_ar") @db.VarChar(500)
+  metaTitleFr  String?        @map("meta_title_fr") @db.VarChar(500)
+  metaTitleEn  String?        @map("meta_title_en") @db.VarChar(500)
+  metaTitleAr  String?        @map("meta_title_ar") @db.VarChar(500)
+  metaDescFr   String?        @map("meta_desc_fr") @db.VarChar(1000)
+  metaDescEn   String?        @map("meta_desc_en") @db.VarChar(1000)
+  metaDescAr   String?        @map("meta_desc_ar") @db.VarChar(1000)
+  contentFr    String         @map("content_fr") @db.LongText
+  contentEn    String         @map("content_en") @db.LongText
+  contentAr    String         @map("content_ar") @db.LongText
+  publishedAt  DateTime       @default(now()) @map("published_at")
+  createdAt    DateTime       @default(now()) @map("created_at")
+  categories   BlogCategory[] @relation("BlogPostCategories")
 
   @@map("blog_posts")
 }

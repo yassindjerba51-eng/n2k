@@ -300,7 +300,6 @@ async function main() {
       contentFr: contentFr8,
       contentEn: contentEn8,
       contentAr: contentAr8,
-      tags: "protocoles nettoyage, normes d'hygiène, transformation viande, audit N2K",
       coverImage: "https://images.unsplash.com/photo-1590483864455-82e4e89f8164?q=80&w=1200",
       publishedAt: new Date("2024-11-25"),
     },
@@ -312,7 +311,6 @@ async function main() {
       contentFr: contentFr8,
       contentEn: contentEn8,
       contentAr: contentAr8,
-      tags: "protocoles nettoyage, normes d'hygiène, transformation viande, audit N2K",
       coverImage: "https://images.unsplash.com/photo-1590483864455-82e4e89f8164?q=80&w=1200",
       publishedAt: new Date("2024-11-25"),
     }
@@ -328,7 +326,6 @@ async function main() {
       contentFr: contentFr9,
       contentEn: contentEn9,
       contentAr: contentAr9,
-      tags: "zones cachées, contamination, abattoir, siphons, évaporateurs",
       coverImage: "https://images.unsplash.com/photo-1605638144074-ce97274bfcc1?q=80&w=1200",
       publishedAt: new Date("2024-11-30"),
     },
@@ -340,7 +337,6 @@ async function main() {
       contentFr: contentFr9,
       contentEn: contentEn9,
       contentAr: contentAr9,
-      tags: "zones cachées, contamination, abattoir, siphons, évaporateurs",
       coverImage: "https://images.unsplash.com/photo-1605638144074-ce97274bfcc1?q=80&w=1200",
       publishedAt: new Date("2024-11-30"),
     }
@@ -356,7 +352,6 @@ async function main() {
       contentFr: contentFr10,
       contentEn: contentEn10,
       contentAr: contentAr10,
-      tags: "désinfection, sécurité viande, conformité, DLC, rappel produit",
       coverImage: "https://images.unsplash.com/photo-1603569283847-aa295f0d016a?q=80&w=1200",
       publishedAt: new Date("2024-12-05"),
     },
@@ -368,7 +363,6 @@ async function main() {
       contentFr: contentFr10,
       contentEn: contentEn10,
       contentAr: contentAr10,
-      tags: "désinfection, sécurité viande, conformité, DLC, rappel produit",
       coverImage: "https://images.unsplash.com/photo-1603569283847-aa295f0d016a?q=80&w=1200",
       publishedAt: new Date("2024-12-05"),
     }

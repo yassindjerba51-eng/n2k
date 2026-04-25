@@ -41,11 +41,12 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ loca
   // Fetch published blog posts directly from Prisma
   const posts = await prisma.blogPost.findMany({
     orderBy: { publishedAt: "desc" },
+    include: { categories: true },
   });
 
-  // Split: first 3 are featured, rest are in the list
-  const featuredPosts = posts.slice(0, 3);
-  const remainingPosts = posts.slice(3);
+  // Featured posts first, then rest
+  const featuredPosts = posts.filter((p: any) => p.featured).slice(0, 3);
+  const remainingPosts = posts.filter((p: any) => !featuredPosts.includes(p));
 
   return (
     <div className="bg-n2k-surface min-h-screen">

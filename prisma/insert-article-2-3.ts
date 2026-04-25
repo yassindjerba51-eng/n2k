@@ -194,7 +194,6 @@ async function main() {
       contentFr: contentFr2,
       contentEn: contentEn2,
       contentAr: contentAr2,
-      tags: "ammoniac, qualité de l'air, élevage avicole, problèmes respiratoires, traitement litière",
       coverImage: "https://images.unsplash.com/photo-1548848221-0c2e497ed557?q=80&w=1200",
       publishedAt: new Date("2024-10-25"),
     },
@@ -206,7 +205,6 @@ async function main() {
       contentFr: contentFr2,
       contentEn: contentEn2,
       contentAr: contentAr2,
-      tags: "ammoniac, qualité de l'air, élevage avicole, problèmes respiratoires, traitement litière",
       coverImage: "https://images.unsplash.com/photo-1548848221-0c2e497ed557?q=80&w=1200",
       publishedAt: new Date("2024-10-25"),
     }
@@ -222,7 +220,6 @@ async function main() {
       contentFr: contentFr3,
       contentEn: contentEn3,
       contentAr: contentAr3,
-      tags: "biofilm, résistance bactérienne, désinfection, élevage avicole, CLORAGRO",
       coverImage: "https://images.unsplash.com/photo-1620853744645-31a890a886b6?q=80&w=1200",
       publishedAt: new Date("2024-10-30"),
     },
@@ -234,7 +231,6 @@ async function main() {
       contentFr: contentFr3,
       contentEn: contentEn3,
       contentAr: contentAr3,
-      tags: "biofilm, résistance bactérienne, désinfection, élevage avicole, CLORAGRO",
       coverImage: "https://images.unsplash.com/photo-1620853744645-31a890a886b6?q=80&w=1200",
       publishedAt: new Date("2024-10-30"),
     }

@@ -197,7 +197,6 @@ async function main() {
       contentFr: contentFr4,
       contentEn: contentEn4,
       contentAr: contentAr4,
-      tags: "biosécurité, erreurs fréquentes, risque sanitaire, élevage avicole, prévention",
       coverImage: "https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?q=80&w=1200",
       publishedAt: new Date("2024-11-05"),
     },
@@ -209,7 +208,6 @@ async function main() {
       contentFr: contentFr4,
       contentEn: contentEn4,
       contentAr: contentAr4,
-      tags: "biosécurité, erreurs fréquentes, risque sanitaire, élevage avicole, prévention",
       coverImage: "https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?q=80&w=1200",
       publishedAt: new Date("2024-11-05"),
     }
@@ -225,7 +223,6 @@ async function main() {
       contentFr: contentFr5,
       contentEn: contentEn5,
       contentAr: contentAr5,
-      tags: "pulvérisation, canon à mousse, méthode d'application, désinfection avicole, nettoyage technique",
       coverImage: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=1200",
       publishedAt: new Date("2024-11-10"),
     },
@@ -237,7 +234,6 @@ async function main() {
       contentFr: contentFr5,
       contentEn: contentEn5,
       contentAr: contentAr5,
-      tags: "pulvérisation, canon à mousse, méthode d'application, désinfection avicole, nettoyage technique",
       coverImage: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=1200",
       publishedAt: new Date("2024-11-10"),
     }

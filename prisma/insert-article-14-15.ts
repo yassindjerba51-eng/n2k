@@ -172,7 +172,6 @@ async function main() {
       contentFr: contentFr14,
       contentEn: contentEn14,
       contentAr: contentAr14,
-      tags: "erreurs d'hygiène, transformation alimentaire, bonnes pratiques, usine agroalimentaire, sécurité sanitaire",
       coverImage: "https://images.unsplash.com/photo-1590483864455-82e4e89f8164?q=80&w=1200",
       publishedAt: new Date("2024-12-25"),
     },
@@ -184,7 +183,6 @@ async function main() {
       contentFr: contentFr14,
       contentEn: contentEn14,
       contentAr: contentAr14,
-      tags: "erreurs d'hygiène, transformation alimentaire, bonnes pratiques, usine agroalimentaire, sécurité sanitaire",
       coverImage: "https://images.unsplash.com/photo-1590483864455-82e4e89f8164?q=80&w=1200",
       publishedAt: new Date("2024-12-25"),
     }
@@ -200,7 +198,6 @@ async function main() {
       contentFr: contentFr15,
       contentEn: contentEn15,
       contentAr: contentAr15,
-      tags: "réduction contamination, microbiologie, zones de production, DSVA, AIRSAN",
       coverImage: "https://images.unsplash.com/photo-1615811361523-6bd03d7748e7?q=80&w=1200",
       publishedAt: new Date("2024-12-30"),
     },
@@ -212,7 +209,6 @@ async function main() {
       contentFr: contentFr15,
       contentEn: contentEn15,
       contentAr: contentAr15,
-      tags: "réduction contamination, microbiologie, zones de production, DSVA, AIRSAN",
       coverImage: "https://images.unsplash.com/photo-1615811361523-6bd03d7748e7?q=80&w=1200",
       publishedAt: new Date("2024-12-30"),
     }

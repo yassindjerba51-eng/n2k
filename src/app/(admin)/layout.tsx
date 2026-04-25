@@ -1,3 +1,4 @@
+import "@/app/globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
@@ -19,8 +20,8 @@ export default function AdminRootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr" dir="ltr" className={`${inter.variable} h-full antialiased`}>
-      <body className="h-full bg-[#F5F5F5] font-[var(--font-body)]" style={{ fontFamily: "var(--font-body), sans-serif" }}>
+    <html lang="fr" dir="ltr" className={`${inter.variable} h-full antialiased`} suppressHydrationWarning>
+      <body className="h-full bg-[#F5F5F5] font-[var(--font-body)]" style={{ fontFamily: "var(--font-body), sans-serif" }} suppressHydrationWarning>
         {children}
       </body>
     </html>

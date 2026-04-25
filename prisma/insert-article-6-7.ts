@@ -197,7 +197,6 @@ async function main() {
       contentFr: contentFr6,
       contentEn: contentEn6,
       contentAr: contentAr6,
-      tags: "contamination croisée, abattoir, chaîne d'abattage, nettoyage industriel, sécurité alimentaire",
       coverImage: "https://images.unsplash.com/photo-1587560699334-bea54a02d84a?q=80&w=1200",
       publishedAt: new Date("2024-11-15"),
     },
@@ -209,7 +208,6 @@ async function main() {
       contentFr: contentFr6,
       contentEn: contentEn6,
       contentAr: contentAr6,
-      tags: "contamination croisée, abattoir, chaîne d'abattage, nettoyage industriel, sécurité alimentaire",
       coverImage: "https://images.unsplash.com/photo-1587560699334-bea54a02d84a?q=80&w=1200",
       publishedAt: new Date("2024-11-15"),
     }
@@ -225,7 +223,6 @@ async function main() {
       contentFr: contentFr7,
       contentEn: contentEn7,
       contentAr: contentAr7,
-      tags: "biofilm, inox, abattoir, listeria, nettoyage technique, CLORAGRO",
       coverImage: "https://images.unsplash.com/photo-1590579491624-f98f36d4c763?q=80&w=1200",
       publishedAt: new Date("2024-11-20"),
     },
@@ -237,7 +234,6 @@ async function main() {
       contentFr: contentFr7,
       contentEn: contentEn7,
       contentAr: contentAr7,
-      tags: "biofilm, inox, abattoir, listeria, nettoyage technique, CLORAGRO",
       coverImage: "https://images.unsplash.com/photo-1590579491624-f98f36d4c763?q=80&w=1200",
       publishedAt: new Date("2024-11-20"),
     }

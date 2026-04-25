@@ -137,7 +137,6 @@ async function main() {
         contentFr,
         contentEn,
         contentAr,
-        tags: "eau, canalisation, biofilm, élevage avicole, hygiène eau",
         coverImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200",
         publishedAt: new Date("2024-10-14"),
       }
@@ -153,7 +152,6 @@ async function main() {
         contentFr,
         contentEn,
         contentAr,
-        tags: "eau, canalisation, biofilm, élevage avicole, hygiène eau",
         coverImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200",
         publishedAt: new Date("2024-10-14"),
       }

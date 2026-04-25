@@ -104,7 +104,6 @@ async function main() {
       contentFr,
       contentEn,
       contentAr,
-      tags: "désinfection, vide sanitaire, élevage avicole, biofilm, nettoyage technique",
       coverImage: "https://images.unsplash.com/photo-1516467508483-a7212febe31a?q=80&w=1200",
       publishedAt: new Date("2024-10-20"),
     },
@@ -116,7 +115,6 @@ async function main() {
       contentFr,
       contentEn,
       contentAr,
-      tags: "désinfection, vide sanitaire, élevage avicole, biofilm, nettoyage technique",
       coverImage: "https://images.unsplash.com/photo-1516467508483-a7212febe31a?q=80&w=1200",
       publishedAt: new Date("2024-10-20"),
     }

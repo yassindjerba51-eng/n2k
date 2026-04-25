@@ -13,19 +13,30 @@ function calculateReadingTime(text: string): number {
   return Math.ceil(minutes);
 }
 
+async function findPostBySlug(slug: string) {
+  // Try main slug first, then trilingual slugs
+  let post = await prisma.blogPost.findUnique({ where: { slug }, include: { categories: true } });
+  if (!post) post = await prisma.blogPost.findUnique({ where: { slugFr: slug }, include: { categories: true } });
+  if (!post) post = await prisma.blogPost.findUnique({ where: { slugEn: slug }, include: { categories: true } });
+  if (!post) post = await prisma.blogPost.findUnique({ where: { slugAr: slug }, include: { categories: true } });
+  return post;
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
-  const post = await prisma.blogPost.findUnique({ where: { slug } });
+  const post = await findPostBySlug(slug);
   const t = await getTranslations({ locale, namespace: "common" });
   
   if (!post) {
     return { title: t("notFound") };
   }
 
-  const title = locale === "ar" ? post.titleAr : locale === "en" ? post.titleEn : post.titleFr;
+  const title = locale === "ar" ? (post.metaTitleAr || post.titleAr) : locale === "en" ? (post.metaTitleEn || post.titleEn) : (post.metaTitleFr || post.titleFr);
+  const description = locale === "ar" ? post.metaDescAr : locale === "en" ? post.metaDescEn : post.metaDescFr;
   
   return {
     title: `${title} | ${t("brandName")}`,
+    description: description || undefined,
     openGraph: {
       title: title,
       type: "article",
@@ -39,9 +50,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ local
   const { locale, slug } = await params;
   const t = await getTranslations("blog");
 
-  const post = await prisma.blogPost.findUnique({
-    where: { slug },
-  });
+  const post = await findPostBySlug(slug);
 
   if (!post) {
     notFound();
@@ -93,7 +102,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ local
         <div className="relative w-full max-w-[1400px] mx-auto px-6 md:px-10 pb-24 grid grid-cols-12 z-20">
           <div className="col-span-12 md:col-span-10 lg:col-span-8">
             <span className="inline-block py-1 px-3 bg-n2k-secondary text-white font-heading text-[10px] uppercase tracking-widest font-bold mb-6">
-              {post.tags ? post.tags.split(',')[0] : t("featuredBadge")}
+              {(post as any).categories?.[0]?.nameFr || t("featuredBadge")}
             </span>
             <h1 className="font-heading text-4xl md:text-6xl font-black text-white tracking-tighter mb-8 leading-[1.1]">
               {title}
@@ -168,7 +177,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ local
                       />
                     </div>
                     <span className="text-[10px] font-heading uppercase tracking-widest text-n2k-secondary font-bold">
-                      {related.tags?.split(',')[0] || t("featuredBadge")}
+                      {t("featuredBadge")}
                     </span>
                     <h4 className="font-heading font-bold text-lg leading-tight mt-2 group-hover:text-n2k-secondary transition-colors">
                       {rTitle}
