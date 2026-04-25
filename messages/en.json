@@ -466,6 +466,11 @@
     "heroSubtitle": "Developed at the Borj Cédria Technology Park under the direction of Dr Mahmoud Naffeti, our formulations are designed for Tunisian field realities. Each protocol follows a precise sequence: Cleaning → Disinfection or Stabilization.",
     "learnMore": "Learn more",
     "step": "Step",
+    "sectorTabs": {
+      "elevage": "Farming",
+      "abattoir": "Slaughterhouse",
+      "agroalimentaire": "Food Industry"
+    },
     "batiment": {
       "badge": "Zone 01 — Building",
       "title": "Surfaces & Floors: Breaking the Pathogen Cycle",

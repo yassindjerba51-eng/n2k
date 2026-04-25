@@ -466,6 +466,11 @@
     "heroSubtitle": "Développées au Pôle Technologique de Borj Cédria sous la direction du Dr Mahmoud Naffeti, nos formulations sont conçues pour les réalités du terrain tunisien. Chaque protocole suit une séquence précise : Nettoyage → Désinfection ou Stabilisation.",
     "learnMore": "En savoir plus",
     "step": "Étape",
+    "sectorTabs": {
+      "elevage": "Élevage",
+      "abattoir": "Abattoir",
+      "agroalimentaire": "Agroalimentaire"
+    },
     "batiment": {
       "badge": "Zone 01 — Le Bâtiment",
       "title": "Surfaces & Sols : Briser le cycle pathogène",
