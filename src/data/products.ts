@@ -91,7 +91,7 @@ export const products: Product[] = [
   // ─── ZONE 02 — CANALISATION D'EAU ────────────────────
   {
     slug: "bionet",
-    name: "BIONETPRO",
+    name: "BIONET",
     zone: "02",
     zoneName: "Canalisation d'Eau",
     zoneLabel: "Zone 02",
@@ -99,7 +99,7 @@ export const products: Product[] = [
     problem:
       "Les circuits d'abreuvement accumulent des biofilms bactériens, algues, encrassements des pipettes et nipples, et dépôts calcaires organiques. Ces formations réduisent le débit et contaminent l'eau de boisson.",
     solution:
-      "BIONETPRO est un nettoyant technique spécial aviculture pour les canalisations d'eau. Il élimine les biofilms bactériens, les algues et les dépôts calcaires organiques dans les circuits d'abreuvement. Homologué MS/DHMPE/HOM/0001/03/01/2023. Principe actif : Hypochlorite de sodium (CAS 7681-52-9) + inhibiteur de corrosion spécial métaux. Efficacité certifiée à 99,9% sur étiquette officielle. Ce produit est un nettoyant technique des canalisations, non un désinfectant biocide systémique.",
+      "BIONET est un nettoyant technique spécial aviculture pour les canalisations d'eau. Il élimine les biofilms bactériens, les algues et les dépôts calcaires organiques dans les circuits d'abreuvement. Principe actif : Hypochlorite de sodium (CAS 7681-52-9) + inhibiteur de corrosion spécial métaux. Ce produit est un nettoyant technique des canalisations, non un désinfectant biocide systémique.",
     applications: [
       "Circuits d'abreuvement avicole (pipettes, nipples)",
       "Canalisations PVC et polyéthylène",
@@ -118,7 +118,6 @@ export const products: Product[] = [
       { label: "Dosage sévère", value: "3%" },
       { label: "Temps de contact", value: "4 à 6 heures (biofilms anciens : 12 à 24h)" },
       { label: "Conditionnement", value: "Bidon de 24 kg" },
-      { label: "Homologation", value: "MS/DHMPE/HOM/0001/03/01/2023" },
     ],
     color: "#0D9488",
     accentBg: "bg-teal-600/10",
@@ -232,11 +231,76 @@ export const zones = [
   { id: "03", label: "Zone 03 — L'Ambiance", color: "#EA580C" },
 ] as const;
 
+// ─── Multilingual zone labels ─────────────────────────
+const zoneLabels: Record<string, { all: string; z01: string; z02: string; z03: string }> = {
+  fr: { all: "Tous les produits", z01: "Zone 01 — Le Bâtiment", z02: "Zone 02 — Canalisation d'Eau", z03: "Zone 03 — L'Ambiance" },
+  en: { all: "All products", z01: "Zone 01 — The Building", z02: "Zone 02 — Water Piping", z03: "Zone 03 — The Atmosphere" },
+  ar: { all: "جميع المنتجات", z01: "المنطقة 01 — المبنى", z02: "المنطقة 02 — شبكة المياه", z03: "المنطقة 03 — الجو العام" },
+};
+
+export function getLocalizedZones(locale: string) {
+  const labels = zoneLabels[locale] || zoneLabels.fr;
+  return [
+    { id: "all", label: labels.all },
+    { id: "01", label: labels.z01, color: "#0D7ED0" },
+    { id: "02", label: labels.z02, color: "#0D9488" },
+    { id: "03", label: labels.z03, color: "#EA580C" },
+  ];
+}
+
+// ─── Multilingual subtitle overrides ──────────────────
+const subtitleOverrides: Record<string, Record<string, string>> = {
+  en: {
+    cloragro: "Foaming Alkaline Chlorinated Detergent Disinfectant with corrosion inhibitor — Phase 01 of the N2K protocol",
+    optimagro: "Broad-spectrum biocidal disinfectant — Glutaraldehyde + Quaternary Ammonium — Phase 02 of the N2K protocol — Dosage 2%",
+    bionet: "Alkaline Chlorinated Antibiofilm Detergent — Poultry drinking circuit cleaning",
+    aquacontrol: "Bacteriological stabilizer for drinking water — Daily maintenance of microbiological quality",
+    airsan: "Nebulization solution for airborne treatment — Safe for use in the presence of animals",
+    bioactive: "Concentrated enzymatic cleaner — Degradation of organic matter on surfaces and equipment during sanitary void",
+  },
+  ar: {
+    cloragro: "منظف مطهر قلوي كلوري رغوي مع مثبط للتآكل — المرحلة 01 من بروتوكول N2K",
+    optimagro: "مطهر حيوي واسع الطيف — غلوتارالدهيد + أمونيوم رباعي — المرحلة 02 من بروتوكول N2K — الجرعة 2%",
+    bionet: "منظف قلوي كلوري مضاد للبيوفيلم — تنظيف دوائر الشرب في تربية الدواجن",
+    aquacontrol: "مثبت بكتيري لمياه الشرب — الحفاظ اليومي على الجودة الميكروبيولوجية",
+    airsan: "محلول ضبابي لمعالجة الهواء — آمن للاستخدام في حضور الحيوانات",
+    bioactive: "منظف إنزيمي مركز — تحليل المواد العضوية على الأسطح والمعدات خلال فترة الفراغ الصحي",
+  },
+  fr: {
+    cloragro: "Détergent Désinfectant Alcalin Chloré moussant avec inhibiteur de corrosion — Phase 01 du protocole N2K",
+    optimagro: "Désinfectant biocide large spectre — Glutaraldéhyde + Ammoniums Quaternaires — Phase 02 du protocole N2K — Dosage 2%",
+    bionet: "Détergent Alcalin Chloré Antibiofilm — Nettoyage des circuits d'abreuvement avicole",
+    aquacontrol: "Stabilisateur bactériologique de l'eau de boisson — Maintien quotidien de la qualité microbiologique",
+    airsan: "Solution de nébulisation pour traitement aéroporté — Utilisable en présence des animaux",
+    bioactive: "Nettoyant enzymatique concentré — Dégradation des matières organiques sur surfaces et équipements en vide sanitaire",
+  },
+};
+
 export function getProductBySlug(slug: string): Product | undefined {
   return products.find((p) => p.slug === slug);
+}
+
+export function getLocalizedProduct(slug: string, locale: string): Product | undefined {
+  const product = getProductBySlug(slug);
+  if (!product) return undefined;
+  const overrides = subtitleOverrides[locale];
+  if (overrides && overrides[slug]) {
+    return { ...product, subtitle: overrides[slug] };
+  }
+  return product;
 }
 
 export function getProductsByZone(zone: string): Product[] {
   if (zone === "all") return products;
   return products.filter((p) => p.zone === zone);
+}
+
+export function getLocalizedProducts(locale: string): Product[] {
+  return products.map((p) => {
+    const overrides = subtitleOverrides[locale];
+    if (overrides && overrides[p.slug]) {
+      return { ...p, subtitle: overrides[p.slug] };
+    }
+    return p;
+  });
 }

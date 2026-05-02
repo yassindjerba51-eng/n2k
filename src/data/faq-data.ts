@@ -4,162 +4,132 @@ export interface FAQItem {
 }
 
 export interface FAQData {
-  metaTitle: string;
-  metaDesc: string;
-  heroBadge: string;
   heroTitle: string;
-  heroDesc: string;
-  faqBadge: string;
-  faqTitle: string;
-  ctaTitle: string;
-  ctaDesc: string;
-  ctaButton: string;
+  heroSubtitle: string;
+  metaTitle: string;
+  metaDescription: string;
   items: FAQItem[];
+  ctaTitle: string;
+  ctaButton: string;
 }
 
-export const faqDataFr: FAQData = {
-  metaTitle: "FAQ — Questions Fréquentes | Les Laboratoires N2K",
-  metaDesc: "Réponses aux questions les plus fréquentes sur nos protocoles de maîtrise sanitaire, nos produits et notre méthodologie.",
-  heroBadge: "FAQ",
-  heroTitle: "Questions fréquentes",
-  heroDesc: "Les réponses aux questions que nos partenaires nous posent le plus souvent sur les protocoles, les produits et notre méthodologie.",
-  faqBadge: "Protocoles & Produits",
-  faqTitle: "Ce que vous devez savoir",
-  ctaTitle: "Votre question n'est pas ici ?",
-  ctaDesc: "Contactez nos experts pour une réponse personnalisée à votre situation terrain.",
-  ctaButton: "Contacter un expert",
-  items: [
-    {
-      question: "Pourquoi un simple désinfectant ne suffit-il pas ?",
-      answer: "Un désinfectant appliqué directement sur un biofilm ou une surface souillée est neutralisé par la matière organique avant d'atteindre les pathogènes. C'est pourquoi le protocole N2K impose un nettoyage technique préalable (Phase 01 — CLORAGRO) avant toute désinfection (Phase 02 — OPTIMAGRO). L'ordre séquentiel est la clé de l'efficacité."
-    },
-    {
-      question: "Quelle est la différence entre nettoyage et désinfection ?",
-      answer: "Le nettoyage (détergence) élimine les souillures visibles : graisses, protéines, biofilm, dépôts organiques. La désinfection détruit les micro-organismes pathogènes sur une surface déjà propre. Sans nettoyage préalable, la désinfection est inefficace car le désinfectant est consommé par la matière organique résiduelle."
-    },
-    {
-      question: "Combien de temps dure un protocole complet ?",
-      answer: "Un protocole complet de nettoyage-désinfection prend entre 4 et 8 heures selon la taille de l'installation. Phase 01 (CLORAGRO) : 20 minutes de temps de contact + rinçage. Temps de séchage. Phase 02 (OPTIMAGRO) : 30 minutes de temps de contact minimum. Le protocole est réalisable pendant un vide sanitaire standard de 48h."
-    },
-    {
-      question: "Vos produits sont-ils compatibles avec les animaux en présence ?",
-      answer: "AIRSAN est spécifiquement formulé pour être utilisé en présence d'animaux lors de la nébulisation. AQUACONTROL est conçu pour le traitement continu de l'eau de boisson. En revanche, CLORAGRO et OPTIMAGRO sont des produits de vide sanitaire qui doivent être utilisés en absence d'animaux, avec un rinçage obligatoire et un temps de séchage avant mise en place."
-    },
-    {
-      question: "Comment contrôlez-vous l'ammoniac dans les bâtiments ?",
-      answer: "L'ammoniac est principalement produit par la dégradation de l'acide urique dans les litières. AIRSAN réduit la charge microbienne responsable de cette dégradation, ce qui diminue mécaniquement la production d'ammoniac. L'objectif est de maintenir le taux sous 20 ppm. Un nettoyage technique régulier avec CLORAGRO entre les cycles complète le dispositif."
-    },
-    {
-      question: "Quelles sont les normes de vos produits biocides ?",
-      answer: "Nos produits biocides sont homologués MS/DHMPE en Tunisie. Ils sont testés selon les normes européennes EN 1276 (bactéricidie), EN 13697 (surfaces), EN 1650 (fongicidie) et EN 14476 (virucide). Classification biocide TP2 (désinfection surfaces), TP3 (hygiène vétérinaire), TP4 (surfaces alimentaires). Les fiches de données de sécurité (FDS) sont disponibles sur demande."
-    },
-    {
-      question: "Proposez-vous un accompagnement terrain ?",
-      answer: "Oui. L'accompagnement terrain est au cœur de notre démarche. Nos experts se déplacent sur votre exploitation pour : un audit initial (prélèvements, analyse des points critiques), la formation de vos équipes au protocole, le suivi post-application avec analyses de contrôle, et l'ajustement des dosages selon les résultats. Nous ne vendons pas de produits sans accompagnement."
-    },
-    {
-      question: "Quelle est la fréquence recommandée des traitements ?",
-      answer: "En élevage avicole : protocole complet (CLORAGRO + OPTIMAGRO) à chaque vide sanitaire. AQUACONTROL en continu sur l'eau de boisson. AIRSAN en nébulisation hebdomadaire en présence d'animaux. En abattoir : nettoyage quotidien CLORAGRO + OPTIMAGRO sur les surfaces de contact. En IAA : fréquence adaptée au plan HACCP de l'établissement."
-    }
-  ]
+const faqData: Record<string, FAQData> = {
+  fr: {
+    heroTitle: "Questions fréquemment posées",
+    heroSubtitle: "Tout ce que vous devez savoir sur nos protocoles de maîtrise sanitaire, nos produits et notre approche terrain.",
+    metaTitle: "FAQ — Les Laboratoires N2K",
+    metaDescription: "Réponses aux questions fréquentes sur les protocoles de maîtrise sanitaire N2K, les produits CLORAGRO, OPTIMAGRO, BIONET et les bonnes pratiques d'hygiène en élevage avicole.",
+    ctaTitle: "Vous avez d'autres questions ?",
+    ctaButton: "Demander un diagnostic terrain gratuit",
+    items: [
+      {
+        question: "Pourquoi le rinçage est-il obligatoire entre CLORAGRO et OPTIMAGRO ?",
+        answer: "CLORAGRO est un détergent alcalin chloré (Phase 01). OPTIMAGRO est un désinfectant à base de glutaraldéhyde et d'ammoniums quaternaires (Phase 02). Ces deux familles chimiques sont incompatibles : un mélange provoque une neutralisation mutuelle qui annule l'efficacité des deux produits. Le rinçage complet à l'eau potable entre les deux étapes est une exigence chimique et réglementaire — ce n'est pas optionnel."
+      },
+      {
+        question: "Pourquoi un protocole en plusieurs étapes et pas un seul produit ?",
+        answer: "Aucun produit unique ne peut à la fois nettoyer (éliminer le biofilm organique) et désinfecter (détruire les pathogènes). Le biofilm protège les bactéries : si vous désinfectez sans nettoyer d'abord, le désinfectant n'atteint pas les micro-organismes. Le protocole séquentiel N2K — Nettoyage (CLORAGRO) → Rinçage → Désinfection (OPTIMAGRO) — est la seule méthode qui garantit un résultat microbiologique mesurable."
+      },
+      {
+        question: "Quand faut-il traiter les circuits d'eau ?",
+        answer: "Les circuits d'abreuvement doivent être traités à chaque vide sanitaire avec BIONET (traitement choc à 1-3%) pour éliminer les biofilms accumulés. En parallèle, AQUACONTROL est utilisé en continu à 0,1% dans l'eau de boisson pour maintenir la qualité microbiologique au quotidien. Un circuit non traité est une source permanente de recontamination, même si les surfaces du bâtiment sont parfaitement désinfectées."
+      },
+      {
+        question: "Pourquoi l'ammoniac réduit-il les performances de l'élevage ?",
+        answer: "L'ammoniac (NH₃) est un gaz irritant produit par la décomposition des déjections. Au-delà de 25 ppm, il provoque des lésions des voies respiratoires supérieures chez les volailles, augmente la sensibilité aux infections (Mycoplasma, E. coli), réduit la consommation alimentaire et dégrade l'indice de conversion. AIRSAN, utilisé en nébulisation à 1 ml/m³, réduit la charge microbienne aéroportée et contribue à stabiliser l'ambiance sans mouiller les litières."
+      },
+      {
+        question: "Quand un protocole minimal suffit-il ?",
+        answer: "Un protocole minimal (CLORAGRO + rinçage + OPTIMAGRO) peut suffire dans les cas suivants : bâtiments récents avec surfaces lisses, historique sanitaire favorable sans pathologies récurrentes, vide sanitaire respecté d'au moins 14 jours. Dès qu'un facteur de risque apparaît (mortalité anormale, contamination de l'eau, audit réglementaire), le protocole doit être renforcé avec les produits complémentaires."
+      },
+      {
+        question: "Quand faut-il renforcer le protocole ?",
+        answer: "Le protocole doit être renforcé dans les situations suivantes : mortalité supérieure à 5% sur un cycle, présence confirmée de Salmonella ou E. coli dans les prélèvements, échec d'un audit HACCP ou vétérinaire, bâtiments anciens avec surfaces poreuses ou dégradées, épisode de maladie respiratoire. Le renforcement implique l'ajout de BIONET (canalisations), AQUACONTROL (eau de boisson), AIRSAN (ambiance) et BIOACTIVE (équipements à forte charge organique)."
+      },
+      {
+        question: "Pourquoi ne pas utiliser tous les produits partout ?",
+        answer: "Chaque produit N2K a une formulation spécifique pour une zone et une fonction précise. AIRSAN est formulé pour la nébulisation en présence d'animaux — il ne convient pas au nettoyage des surfaces. BIONET est conçu pour les canalisations — il n'est pas efficace en pulvérisation sur les murs. Utiliser un produit hors de son champ d'application gaspille des ressources et peut compromettre la sécurité. Le protocole N2K attribue chaque produit à sa zone : le bon produit, au bon endroit, au bon moment."
+      }
+    ]
+  },
+  en: {
+    heroTitle: "Frequently Asked Questions",
+    heroSubtitle: "Everything you need to know about our sanitary control protocols, products, and field-based approach.",
+    metaTitle: "FAQ — Les Laboratoires N2K",
+    metaDescription: "Answers to frequently asked questions about N2K sanitary control protocols, CLORAGRO, OPTIMAGRO, BIONET products and hygiene best practices in poultry farming.",
+    ctaTitle: "Have more questions?",
+    ctaButton: "Request a free field diagnostic",
+    items: [
+      {
+        question: "Why is rinsing mandatory between CLORAGRO and OPTIMAGRO?",
+        answer: "CLORAGRO is an alkaline chlorinated detergent (Phase 01). OPTIMAGRO is a disinfectant based on glutaraldehyde and quaternary ammonium (Phase 02). These two chemical families are incompatible: mixing them causes mutual neutralization that cancels the effectiveness of both products. Complete rinsing with drinking water between the two steps is a chemical and regulatory requirement — it is not optional."
+      },
+      {
+        question: "Why a multi-step protocol instead of a single product?",
+        answer: "No single product can both clean (remove organic biofilm) and disinfect (destroy pathogens). Biofilm protects bacteria: if you disinfect without cleaning first, the disinfectant cannot reach the microorganisms. The N2K sequential protocol — Cleaning (CLORAGRO) → Rinsing → Disinfection (OPTIMAGRO) — is the only method that guarantees a measurable microbiological result."
+      },
+      {
+        question: "When should water circuits be treated?",
+        answer: "Drinking circuits must be treated at each sanitary void with BIONET (shock treatment at 1-3%) to eliminate accumulated biofilms. In parallel, AQUACONTROL is used continuously at 0.1% in drinking water to maintain daily microbiological quality. An untreated circuit is a permanent source of recontamination, even if building surfaces are perfectly disinfected."
+      },
+      {
+        question: "Why does ammonia reduce farming performance?",
+        answer: "Ammonia (NH₃) is an irritant gas produced by the decomposition of droppings. Above 25 ppm, it causes lesions in the upper respiratory tract of poultry, increases susceptibility to infections (Mycoplasma, E. coli), reduces feed consumption, and degrades feed conversion ratio. AIRSAN, used in nebulization at 1 ml/m³, reduces airborne microbial load and helps stabilize the atmosphere without wetting litter."
+      },
+      {
+        question: "When is a minimal protocol sufficient?",
+        answer: "A minimal protocol (CLORAGRO + rinsing + OPTIMAGRO) may be sufficient in the following cases: recent buildings with smooth surfaces, favorable health history without recurrent pathologies, respected sanitary void of at least 14 days. As soon as a risk factor appears (abnormal mortality, water contamination, regulatory audit), the protocol must be strengthened with complementary products."
+      },
+      {
+        question: "When should the protocol be strengthened?",
+        answer: "The protocol should be strengthened in the following situations: mortality above 5% on a cycle, confirmed presence of Salmonella or E. coli in samples, failed HACCP or veterinary audit, old buildings with porous or degraded surfaces, respiratory disease episode. Strengthening involves adding BIONET (pipes), AQUACONTROL (drinking water), AIRSAN (atmosphere) and BIOACTIVE (equipment with high organic load)."
+      },
+      {
+        question: "Why not use all products everywhere?",
+        answer: "Each N2K product has a specific formulation for a specific zone and function. AIRSAN is formulated for nebulization in the presence of animals — it is not suitable for surface cleaning. BIONET is designed for pipes — it is not effective in spray application on walls. Using a product outside its field of application wastes resources and can compromise safety. The N2K protocol assigns each product to its zone: the right product, in the right place, at the right time."
+      }
+    ]
+  },
+  ar: {
+    heroTitle: "الأسئلة الشائعة",
+    heroSubtitle: "كل ما تحتاج معرفته عن بروتوكولات التحكم الصحي لدينا ومنتجاتنا ومنهجيتنا الميدانية.",
+    metaTitle: "الأسئلة الشائعة — مختبرات N2K",
+    metaDescription: "إجابات على الأسئلة الشائعة حول بروتوكولات التحكم الصحي N2K ومنتجات CLORAGRO وOPTIMAGRO وBIONET وأفضل ممارسات النظافة في تربية الدواجن.",
+    ctaTitle: "هل لديك أسئلة أخرى؟",
+    ctaButton: "اطلب تشخيصاً ميدانياً مجانياً",
+    items: [
+      {
+        question: "لماذا يعتبر الشطف إلزامياً بين CLORAGRO وOPTIMAGRO؟",
+        answer: "CLORAGRO هو منظف قلوي كلوري (المرحلة 01). OPTIMAGRO هو مطهر يعتمد على الغلوتارالدهيد والأمونيوم الرباعي (المرحلة 02). هاتان العائلتان الكيميائيتان غير متوافقتين: خلطهما يسبب معادلة متبادلة تلغي فعالية المنتجين. الشطف الكامل بالماء الصالح للشرب بين المرحلتين هو شرط كيميائي وتنظيمي — وليس اختيارياً."
+      },
+      {
+        question: "لماذا بروتوكول متعدد المراحل بدلاً من منتج واحد؟",
+        answer: "لا يمكن لأي منتج واحد أن ينظف (يزيل البيوفيلم العضوي) ويطهر (يدمر مسببات الأمراض) في نفس الوقت. البيوفيلم يحمي البكتيريا: إذا قمت بالتطهير دون التنظيف أولاً، فإن المطهر لا يصل إلى الكائنات الدقيقة. بروتوكول N2K التسلسلي — التنظيف (CLORAGRO) ← الشطف ← التطهير (OPTIMAGRO) — هو الطريقة الوحيدة التي تضمن نتيجة ميكروبيولوجية قابلة للقياس."
+      },
+      {
+        question: "متى يجب معالجة دوائر المياه؟",
+        answer: "يجب معالجة دوائر الشرب في كل فراغ صحي باستخدام BIONET (معالجة صدمية بنسبة 1-3%) للقضاء على البيوفيلم المتراكم. بالتوازي، يستخدم AQUACONTROL باستمرار بنسبة 0.1% في مياه الشرب للحفاظ على الجودة الميكروبيولوجية اليومية. الدائرة غير المعالجة هي مصدر دائم لإعادة التلوث، حتى لو كانت أسطح المبنى مطهرة بشكل مثالي."
+      },
+      {
+        question: "لماذا يقلل الأمونياك من أداء التربية؟",
+        answer: "الأمونياك (NH₃) هو غاز مهيج ينتج عن تحلل الفضلات. فوق 25 جزء في المليون، يسبب آفات في الجهاز التنفسي العلوي للدواجن، ويزيد من القابلية للعدوى (الميكوبلازما، الإشريكية القولونية)، ويقلل استهلاك العلف، ويضعف معدل تحويل الأعلاف. AIRSAN، المستخدم في التضبيب بمعدل 1 مل/م³، يقلل الحمل الميكروبي المحمول جواً ويساهم في تثبيت الأجواء دون تبليل الفرشة."
+      },
+      {
+        question: "متى يكفي البروتوكول الأدنى؟",
+        answer: "قد يكفي البروتوكول الأدنى (CLORAGRO + شطف + OPTIMAGRO) في الحالات التالية: مباني حديثة بأسطح ملساء، تاريخ صحي إيجابي بدون أمراض متكررة، فراغ صحي محترم لمدة 14 يوماً على الأقل. بمجرد ظهور عامل خطر (وفيات غير طبيعية، تلوث المياه، تدقيق تنظيمي)، يجب تعزيز البروتوكول بالمنتجات التكميلية."
+      },
+      {
+        question: "متى يجب تعزيز البروتوكول؟",
+        answer: "يجب تعزيز البروتوكول في الحالات التالية: وفيات تتجاوز 5% في دورة واحدة، وجود مؤكد للسالمونيلا أو الإشريكية القولونية في العينات، فشل في تدقيق HACCP أو بيطري، مباني قديمة بأسطح مسامية أو متدهورة، نوبة مرض تنفسي. التعزيز يتضمن إضافة BIONET (الأنابيب)، AQUACONTROL (مياه الشرب)، AIRSAN (الأجواء) وBIOACTIVE (المعدات ذات الحمل العضوي العالي)."
+      },
+      {
+        question: "لماذا لا نستخدم جميع المنتجات في كل مكان؟",
+        answer: "كل منتج من N2K له تركيبة محددة لمنطقة ووظيفة محددة. AIRSAN مصمم للتضبيب في حضور الحيوانات — وليس مناسباً لتنظيف الأسطح. BIONET مصمم للأنابيب — وليس فعالاً في الرش على الجدران. استخدام منتج خارج مجال تطبيقه يهدر الموارد وقد يضر بالسلامة. بروتوكول N2K يخصص كل منتج لمنطقته: المنتج المناسب، في المكان المناسب، في الوقت المناسب."
+      }
+    ]
+  }
 };
 
-export const faqDataEn: FAQData = {
-  metaTitle: "FAQ — Frequently Asked Questions | Les Laboratoires N2K",
-  metaDesc: "Answers to the most frequently asked questions about our sanitary mastery protocols, products, and methodology.",
-  heroBadge: "FAQ",
-  heroTitle: "Frequently Asked Questions",
-  heroDesc: "Answers to the questions our partners ask most often about protocols, products, and our methodology.",
-  faqBadge: "Protocols & Products",
-  faqTitle: "What you need to know",
-  ctaTitle: "Your question isn't here?",
-  ctaDesc: "Contact our experts for a personalized response to your field situation.",
-  ctaButton: "Contact an expert",
-  items: [
-    {
-      question: "Why isn't a simple disinfectant enough?",
-      answer: "A disinfectant applied directly to a biofilm or a soiled surface is neutralized by organic matter before reaching pathogens. This is why the N2K protocol requires prior technical cleaning (Phase 01 — CLORAGRO) before any disinfection (Phase 02 — OPTIMAGRO). The sequential order is the key to efficiency."
-    },
-    {
-      question: "What is the difference between cleaning and disinfection?",
-      answer: "Cleaning (detergency) removes visible soils: fats, proteins, biofilm, organic deposits. Disinfection destroys pathogenic microorganisms on an already clean surface. Without prior cleaning, disinfection is ineffective because the disinfectant is consumed by residual organic matter."
-    },
-    {
-      question: "How long does a complete protocol take?",
-      answer: "A complete cleaning-disinfection protocol takes between 4 and 8 hours depending on the size of the facility. Phase 01 (CLORAGRO): 20 minutes of contact time + rinsing. Drying time. Phase 02 (OPTIMAGRO): 30 minutes minimum contact time. The protocol is achievable during a standard 48h sanitary break."
-    },
-    {
-      question: "Are your products compatible with animals present?",
-      answer: "AIRSAN is specifically formulated to be used in the presence of animals during nebulization. AQUACONTROL is designed for continuous treatment of drinking water. On the other hand, CLORAGRO and OPTIMAGRO are sanitary break products that must be used in the absence of animals, with mandatory rinsing and drying time before placement."
-    },
-    {
-      question: "How do you control ammonia in buildings?",
-      answer: "Ammonia is mainly produced by the degradation of uric acid in litter. AIRSAN reduces the microbial load responsible for this degradation, which mechanically decreases ammonia production. The objective is to keep the rate below 20 ppm. Regular technical cleaning with CLORAGRO between cycles completes the setup."
-    },
-    {
-      question: "What are the standards for your biocidal products?",
-      answer: "Our biocidal products are approved by MS/DHMPE in Tunisia. They are tested according to European standards EN 1276 (bactericidal), EN 13697 (surfaces), EN 1650 (fungicidal) and EN 14476 (virucidal). Biocide classification TP2 (surface disinfection), TP3 (veterinary hygiene), TP4 (food surfaces). Safety Data Sheets (SDS) are available on request."
-    },
-    {
-      question: "Do you offer field support?",
-      answer: "Yes. Field support is at the heart of our approach. Our experts visit your farm for: an initial audit (sampling, critical point analysis), training your teams in the protocol, post-application follow-up with control analyzes, and dosage adjustment according to the results. We do not sell products without support."
-    },
-    {
-      question: "What is the recommended frequency of treatments?",
-      answer: "In poultry farming: complete protocol (CLORAGRO + OPTIMAGRO) at each sanitary break. AQUACONTROL continuously on drinking water. AIRSAN in weekly nebulization in the presence of animals. In slaughterhouses: daily cleaning CLORAGRO + OPTIMAGRO on contact surfaces. In the food industry: frequency adapted to the establishment's HACCP plan."
-    }
-  ]
-};
-
-export const faqDataAr: FAQData = {
-  metaTitle: "الأسئلة الشائعة | مختبرات N2K",
-  metaDesc: "إجابات على الأسئلة الأكثر شيوعًا حول بروتوكولاتنا الخاصة بالتحكم الصحي، منتجاتنا ومنهجيتنا.",
-  heroBadge: "الأسئلة الشائعة",
-  heroTitle: "الأسئلة المتداولة",
-  heroDesc: "إجابات على الأسئلة التي يطرحها شركاؤنا في أغلب الأحيان حول البروتوكولات، المنتجات، ومنهجيتنا.",
-  faqBadge: "البروتوكولات والمنتجات",
-  faqTitle: "ما يجب أن تعرفه",
-  ctaTitle: "سؤالك ليس هنا؟",
-  ctaDesc: "اتصل بخبرائنا للحصول على إجابة مخصصة لظروفك الميدانية.",
-  ctaButton: "اتصل بخبير",
-  items: [
-    {
-      question: "لماذا لا يكفي المطهر البسيط؟",
-      answer: "المطهر الذي يتم تطبيقه مباشرة على غشاء حيوي أو سطح متسخ يتم تحييده بواسطة المادة العضوية قبل الوصول إلى مسببات الأمراض. ولهذا السبب يفرض بروتوكول N2K تنظيفًا فنيًا مسبقًا (المرحلة 01 - CLORAGRO) قبل أي تطهير (المرحلة 02 - OPTIMAGRO). الترتيب التسلسلي هو مفتاح الفعالية."
-    },
-    {
-      question: "ما الفرق بين التنظيف والتطهير؟",
-      answer: "التنظيف يزيل الأوساخ المرئية: الدهون، البروتينات، الغشاء الحيوي، الرواسب العضوية. التطهير يدمر الكائنات الحية الدقيقة المسببة للأمراض على سطح نظيف بالفعل. بدون تنظيف مسبق، يكون التطهير غير فعال لأن المادة العضوية المتبقية تستهلك المطهر."
-    },
-    {
-      question: "كم يستغرق البروتوكول الكامل؟",
-      answer: "يستغرق بروتوكول التنظيف والتطهير الكامل بين 4 و 8 ساعات حسب حجم المنشأة. المرحلة 01 (CLORAGRO): 20 دقيقة من وقت التلامس + الشطف. وقت التجفيف. المرحلة 02 (OPTIMAGRO): 30 دقيقة وقت تلامس كحد أدنى. يمكن تنفيذ البروتوكول خلال فترة راحة صحية قياسية تبلغ 48 ساعة."
-    },
-    {
-      question: "هل منتجاتكم متوافقة مع وجود الحيوانات؟",
-      answer: "تمت صياغة AIRSAN خصيصًا للاستخدام في وجود الحيوانات أثناء التبخير. تم تصميم AQUACONTROL للمعالجة المستمرة لمياه الشرب. من ناحية أخرى، تعتبر CLORAGRO و OPTIMAGRO منتجات فترة الراحة الصحية والتي يجب استخدامها في غياب الحيوانات، مع إلزامية الشطف ووقت التجفيف قبل الإدخال."
-    },
-    {
-      question: "كيف تتحكمون في الأمونيا داخل المباني؟",
-      answer: "يتم إنتاج الأمونيا بشكل أساسي عن طريق تحلل حمض اليوريك في الفرشة. يقلل AIRSAN من العبء الميكروبي المسؤول عن هذا التحلل، مما يقلل ميكانيكيًا من إنتاج الأمونيا. الهدف هو إبقاء المعدل أقل من 20 جزء في المليون. يكتمل النظام بتنظيف فني منتظم باستخدام CLORAGRO بين الدورات."
-    },
-    {
-      question: "ما هي معايير منتجاتكم المبيدة للجراثيم؟",
-      answer: "منتجاتنا المبيدة للجراثيم معتمدة من MS/DHMPE في تونس. تم اختبارها وفقًا للمعايير الأوروبية EN 1276 (مبيد للجراثيم) ، EN 13697 (أسطح) ، EN 1650 (مبيد للفطريات) و EN 14476 (مبيد للفيروسات). تصنيف المبيدات الحيوية TP2 (تطهير الأسطح) ، TP3 (النظافة البيطرية) ، TP4 (الأسطح الغذائية). صحائف بيانات السلامة (FDS) متاحة عند الطلب."
-    },
-    {
-      question: "هل تقدمون دعمًا ميدانيًا؟",
-      answer: "نعم. الدعم الميداني هو في صميم نهجنا. يزور خبراؤنا مزرعتك من أجل: التدقيق الأولي (أخذ العينات، تحليل النقاط الحرجة)، تدريب فرقك على البروتوكول، المتابعة بعد التطبيق مع تحليلات المراقبة، وتعديل الجرعات وفقًا للنتائج. نحن لا نبيع المنتجات دون دعم."
-    },
-    {
-      question: "ما هو التكرار الموصى به للعلاجات؟",
-      answer: "في تربية الدواجن: بروتوكول كامل (CLORAGRO + OPTIMAGRO) في كل فترة راحة صحية. AQUACONTROL بشكل مستمر على مياه الشرب. AIRSAN في التبخير الأسبوعي بوجود الحيوانات. في المسالخ: تنظيف يومي CLORAGRO + OPTIMAGRO على أسطح التلامس. في الصناعات الغذائية: تكرار يتكيف مع خطة الهاسب (HACCP) للمؤسسة."
-    }
-  ]
-};
-
-export const getFaqData = (locale: string): FAQData => {
-  if (locale === "en") return faqDataEn;
-  if (locale === "ar") return faqDataAr;
-  return faqDataFr;
-};
+export function getFAQData(locale: string): FAQData {
+  return faqData[locale] || faqData["fr"];
+}

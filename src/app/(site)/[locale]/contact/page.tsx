@@ -14,7 +14,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 opacity-40">
           <Image
             src="/images/contact-hero.jpg"
-            alt="Laboratory background"
+            alt={t("hero.imageAlt")}
             fill
             className="object-cover"
             priority
@@ -33,6 +33,30 @@ export default function ContactPage() {
             <p className="text-xl text-slate-200 leading-relaxed font-light">
               {t("hero.subtitle")}
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Diagnostic Steps */}
+      <section className="py-12 md:py-16 bg-n2k-surface-low">
+        <div className="container mx-auto px-6 md:px-8 max-w-[1400px]">
+          <h2 className="text-2xl md:text-3xl font-heading font-bold text-n2k-primary text-center mb-10">
+            {t("diagnostic.title")}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            {[
+              { num: "01", title: t("diagnostic.step1Title"), desc: t("diagnostic.step1Desc") },
+              { num: "02", title: t("diagnostic.step2Title"), desc: t("diagnostic.step2Desc") },
+              { num: "03", title: t("diagnostic.step3Title"), desc: t("diagnostic.step3Desc") },
+            ].map((step) => (
+              <div key={step.num} className="relative bg-white rounded-xl p-6 md:p-8 border border-slate-100 shadow-sm">
+                <span className="text-5xl font-black font-heading text-n2k-secondary/10 absolute top-4 right-4 rtl:left-4 rtl:right-auto leading-none">
+                  {step.num}
+                </span>
+                <h3 className="font-heading font-bold text-n2k-primary text-lg mb-3">{step.title}</h3>
+                <p className="text-n2k-on-surface-variant text-sm leading-relaxed font-body">{step.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -62,7 +86,7 @@ export default function ContactPage() {
               <div className="w-20 h-20 rounded-full overflow-hidden bg-slate-100 shrink-0">
                 <Image
                   src="/images/mahmoud-portrait.jpg"
-                  alt="Dr. Mahmoud Nafeti"
+                  alt="Dr. Mahmoud Naffati"
                   width={80}
                   height={80}
                   className="w-full h-full object-cover"
@@ -131,6 +155,11 @@ export default function ContactPage() {
                         {t("info.support.phone")}
                       </a>
                     </div>
+                    <div className="text-n2k-primary font-bold text-lg mt-1">
+                      <a href="tel:+21628717998" className="hover:text-n2k-secondary transition-colors">
+                        (+216) 28 717 998
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -171,7 +200,7 @@ export default function ContactPage() {
               <div className="absolute bottom-4 left-4 right-4 bg-white/80 backdrop-blur-md p-4 rounded-lg flex justify-between items-center shadow-lg">
                 <div>
                   <p className="text-[10px] font-bold text-n2k-primary tracking-widest uppercase">
-                    Location
+                    {t("info.map.label")}
                   </p>
                   <p className="font-heading font-bold text-n2k-primary">
                     Borj Cédria Technopark
@@ -191,19 +220,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Accreditation Footer Accent */}
-      <section className="py-12 bg-slate-100 border-t border-slate-200">
-        <div className="container mx-auto px-6 md:px-8 max-w-[1400px] flex flex-wrap justify-between items-center gap-8">
-          <div className="flex items-center gap-8 md:gap-12 opacity-50 grayscale hover:grayscale-0 transition-all">
-            <span className="font-heading font-black text-xl md:text-2xl tracking-tighter">ISO 17025</span>
-            <span className="font-heading font-black text-xl md:text-2xl tracking-tighter">TUNAC</span>
-            <span className="font-heading font-black text-xl md:text-2xl tracking-tighter">BUREAU VERITAS</span>
-          </div>
-          <p className="text-sm font-medium text-slate-500 max-w-sm text-left md:text-right">
-            {t("accreditation")}
-          </p>
-        </div>
-      </section>
+
     </main>
   );
 }

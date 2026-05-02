@@ -271,7 +271,7 @@ export default async function ReferencesPage({ params }: { params: Promise<{ loc
                   href="/diagnostic"
                   className="inline-flex items-center gap-3 bg-n2k-secondary text-white px-10 py-5 rounded-xl font-black font-heading text-lg shadow-lg transition-all group hover:opacity-90 hover:scale-[1.02] active:scale-95"
                 >
-                  👉 {t("ctaButton")}
+                  {t("ctaButton")}
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform rtl:group-hover:-translate-x-1 rtl:rotate-180 shrink-0" />
                 </Link>
               </div>

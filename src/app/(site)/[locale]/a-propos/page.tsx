@@ -291,7 +291,7 @@ export default async function AboutPage({
               <div className="sm:w-1/2 relative aspect-video sm:aspect-auto min-h-[200px]">
                 <Image
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_nxpF6ZAWzcT3geIWX_D-jzhldn_ICvuF5nPPtDs0addW1X7olFat182WdrB9WZGpE0CukSGywxJOIeoO-E_bTrKCVmCg2ZTXyf6MDOFWu2AmhPzyxKPT_m1tRUKniJC8OapVFlMrMqQgPP8hnuodAFhcDEPwp428NDqYWRiVzupS7UeolEJMskMzFSyxgcrO5_rHp7SZpbYh1k8N16Rx53dFSj-4wsY0xzqAmQE787xS9W9ehYMp-jviNnK4k02-ECMZnEMOrPI"
-                  alt="Before treatment"
+                  alt={t("resultsBefore")}
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 25vw"
@@ -303,7 +303,7 @@ export default async function AboutPage({
               <div className="sm:w-1/2 relative aspect-video sm:aspect-auto min-h-[200px]">
                 <Image
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkbEi15kDR7-_09jj7gcSXgayveafVyr9QEXhovlmMGST-dv4fIyXOVN735KjLvfpXHSUZKxQOcd1Ypl4mCnXJlf_o1Skuur8UtLaAlj5LhnGpn1Fr2Tg2DsQmrlvRn8yjgyl8ZfbJA_xTFKPPLz8EjZampP5kDwRhTc9cdf9duEpci18xsKOuh6sJjBkZfQjiOQl-7GXW13_ByI3lqnKgQnyTKf0XXaPc19RG8XFG3j6B4InbN90JCHsWDRkdeNVL-rPH2FS_tmU"
-                  alt="After treatment"
+                  alt={t("resultsAfter")}
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 25vw"

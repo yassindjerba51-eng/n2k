@@ -196,7 +196,7 @@ async function main() {
     update: {},
     create: {
       email: "admin@n2k.tn",
-      name: "Dr. Nafeti (Admin)",
+      name: "Dr. Naffati (Admin)",
       password: adminPassword,
     },
   });

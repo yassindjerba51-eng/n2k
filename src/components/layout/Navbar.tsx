@@ -140,11 +140,11 @@ export default function Navbar({ locale }: { locale: string }) {
                     <span className="font-body text-sm">(+216) 21 444 765</span>
                   </a>
                   <a
-                    href="tel:+21658864370"
+                    href="tel:+21628717998"
                     className="flex items-center gap-3 text-white/50 hover:text-white py-3 px-4 rounded-xl hover:bg-white/5 transition-all"
                   >
                     <PhoneCall className="w-5 h-5 text-[#2BB673]" />
-                    <span className="font-body text-sm">(+216) 58 864 370</span>
+                    <span className="font-body text-sm">(+216) 28 717 998</span>
                   </a>
                 </div>
 

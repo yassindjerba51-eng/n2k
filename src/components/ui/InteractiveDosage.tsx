@@ -19,7 +19,7 @@ export default function InteractiveDosage() {
           bg: "bg-secondary-container/20 border-secondary",
           icon: <FlaskConical className="w-10 h-10 text-secondary mb-4" />,
           cloragro: "1% -> Sprayage (200L/1000m²)",
-          optimagro: "0.5% -> Pulvérisation / Thermo",
+          optimagro: "2% -> Pulvérisation / Thermo",
         };
       case 2:
         return {
@@ -28,7 +28,7 @@ export default function InteractiveDosage() {
           bg: "bg-primary-container/10 border-primary",
           icon: <Beaker className="w-10 h-10 text-primary mb-4" />,
           cloragro: "2% -> Canon à mousse (300L/1000m²)",
-          optimagro: "1% -> Pulvérisation / Thermo",
+          optimagro: "2% -> Pulvérisation / Thermo",
         };
       case 3:
         return {
@@ -37,7 +37,7 @@ export default function InteractiveDosage() {
           bg: "bg-orange-container/20 border-orange",
           icon: <ShieldAlert className="w-10 h-10 text-orange mb-4" />,
           cloragro: "3-4% -> Canon à mousse haute pression",
-          optimagro: "1.5% -> Saturation complète",
+          optimagro: "2% -> Saturation complète",
         };
       case 4:
         return {

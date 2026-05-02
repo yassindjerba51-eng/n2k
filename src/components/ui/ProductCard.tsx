@@ -38,11 +38,6 @@ export default function ProductCard({
             Étape 2: Désinfection
           </Badge>
         )}
-        {isDisinfectant && (
-          <Badge variant="outline" className="bg-white/80 backdrop-blur-sm text-primary border-primary/20 text-[10px] uppercase font-black px-2">
-            BIO-CLEAN
-          </Badge>
-        )}
       </div>
 
       {/* Category Indicator */}

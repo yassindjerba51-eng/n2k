@@ -168,7 +168,7 @@
       "label": "Avant cycle",
       "name": "Nettoyer",
       "description": "Nettoyage technique des surfaces : destruction du biofilm, élimination des graisses et dépôts organiques. Préparation indispensable avant désinfection.",
-      "products": "CLORAGRO / BIONETPRO / BIOACTIVE"
+      "products": "CLORAGRO / BIONET / BIOACTIVE"
     },
     "step2": {
       "label": "Pendant cycle",
@@ -213,15 +213,15 @@
     "titleHighlight": "Borj Cédria",
     "titleEnd": "au Service de l'Élevage",
     "doctor": {
-      "name": "Dr. Mahmoud Naffeti",
-      "description": "Expert de terrain reconnu, le Dr Naffeti dirige nos recherches pour adapter les standards mondiaux de biosécurité aux réalités climatiques et structurelles de la Tunisie."
+      "name": "Dr. Mahmoud Naffati",
+      "description": "Expert de terrain reconnu, le Dr Naffati dirige nos recherches pour adapter les standards mondiaux de biosécurité aux réalités climatiques et structurelles de la Tunisie."
     },
     "techpark": {
       "name": "Pôle Technologique Borj Cédria",
       "description": "Implantés au cœur de l'innovation tunisienne, Les Laboratoires N2K bénéficient d'un écosystème scientifique de pointe pour garantir la qualité de chaque lot produit."
     },
     "quote": "« Notre mission n'est pas de vendre des bidons, mais d'assurer la réussite sanitaire de vos bandes. »",
-    "quoteAuthor": "— Dr. Mahmoud Naffeti"
+    "quoteAuthor": "— Dr. Mahmoud Naffati"
   },
   "credibility": {
     "badge": "Pourquoi N2K",
@@ -250,7 +250,7 @@
       },
       "serious": {
         "title": "Sérieux professionnel",
-        "desc": "Direction scientifique par le Dr Mahmoud Naffeti. Chaque recommandation est scientifiquement fondée."
+        "desc": "Direction scientifique par le Dr Mahmoud Naffati. Chaque recommandation est scientifiquement fondée."
       }
     }
   },
@@ -360,9 +360,9 @@
     "pageTitle": "Notre Expertise",
     "pageSubtitle": "Une approche scientifique rigoureuse, ancrée dans la recherche appliquée au Pôle Technologique de Borj Cédria.",
     "directorTitle": "Direction Scientifique",
-    "directorName": "Dr. Mahmoud Naffeti",
-    "directorRole": "Docteur en Chimie — Directeur R&D",
-    "directorBio": "Fort d'un doctorat en chimie et de plus de 15 ans d'expérience terrain, le Dr. Naffeti a développé une méthodologie unique qui combine rigueur académique et pragmatisme industriel.",
+    "directorName": "Dr. Mahmoud Naffati",
+    "directorRole": "Associée — Directrice Recherche et Production",
+    "directorBio": "Fort d'un doctorat en chimie et de plus de 15 ans d'expérience terrain, le Dr. Naffati a développé une méthodologie unique qui combine rigueur académique et pragmatisme industriel.",
     "techparkTitle": "Pôle Technologique Borj Cédria",
     "techparkDesc": "Les Laboratoires N2K sont implantés au sein du Borj Cédria Technopark, l'un des plus grands pôles scientifiques de Tunisie.",
     "methodTitle": "Notre Méthodologie",
@@ -444,13 +444,22 @@
       "contact": "Contact Expert",
       "diagnostic": "Diagnostic Virtuel",
       "about": "À propos",
-      "faq": "Questions Fréquemment Posées"
+      "faq": "Questions Fréquemment Posées",
+      "problemes": "Problèmes & Solutions",
+      "produits": "Produits",
+      "references": "Nos Références"
     },
     "contactTitle": "Localisation & Contact",
     "address": "Pôle Technologique Borj Cédria, Soliman, Nabeul",
-    "copyright": "© 2024 Les Laboratoires N2K. Tous droits réservés.",
+    "copyright": "© 2026 Les Laboratoires N2K. Tous droits réservés.",
     "legal": "Mentions Légales",
-    "privacy": "Confidentialité"
+    "privacy": "Confidentialité",
+    "sectors": {
+      "title": "Secteurs",
+      "elevage": "Élevage avicole",
+      "abattoirs": "Abattoirs",
+      "agroalimentaire": "Industrie agroalimentaire"
+    }
   },
   "blog": {
     "pageTitle": "Actualités & Résultats Terrain",
@@ -512,7 +521,7 @@
     "solutionsDescription": "Découvrez nos produits certifiés et techniques pour une biosécurité totale.",
     "problemsTitle": "Vos Problèmes — Les Laboratoires N2K",
     "problemsDescription": "Comprendre les menaces : Biofilm, contamination de l'eau et pression aérienne.",
-    "expertiseTitle": "Notre Expertise — Dr. Mahmoud Naffeti",
+    "expertiseTitle": "Notre Expertise — Dr. Mahmoud Naffati",
     "expertiseDescription": "Une approche scientifique rigoureuse basée sur la recherche au Technopole de Borj Cédria.",
     "diagnosticTitle": "Diagnostic Terrain Gratuit — Les Laboratoires N2K",
     "diagnosticDescription": "Remplissez notre formulaire pour une analyse personnalisée de votre exploitation.",
@@ -563,12 +572,11 @@
       "Société MaraiiCap Bon",
       "Société Shahiya",
       "Société Al-Bajh",
-      "Société Sabar Aboulad",
-      "Société"
+      "Société Sabar Aboulad"
     ],
     "directorQuote": "Chaque partenaire est un terrain de validation. Nos protocoles n'existent pas en laboratoire — ils sont conçus, testés et optimisés directement sur le terrain tunisien.",
-    "directorName": "Naffeti Mahmoud",
-    "directorRole": "Directeur Production & Innovation",
+    "directorName": "Naffati Mahmoud",
+    "directorRole": "Associée — Directrice Recherche et Production",
     "ctaTitle": "Demandez votre essai terrain",
     "ctaSubtitle": "Testez nos protocoles dans vos conditions réelles. Résultats mesurables sous 48h.",
     "ctaButton": "Demander un essai terrain",
@@ -580,7 +588,7 @@
     "badge": "Les Laboratoires N2K — Nos Solutions",
     "heroTitle": "L'efficacité d'un produit ne dépend pas de sa composition seule,",
     "heroTitleHighlight": "mais de son intégration dans un protocole rigoureux.",
-    "heroSubtitle": "Développées au Pôle Technologique de Borj Cédria sous la direction du Dr Mahmoud Naffeti, nos formulations sont conçues pour les réalités du terrain tunisien. Chaque protocole suit une séquence précise : Nettoyage → Désinfection ou Stabilisation.",
+    "heroSubtitle": "Développées au Pôle Technologique de Borj Cédria sous la direction du Dr Mahmoud Naffati, nos formulations sont conçues pour les réalités du terrain tunisien. Chaque protocole suit une séquence précise : Nettoyage → Désinfection ou Stabilisation.",
     "learnMore": "En savoir plus",
     "step": "Étape",
     "sectorTabs": {
@@ -658,14 +666,15 @@
       "scienceNoteLabel": "Analyse Scientifique"
     },
     "authorityQuote": "« Un produit sans méthode est un coût. Un produit avec notre protocole est un investissement rentable. »",
-    "authorityQuoteAuthor": "— Dr Mahmoud Naffeti",
+    "authorityQuoteAuthor": "— Dr Mahmoud Naffati",
     "authorityDesc": "Pôle d'excellence en biosécurité industrielle et agricole au cœur du Technoparc de Borj Cédria."
   },
   "contactPage": {
     "hero": {
       "badge": "Contact Direct",
       "title": "Contactez l'Expertise de Terrain",
-      "subtitle": "Depuis le Pôle Technologique de Borj Cédria, nos ingénieurs et chercheurs déploient un diagnostic de précision pour vos projets environnementaux et industriels."
+      "subtitle": "Depuis le Pôle Technologique de Borj Cédria, nos ingénieurs et chercheurs déploient un diagnostic de précision pour vos projets environnementaux et industriels.",
+      "imageAlt": "Laboratoire N2K — Maîtrise sanitaire professionnelle"
     },
     "form": {
       "title": "Demande de Diagnostic",
@@ -687,11 +696,46 @@
       "submitting": "Envoi en cours...",
       "successTitle": "Demande Envoyée",
       "successMessage": "Notre équipe technique a bien reçu votre demande. Nous vous contacterons dans les plus brefs délais.",
-      "sendAnother": "Envoyer un autre message"
+      "sendAnother": "Envoyer un autre message",
+      "sectorLabel": "Secteur d'activité",
+      "sectorPlaceholder": "— Sélectionnez —",
+      "sectorOptions": {
+        "elevage": "Élevage avicole",
+        "abattoir": "Abattoir & Découpe",
+        "agroalimentaire": "Industrie agroalimentaire",
+        "autre": "Autre"
+      },
+      "problemLabel": "Type de problème",
+      "problemPlaceholder": "— Sélectionnez —",
+      "problemOptions": {
+        "mortalite": "Mortalité anormale",
+        "desinfection": "Problème de désinfection",
+        "eau": "Qualité de l'eau",
+        "contamination": "Contamination aérienne",
+        "audit": "Audit réglementaire",
+        "autre": "Autre"
+      },
+      "installationLabel": "Taille de l'installation",
+      "installationPlaceholder": "— Sélectionnez —",
+      "installationOptions": {
+        "small": "Moins de 5 000 m²",
+        "medium": "5 000 à 20 000 m²",
+        "large": "Plus de 20 000 m²"
+      },
+      "requestLabel": "Type de demande",
+      "requestOptions": {
+        "diagnostic": "Diagnostic terrain",
+        "protocole": "Protocole sur mesure",
+        "devis": "Devis produits",
+        "conseil": "Conseil technique",
+        "autre": "Autre"
+      },
+      "phoneLabel": "Téléphone",
+      "phonePlaceholder": "Votre numéro de téléphone"
     },
     "leadership": {
-      "name": "Dr. Mahmoud Naffeti",
-      "role": "Directeur des Opérations & Innovation",
+      "name": "Dr. Mahmoud Naffati",
+      "role": "Associée — Directrice Recherche et Production",
       "linkedin": "https://www.linkedin.com/company/laboratoires-n2k/",
       "linkedinText": "Profil LinkedIn"
     },
@@ -704,7 +748,7 @@
         "title": "Support Technique",
         "email": "contact@n2k-tunisie.com",
         "phone": "(+216) 21 444 765",
-        "phone2": "(+216) 58 864 370"
+        "phone2": "(+216) 28 717 998"
       },
       "hours": {
         "title": "Heures d'Ouverture",
@@ -712,10 +756,20 @@
         "urgent": "Interventions urgentes 24/7 sur demande"
       },
       "map": {
-        "openBtn": "Ouvrir"
+        "openBtn": "Ouvrir",
+        "label": "Localisation"
       }
     },
-    "accreditation": "Laboratoires accrédités pour la précision et la rigueur des processus d'analyse environnementale."
+    "accreditation": "Laboratoires accrédités pour la précision et la rigueur des processus d'analyse environnementale.",
+    "diagnostic": {
+      "title": "Comment ça fonctionne",
+      "step1Title": "Prise de contact",
+      "step1Desc": "Décrivez votre situation et vos besoins. Notre équipe analyse votre demande sous 24h.",
+      "step2Title": "Visite terrain",
+      "step2Desc": "Un technicien N2K se déplace sur site pour évaluer les conditions réelles et identifier les points critiques.",
+      "step3Title": "Protocole sur mesure",
+      "step3Desc": "Nous élaborons un protocole personnalisé avec dosages, fréquences et calendrier d'application adaptés."
+    }
   },
   "products": {
     "badge": "Catalogue Produits",
@@ -829,7 +883,7 @@
     "resultsTitle": "La preuve par les résultats",
     "resultsDesc": "Données collectées lors de nos interventions en élevage avicole et industriel.",
     "resultsStatTitle": "Réduction de la charge bactérienne",
-    "resultsStat": "Moyenne constatée après application du protocole \"N2K Bio-Shield\" sur des surfaces en béton poreux infestées de salmonelles.",
+    "resultsStat": "Moyenne constatée après application du protocole \"protocole séquentiel N2K\" sur des surfaces en béton poreux infestées de salmonelles.",
     "resultsBefore": "AVANT",
     "resultsAfter": "APRÈS",
     "errorsLabel": "Attention",

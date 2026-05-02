@@ -10,12 +10,12 @@ import { Send, Loader2 } from "lucide-react";
 const contactSchema = z.object({
   name: z.string().min(2, { message: "Name is required" }),
   email: z.string().email({ message: "Valid email is required" }),
+  phone: z.string().min(5, { message: "Phone is required" }),
   sector: z.string().min(1, { message: "Sector is required" }),
   problemType: z.string().min(1, { message: "Problem type is required" }),
-  subject: z.string().min(1, { message: "Subject is required" }),
   installationSize: z.string().optional(),
   requestType: z.string().min(1, { message: "Request type is required" }),
-  message: z.string().min(10, { message: "Message is too short" }),
+  message: z.string().optional(),
 });
 
 type ContactFormValues = z.infer<typeof contactSchema>;
@@ -35,11 +35,11 @@ export default function GeneralContactForm() {
     defaultValues: {
       name: "",
       email: "",
+      phone: "",
       sector: "",
       problemType: "",
-      subject: "Zone Bâtiment",
       installationSize: "",
-      requestType: "audit",
+      requestType: "",
       message: "",
     },
   });
@@ -115,82 +115,86 @@ export default function GeneralContactForm() {
         </div>
       </div>
 
-      {/* Row 2: Sector + Problem Type */}
+      {/* Row 2: Phone + Sector */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-2">
           <label className="text-[10px] font-bold tracking-widest text-slate-500 uppercase">
-            Secteur d&apos;activité
+            {t("phoneLabel")}
+          </label>
+          <input
+            {...register("phone")}
+            className="w-full bg-white border-none border-b-2 border-slate-200 focus:border-n2k-primary focus:ring-0 px-4 py-3 transition-colors outline-none"
+            placeholder={t("phonePlaceholder")}
+            type="tel"
+          />
+          {errors.phone && <p className="text-red-500 text-xs font-semibold">{errors.phone.message}</p>}
+        </div>
+        <div className="space-y-2">
+          <label className="text-[10px] font-bold tracking-widest text-slate-500 uppercase">
+            {t("sectorLabel")}
           </label>
           <select
             {...register("sector")}
             className="w-full bg-white border-none border-b-2 border-slate-200 focus:border-n2k-primary focus:ring-0 px-4 py-3 transition-colors outline-none cursor-pointer"
           >
-            <option value="">— Sélectionnez —</option>
-            <option value="elevage">Élevage avicole</option>
-            <option value="abattoir">Abattoir</option>
-            <option value="agroalimentaire">Industrie agroalimentaire</option>
-            <option value="autre">Autre secteur</option>
+            <option value="">{t("sectorPlaceholder")}</option>
+            <option value="elevage">{t("sectorOptions.elevage")}</option>
+            <option value="abattoir">{t("sectorOptions.abattoir")}</option>
+            <option value="agroalimentaire">{t("sectorOptions.agroalimentaire")}</option>
+            <option value="autre">{t("sectorOptions.autre")}</option>
           </select>
           {errors.sector && <p className="text-red-500 text-xs font-semibold">{errors.sector.message}</p>}
         </div>
+      </div>
+
+      {/* Row 3: Problem Type + Installation Size */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-2">
           <label className="text-[10px] font-bold tracking-widest text-slate-500 uppercase">
-            Type de problème
+            {t("problemLabel")}
           </label>
           <select
             {...register("problemType")}
             className="w-full bg-white border-none border-b-2 border-slate-200 focus:border-n2k-primary focus:ring-0 px-4 py-3 transition-colors outline-none cursor-pointer"
           >
-            <option value="">— Sélectionnez —</option>
-            <option value="surfaces">Hygiène bâtiments & surfaces</option>
-            <option value="eau">Eau & réseaux hydriques</option>
-            <option value="ambiance">Ambiance & environnement</option>
-            <option value="multiple">Toutes les zones</option>
+            <option value="">{t("problemPlaceholder")}</option>
+            <option value="mortalite">{t("problemOptions.mortalite")}</option>
+            <option value="desinfection">{t("problemOptions.desinfection")}</option>
+            <option value="eau">{t("problemOptions.eau")}</option>
+            <option value="contamination">{t("problemOptions.contamination")}</option>
+            <option value="audit">{t("problemOptions.audit")}</option>
+            <option value="autre">{t("problemOptions.autre")}</option>
           </select>
           {errors.problemType && <p className="text-red-500 text-xs font-semibold">{errors.problemType.message}</p>}
         </div>
-      </div>
-
-      {/* Row 3: Subject + Installation Size */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-2">
           <label className="text-[10px] font-bold tracking-widest text-slate-500 uppercase">
-            {t("subjectLabel")}
+            {t("installationLabel")}
           </label>
           <select
-            {...register("subject")}
+            {...register("installationSize")}
             className="w-full bg-white border-none border-b-2 border-slate-200 focus:border-n2k-primary focus:ring-0 px-4 py-3 transition-colors outline-none cursor-pointer"
           >
-            <option value="Zone Bâtiment">{t("subjects.batiment")}</option>
-            <option value="Analyse de l'Eau">{t("subjects.eau")}</option>
-            <option value="Ambiance & Environnement">{t("subjects.ambiance")}</option>
-            <option value="Autre Expertise">{t("subjects.autre")}</option>
+            <option value="">{t("installationPlaceholder")}</option>
+            <option value="small">{t("installationOptions.small")}</option>
+            <option value="medium">{t("installationOptions.medium")}</option>
+            <option value="large">{t("installationOptions.large")}</option>
           </select>
-        </div>
-        <div className="space-y-2">
-          <label className="text-[10px] font-bold tracking-widest text-slate-500 uppercase">
-            Taille de l&apos;installation
-          </label>
-          <input
-            {...register("installationSize")}
-            className="w-full bg-white border-none border-b-2 border-slate-200 focus:border-n2k-primary focus:ring-0 px-4 py-3 transition-colors outline-none"
-            placeholder="Ex: 3 bâtiments, 10 000 m², ..."
-            type="text"
-          />
         </div>
       </div>
 
       {/* Row 4: Request Type */}
       <div className="space-y-3">
         <label className="text-[10px] font-bold tracking-widest text-slate-500 uppercase block">
-          Besoin principal
+          {t("requestLabel")}
         </label>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
           {[
-            { value: "audit", label: "Audit sanitaire" },
-            { value: "protocole", label: "Protocole personnalisé" },
-            { value: "conseil", label: "Conseil technique" },
-            { value: "devis", label: "Demande de devis" },
+            { value: "diagnostic", key: "diagnostic" },
+            { value: "protocole", key: "protocole" },
+            { value: "devis", key: "devis" },
+            { value: "conseil", key: "conseil" },
+            { value: "autre", key: "autre" },
           ].map((option) => (
             <label
               key={option.value}
@@ -202,7 +206,7 @@ export default function GeneralContactForm() {
                 {...register("requestType")}
                 className="accent-n2k-secondary"
               />
-              <span className="font-medium text-n2k-on-surface">{option.label}</span>
+              <span className="font-medium text-n2k-on-surface">{t(`requestOptions.${option.key}`)}</span>
             </label>
           ))}
         </div>

@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { notFound } from "next/navigation";
-import { products, getProductBySlug, getProductsByZone } from "@/data/products";
+import { products, getProductBySlug, getLocalizedProduct, getProductsByZone } from "@/data/products";
 import {
   ArrowRight,
   ArrowLeft,
@@ -46,8 +46,8 @@ export default async function ProductDetailPage({
 }: {
   params: Promise<{ locale: string; slug: string }>;
 }) {
-  const { slug } = await params;
-  const product = getProductBySlug(slug);
+  const { slug, locale } = await params;
+  const product = getLocalizedProduct(slug, locale);
   if (!product) notFound();
 
   const t = await getTranslations("products");

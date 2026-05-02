@@ -18,22 +18,22 @@ export default function Footer() {
         </div>
         <div>
           <h5 className="text-white font-bold mb-6 uppercase tracking-widest text-xs font-heading">
-            Secteurs
+            {t("sectors.title")}
           </h5>
           <ul className="space-y-4 font-body text-sm">
             <li>
               <Link href="/secteurs/elevage-avicole" className="text-slate-400 hover:text-white hover:underline decoration-secondary-light decoration-2 underline-offset-4 transition-colors">
-                Élevage avicole
+                {t("sectors.elevage")}
               </Link>
             </li>
             <li>
               <Link href="/secteurs/abattoirs" className="text-slate-400 hover:text-white hover:underline decoration-secondary-light decoration-2 underline-offset-4 transition-colors">
-                Abattoirs
+                {t("sectors.abattoirs")}
               </Link>
             </li>
             <li>
               <Link href="/secteurs/industrie-agroalimentaire" className="text-slate-400 hover:text-white hover:underline decoration-secondary-light decoration-2 underline-offset-4 transition-colors">
-                Industrie agroalimentaire
+                {t("sectors.agroalimentaire")}
               </Link>
             </li>
           </ul>
@@ -45,12 +45,17 @@ export default function Footer() {
           <ul className="space-y-4 font-body text-sm">
             <li>
               <Link href="/problemes-solutions" className="text-slate-400 hover:text-white hover:underline decoration-secondary-light decoration-2 underline-offset-4 transition-colors">
-                Problèmes & Solutions
+                {t("supportLinks.problemes")}
               </Link>
             </li>
             <li>
               <Link href="/produits" className="text-slate-400 hover:text-white hover:underline decoration-secondary-light decoration-2 underline-offset-4 transition-colors">
-                Produits
+                {t("supportLinks.produits")}
+              </Link>
+            </li>
+            <li>
+              <Link href="/references" className="text-slate-400 hover:text-white hover:underline decoration-secondary-light decoration-2 underline-offset-4 transition-colors">
+                {t("supportLinks.references")}
               </Link>
             </li>
             <li>
@@ -77,7 +82,7 @@ export default function Footer() {
           <ul className="space-y-3 font-body text-sm text-slate-400">
             <li className="flex items-start gap-2">
               <MapPin className="text-secondary-light w-4 h-4 mt-0.5 shrink-0" />
-              <span>Pôle Technologique Borj Cédria, Soliman, Nabeul</span>
+              <span>{t("address")}</span>
             </li>
             <li className="flex items-center gap-2">
               <Mail className="text-secondary-light w-4 h-4 shrink-0" />
@@ -92,9 +97,9 @@ export default function Footer() {
               </a>
             </li>
             <li className="flex items-center gap-2">
-              <PhoneCall className="text-slate-600 w-4 h-4 shrink-0" />
-              <a href="tel:+21658864370" className="hover:text-white transition-colors">
-                (+216) 58 864 370
+              <PhoneCall className="text-secondary-light w-4 h-4 shrink-0" />
+              <a href="tel:+21628717998" className="hover:text-white transition-colors">
+                (+216) 28 717 998
               </a>
             </li>
           </ul>

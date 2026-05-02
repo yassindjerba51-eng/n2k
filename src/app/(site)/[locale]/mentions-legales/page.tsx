@@ -28,21 +28,21 @@ export default async function MentionsLegalesPage() {
               <strong>Téléphone :</strong>{" "}
               <a href="tel:+21621444765" className="text-n2k-secondary underline">(+216) 21 444 765</a>
               {" / "}
-              <a href="tel:+21658864370" className="text-n2k-secondary underline">(+216) 58 864 370</a>
+              <a href="tel:+21628717998" className="text-n2k-secondary underline">(+216) 28 717 998</a>
             </p>
           </section>
 
           <section>
             <h2 className="text-xl font-black font-heading text-n2k-primary mb-3">Directeur de la publication</h2>
             <p className="text-slate-600 leading-relaxed">
-              Dr Mahmoud Naffeti, Directeur Scientifique — Les Laboratoires N2K.
+              Dr Mahmoud Naffati, Associée — Directrice Recherche et Production — Les Laboratoires N2K.
             </p>
           </section>
 
           <section>
             <h2 className="text-xl font-black font-heading text-n2k-primary mb-3">Hébergement</h2>
             <p className="text-slate-600 leading-relaxed">
-              Ce site est hébergé par un prestataire d'hébergement web professionnel.
+              Ce site est hébergé par Vercel Inc., 340 Pine Street Suite 701, San Francisco, CA 94104, États-Unis. Site : vercel.com
             </p>
           </section>
 
@@ -58,7 +58,7 @@ export default async function MentionsLegalesPage() {
           <section>
             <h2 className="text-xl font-black font-heading text-n2k-primary mb-3">Homologations</h2>
             <p className="text-slate-600 leading-relaxed">
-              Les produits CLORAGRO et BIONETPRO sont homologués par le Ministère de la Santé tunisien
+              Les produits CLORAGRO et OPTIMAGRO sont homologués par le Ministère de la Santé tunisien
               (MS/DHMPE/HOM/0002/03/01/2023 et MS/DHMPE/HOM/0001/03/01/2023 respectivement).
               Les informations techniques présentées sur ce site sont conformes aux fiches techniques et
               étiquettes officielles délivrées à la date d'homologation.
