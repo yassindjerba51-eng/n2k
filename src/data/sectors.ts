@@ -9,7 +9,7 @@ export type SectorProduct = {
 
 export type SectorZoneContent = {
   product1: SectorProduct;
-  product2: SectorProduct;
+  product2?: SectorProduct;
   image: string;
 };
 
@@ -199,16 +199,6 @@ export const ambianceSectors: ZoneSectorMap = {
         "Brumisation fine sans condensation sur les carcasses",
       ],
     },
-    product2: {
-      name: "BIOACTIVE",
-      type: "Nettoyant — Zones de Découpe",
-      desc: "Nettoyant enzymatique pour le traitement des surfaces encrassées en zone de découpe : tables, convoyeurs, bacs de collecte, avant désinfection aérienne.",
-      features: [
-        "Action sur les graisses animales et résidus de sang",
-        "Nettoyage des convoyeurs et bacs de récupération",
-        "Compatible avec les matériaux alimentaires (inox, PE)",
-      ],
-    },
     image: "/images/sectors/ambiance-abattoir.webp",
   },
   agroalimentaire: {
@@ -220,16 +210,6 @@ export const ambianceSectors: ZoneSectorMap = {
         "Contrôle de la charge microbienne en salle blanche",
         "Traitement de l'air dans les caves d'affinage",
         "Conformité aux exigences IFS/BRC pour la qualité de l'air",
-      ],
-    },
-    product2: {
-      name: "BIOACTIVE",
-      type: "Nettoyant — Industrie Alimentaire",
-      desc: "Nettoyant enzymatique pour l'industrie agroalimentaire. Élimine les résidus organiques sur les lignes de conditionnement, trémies et surfaces de production.",
-      features: [
-        "Nettoyage des lignes de conditionnement lait/yaourt",
-        "Élimination des résidus protéiques en fromagerie",
-        "Préparation optimale avant désinfection aérienne AIRSAN",
       ],
     },
     image: "/images/sectors/ambiance-agroalimentaire.webp",

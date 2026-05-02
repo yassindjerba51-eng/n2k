@@ -215,7 +215,7 @@ async function main() {
 <li><strong>Choix stratégique de la chimie :</strong> Utilisez des désinfectants de qualité professionnelle (comme OPTIMAGRO) avec un spectre d'action prouvé et adapté à l'environnement froid et humide des abattoirs.</li>
 </ul>
 <h2>L'approche d'un expert en hygiène</h2>
-<p>Chez N2K, nous positionnons l'hygiène comme un centre de profit. Notre rôle est de sécuriser votre DLC et de vous préparer sereinement aux audits de certification. Nous analysons le coût de non-qualité (déclassements, rappels) et nous construisons un protocole où l'investissement dans des détergents techniques (comme BIOACTIVE ou CLORAGRO) est largement remboursé par l'augmentation de la qualité et de la durée de vie de vos viandes.</p>
+<p>Chez N2K, nous positionnons l'hygiène comme un centre de profit. Notre rôle est de sécuriser votre DLC et de vous préparer sereinement aux audits de certification. Nous analysons le coût de non-qualité (déclassements, rappels) et nous construisons un protocole où l'investissement dans des détergents techniques (comme CLORAGRO ou OPTIMAGRO) est largement remboursé par l'augmentation de la qualité et de la durée de vie de vos viandes.</p>
 <h2>Conclusion</h2>
 <p>Une mauvaise désinfection ne se voit pas à l'œil nu lors du contrôle matinal, elle se lit dans vos bilans financiers à la fin du mois. La sécurité alimentaire n'est pas négociable : investir dans la bonne chimie et la bonne méthode est la décision managériale la plus rentable de votre abattoir.</p>
 `.trim();
@@ -250,7 +250,7 @@ async function main() {
 <li><strong>Strategic choice of chemistry:</strong> Use professional-grade disinfectants (like OPTIMAGRO) with a proven spectrum of action adapted to the cold and humid environment of slaughterhouses.</li>
 </ul>
 <h2>The approach of a hygiene expert</h2>
-<p>At N2K, we position hygiene as a profit center. Our role is to secure your shelf life and prepare you calmly for certification audits. We analyze the cost of non-quality (downgrades, recalls) and build a protocol where the investment in technical detergents (like BIOACTIVE or CLORAGRO) is largely repaid by the increase in quality and shelf life of your meats.</p>
+<p>At N2K, we position hygiene as a profit center. Our role is to secure your shelf life and prepare you calmly for certification audits. We analyze the cost of non-quality (downgrades, recalls) and build a protocol where the investment in technical detergents (like CLORAGRO or OPTIMAGRO) is largely repaid by the increase in quality and shelf life of your meats.</p>
 <h2>Conclusion</h2>
 <p>Poor disinfection is not visible to the naked eye during the morning check; it is read in your financial statements at the end of the month. Food safety is not negotiable: investing in the right chemistry and the right method is the most profitable managerial decision for your slaughterhouse.</p>
 `.trim();
@@ -285,7 +285,7 @@ async function main() {
 <li><strong>الاختيار الاستراتيجي للكيمياء:</strong> استخدم مطهرات احترافية (مثل OPTIMAGRO) مع طيف عمل مثبت ومكيف مع البيئة الباردة والرطبة للمسالخ.</li>
 </ul>
 <h2>نهج خبير النظافة</h2>
-<p>في N2K، نضع النظافة كمركز ربح. دورنا هو تأمين تاريخ صلاحية منتجاتك وإعدادك بهدوء لعمليات تدقيق الشهادات. نقوم بتحليل تكلفة عدم الجودة (خفض التصنيف، السحب) وبناء بروتوكول حيث يتم سداد الاستثمار في المنظفات الفنية (مثل BIOACTIVE أو CLORAGRO) إلى حد كبير من خلال زيادة جودة اللحوم وعمرها الافتراضي.</p>
+<p>في N2K، نضع النظافة كمركز ربح. دورنا هو تأمين تاريخ صلاحية منتجاتك وإعدادك بهدوء لعمليات تدقيق الشهادات. نقوم بتحليل تكلفة عدم الجودة (خفض التصنيف، السحب) وبناء بروتوكول حيث يتم سداد الاستثمار في المنظفات الفنية (مثل CLORAGRO أو OPTIMAGRO) إلى حد كبير من خلال زيادة جودة اللحوم وعمرها الافتراضي.</p>
 <h2>خاتمة</h2>
 <p>التطهير السيئ لا يُرى بالعين المجردة أثناء الفحص الصباحي؛ بل يُقرأ في بياناتك المالية في نهاية الشهر. سلامة الأغذية غير قابلة للتفاوض: الاستثمار في الكيمياء الصحيحة والطريقة الصحيحة هو القرار الإداري الأكثر ربحية لمسلخك.</p>
 `.trim();

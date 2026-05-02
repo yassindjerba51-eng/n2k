@@ -150,26 +150,31 @@ export default function SectorTabs({
             containerBgClass={containerBgClass}
           />
 
-          {/* Arrow */}
-          <div className="flex items-center justify-center py-1">
-            <div className="w-10 h-10 rounded-full bg-n2k-surface-low flex items-center justify-center shadow-sm">
-              <ArrowRight
-                className={`w-5 h-5 ${colorClass} rotate-90`}
-              />
-            </div>
-          </div>
+          {/* Optional Arrow and Product 2 */}
+          {data.product2 && (
+            <>
+              {/* Arrow */}
+              <div className="flex items-center justify-center py-1">
+                <div className="w-10 h-10 rounded-full bg-n2k-surface-low flex items-center justify-center shadow-sm">
+                  <ArrowRight
+                    className={`w-5 h-5 ${colorClass} rotate-90`}
+                  />
+                </div>
+              </div>
 
-          <SectorProductCard
-            step={2}
-            stepLabel={stepLabel}
-            name={data.product2.name}
-            type={data.product2.type}
-            desc={data.product2.desc}
-            features={data.product2.features}
-            colorClass={colorClass}
-            bgClass={bgClass}
-            containerBgClass={containerBgClass}
-          />
+              <SectorProductCard
+                step={2}
+                stepLabel={stepLabel}
+                name={data.product2.name}
+                type={data.product2.type}
+                desc={data.product2.desc}
+                features={data.product2.features}
+                colorClass={colorClass}
+                bgClass={bgClass}
+                containerBgClass={containerBgClass}
+              />
+            </>
+          )}
         </div>
 
         {/* Right column — Sector image */}

@@ -47,7 +47,8 @@ export const sectorsDataFr: Record<string, SectorData> = {
     reinforcedProtocol: [
       { product: "BIONET", action: "Nettoyage canalisations", description: "Décapage des dépôts organiques et calcaire dans les circuits d'eau avant mise en place des animaux." },
       { product: "AQUACONTROL", action: "Traitement eau continu", description: "Stabilisation bactériologique de l'eau de boisson tout au long du cycle d'élevage." },
-      { product: "AIRSAN", action: "Désinfection ambiance", description: "Nébulisation fine en présence d'animaux pour réduire la charge microbienne aérienne et l'ammoniac." }
+      { product: "AIRSAN", action: "Désinfection ambiance", description: "Nébulisation fine en présence d'animaux pour réduire la charge microbienne aérienne et l'ammoniac." },
+      { product: "BIOACTIVE", action: "Dégradation enzymatique", description: "Nettoyage des équipements à forte charge organique avant désinfection." }
     ],
     specificCases: [
       { title: "Nouveau lot après contamination Salmonella", description: "En cas de détection Salmonella sur le lot précédent, le protocole est renforcé.", protocol: "Double passage CLORAGRO + OPTIMAGRO en augmentant les concentrations de 30%. Analyse microbiologique de contrôle avant mise en place." },
@@ -91,7 +92,6 @@ export const sectorsDataFr: Record<string, SectorData> = {
       { product: "OPTIMAGRO", action: "Désinfection terminale", description: "Désinfection de contact sur surfaces propres. Spectre Salmonella, Listeria, E. coli." }
     ],
     reinforcedProtocol: [
-      { product: "BIOACTIVE", action: "Nettoyage enzymatique", description: "Traitement des zones difficiles d'accès : joints, caniveaux, zones de rétention." },
       { product: "BIONET", action: "Nettoyage circuits eau", description: "Décapage des circuits d'eau de process et de refroidissement." },
       { product: "AIRSAN", action: "Traitement chambres froides", description: "Nébulisation des chambres froides pour réduire la charge Listeria." }
     ],
@@ -99,7 +99,7 @@ export const sectorsDataFr: Record<string, SectorData> = {
       { title: "Détection Listeria en chambre froide", description: "Contamination confirmée par analyse en chambre froide ou zone de stockage.", protocol: "Nettoyage CLORAGRO renforcé + OPTIMAGRO en concentration augmentée. AIRSAN en nébulisation froide. Prélèvements de contrôle à J+3." },
       { title: "Préparation audit IFS/BRC", description: "Mise en conformité avant audit de certification internationale.", protocol: "Protocole complet sur 48h + prélèvements de surface 72h avant audit + rapport microbiologique documenté." }
     ],
-    associatedProducts: ["cloragro", "optimagro", "bioactive", "bionet", "airsan"],
+    associatedProducts: ["cloragro", "optimagro", "bionet", "airsan"],
     expectedResults: [
       "Conformité HACCP sur 100% des points de contrôle",
       "Réduction Salmonella sous seuil de détection",
@@ -131,7 +131,6 @@ export const sectorsDataFr: Record<string, SectorData> = {
     ],
     minimalProtocol: [
       { product: "CLORAGRO", action: "Nettoyage des surfaces ouvertes", description: "Dégraissage et décapage des surfaces de travail, plans de découpe, convoyeurs." },
-      { product: "BIOACTIVE", action: "Nettoyage enzymatique CIP", description: "Traitement enzymatique des lignes fermées pour dégrader les résidus organiques." },
       { product: "OPTIMAGRO", action: "Désinfection terminale", description: "Désinfection de toutes les surfaces après nettoyage. Spectre complet." }
     ],
     reinforcedProtocol: [
@@ -143,7 +142,7 @@ export const sectorsDataFr: Record<string, SectorData> = {
       { title: "Contamination Listeria en zone de conditionnement", description: "Détection Listeria sur surfaces ou dans l'atmosphère de la zone de conditionnement.", protocol: "Arrêt de ligne, nettoyage CLORAGRO intensif, désinfection OPTIMAGRO renforcée, AIRSAN en nébulisation. Prélèvements de contrôle avant reprise." },
       { title: "Audit IFS/BRC imminent", description: "Préparation express aux audits de certification.", protocol: "Protocole complet renforcé 72h avant audit. Documentation complète des actions, dosages et résultats. Rapport microbiologique fourni." }
     ],
-    associatedProducts: ["cloragro", "optimagro", "bioactive", "bionet", "aquacontrol", "airsan"],
+    associatedProducts: ["cloragro", "optimagro", "bionet", "aquacontrol", "airsan"],
     expectedResults: [
       "Score IFS/BRC supérieur sur les critères d'hygiène",
       "Réduction de la charge microbienne atmosphérique de 90%",
@@ -175,7 +174,8 @@ export const sectorsDataEn: Record<string, SectorData> = {
     reinforcedProtocol: [
       { product: "BIONET", action: "Pipe cleaning", description: "Stripping of organic deposits and scale in water circuits before placing the animals." },
       { product: "AQUACONTROL", action: "Continuous water treatment", description: "Bacteriological stabilization of drinking water throughout the rearing cycle." },
-      { product: "AIRSAN", action: "Atmosphere disinfection", description: "Fine nebulization in the presence of animals to reduce the aerial microbial charge and ammonia." }
+      { product: "AIRSAN", action: "Atmosphere disinfection", description: "Fine nebulization in the presence of animals to reduce the aerial microbial charge and ammonia." },
+      { product: "BIOACTIVE", action: "Enzymatic degradation", description: "Cleaning of equipment with high organic load before disinfection." }
     ],
     specificCases: [
       { title: "New batch after Salmonella contamination", description: "In case of Salmonella detection on the previous batch, the protocol is reinforced.", protocol: "Double passage of CLORAGRO + OPTIMAGRO, increasing concentrations by 30%. Microbiological control analysis before placement." },
@@ -210,7 +210,6 @@ export const sectorsDataEn: Record<string, SectorData> = {
       { product: "OPTIMAGRO", action: "Terminal disinfection", description: "Contact disinfection on clean surfaces. Salmonella, Listeria, E. coli spectrum." }
     ],
     reinforcedProtocol: [
-      { product: "BIOACTIVE", action: "Enzymatic cleaning", description: "Treatment of hard-to-reach areas: joints, gutters, retention zones." },
       { product: "BIONET", action: "Water circuit cleaning", description: "Stripping of process and cooling water circuits." },
       { product: "AIRSAN", action: "Cold room treatment", description: "Nebulization of cold rooms to reduce the Listeria load." }
     ],
@@ -218,7 +217,7 @@ export const sectorsDataEn: Record<string, SectorData> = {
       { title: "Listeria detection in cold room", description: "Confirmed contamination by analysis in cold room or storage area.", protocol: "Reinforced CLORAGRO cleaning + OPTIMAGRO at increased concentration. AIRSAN cold nebulization. Control swabs at D+3." },
       { title: "IFS/BRC audit preparation", description: "Compliance preparation before international certification audit.", protocol: "Complete 48h protocol + surface swabs 72h before audit + documented microbiological report." }
     ],
-    associatedProducts: ["cloragro", "optimagro", "bioactive", "bionet", "airsan"],
+    associatedProducts: ["cloragro", "optimagro", "bionet", "airsan"],
     expectedResults: [
       "HACCP compliance on 100% of control points",
       "Salmonella reduction below detection threshold",
@@ -241,7 +240,6 @@ export const sectorsDataEn: Record<string, SectorData> = {
     ],
     minimalProtocol: [
       { product: "CLORAGRO", action: "Cleaning open surfaces", description: "Degreasing and stripping of work surfaces, cutting boards, conveyors." },
-      { product: "BIOACTIVE", action: "Enzymatic CIP cleaning", description: "Enzymatic treatment of closed lines to degrade organic residues." },
       { product: "OPTIMAGRO", action: "Terminal disinfection", description: "Disinfection of all surfaces after cleaning. Full spectrum." }
     ],
     reinforcedProtocol: [
@@ -253,7 +251,7 @@ export const sectorsDataEn: Record<string, SectorData> = {
       { title: "Listeria contamination in packaging area", description: "Listeria detection on surfaces or in the atmosphere of the packaging zone.", protocol: "Line stop, intensive CLORAGRO cleaning, reinforced OPTIMAGRO disinfection, AIRSAN nebulization. Control swabs before resuming." },
       { title: "Imminent IFS/BRC audit", description: "Express preparation for certification audits.", protocol: "Complete reinforced protocol 72h before audit. Full documentation of actions, dosages, and results. Microbiological report provided." }
     ],
-    associatedProducts: ["cloragro", "optimagro", "bioactive", "bionet", "aquacontrol", "airsan"],
+    associatedProducts: ["cloragro", "optimagro", "bionet", "aquacontrol", "airsan"],
     expectedResults: [
       "Higher IFS/BRC score on hygiene criteria",
       "90% reduction of atmospheric microbial load",
@@ -285,7 +283,8 @@ export const sectorsDataAr: Record<string, SectorData> = {
     reinforcedProtocol: [
       { product: "BIONET", action: "تنظيف الأنابيب", description: "تجريد الرواسب العضوية والترسبات الكلسية في شبكات المياه قبل إدخال الحيوانات." },
       { product: "AQUACONTROL", action: "المعالجة المستمرة للمياه", description: "الاستقرار البكتريولوجي لمياه الشرب طوال دورة التربية." },
-      { product: "AIRSAN", action: "تطهير الأجواء", description: "تبخير دقيق بوجود الحيوانات لتقليل العبء الميكروبي الجوي والأمونيا." }
+      { product: "AIRSAN", action: "تطهير الأجواء", description: "تبخير دقيق بوجود الحيوانات لتقليل العبء الميكروبي الجوي والأمونيا." },
+      { product: "BIOACTIVE", action: "تحليل إنزيمي", description: "تنظيف المعدات ذات الحمل العضوي العالي قبل التطهير." }
     ],
     specificCases: [
       { title: "دورة جديدة بعد تلوث السالمونيلا", description: "في حالة اكتشاف السالمونيلا في الدفعة السابقة، يتم تعزيز البروتوكول.", protocol: "تمرير مزدوج لـ CLORAGRO + OPTIMAGRO بزيادة التركيزات بنسبة 30%. تحليل ميكروبيولوجي للمراقبة قبل الإدخال." },
@@ -320,7 +319,6 @@ export const sectorsDataAr: Record<string, SectorData> = {
       { product: "OPTIMAGRO", action: "التطهير النهائي", description: "تطهير بالتماس للأسطح النظيفة. طيف واسع يشمل السالمونيلا والليستيريا والإشريكية القولونية." }
     ],
     reinforcedProtocol: [
-      { product: "BIOACTIVE", action: "التنظيف الإنزيمي", description: "معالجة المناطق التي يصعب الوصول إليها: المفاصل، المزاريب، مناطق الاحتفاظ." },
       { product: "BIONET", action: "تنظيف شبكات المياه", description: "تجريد شبكات مياه التصنيع والتبريد." },
       { product: "AIRSAN", action: "معالجة الغرف الباردة", description: "تبخير الغرف الباردة لتقليل عبء الليستيريا." }
     ],
@@ -328,7 +326,7 @@ export const sectorsDataAr: Record<string, SectorData> = {
       { title: "اكتشاف الليستيريا في الغرفة الباردة", description: "تأكيد التلوث من خلال التحليل في الغرفة الباردة أو منطقة التخزين.", protocol: "تنظيف معزز بـ CLORAGRO + OPTIMAGRO بتركيز زائد. التبخير البارد باستخدام AIRSAN. عينات مراقبة في اليوم الثالث." },
       { title: "التحضير لتدقيق IFS/BRC", description: "التحضير للامتثال قبل تدقيق الشهادات الدولية.", protocol: "بروتوكول كامل على مدار 48 ساعة + مسحات سطحية 72 ساعة قبل التدقيق + تقرير ميكروبيولوجي موثق." }
     ],
-    associatedProducts: ["cloragro", "optimagro", "bioactive", "bionet", "airsan"],
+    associatedProducts: ["cloragro", "optimagro", "bionet", "airsan"],
     expectedResults: [
       "امتثال الهاسب بنسبة 100% في نقاط المراقبة",
       "خفض السالمونيلا إلى ما دون عتبة الكشف",
@@ -351,7 +349,6 @@ export const sectorsDataAr: Record<string, SectorData> = {
     ],
     minimalProtocol: [
       { product: "CLORAGRO", action: "تنظيف الأسطح المفتوحة", description: "إزالة الشحوم وتجريد أسطح العمل، ألواح التقطيع، والناقلات." },
-      { product: "BIOACTIVE", action: "التنظيف الإنزيمي CIP", description: "المعالجة الإنزيمية للخطوط المغلقة لتحليل الرواسب العضوية." },
       { product: "OPTIMAGRO", action: "التطهير النهائي", description: "تطهير جميع الأسطح بعد التنظيف. طيف كامل." }
     ],
     reinforcedProtocol: [
@@ -363,7 +360,7 @@ export const sectorsDataAr: Record<string, SectorData> = {
       { title: "تلوث الليستيريا في منطقة التعبئة", description: "اكتشاف الليستيريا على الأسطح أو في هواء منطقة التعبئة.", protocol: "توقف الخط، تنظيف مكثف بـ CLORAGRO، تطهير معزز بـ OPTIMAGRO، التبخير بـ AIRSAN. مسحات المراقبة قبل الاستئناف." },
       { title: "تدقيق IFS/BRC وشيك", description: "تحضير سريع لتدقيقات الشهادات.", protocol: "بروتوكول معزز كامل 72 ساعة قبل التدقيق. توثيق كامل للإجراءات والجرعات والنتائج. توفير تقرير ميكروبيولوجي." }
     ],
-    associatedProducts: ["cloragro", "optimagro", "bioactive", "bionet", "aquacontrol", "airsan"],
+    associatedProducts: ["cloragro", "optimagro", "bionet", "aquacontrol", "airsan"],
     expectedResults: [
       "تسجيل درجة أعلى في معايير IFS/BRC على معايير النظافة",
       "خفض العبء الميكروبي الجوي بنسبة 90%",
