@@ -65,72 +65,135 @@
     }
   },
   "problemesSolutions": {
-    "batiment": {
-      "pageTitle": "Zone 1 : Le Bâtiment",
-      "pageSubtitle": "Entre deux cycles : La fenêtre de tir pour briser le cycle pathogène.",
-      "problem": {
-        "title": "Le Biofilm — L'Ennemi Invisible",
-        "content": "Le biofilm est une matrice protectrice que les bactéries créent sur les surfaces. Il résiste aux désinfectants classiques et se reforme en 48h si la surface n'est pas traitée en profondeur. Chaque cycle de production qui démarre sur des surfaces contaminées hérite de la charge microbienne du cycle précédent.",
-        "impact": "Impact : Jusqu'à 8% de mortalité supplémentaire par bande."
-      },
-      "protocol": {
-        "title": "Protocole Bâtiment N2K",
-        "step1": {
-          "name": "CLORAGRO",
-          "action": "Nettoyage Technique",
-          "desc": "Destruction radicale du biofilm organique. Préparation indispensable avant désinfection."
-        },
-        "step2": {
-          "name": "OPTIMAGRO",
-          "action": "Désinfection Totale",
-          "desc": "Désinfection à spectre complet (Bactéricide, Virucide, Fongicide). Rémanence maximale."
-        }
-      }
+    "heroTitle": "Problèmes & Solutions",
+    "heroSubtitle": "Chaque secteur a ses risques spécifiques. Découvrez le protocole adapté à votre situation.",
+    "metaTitle": "Problèmes & Solutions — Les Laboratoires N2K",
+    "metaDescription": "Protocoles de maîtrise sanitaire adaptés par secteur : élevage avicole, abattoir et industrie agroalimentaire.",
+    "tabs": {
+      "elevage": "Élevage Avicole",
+      "abattoir": "Abattoir & Découpe",
+      "agroalimentaire": "Industrie Agroalimentaire"
     },
-    "water": {
-      "pageTitle": "Zone 2 : L'Eau",
-      "pageSubtitle": "Réseau de boisson : Le plus grand vecteur de contamination.",
-      "problem": {
-        "title": "Les Canalisations — Le Vecteur Silencieux",
-        "content": "L'eau qui arrive à vos abreuvoirs traverse des kilomètres de tuyauterie où le calcaire et les résidus organiques créent un terrain idéal pour les coliformes fécaux, E. coli et Salmonella.",
-        "impact": "Impact : Jusqu'à +15% sur l'indice de consommation (FCR)."
-      },
-      "protocol": {
-        "title": "Protocole Eau N2K",
-        "step1": {
-          "name": "BIONET",
-          "action": "Nettoyage Technique",
-          "desc": "Nettoyage technique des canalisations. Décapage des dépôts organiques et calcaire."
+    "elevage": {
+      "accroche": "L'élevage avicole concentre les trois risques sanitaires simultanément : surfaces contaminées, eau de boisson infectée, air chargé en pathogènes. Le protocole N2K couvre les trois zones en séquence obligatoire.",
+      "steps": [
+        {
+          "num": "01",
+          "product": "CLORAGRO",
+          "title": "Nettoyage des surfaces",
+          "context": "Vide sanitaire",
+          "role": "Destruction du biofilm organique, élimination des graisses et protéines. Préparation de surface obligatoire avant désinfection.",
+          "dosage": "2% — temps de contact minimum 15 minutes",
+          "constraint": "Rinçage complet obligatoire avant toute étape suivante."
         },
-        "step2": {
-          "name": "AQUACONTROL",
-          "action": "Stabilisation",
-          "desc": "Stabilisation de la qualité de l'eau. Contrôle constant de la charge microbienne."
+        {
+          "num": "02",
+          "product": "RINÇAGE",
+          "title": "Rinçage obligatoire",
+          "context": "Étape intermédiaire",
+          "role": "Eau potable uniquement. Exigence chimique et réglementaire non optionnelle. Les résidus chlorés de CLORAGRO sont chimiquement incompatibles avec OPTIMAGRO.",
+          "dosage": "",
+          "constraint": ""
+        },
+        {
+          "num": "03",
+          "product": "OPTIMAGRO",
+          "title": "Désinfection des surfaces",
+          "context": "Vide sanitaire",
+          "role": "Désinfection biocide à spectre complet sur surfaces rincées. Élimination des pathogènes résiduels.",
+          "dosage": "2% — temps de contact 15 à 30 minutes",
+          "constraint": "Aération 4h minimum avant réintroduction des animaux. Rémanence 7 jours."
+        },
+        {
+          "num": "04",
+          "product": "BIONET + AQUACONTROL",
+          "title": "Nettoyage et désinfection des canalisations",
+          "context": "Début de cycle",
+          "role": "Phase 01 — BIONET : traitement choc des circuits d'abreuvement. Élimination tartre, biofilm, dépôts organiques. Dosage 1% à 3% — rinçage complet obligatoire après.\nPhase 02 — AQUACONTROL : introduction en continu dans l'eau de boisson. Maintien de la qualité microbiologique tout au long du cycle. Dosage 0,1%.",
+          "dosage": "",
+          "constraint": ""
+        },
+        {
+          "num": "05",
+          "product": "AIRSAN",
+          "title": "Traitement de l'ambiance",
+          "context": "Durant le cycle",
+          "role": "Nébulisation périodique en présence des animaux. Réduction de la charge microbienne aérienne et des concentrations d'ammoniac.",
+          "dosage": "1 ml/m³",
+          "constraint": "Sans stress animal, sans mouiller les litières."
         }
-      }
+      ],
+      "bioactiveNote": "BIOACTIVE s'utilise en complément de CLORAGRO lors du vide sanitaire sur les équipements à forte charge organique (dosage 5% à 10%). C'est un nettoyant de surface enzymatique — jamais en nébulisation."
     },
-    "air": {
-      "pageTitle": "Zone 3 : L'Ambiance",
-      "pageSubtitle": "Aéro-biocontamination : Quand l'air devient une menace.",
-      "problem": {
-        "title": "La Pression Respiratoire — Le Facteur Oublié",
-        "content": "L'ammoniac et la charge microbienne aérienne attaquent les muqueuses respiratoires des animaux. Au-delà de 25 ppm d'ammoniac, les performances chutent drastiquement.",
-        "impact": "Impact : Jusqu'à -12% sur le Gain Moyen Quotidien (GMQ)."
-      },
-      "protocol": {
-        "title": "Protocole Ambiance N2K",
-        "step1": {
-          "name": "AIRSAN",
-          "action": "Réduction de Charge",
-          "desc": "Réduction de la charge microbienne aérienne et des gaz nocifs (Ammoniac)."
+    "abattoir": {
+      "accroche": "En abattoir, la pression microbienne est continue et les risques de contamination croisée sont maximaux. Le protocole N2K couvre le nettoyage et la désinfection des surfaces avec les précautions réglementaires spécifiques au secteur.",
+      "steps": [
+        {
+          "num": "01",
+          "product": "CLORAGRO",
+          "title": "Nettoyage des surfaces post-production",
+          "context": "Quotidien",
+          "role": "Application mousseuse sur sols, murs, équipements, convoyeurs. Dissolution des graisses animales, destruction du biofilm.",
+          "dosage": "2% — temps de contact 20 minutes minimum",
+          "constraint": "Rinçage obligatoire et abondant après application."
         },
-        "step2": {
-          "name": "BIOACTIVE",
-          "action": "Nettoyage Enzymatique",
-          "desc": "Dégradation enzymatique des matières organiques (graisses, protéines, biofilms) pour un nettoyage en profondeur."
+        {
+          "num": "02",
+          "product": "RINÇAGE",
+          "title": "Rinçage obligatoire",
+          "context": "Étape intermédiaire",
+          "role": "Eau potable uniquement. Exigence chimique et réglementaire non optionnelle avant toute désinfection.",
+          "dosage": "",
+          "constraint": ""
+        },
+        {
+          "num": "03",
+          "product": "OPTIMAGRO",
+          "title": "Désinfection finale",
+          "context": "Quotidien après rinçage",
+          "role": "Élimination des pathogènes résiduels — Listeria, Salmonella, E. coli.",
+          "dosage": "2%",
+          "constraint": "Rinçage obligatoire si les surfaces traitées entrent en contact avec les denrées lors de la production suivante. Ventilation obligatoire avant reprise de production."
         }
-      }
-    }
+      ],
+      "bioactiveNote": ""
+    },
+    "agroalimentaire": {
+      "accroche": "L'industrie agroalimentaire exige des protocoles documentés, traçables et conformes aux normes HACCP. Nos produits s'intègrent dans vos PMS existants avec des fiches techniques et FDS complètes disponibles sur demande.",
+      "steps": [
+        {
+          "num": "01",
+          "product": "CLORAGRO",
+          "title": "Nettoyage des surfaces hors contact alimentaire direct",
+          "context": "",
+          "role": "",
+          "dosage": "2% — temps de contact 15 minutes",
+          "constraint": "Ne pas utiliser sur surfaces en contact direct avec les aliments sans rinçage abondant et validation analytique des résidus."
+        },
+        {
+          "num": "02",
+          "product": "RINÇAGE",
+          "title": "Rinçage obligatoire",
+          "context": "Étape intermédiaire",
+          "role": "Eau potable uniquement. Exigence chimique et réglementaire non optionnelle.",
+          "dosage": "",
+          "constraint": ""
+        },
+        {
+          "num": "03",
+          "product": "OPTIMAGRO",
+          "title": "Désinfection post-nettoyage",
+          "context": "Hors présence de denrées",
+          "role": "",
+          "dosage": "2%",
+          "constraint": "Glutaraldéhyde présent — rinçage obligatoire après application. Jamais en présence de denrées. Ventilation obligatoire. Ne pas utiliser sur surfaces de contact alimentaire direct sans validation réglementaire préalable."
+        }
+      ],
+      "bioactiveNote": ""
+    },
+    "viewTechSheet": "Voir la fiche technique",
+    "ctaTitle": "Besoin d'un protocole adapté à votre installation ?",
+    "ctaButton": "Demander un audit sanitaire personnalisé"
   },
   "problems": {
     "badge": "Les 3 Problèmes Majeurs",
@@ -276,7 +339,7 @@
   "cta": {
     "title": "Sécurisez votre maîtrise sanitaire",
     "subtitle": "Nos experts se déplacent partout en Tunisie pour auditer vos installations et concevoir un protocole adapté.",
-    "button": "Demander un audit sanitaire",
+    "button": "Découvrir pourquoi votre désinfection échoue",
     "button2": "Demander un protocole",
     "button3": "Contact commercial",
     "call": "Appeler un expert"
@@ -921,7 +984,16 @@
     },
     "ctaTitle": "Optimisez votre protocole sanitaire dès aujourd'hui",
     "ctaDesc": "Contactez nos ingénieurs pour un audit de terrain complet et une proposition technique chiffrée.",
-    "ctaButton": "Demander une expertise gratuite"
+    "ctaButton": "Demander une expertise gratuite",
+    "team": {
+      "title": "Une expertise multidisciplinaire à votre service",
+      "subtitle": "N2K s’appuie sur une équipe de haut niveau pour garantir la maîtrise sanitaire de vos installations.",
+      "directorName": "Dr Mahmoud Naffati",
+      "directorRole": "Associée — Directrice Recherche et Production",
+      "directorDesc": "Docteur en chimie industrielle avec plus de 20 ans d’expérience dans la formulation de solutions biocides et la R&D appliquée à l’hygiène industrielle.",
+      "staffTitle": "Experts Terrain & Scientifiques",
+      "staffDesc": "Docteurs vétérinaires, ingénieurs agroalimentaires et techniciens spécialisés travaillant en synergie pour auditer, conseiller et mettre en œuvre vos protocoles."
+    }
   },
   "sectorDetail": {
     "problemsBadge": "Problèmes identifiés",
@@ -944,5 +1016,154 @@
     "ctaSubtitle": "Nos experts analysent votre situation spécifique et conçoivent un protocole adapté à vos contraintes terrain, votre budget et vos objectifs sanitaires.",
     "ctaButton1": "Demander un audit sanitaire",
     "ctaButton2": "Voir les produits associés"
+  },
+  "ctas": {
+    "heroCTA": "Demander un diagnostic sanitaire",
+    "homeFinal": "Découvrir pourquoi votre désinfection échoue",
+    "problemesSolutions": "Demander un audit sanitaire personnalisé",
+    "aPropos": "Évaluer mon risque sanitaire",
+    "contact": "Demander un diagnostic terrain gratuit",
+    "produit": "Demander un protocole adapté à mon installation",
+    "secteurElevage": "Construire mon protocole inter-bandes",
+    "secteurAbattoir": "Obtenir un protocole conforme HACCP",
+    "secteurIAA": "Intégrer nos produits dans mon PMS"
+  },
+  "productDetailBlocks": {
+    "cloragro": {
+      "problem": "Les biofilms résistants, graisses, et protéines incrustés empêchent la désinfection finale d'agir sur les pathogènes.",
+      "where": "Bâtiments d'élevage avicole (Phase 01), Abattoirs (Quotidien), Industrie agroalimentaire (hors contact direct).",
+      "how": "Application moussante ou pulvérisation. S'applique en premier. Matériel : canon à mousse, groupe haute pression.",
+      "why": "Formule alcaline chlorée moussante avec inhibiteur de corrosion. Détruit la matrice protectrice du biofilm.",
+      "results": "Surfaces nues, décapées, prêtes pour la désinfection biocide finale.",
+      "contactTime": "15 à 20 minutes minimum",
+      "rinsing": "Obligatoire et abondant à l'eau potable avant toute étape ultérieure.",
+      "aeration": "Ventilation pendant l'application recommandée.",
+      "compliance": "Homologué MS/DHMPE/HOM/0002/03/01/2023. Incompatible avec les acides.",
+      "whenAlone": "Pour le nettoyage de maintenance où la pression microbienne est faible.",
+      "whenComplete": "Toujours suivi d'un rinçage puis d'OPTIMAGRO pour une désinfection totale.",
+      "whenNot": "Ne jamais utiliser en présence d'animaux ou sur des surfaces en contact direct non rincées."
+    },
+    "optimagro": {
+      "problem": "Pathogènes résiduels (Salmonella, Campylobacter, Listeria, virus) survivant au nettoyage.",
+      "where": "Bâtiments d'élevage avicole (Phase 02), Abattoirs, Industrie agroalimentaire.",
+      "how": "Pulvérisation ou nébulisation après rinçage complet des surfaces.",
+      "why": "Action synergique Glutaraldéhyde + Ammoniums quaternaires. Spectre complet bactéricide, virucide, fongicide.",
+      "results": "Éradication totale des pathogènes. Rémanence prolongée jusqu'à 7 jours.",
+      "contactTime": "15 à 30 minutes",
+      "rinsing": "Obligatoire si les surfaces entrent en contact avec les denrées. Incompatible avec le chlore.",
+      "aeration": "4h minimum avant réintroduction des animaux. Ventilation obligatoire en agroalimentaire.",
+      "compliance": "Homologué MS/DHMPE/HOM/0001/03/01/2023. TP2, TP3, TP4.",
+      "whenAlone": "Uniquement sur des surfaces préalablement nettoyées et parfaitement rincées.",
+      "whenComplete": "Nécessite impérativement CLORAGRO en Phase 01 pour une action efficace.",
+      "whenNot": "Ne jamais appliquer sur des résidus chlorés (risque toxique) ou en présence d'animaux/denrées."
+    },
+    "bionet": {
+      "problem": "Accumulation de tartre, dépôts minéraux et biofilm bactérien dans les lignes d'abreuvement.",
+      "where": "Circuits d'eau, pipettes, nipples (Élevage avicole uniquement).",
+      "how": "Traitement choc (1% à 3%) en vide sanitaire. Laisser agir dans les canalisations.",
+      "why": "Dissout les minéraux et déstructure le biofilm interne. Prévient les fuites de pipettes.",
+      "results": "Débit d'eau restauré, élimination des nids bactériens internes.",
+      "contactTime": "12 à 24 heures",
+      "rinsing": "Rinçage complet et abondant sous pression de chaque ligne obligatoire.",
+      "aeration": "Non applicable.",
+      "compliance": "Réservé exclusivement à l'élevage avicole.",
+      "whenAlone": "Pour le détartrage périodique en vide sanitaire.",
+      "whenComplete": "À relayer par AQUACONTROL en continu lors de la mise en place des animaux.",
+      "whenNot": "Ne jamais utiliser en présence des animaux. Ne pas utiliser en abattoir ou IAA."
+    },
+    "aquacontrol": {
+      "problem": "Contamination continue de l'eau de boisson et multiplication microbienne en bout de ligne.",
+      "where": "Systèmes d'abreuvement continu (Élevage avicole uniquement).",
+      "how": "Dosage continu (0,1%) via pompe doseuse pendant la présence des animaux.",
+      "why": "Stabilisation bactériologique constante sans altérer l'appétence de l'eau.",
+      "results": "Baisse de la mortalité, eau saine jusqu'à la dernière pipette, amélioration de l'IC.",
+      "contactTime": "Action continue",
+      "rinsing": "Non applicable (consommé par les animaux).",
+      "aeration": "Non applicable.",
+      "compliance": "Réservé exclusivement à l'élevage avicole.",
+      "whenAlone": "Pour la maintenance quotidienne d'une ligne saine.",
+      "whenComplete": "Nécessite un nettoyage préalable des lignes au BIONET pour une pleine efficacité.",
+      "whenNot": "Ne pas surdoser. Ne pas utiliser en abattoir ou IAA."
+    },
+    "airsan": {
+      "problem": "Charge ammoniacale élevée et germes aérosolisés causant des troubles respiratoires.",
+      "where": "Ambiance des bâtiments d'élevage (Élevage avicole uniquement).",
+      "how": "Nébulisation aérienne ultra-fine (1 ml/m³).",
+      "why": "Action neutralisante sur l'ammoniac et abattement des poussières porteuses de germes.",
+      "results": "Air respirable, stress animal réduit, prévention des pathologies respiratoires.",
+      "contactTime": "Immédiat",
+      "rinsing": "Non applicable.",
+      "aeration": "Ventilation normale du bâtiment.",
+      "compliance": "Sûr pour une utilisation en présence des animaux. Réservé à l'élevage avicole.",
+      "whenAlone": "Pour améliorer rapidement le confort respiratoire en cas de pic d'ammoniac.",
+      "whenComplete": "S'intègre dans le suivi global du lot.",
+      "whenNot": "Ne jamais mouiller directement les animaux ou la litière. Ne pas utiliser en abattoir ou IAA."
+    },
+    "bioactive": {
+      "problem": "Matière organique tenace (graisses, protéines) incrustée sur les équipements.",
+      "where": "Surfaces et équipements fortement chargés (Élevage avicole uniquement).",
+      "how": "Nettoyage enzymatique en complément du vide sanitaire (5% à 10%).",
+      "why": "Les enzymes digèrent spécifiquement la matière organique complexe.",
+      "results": "Surfaces parfaitement dégraissées et prêtes pour la désinfection.",
+      "contactTime": "20 à 30 minutes",
+      "rinsing": "Rinçage à haute pression obligatoire.",
+      "aeration": "Non applicable.",
+      "compliance": "Réservé à l'élevage avicole.",
+      "whenAlone": "Pour les nettoyages d'équipements très encrassés.",
+      "whenComplete": "À utiliser avec ou après CLORAGRO pour optimiser la préparation des surfaces.",
+      "whenNot": "Ne jamais utiliser en nébulisation. Ne pas utiliser en abattoir ou IAA."
+    }
+  },
+  "productDetailHeadings": {
+    "titles": {
+      "problem": "Le problème que ce produit résout",
+      "where": "Où il s'utilise",
+      "how": "Comment il s'utilise",
+      "why": "Pourquoi ce produit",
+      "results": "Résultats attendus",
+      "contactTime": "Temps de contact exact",
+      "rinsing": "Rinçage obligatoire",
+      "aeration": "Aération",
+      "compliance": "Précautions et conformité",
+      "whenAlone": "Quand ce produit seul suffit",
+      "whenComplete": "Quand compléter le protocole",
+      "whenNot": "Quand ne pas le proposer"
+    },
+    "actions": {
+      "downloadTechSheet": "Télécharger la Fiche Technique",
+      "downloadSDS": "Télécharger la Fiche de Données de Sécurité (FDS)"
+    }
+  },
+  "homeInnovation": {
+    "badge": "Science & Innovation",
+    "title": "L’Excellence Scientifique au service de votre sécurité",
+    "subtitle": "Nos solutions ne sont pas de simples produits, ce sont des protocoles issus de 20 ans de recherche et de terrain.",
+    "rdTitle": "Laboratoire R&D intégré",
+    "rdDesc": "Conception et optimisation continue de formulations biocides de pointe.",
+    "expertiseTitle": "Expertise Multidisciplinaire",
+    "expertiseDesc": "Une équipe de docteurs et d’ingénieurs pour répondre à vos enjeux les plus complexes."
+  },
+  "homeStats": {
+    "badge": "Performance",
+    "title": "N2K en chiffres",
+    "subtitle": "Une présence solide et une expertise reconnue par les leaders de l’industrie.",
+    "items": [
+      {
+        "label": "Ans d’Expertise",
+        "value": "20+"
+      },
+      {
+        "label": "Clients Industriels",
+        "value": "500+"
+      },
+      {
+        "label": "Secteurs d’Activité",
+        "value": "12"
+      },
+      {
+        "label": "Taux de Satisfaction",
+        "value": "98%"
+      }
+    ]
   }
 }

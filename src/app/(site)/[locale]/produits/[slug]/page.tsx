@@ -1,20 +1,24 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { notFound } from "next/navigation";
-import { products, getProductBySlug, getLocalizedProduct, getProductsByZone } from "@/data/products";
+import { getProductBySlug, getLocalizedProduct, getProductsByZone } from "@/data/products";
 import {
   ArrowRight,
   ArrowLeft,
   Download,
-  CheckCircle,
   AlertTriangle,
   Beaker,
   Building2,
   Droplets,
   Wind,
   FlaskConical,
-  Layers,
-  Shield,
+  FileText,
+  CheckCircle,
+  XCircle,
+  Info,
+  Clock,
+  ShieldAlert,
+  Headset
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
@@ -23,8 +27,6 @@ const zoneIcons: Record<string, React.ElementType> = {
   "02": Droplets,
   "03": Wind,
 };
-
-
 
 export async function generateMetadata({
   params,
@@ -51,6 +53,10 @@ export default async function ProductDetailPage({
   if (!product) notFound();
 
   const t = await getTranslations("products");
+  const tCTA = await getTranslations("ctas");
+  const pt = await getTranslations(`productDetailBlocks.${product.slug}`);
+  const ph = await getTranslations("productDetailHeadings");
+
   const ZoneIcon = zoneIcons[product.zone] || FlaskConical;
   const relatedProducts = getProductsByZone(product.zone).filter(
     (p) => p.slug !== product.slug
@@ -119,181 +125,174 @@ export default async function ProductDetailPage({
         </div>
       </section>
 
-      {/* ====== PROBLEM / SOLUTION ====== */}
+      {/* ====== 13-POINT TECHNICAL STRUCTURE ====== */}
       <section className="bg-n2k-surface py-16 md:py-24">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
-            {/* Problem */}
-            <div className="relative bg-white rounded-3xl border border-border/30 p-8 md:p-10 shadow-ambient overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 to-orange-400" />
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-red-50 rounded-2xl flex items-center justify-center">
-                  <AlertTriangle className="w-6 h-6 text-red-500" />
-                </div>
-                <h2 className="text-2xl font-black font-heading text-n2k-primary tracking-tight">
-                  {t("problemTitle")}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+            
+            <div className="lg:col-span-8 space-y-12">
+              
+              {/* DIAGNOSTIC ET USAGE */}
+              <div className="space-y-6">
+                <h2 className="text-3xl font-black font-heading text-n2k-primary flex items-center gap-3 border-b border-border/30 pb-4">
+                  <Beaker className="w-8 h-8 text-n2k-secondary" />
+                  Diagnostic et Application
                 </h2>
-              </div>
-              <p className="text-n2k-on-surface-variant font-body leading-relaxed text-base">
-                {product.problem}
-              </p>
-            </div>
-
-            {/* Solution */}
-            <div className="relative bg-white rounded-3xl border border-border/30 p-8 md:p-10 shadow-ambient overflow-hidden">
-              <div
-                className="absolute top-0 left-0 w-full h-1"
-                style={{
-                  background: `linear-gradient(to right, ${product.color}, #2BB673)`,
-                }}
-              />
-              <div className="flex items-center gap-3 mb-6">
-                <div
-                  className="w-12 h-12 rounded-2xl flex items-center justify-center"
-                  style={{ backgroundColor: `${product.color}15` }}
-                >
-                  <Shield
-                    className="w-6 h-6"
-                    style={{ color: product.color }}
-                  />
-                </div>
-                <h2 className="text-2xl font-black font-heading text-n2k-primary tracking-tight">
-                  {t("solutionTitle")} {product.name}
-                </h2>
-              </div>
-              <p className="text-n2k-on-surface-variant font-body leading-relaxed text-base">
-                {product.solution}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ====== CHAMPS D'APPLICATION ====== */}
-      <section className="bg-n2k-surface-low py-16 md:py-24">
-        <div className="max-w-[1400px] mx-auto px-4 md:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-            <div className="lg:col-span-5">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="w-8 h-px bg-n2k-secondary shrink-0" />
-                <span className="text-xs font-black tracking-[0.2em] uppercase text-n2k-secondary">
-                  {t("applicationsBadge")}
-                </span>
-              </div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-n2k-primary tracking-tight leading-tight mb-4">
-                {t("applicationsTitle")}
-              </h2>
-              <p className="text-n2k-on-surface-variant text-base md:text-lg font-body leading-relaxed">
-                {t("applicationsSubtitle")}
-              </p>
-            </div>
-
-            <div className="lg:col-span-7">
-              <div className="grid grid-cols-1 gap-3">
-                {product.applications.map((app, idx) => (
-                  <div
-                    key={idx}
-                    className="flex items-start gap-4 bg-white p-5 rounded-xl border border-border/30 shadow-sm hover:shadow-ambient transition-shadow"
-                  >
-                    <div
-                      className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 mt-0.5"
-                      style={{ backgroundColor: `${product.color}15` }}
-                    >
-                      <CheckCircle
-                        className="w-4 h-4"
-                        style={{ color: product.color }}
-                      />
-                    </div>
-                    <span className="text-n2k-primary font-bold font-heading text-sm md:text-base">
-                      {app}
-                    </span>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* 1. Problème */}
+                  <div className="bg-white p-6 rounded-2xl border border-red-100 shadow-sm relative overflow-hidden">
+                    <div className="absolute top-0 left-0 w-1 h-full bg-red-500" />
+                    <h3 className="font-heading font-bold text-n2k-primary text-sm uppercase tracking-wider mb-2 text-red-600 flex items-center gap-2">
+                      <AlertTriangle className="w-4 h-4" /> {ph("titles.problem")}
+                    </h3>
+                    <p className="text-n2k-on-surface-variant font-body">{pt("problem")}</p>
                   </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ====== TECHNICAL SPECS ====== */}
-      <section className="bg-n2k-surface py-16 md:py-24">
-        <div className="max-w-[1400px] mx-auto px-4 md:px-8">
-          <div className="text-center mb-12">
-            <div className="flex items-center gap-3 mb-4 justify-center">
-              <span className="w-8 h-px bg-n2k-secondary shrink-0" />
-              <span className="text-xs font-black tracking-[0.2em] uppercase text-n2k-secondary">
-                {t("specsBadge")}
-              </span>
-              <span className="w-8 h-px bg-n2k-secondary shrink-0" />
-            </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-n2k-primary tracking-tight mb-4">
-              {t("specsTitle")}
-            </h2>
-          </div>
-
-          <div className="max-w-3xl mx-auto">
-            <div className="bg-white rounded-3xl border border-border/30 shadow-ambient overflow-hidden">
-              {/* Table Header */}
-              <div
-                className="grid grid-cols-2 px-6 md:px-8 py-4 text-[10px] font-black tracking-[0.2em] uppercase"
-                style={{ backgroundColor: `${product.color}10`, color: product.color }}
-              >
-                <span>{t("specsParameter")}</span>
-                <span>{t("specsValue")}</span>
-              </div>
-
-              {/* Table Rows */}
-              {product.specs.map((spec, idx) => (
-                <div
-                  key={idx}
-                  className={`grid grid-cols-2 px-6 md:px-8 py-4 ${
-                    idx % 2 === 0 ? "bg-white" : "bg-slate-50/50"
-                  } ${
-                    idx < product.specs.length - 1
-                      ? "border-b border-border/20"
-                      : ""
-                  }`}
-                >
-                  <span className="text-n2k-on-surface-variant font-heading font-bold text-sm">
-                    {spec.label}
-                  </span>
-                  <span className="text-n2k-primary font-heading font-black text-sm">
-                    {spec.value}
-                  </span>
+                  
+                  {/* 4. Pourquoi */}
+                  <div className="bg-white p-6 rounded-2xl border border-n2k-secondary/20 shadow-sm relative overflow-hidden">
+                    <div className="absolute top-0 left-0 w-1 h-full bg-n2k-secondary" />
+                    <h3 className="font-heading font-bold text-n2k-primary text-sm uppercase tracking-wider mb-2 text-n2k-secondary flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4" /> {ph("titles.why")}
+                    </h3>
+                    <p className="text-n2k-on-surface-variant font-body">{pt("why")}</p>
+                  </div>
                 </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* ====== CTA — Download ====== */}
-      <section
-        className="py-16 md:py-24"
-        style={{
-          background: `linear-gradient(135deg, ${product.color} 0%, ${product.color}cc 100%)`,
-        }}
-      >
-        <div className="max-w-[1400px] mx-auto px-4 md:px-8">
-          <div className="max-w-2xl mx-auto text-center">
-            <Beaker className="w-12 h-12 text-white/60 mx-auto mb-6" />
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-white tracking-tight leading-tight mb-4">
-              {t("ctaTitle")} {product.name}
-            </h2>
-            <p className="text-lg text-white/80 font-body leading-relaxed mb-10">
-              {t("ctaSubtitle")}
-            </p>
-            <button className="inline-flex items-center gap-3 bg-white text-n2k-primary px-10 py-5 rounded-xl font-black font-heading text-lg shadow-lg transition-all hover:scale-[1.02] active:scale-95 group">
-              <Download className="w-6 h-6" />
-              {t("ctaButton")}
-            </button>
+                {/* 2 & 3. Où et Comment */}
+                <div className="bg-white p-6 rounded-2xl border border-border/30 shadow-sm">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <h3 className="font-heading font-bold text-n2k-primary text-sm uppercase tracking-wider mb-2 flex items-center gap-2">
+                        <Building2 className="w-4 h-4 text-slate-400" /> {ph("titles.where")}
+                      </h3>
+                      <p className="text-n2k-on-surface-variant font-body">{pt("where")}</p>
+                    </div>
+                    <div>
+                      <h3 className="font-heading font-bold text-n2k-primary text-sm uppercase tracking-wider mb-2 flex items-center gap-2">
+                        <Info className="w-4 h-4 text-slate-400" /> {ph("titles.how")}
+                      </h3>
+                      <p className="text-n2k-on-surface-variant font-body">{pt("how")}</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* 5. Résultats */}
+                <div className="bg-n2k-secondary/5 p-6 rounded-2xl border border-n2k-secondary/20 shadow-sm">
+                  <h3 className="font-heading font-bold text-n2k-secondary text-sm uppercase tracking-wider mb-2 flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4" /> {ph("titles.results")}
+                  </h3>
+                  <p className="text-n2k-primary font-body font-medium">{pt("results")}</p>
+                </div>
+              </div>
+
+              {/* PROTOCOLE ET SECURITE */}
+              <div className="space-y-6">
+                <h2 className="text-3xl font-black font-heading text-n2k-primary flex items-center gap-3 border-b border-border/30 pb-4">
+                  <ShieldAlert className="w-8 h-8 text-n2k-secondary" />
+                  Protocole et Sécurité
+                </h2>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {/* 6. Temps de contact */}
+                  <div className="bg-white p-5 rounded-xl border border-border/30 flex items-start gap-4">
+                    <Clock className="w-6 h-6 text-n2k-secondary shrink-0 mt-1" />
+                    <div>
+                      <h3 className="font-heading font-bold text-n2k-primary text-xs uppercase tracking-wider mb-1">{ph("titles.contactTime")}</h3>
+                      <p className="text-n2k-on-surface-variant font-body">{pt("contactTime")}</p>
+                    </div>
+                  </div>
+                  
+                  {/* 7. Rinçage */}
+                  <div className="bg-white p-5 rounded-xl border border-border/30 flex items-start gap-4">
+                    <Droplets className="w-6 h-6 text-blue-500 shrink-0 mt-1" />
+                    <div>
+                      <h3 className="font-heading font-bold text-n2k-primary text-xs uppercase tracking-wider mb-1">{ph("titles.rinsing")}</h3>
+                      <p className="text-n2k-on-surface-variant font-body">{pt("rinsing")}</p>
+                    </div>
+                  </div>
+                  
+                  {/* 8. Aération */}
+                  <div className="bg-white p-5 rounded-xl border border-border/30 flex items-start gap-4">
+                    <Wind className="w-6 h-6 text-sky-500 shrink-0 mt-1" />
+                    <div>
+                      <h3 className="font-heading font-bold text-n2k-primary text-xs uppercase tracking-wider mb-1">{ph("titles.aeration")}</h3>
+                      <p className="text-n2k-on-surface-variant font-body">{pt("aeration")}</p>
+                    </div>
+                  </div>
+                  
+                  {/* 9. Conformité */}
+                  <div className="bg-white p-5 rounded-xl border border-border/30 flex items-start gap-4">
+                    <FileText className="w-6 h-6 text-slate-500 shrink-0 mt-1" />
+                    <div>
+                      <h3 className="font-heading font-bold text-n2k-primary text-xs uppercase tracking-wider mb-1">{ph("titles.compliance")}</h3>
+                      <p className="text-n2k-on-surface-variant font-body text-sm">{pt("compliance")}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            {/* SIDEBAR : POSITIONNEMENT & CTA */}
+            <div className="lg:col-span-4 space-y-8">
+              
+              {/* POSITIONNEMENT */}
+              <div className="bg-white rounded-3xl border border-border/30 shadow-ambient p-6 space-y-6">
+                <h3 className="font-heading font-black text-xl text-n2k-primary border-b border-border/30 pb-3">Positionnement Protocole</h3>
+                
+                {/* 10. Quand seul suffit */}
+                <div>
+                  <h4 className="font-heading font-bold text-n2k-primary text-xs uppercase tracking-wider mb-2 flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" /> {ph("titles.whenAlone")}
+                  </h4>
+                  <p className="text-n2k-on-surface-variant text-sm font-body">{pt("whenAlone")}</p>
+                </div>
+                
+                {/* 11. Quand compléter */}
+                <div>
+                  <h4 className="font-heading font-bold text-n2k-primary text-xs uppercase tracking-wider mb-2 flex items-center gap-2">
+                    <Info className="w-4 h-4 text-amber-500" /> {ph("titles.whenComplete")}
+                  </h4>
+                  <p className="text-n2k-on-surface-variant text-sm font-body">{pt("whenComplete")}</p>
+                </div>
+                
+                {/* 12. Quand ne pas le proposer */}
+                <div>
+                  <h4 className="font-heading font-bold text-n2k-primary text-xs uppercase tracking-wider mb-2 flex items-center gap-2">
+                    <XCircle className="w-4 h-4 text-red-500" /> {ph("titles.whenNot")}
+                  </h4>
+                  <p className="text-n2k-on-surface-variant text-sm font-body">{pt("whenNot")}</p>
+                </div>
+              </div>
+
+              {/* DOCUMENTATION & CTA (13) */}
+              <div className="space-y-4">
+                <a href="/documents/fiche-technique.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 w-full bg-white hover:bg-slate-50 text-n2k-primary border border-border/30 px-6 py-4 rounded-xl font-bold font-heading text-sm shadow-sm transition-all">
+                  <Download className="w-5 h-5 text-n2k-secondary" />
+                  {ph("actions.downloadTechSheet")}
+                </a>
+                
+                <a href="/documents/fds.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 w-full bg-white hover:bg-slate-50 text-n2k-primary border border-border/30 px-6 py-4 rounded-xl font-bold font-heading text-sm shadow-sm transition-all">
+                  <ShieldAlert className="w-5 h-5 text-n2k-secondary" />
+                  {ph("actions.downloadSDS")}
+                </a>
+
+                <Link href="/contact" className="flex items-center justify-center gap-3 w-full bg-n2k-primary hover:bg-n2k-primary-light text-white px-6 py-5 rounded-xl font-black font-heading text-sm shadow-lg transition-all mt-4 group">
+                  <Headset className="w-5 h-5" />
+                  {tCTA("produit")}
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform rtl:rotate-180 rtl:group-hover:-translate-x-1" />
+                </Link>
+              </div>
+
+            </div>
           </div>
         </div>
       </section>
 
       {/* ====== RELATED PRODUCTS ====== */}
       {relatedProducts.length > 0 && (
-        <section className="bg-n2k-surface-low py-16 md:py-24">
+        <section className="bg-n2k-surface-low py-16 md:py-24 border-t border-border/30">
           <div className="max-w-[1400px] mx-auto px-4 md:px-8">
             <div className="text-center mb-12">
               <h2 className="text-2xl sm:text-3xl font-black font-heading text-n2k-primary tracking-tight">

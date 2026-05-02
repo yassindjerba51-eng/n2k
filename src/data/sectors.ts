@@ -22,7 +22,7 @@ export const batimentSectors: ZoneSectorMap = {
   elevage: {
     product1: {
       name: "CLORAGRO",
-      type: "Désinfectant — Nettoyage Technique",
+      type: "Détergent Désinfectant — Phase 01",
       desc: "Alcalin chloré ultra-puissant conçu pour déstructurer la matrice organique du biofilm et éliminer les graisses persistantes dans les poulaillers et bâtiments d'élevage avicole.",
       features: [
         "Destruction radicale du biofilm organique sur sols et parois",
@@ -33,7 +33,7 @@ export const batimentSectors: ZoneSectorMap = {
     product2: {
       name: "OPTIMAGRO",
       type: "Désinfectant — Spectre Complet",
-      desc: "Acide stabilisé à spectre total. Intervient sur une surface « mise à nu » pour une désinfection chirurgicale des pathogènes résiduels en bâtiment d'élevage.",
+      desc: "Désinfectant biocide à spectre complet — Glutaraldéhyde + Ammoniums Quaternaires — Phase 02. S'applique obligatoirement après rinçage complet des résidus chlorés.",
       features: [
         "Spectre complet : Bactéricide, Virucide, Fongicide",
         "Rémanence prolongée jusqu'à 7 jours entre bandes",

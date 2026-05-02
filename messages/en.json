@@ -1,7 +1,7 @@
 {
   "nav": {
     "home": "Home",
-    "secteurs": "Industries",
+    "secteurs": "Our Sectors",
     "problemesSolutions": "Problems & Solutions",
     "expertise": "Expertise",
     "produits": "Products",
@@ -65,72 +65,135 @@
     }
   },
   "problemesSolutions": {
-    "batiment": {
-      "pageTitle": "Zone 1: The Building",
-      "pageSubtitle": "Between two cycles: The window of opportunity to break the pathogen cycle.",
-      "problem": {
-        "title": "Biofilm — The Invisible Enemy",
-        "content": "Biofilm is a protective matrix that bacteria create on surfaces. It resists conventional disinfectants and reforms within 48h if the surface isn't treated in depth.",
-        "impact": "Impact: Up to 8% additional mortality per flock."
-      },
-      "protocol": {
-        "title": "N2K Building Protocol",
-        "step1": {
-          "name": "CLORAGRO",
-          "action": "Technical Cleaning",
-          "desc": "Radical destruction of organic biofilm. Essential preparation before disinfection."
-        },
-        "step2": {
-          "name": "OPTIMAGRO",
-          "action": "Total Disinfection",
-          "desc": "Full spectrum disinfection (Bactericidal, Virucidal, Fungicidal). Maximum persistence."
-        }
-      }
+    "heroTitle": "Problems & Solutions",
+    "heroSubtitle": "Each sector has its specific risks. Discover the protocol adapted to your situation.",
+    "metaTitle": "Problems & Solutions — Les Laboratoires N2K",
+    "metaDescription": "Sanitary control protocols adapted by sector: poultry farming, slaughterhouse, and food industry.",
+    "tabs": {
+      "elevage": "Poultry Farming",
+      "abattoir": "Slaughterhouse & Processing",
+      "agroalimentaire": "Food Industry"
     },
-    "water": {
-      "pageTitle": "Zone 2: Water",
-      "pageSubtitle": "Drinking network: The largest vector of contamination.",
-      "problem": {
-        "title": "Pipes — The Silent Vector",
-        "content": "The water reaching your drinkers travels through kilometers of piping where limescale and organic residues create ideal conditions for pathogens.",
-        "impact": "Impact: Up to +15% on the feed conversion ratio (FCR)."
-      },
-      "protocol": {
-        "title": "N2K Water Protocol",
-        "step1": {
-          "name": "BIONET",
-          "action": "Technical Cleaning",
-          "desc": "Technical cleaning of pipes. Stripping of organic and limescale deposits."
+    "elevage": {
+      "accroche": "Poultry farming concentrates all three sanitary risks simultaneously: contaminated surfaces, infected drinking water, air laden with pathogens. The N2K protocol covers all three zones in a mandatory sequence.",
+      "steps": [
+        {
+          "num": "01",
+          "product": "CLORAGRO",
+          "title": "Surface cleaning",
+          "context": "Sanitary void",
+          "role": "Organic biofilm destruction, elimination of fats and proteins. Mandatory surface preparation before disinfection.",
+          "dosage": "2% — minimum contact time 15 minutes",
+          "constraint": "Complete rinsing mandatory before any subsequent step."
         },
-        "step2": {
-          "name": "AQUACONTROL",
-          "action": "Stabilization",
-          "desc": "Water quality stabilization. Constant control of microbial load."
+        {
+          "num": "02",
+          "product": "RINSING",
+          "title": "Mandatory rinsing",
+          "context": "Intermediate step",
+          "role": "Drinking water only. Non-optional chemical and regulatory requirement. Chlorinated residues from CLORAGRO are chemically incompatible with OPTIMAGRO.",
+          "dosage": "",
+          "constraint": ""
+        },
+        {
+          "num": "03",
+          "product": "OPTIMAGRO",
+          "title": "Surface disinfection",
+          "context": "Sanitary void",
+          "role": "Full-spectrum biocidal disinfection on rinsed surfaces. Elimination of residual pathogens.",
+          "dosage": "2% — contact time 15 to 30 minutes",
+          "constraint": "Minimum 4h ventilation before reintroducing animals. 7-day residual effect."
+        },
+        {
+          "num": "04",
+          "product": "BIONET + AQUACONTROL",
+          "title": "Pipe cleaning and disinfection",
+          "context": "Start of cycle",
+          "role": "Phase 01 — BIONET: shock treatment of drinking circuits. Elimination of scale, biofilm, organic deposits. Dosage 1% to 3% — complete rinsing mandatory after.\nPhase 02 — AQUACONTROL: continuous introduction in drinking water. Maintenance of microbiological quality throughout the cycle. Dosage 0.1%.",
+          "dosage": "",
+          "constraint": ""
+        },
+        {
+          "num": "05",
+          "product": "AIRSAN",
+          "title": "Atmosphere treatment",
+          "context": "During cycle",
+          "role": "Periodic nebulization in the presence of animals. Reduction of airborne microbial load and ammonia concentrations.",
+          "dosage": "1 ml/m³",
+          "constraint": "No animal stress, no wetting of litter."
         }
-      }
+      ],
+      "bioactiveNote": "BIOACTIVE is used as a complement to CLORAGRO during sanitary void on equipment with high organic load (dosage 5% to 10%). It is an enzymatic surface cleaner — never in nebulization."
     },
-    "air": {
-      "pageTitle": "Zone 3: Atmosphere",
-      "pageSubtitle": "Aero-biocontamination: When air becomes a threat.",
-      "problem": {
-        "title": "Respiratory Pressure — The Forgotten Factor",
-        "content": "Ammonia and airborne microbial load attack the respiratory mucous membranes of animals.",
-        "impact": "Impact: Up to -12% on Average Daily Gain (ADG)."
-      },
-      "protocol": {
-        "title": "N2K Atmosphere Protocol",
-        "step1": {
-          "name": "AIRSAN",
-          "action": "Load Reduction",
-          "desc": "Reduction of airborne microbial load and harmful gases (Ammonia)."
+    "abattoir": {
+      "accroche": "In slaughterhouses, microbial pressure is continuous and cross-contamination risks are at their highest. The N2K protocol covers surface cleaning and disinfection with sector-specific regulatory precautions.",
+      "steps": [
+        {
+          "num": "01",
+          "product": "CLORAGRO",
+          "title": "Post-production surface cleaning",
+          "context": "Daily",
+          "role": "Foam application on floors, walls, equipment, conveyors. Dissolution of animal fats, biofilm destruction.",
+          "dosage": "2% — minimum contact time 20 minutes",
+          "constraint": "Mandatory and abundant rinsing after application."
         },
-        "step2": {
-          "name": "BIOACTIVE",
-          "action": "Enzymatic Cleaning",
-          "desc": "Enzymatic degradation of organic matter (grease, proteins, biofilms) for deep cleaning."
+        {
+          "num": "02",
+          "product": "RINSING",
+          "title": "Mandatory rinsing",
+          "context": "Intermediate step",
+          "role": "Drinking water only. Non-optional chemical and regulatory requirement before any disinfection.",
+          "dosage": "",
+          "constraint": ""
+        },
+        {
+          "num": "03",
+          "product": "OPTIMAGRO",
+          "title": "Final disinfection",
+          "context": "Daily after rinsing",
+          "role": "Elimination of residual pathogens — Listeria, Salmonella, E. coli.",
+          "dosage": "2%",
+          "constraint": "Mandatory rinsing if treated surfaces come into contact with food during the next production. Mandatory ventilation before resuming production."
         }
-      }
-    }
+      ],
+      "bioactiveNote": ""
+    },
+    "agroalimentaire": {
+      "accroche": "The food industry requires documented, traceable protocols compliant with HACCP standards. Our products integrate into your existing SMP with complete technical sheets and SDS available on request.",
+      "steps": [
+        {
+          "num": "01",
+          "product": "CLORAGRO",
+          "title": "Surface cleaning — non-direct food contact",
+          "context": "",
+          "role": "",
+          "dosage": "2% — contact time 15 minutes",
+          "constraint": "Do not use on surfaces in direct contact with food without abundant rinsing and analytical validation of residues."
+        },
+        {
+          "num": "02",
+          "product": "RINSING",
+          "title": "Mandatory rinsing",
+          "context": "Intermediate step",
+          "role": "Drinking water only. Non-optional chemical and regulatory requirement.",
+          "dosage": "",
+          "constraint": ""
+        },
+        {
+          "num": "03",
+          "product": "OPTIMAGRO",
+          "title": "Post-cleaning disinfection",
+          "context": "Outside food presence",
+          "role": "",
+          "dosage": "2%",
+          "constraint": "Glutaraldehyde present — mandatory rinsing after application. Never in the presence of food. Mandatory ventilation. Do not use on direct food contact surfaces without prior regulatory validation."
+        }
+      ],
+      "bioactiveNote": ""
+    },
+    "viewTechSheet": "View technical sheet",
+    "ctaTitle": "Need a protocol adapted to your installation?",
+    "ctaButton": "Request a personalized sanitary audit"
   },
   "problems": {
     "badge": "The 3 Major Problems",
@@ -276,7 +339,7 @@
   "cta": {
     "title": "Secure your sanitary mastery",
     "subtitle": "Our experts travel throughout Tunisia to audit your facilities and design a tailored protocol.",
-    "button": "Request a sanitary audit",
+    "button": "Discover why your disinfection is failing",
     "button2": "Request a protocol",
     "button3": "Commercial contact",
     "call": "Call an expert"
@@ -921,7 +984,16 @@
     },
     "ctaTitle": "Optimize your sanitary protocol today.",
     "ctaDesc": "Contact our engineers for a complete field audit and a detailed technical proposal.",
-    "ctaButton": "Request a free expertise"
+    "ctaButton": "Request a free expertise",
+    "team": {
+      "title": "Multidisciplinary expertise at your service",
+      "subtitle": "N2K relies on a high-level team to guarantee the sanitary control of your facilities.",
+      "directorName": "Dr Mahmoud Naffati",
+      "directorRole": "Associate — Director of Research and Production",
+      "directorDesc": "Doctor in industrial chemistry with over 20 years of experience in the formulation of biocidal solutions and R&D applied to industrial hygiene.",
+      "staffTitle": "Field Experts & Scientists",
+      "staffDesc": "Veterinary doctors, agri-food engineers and specialized technicians working in synergy to audit, advise and implement your protocols."
+    }
   },
   "sectorDetail": {
     "problemsBadge": "Identified problems",
@@ -944,5 +1016,154 @@
     "ctaSubtitle": "Our experts analyze your specific situation and design a protocol adapted to your field constraints, your budget, and your sanitary goals.",
     "ctaButton1": "Request a sanitary audit",
     "ctaButton2": "View associated products"
+  },
+  "ctas": {
+    "heroCTA": "Request a sanitary diagnostic",
+    "homeFinal": "Discover why your disinfection is failing",
+    "problemesSolutions": "Request a personalized sanitary audit",
+    "aPropos": "Evaluate my sanitary risk",
+    "contact": "Request a free field diagnostic",
+    "produit": "Request a protocol adapted to my installation",
+    "secteurElevage": "Build my inter-batch protocol",
+    "secteurAbattoir": "Get an HACCP compliant protocol",
+    "secteurIAA": "Integrate our products into my SMP"
+  },
+  "productDetailBlocks": {
+    "cloragro": {
+      "problem": "Resistant biofilms, fats, and encrusted proteins prevent final disinfection from reaching pathogens.",
+      "where": "Poultry farming buildings (Phase 01), Slaughterhouses (Daily), Food industry (non-direct contact).",
+      "how": "Foam application or spraying. Applied first. Equipment: foam cannon, high-pressure washer.",
+      "why": "Foaming alkaline chlorinated formula with corrosion inhibitor. Destroys the biofilm's protective matrix.",
+      "results": "Bare, stripped surfaces, ready for final biocidal disinfection.",
+      "contactTime": "Minimum 15 to 20 minutes",
+      "rinsing": "Mandatory and abundant with drinking water before any subsequent step.",
+      "aeration": "Ventilation recommended during application.",
+      "compliance": "Approved MS/DHMPE/HOM/0002/03/01/2023. Incompatible with acids.",
+      "whenAlone": "For maintenance cleaning where microbial pressure is low.",
+      "whenComplete": "Always followed by rinsing then OPTIMAGRO for complete disinfection.",
+      "whenNot": "Never use in the presence of animals or on unrinsed direct contact surfaces."
+    },
+    "optimagro": {
+      "problem": "Residual pathogens (Salmonella, Campylobacter, Listeria, viruses) surviving cleaning.",
+      "where": "Poultry farming buildings (Phase 02), Slaughterhouses, Food industry.",
+      "how": "Spraying or nebulization after complete rinsing of surfaces.",
+      "why": "Synergistic action Glutaraldehyde + Quaternary ammoniums. Full-spectrum bactericidal, virucidal, fungicidal.",
+      "results": "Total eradication of pathogens. Extended residual effect up to 7 days.",
+      "contactTime": "15 to 30 minutes",
+      "rinsing": "Mandatory if surfaces come into contact with food. Incompatible with chlorine.",
+      "aeration": "Minimum 4h before reintroducing animals. Mandatory ventilation in food industry.",
+      "compliance": "Approved MS/DHMPE/HOM/0001/03/01/2023. TP2, TP3, TP4.",
+      "whenAlone": "Only on surfaces previously cleaned and perfectly rinsed.",
+      "whenComplete": "Strictly requires CLORAGRO in Phase 01 for effective action.",
+      "whenNot": "Never apply on chlorinated residues (toxic risk) or in the presence of animals/food."
+    },
+    "bionet": {
+      "problem": "Accumulation of scale, mineral deposits, and bacterial biofilm in drinking lines.",
+      "where": "Water circuits, pipettes, nipples (Poultry farming only).",
+      "how": "Shock treatment (1% to 3%) during sanitary void. Leave to act in pipes.",
+      "why": "Dissolves minerals and breaks down internal biofilm. Prevents pipette leaks.",
+      "results": "Restored water flow, elimination of internal bacterial nests.",
+      "contactTime": "12 to 24 hours",
+      "rinsing": "Complete and abundant pressure rinsing of each line is mandatory.",
+      "aeration": "Not applicable.",
+      "compliance": "Exclusively reserved for poultry farming.",
+      "whenAlone": "For periodic descaling during sanitary void.",
+      "whenComplete": "To be followed by continuous AQUACONTROL when animals are placed.",
+      "whenNot": "Never use in the presence of animals. Do not use in slaughterhouses or food industry."
+    },
+    "aquacontrol": {
+      "problem": "Continuous contamination of drinking water and microbial multiplication at the end of the line.",
+      "where": "Continuous drinking systems (Poultry farming only).",
+      "how": "Continuous dosing (0.1%) via dosing pump while animals are present.",
+      "why": "Constant bacteriological stabilization without altering water palatability.",
+      "results": "Reduced mortality, safe water to the last pipette, improved FCR.",
+      "contactTime": "Continuous action",
+      "rinsing": "Not applicable (consumed by animals).",
+      "aeration": "Not applicable.",
+      "compliance": "Exclusively reserved for poultry farming.",
+      "whenAlone": "For daily maintenance of a clean line.",
+      "whenComplete": "Requires prior cleaning of lines with BIONET for full effectiveness.",
+      "whenNot": "Do not overdose. Do not use in slaughterhouses or food industry."
+    },
+    "airsan": {
+      "problem": "High ammonia load and aerosolized germs causing respiratory issues.",
+      "where": "Atmosphere of livestock buildings (Poultry farming only).",
+      "how": "Ultra-fine aerial nebulization (1 ml/m³).",
+      "why": "Neutralizing action on ammonia and reduction of germ-carrying dust.",
+      "results": "Breathable air, reduced animal stress, prevention of respiratory pathologies.",
+      "contactTime": "Immediate",
+      "rinsing": "Not applicable.",
+      "aeration": "Normal building ventilation.",
+      "compliance": "Safe for use in the presence of animals. Reserved for poultry farming.",
+      "whenAlone": "To quickly improve respiratory comfort during an ammonia peak.",
+      "whenComplete": "Integrates into the overall batch monitoring.",
+      "whenNot": "Never spray directly on animals or wet the litter. Do not use in slaughterhouses or food industry."
+    },
+    "bioactive": {
+      "problem": "Stubborn organic matter (fats, proteins) encrusted on equipment.",
+      "where": "Heavily loaded surfaces and equipment (Poultry farming only).",
+      "how": "Enzymatic cleaning complementing sanitary void (5% to 10%).",
+      "why": "Enzymes specifically digest complex organic matter.",
+      "results": "Perfectly degreased surfaces ready for disinfection.",
+      "contactTime": "20 to 30 minutes",
+      "rinsing": "Mandatory high-pressure rinsing.",
+      "aeration": "Not applicable.",
+      "compliance": "Reserved for poultry farming.",
+      "whenAlone": "For cleaning heavily soiled equipment.",
+      "whenComplete": "To be used with or after CLORAGRO to optimize surface preparation.",
+      "whenNot": "Never use in nebulization. Do not use in slaughterhouses or food industry."
+    }
+  },
+  "productDetailHeadings": {
+    "titles": {
+      "problem": "The problem this product solves",
+      "where": "Where it is used",
+      "how": "How it is used",
+      "why": "Why this product",
+      "results": "Expected results",
+      "contactTime": "Exact contact time",
+      "rinsing": "Mandatory rinsing",
+      "aeration": "Aeration",
+      "compliance": "Precautions and compliance",
+      "whenAlone": "When this product alone is enough",
+      "whenComplete": "When to complete the protocol",
+      "whenNot": "When not to propose it"
+    },
+    "actions": {
+      "downloadTechSheet": "Download Technical Sheet",
+      "downloadSDS": "Download Safety Data Sheet (SDS)"
+    }
+  },
+  "homeInnovation": {
+    "badge": "Science & Innovation",
+    "title": "Scientific Excellence at the service of your safety",
+    "subtitle": "Our solutions are not just products, they are protocols resulting from 20 years of research and field work.",
+    "rdTitle": "Integrated R&D Laboratory",
+    "rdDesc": "Continuous design and optimization of advanced biocidal formulations.",
+    "expertiseTitle": "Multidisciplinary Expertise",
+    "expertiseDesc": "A team of doctors and engineers to meet your most complex challenges."
+  },
+  "homeStats": {
+    "badge": "Performance",
+    "title": "N2K in figures",
+    "subtitle": "A solid presence and expertise recognized by industry leaders.",
+    "items": [
+      {
+        "label": "Years of Expertise",
+        "value": "20+"
+      },
+      {
+        "label": "Industrial Clients",
+        "value": "500+"
+      },
+      {
+        "label": "Activity Sectors",
+        "value": "12"
+      },
+      {
+        "label": "Satisfaction Rate",
+        "value": "98%"
+      }
+    ]
   }
 }
