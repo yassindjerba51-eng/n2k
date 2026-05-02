@@ -623,9 +623,11 @@
         "desc": "Acteur majeur de l'agroalimentaire tunisien. Nos solutions de nettoyage technique et de désinfection séquentielle garantissent la conformité sanitaire de leurs installations."
       }
     },
-    "networkTitle": "Réseau de confiance terrain",
-    "networkSubtitle": "Des exploitations agricoles aux laboratoires d'analyse, nos protocoles sont validés par un réseau étendu de professionnels exigeants.",
+    "networkTitle": "Partenaires Stratégiques & Réseau de confiance terrain",
+    "networkSubtitle": "Spécialistes de la désinfection, nous sommes reconnus par les leaders du secteur avicole et agroalimentaire tunisien pour la fiabilité de nos protocoles, validés par des professionnels exigeants tout au long de la chaîne de production.",
     "partners": [
+      "Groupe Mazraa",
+      "Groupe Chahia",
       "Société Intégrale Agricole",
       "Laboratoire des Abattoirs de Tunis",
       "Oasis",
@@ -992,7 +994,13 @@
       "directorRole": "Associée — Directrice Recherche et Production",
       "directorDesc": "Docteur en chimie industrielle avec plus de 20 ans d’expérience dans la formulation de solutions biocides et la R&D appliquée à l’hygiène industrielle.",
       "staffTitle": "Experts Terrain & Scientifiques",
-      "staffDesc": "Docteurs vétérinaires, ingénieurs agroalimentaires et techniciens spécialisés travaillant en synergie pour auditer, conseiller et mettre en œuvre vos protocoles."
+      "staffDesc": "Docteurs vétérinaires, ingénieurs agroalimentaires et techniciens spécialisés travaillant en synergie pour auditer, conseiller et mettre en œuvre vos protocoles.",
+      "issamName": "Mr. Issam Khalsi",
+      "issamRole": "Gérant",
+      "issamDesc": "Assure la gestion générale de la société, le développement commercial ainsi que la coordination stratégique des activités, avec une forte orientation terrain et performance.",
+      "mouradName": "Mr. Mourad Ben Amour",
+      "mouradRole": "Ingénieur agricole spécialisé en production animale",
+      "mouradDesc": "Intervient comme expert technique dans les domaines de l'élevage, de la biosécurité, de la nutrition animale et de l'optimisation des performances zootechniques."
     }
   },
   "sectorDetail": {

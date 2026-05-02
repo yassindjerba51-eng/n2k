@@ -623,9 +623,11 @@
         "desc": "Major player in Tunisian agri-food. Our technical cleaning and sequential disinfection solutions ensure the sanitary compliance of their facilities."
       }
     },
-    "networkTitle": "Field trust network",
-    "networkSubtitle": "From farms to analysis laboratories, our protocols are validated by an extensive network of demanding professionals.",
+    "networkTitle": "Strategic Partners & Field Trust Network",
+    "networkSubtitle": "As disinfection specialists, we are recognized by leaders in the Tunisian poultry and agri-food sectors for the reliability of our protocols, validated by demanding professionals throughout the production chain.",
     "partners": [
+      "Mazraa Group",
+      "Chahia Group",
       "Société Intégrale Agricole",
       "Tunis Slaughterhouse Laboratory",
       "Oasis",
@@ -992,7 +994,13 @@
       "directorRole": "Associate — Director of Research and Production",
       "directorDesc": "Doctor in industrial chemistry with over 20 years of experience in the formulation of biocidal solutions and R&D applied to industrial hygiene.",
       "staffTitle": "Field Experts & Scientists",
-      "staffDesc": "Veterinary doctors, agri-food engineers and specialized technicians working in synergy to audit, advise and implement your protocols."
+      "staffDesc": "Veterinary doctors, agri-food engineers and specialized technicians working in synergy to audit, advise and implement your protocols.",
+      "issamName": "Mr. Issam Khalsi",
+      "issamRole": "Manager",
+      "issamDesc": "Ensures the general management of the company, commercial development, and strategic coordination of activities, with a strong focus on field and performance.",
+      "mouradName": "Mr. Mourad Ben Amour",
+      "mouradRole": "Agricultural engineer specializing in animal production",
+      "mouradDesc": "Acts as a technical expert in the fields of breeding, biosecurity, animal nutrition, and optimization of zootechnical performance."
     }
   },
   "sectorDetail": {
