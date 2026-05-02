@@ -16,10 +16,11 @@ export default function Navbar({ locale }: { locale: string }) {
 
   const navLinks = [
     { name: t("home"), path: "/", mobileOnly: true },
+    { name: t("secteurs"), path: "/secteurs" },
     { name: t("problemesSolutions"), path: "/problemes-solutions" },
-    { name: t("expertise"), path: "/expertise" },
     { name: t("produits"), path: "/produits" },
     { name: t("blog"), path: "/blog" },
+    { name: t("aPropos"), path: "/a-propos" },
     { name: t("contactPageLink"), path: "/contact" },
   ];
 

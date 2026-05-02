@@ -1,24 +1,47 @@
 {
   "nav": {
     "home": "Home",
+    "secteurs": "Industries",
     "problemesSolutions": "Problems & Solutions",
     "expertise": "Expertise",
     "produits": "Products",
     "references": "Our References",
-    "contact": "Contact & Diagnostic",
-    "diagnostic": "Free Diagnostic",
-    "contactPageLink": "Contact Us",
+    "contact": "Sanitary Diagnostic",
+    "diagnostic": "Sanitary Diagnostic",
+    "contactPageLink": "Contact",
+    "aPropos": "About",
     "blog": "Blog",
     "lang": "Language"
   },
   "hero": {
-    "badge": "Biosecurity Expertise Tunisia",
-    "title1": "You Clean.",
-    "title2": "You Disinfect.",
-    "title3": "And the Problem Returns.",
-    "subtitle": "Your disinfection fails because the problem is the sequence and method. Rediscover hygiene with Les Laboratoires N2K. A rigorous scientific approach for Tunisian livestock farming.",
-    "cta": "See why your disinfection fails",
-    "imageAlt": "Modern Tunisian poultry house interior, ready for cleaning with natural light"
+    "badge": "Professional Sanitary Mastery",
+    "title1": "Professional",
+    "title2": "sanitary mastery",
+    "title3": "for industry",
+    "subtitle": "Comprehensive protocols for cleaning, sanitation, and preventive maintenance for poultry farming, slaughterhouses, and the food industry.",
+    "cta": "Request a sanitary diagnostic",
+    "ctaSecondary": "Discover our solutions",
+    "imageAlt": "Professional hygiene industrial installation for the food industry"
+  },
+  "sectors": {
+    "badge": "Your Industries",
+    "title": "Your industry, our expertise",
+    "subtitle": "Identify your field of activity. We adapt our protocols to your specific constraints.",
+    "elevage": {
+      "title": "Poultry Farming",
+      "desc": "Biosecurity protocols adapted to breeding cycles: inter-batch cleaning, water treatment, environment control.",
+      "link": "See poultry protocol"
+    },
+    "abattoirs": {
+      "title": "Slaughterhouses",
+      "desc": "Hygiene of the slaughter chain: surfaces, process water, cold rooms. HACCP compliance guaranteed.",
+      "link": "See slaughterhouse protocol"
+    },
+    "agroalimentaire": {
+      "title": "Food Industry",
+      "desc": "CIP cleaning, disinfection of production lines, air treatment in sensitive areas. IFS/BRC standards.",
+      "link": "See food industry protocol"
+    }
   },
   "hub": {
     "title": "The 3 Weak Links of your Profitability",
@@ -110,34 +133,55 @@
     }
   },
   "problems": {
-    "badge": "Sanitary Risks",
-    "title": "Your livestock is under",
-    "titleHighlight": "Constant Threat",
-    "subtitle": "Pathogens never sleep. Without a rigorous sequential protocol, your investment is at the mercy of invisible contamination.",
+    "badge": "The 3 Major Problems",
+    "title": "What you don't see",
+    "titleHighlight": "costs you money",
+    "subtitle": "Every neglected zone is a breeding ground that reduces your performance and increases your costs.",
     "discoverLink": "Explore solutions",
     "building": {
-      "title": "Building & Biofilm",
-      "description": "Porous walls house bacterial colonies that resist conventional washing.",
-      "risk": "Risk Index",
+      "title": "Building and surface hygiene",
+      "description": "Resistant biofilm, encrusted grease, cross-contamination between production cycles.",
+      "impact": "Production stops, HACCP audit non-compliance, increased mortality.",
+      "risk": "Economic Impact",
       "riskPercent": "85"
     },
     "water": {
-      "title": "Water Network",
-      "description": "Limescale and organic deposits in pipes are the #1 vectors of disease.",
-      "risk": "Disease Vector",
+      "title": "Water and hydric networks",
+      "description": "Biofilm in pipes, bacterial proliferation, contaminated drinking water.",
+      "impact": "Decreased zootechnical performance, mortality, drinking water non-compliance.",
+      "risk": "Production Impact",
       "riskPercent": "92"
     },
     "air": {
-      "title": "Air Quality",
-      "description": "Ammonia and dust saturate your animals' respiratory defenses.",
+      "title": "Atmosphere and environment",
+      "description": "Ammonia, dust, aerosolized germs, airborne microbial pressure.",
+      "impact": "Respiratory pathologies, ADG drop, odors, degraded animal welfare.",
       "risk": "Respiratory Impact",
       "riskPercent": "78"
     }
   },
   "protocol": {
-    "badge": "The N2K Method",
-    "title": "A 2-Phase Sequential Protocol",
-    "subtitle": "For total biosecurity, the sequence of actions is more critical than the products themselves.",
+    "badge": "The N2K Protocol",
+    "title": "Clean — Sanitize — Maintain",
+    "subtitle": "A 3-step protocol for complete sanitary mastery. The sequence of actions is more critical than the products themselves.",
+    "step1": {
+      "label": "Pre-cycle",
+      "name": "Clean",
+      "description": "Technical cleaning of surfaces: destruction of biofilm, elimination of fats and organic deposits. Essential preparation before disinfection.",
+      "products": "CLORAGRO / BIONETPRO / BIOACTIVE"
+    },
+    "step2": {
+      "label": "During cycle",
+      "name": "Sanitize",
+      "description": "Full-spectrum biocide disinfection after mandatory rinsing. Stabilization of water and air quality.",
+      "products": "OPTIMAGRO / AQUACONTROL / AIRSAN"
+    },
+    "step3": {
+      "label": "Continuous maintenance",
+      "name": "Maintain",
+      "description": "Continuous monitoring and treatment: water quality, atmosphere, regular microbiological control.",
+      "products": "AQUACONTROL / AIRSAN"
+    },
     "phase1": {
       "label": "Phase 01",
       "name": "CLORAGRO",
@@ -156,7 +200,7 @@
       "type": "Total Disinfection & Stabilization",
       "features": [
         "Full spectrum (Bact, Vir, Fung)",
-        "Extended 7-day persistence",
+        "Extended persistence 7 days",
         "Protection of new arrivals"
       ],
       "badgeLabel": "Maximum Security",
@@ -164,26 +208,78 @@
     }
   },
   "authority": {
-    "imageAlt": "Dr. Mahmoud Naffeti in the laboratory",
-    "title": "The expertise of a",
-    "titleHighlight": "Doctor in Chemistry",
-    "titleEnd": "at your service.",
+    "imageAlt": "N2K Laboratory at Borj Cédria Technopark",
+    "title": "The Expertise of",
+    "titleHighlight": "Borj Cédria",
+    "titleEnd": "Serving Livestock",
     "doctor": {
       "name": "Dr. Mahmoud Naffeti",
-      "description": "N2K Scientific Director, recognized expert in chemical formulation for industrial and poultry hygiene."
+      "description": "A recognized field expert, Dr. Naffeti leads our research to adapt global biosecurity standards to Tunisia's climatic and structural realities."
     },
     "techpark": {
-      "name": "Borj Cédria Technopark",
-      "description": "Our R&D laboratory is located in the heart of Tunisia's largest scientific innovation hub."
+      "name": "Borj Cédria Technology Park",
+      "description": "Located at the heart of Tunisian innovation, Les Laboratoires N2K benefit from a cutting-edge scientific ecosystem to guarantee the quality of each produced batch."
     },
-    "quote": "« Biosecurity is not an expense, it's the life insurance of your profitability. »",
+    "quote": "« Our mission is not to sell jerrycans, but to ensure the sanitary success of your flocks. »",
     "quoteAuthor": "— Dr. Mahmoud Naffeti"
   },
+  "credibility": {
+    "badge": "Why N2K",
+    "title": "Trust is earned",
+    "titleHighlight": "in the field",
+    "items": {
+      "expertise": {
+        "title": "Field expertise",
+        "desc": "Over 15 years of direct interventions in farms, slaughterhouses, and food processing plants in Tunisia."
+      },
+      "protocols": {
+        "title": "Validated protocols",
+        "desc": "Each protocol is tested and validated in situ before deployment. Measurable and documented results."
+      },
+      "compliance": {
+        "title": "Regulatory compliance",
+        "desc": "MS/DHMPE approved products. EN 1276, EN 13697, EN 1650 standards. TP2/TP3/TP4 biocide classification."
+      },
+      "support": {
+        "title": "Technical support",
+        "desc": "Team training, post-application follow-up, dosage adjustment. No sales without support."
+      },
+      "mastery": {
+        "title": "Industrial mastery",
+        "desc": "Formulations developed at the Borj Cédria Technopark. Applied R&D to North African field realities."
+      },
+      "serious": {
+        "title": "Professionalism",
+        "desc": "Scientific direction by Dr. Mahmoud Naffeti. Every recommendation is scientifically founded."
+      }
+    }
+  },
+  "homeProducts": {
+    "badge": "Our Products",
+    "title": "6 products, 1 protocol",
+    "subtitle": "Each product has a specific role in the sanitary mastery protocol.",
+    "cloragro": "Technical cleaning of surfaces — Phase 01",
+    "optimagro": "Full spectrum biocide disinfection — Phase 02",
+    "bionet": "Technical cleaning of water pipes",
+    "aquacontrol": "Continuous treatment of drinking water",
+    "airsan": "Atmospheric disinfection in the presence of animals",
+    "bioactive": "Enzymatic cleaner for organic matter",
+    "viewAll": "View all products"
+  },
+  "homeBlog": {
+    "badge": "Expertise & Field",
+    "title": "Technical articles",
+    "subtitle": "Field advice, best practices, and sanitary news.",
+    "readMore": "Read the article",
+    "viewAll": "View all articles"
+  },
   "cta": {
-    "title": "Ready to secure your next flock?",
-    "subtitle": "Join the farmers who have reduced their mortality by 35% thanks to the N2K method.",
-    "button": "Launch my Free Diagnostic",
-    "call": "Talk to an expert: +216 71 000 000"
+    "title": "Secure your sanitary mastery",
+    "subtitle": "Our experts travel throughout Tunisia to audit your facilities and design a tailored protocol.",
+    "button": "Request a sanitary audit",
+    "button2": "Request a protocol",
+    "button3": "Commercial contact",
+    "call": "Call an expert"
   },
   "solutions": {
     "pageTitle": "Our Scientific Solutions",
@@ -347,7 +443,8 @@
     "supportLinks": {
       "contact": "Contact Expert",
       "diagnostic": "Virtual Diagnostic",
-      "about": "About"
+      "about": "About",
+      "faq": "Frequently Asked Questions"
     },
     "contactTitle": "Location & Contact",
     "address": "Borj Cédria Technology Park, Soliman, Nabeul",
@@ -771,5 +868,27 @@
     "ctaTitle": "Optimize your sanitary protocol today.",
     "ctaDesc": "Contact our engineers for a complete field audit and a detailed technical proposal.",
     "ctaButton": "Request a free expertise"
+  },
+  "sectorDetail": {
+    "problemsBadge": "Identified problems",
+    "problemsTitle": "What threatens your operation",
+    "risksBadge": "Economic impact",
+    "risksTitle": "What it really costs you",
+    "minimalBadge": "Base protocol",
+    "minimalTitle": "Recommended minimal protocol",
+    "minimalSubtitle": "The basic sequence for compliant sanitary mastery. Applicable to any operation in this sector.",
+    "reinforcedBadge": "Reinforced protocol",
+    "reinforcedTitle": "When to reinforce the protocol",
+    "reinforcedSubtitle": "In addition to the base protocol, these actions target the specific risk zones of your sector.",
+    "casesBadge": "Specific cases",
+    "casesTitle": "Particular situations",
+    "casesProtocol": "Recommended protocol",
+    "resultsBadge": "Expected results",
+    "resultsTitle": "What you can expect",
+    "ctaBadge": "Next step",
+    "ctaTitle": "Request a customized protocol",
+    "ctaSubtitle": "Our experts analyze your specific situation and design a protocol adapted to your field constraints, your budget, and your sanitary goals.",
+    "ctaButton1": "Request a sanitary audit",
+    "ctaButton2": "View associated products"
   }
 }

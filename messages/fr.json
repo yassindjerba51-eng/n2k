@@ -1,24 +1,47 @@
 {
   "nav": {
     "home": "Accueil",
+    "secteurs": "Secteurs d'activité",
     "problemesSolutions": "Problèmes & Solutions",
     "expertise": "Expertise",
     "produits": "Produits",
     "references": "Nos Références",
-    "contact": "Contact & Diagnostic",
-    "diagnostic": "Diagnostic Gratuit",
-    "contactPageLink": "Nous contacter",
+    "contact": "Diagnostic Sanitaire",
+    "diagnostic": "Diagnostic Sanitaire",
+    "contactPageLink": "Contact",
+    "aPropos": "À propos",
     "blog": "Blog",
     "lang": "Langue"
   },
   "hero": {
-    "badge": "Expertise Bio-Sécurité Tunisie",
-    "title1": "Vous Nettoyez.",
-    "title2": "Vous Désinfectez.",
-    "title3": "Et le Problème Revient.",
-    "subtitle": "Votre désinfection échoue car le problème est l'ordre et la méthode. Redécouvrez l'hygiène avec Les Laboratoires N2K. Une approche scientifique rigoureuse pour l'élevage tunisien.",
-    "cta": "Voir pourquoi votre désinfection échoue",
-    "imageAlt": "Intérieur d'un hangar avicole tunisien moderne, prêt pour le nettoyage avec lumière naturelle"
+    "badge": "Maîtrise Sanitaire Professionnelle",
+    "title1": "Maîtrise sanitaire",
+    "title2": "professionnelle",
+    "title3": "pour l'industrie",
+    "subtitle": "Protocoles complets de nettoyage, assainissement et maintenance préventive pour élevage avicole, abattoirs et industrie agroalimentaire.",
+    "cta": "Demander un diagnostic sanitaire",
+    "ctaSecondary": "Découvrir nos solutions",
+    "imageAlt": "Installation industrielle d'hygiène professionnelle pour l'agroalimentaire"
+  },
+  "sectors": {
+    "badge": "Vos Secteurs",
+    "title": "Votre secteur, notre expertise",
+    "subtitle": "Identifiez votre domaine d'activité. Nous adaptons nos protocoles à vos contraintes spécifiques.",
+    "elevage": {
+      "title": "Élevage avicole",
+      "desc": "Protocoles de biosécurité adaptés aux cycles d'élevage : nettoyage inter-bandes, traitement de l'eau, contrôle de l'ambiance.",
+      "link": "Voir le protocole élevage"
+    },
+    "abattoirs": {
+      "title": "Abattoirs",
+      "desc": "Hygiène de la chaîne d'abattage : surfaces, eau de process, chambres froides. Conformité HACCP garantie.",
+      "link": "Voir le protocole abattoir"
+    },
+    "agroalimentaire": {
+      "title": "Industrie agroalimentaire",
+      "desc": "Nettoyage CIP, désinfection des lignes de production, traitement de l'air en zones sensibles. Normes IFS/BRC.",
+      "link": "Voir le protocole IAA"
+    }
   },
   "hub": {
     "title": "Les 3 Maillons Faibles de votre Rentabilité",
@@ -110,34 +133,55 @@
     }
   },
   "problems": {
-    "badge": "Risques Sanitaires",
+    "badge": "Les 3 Problèmes Majeurs",
     "title": "Ce que vous ne voyez pas",
     "titleHighlight": "vous coûte de l'argent",
-    "subtitle": "L'élevage moderne ne tolère pas l'improvisation. Chaque zone négligée est un foyer de prolifération qui réduit vos indices de consommation et augmente votre mortalité.",
+    "subtitle": "Chaque zone négligée est un foyer de prolifération qui réduit vos performances et augmente vos coûts.",
     "discoverLink": "Explorer les solutions",
     "building": {
-      "title": "Bâtiment & Biofilm",
-      "description": "Les parois poreuses abritent des colonies bactériennes qui résistent aux lavages classiques.",
-      "risk": "Indice de Risque",
+      "title": "Hygiène bâtiments et surfaces",
+      "description": "Biofilm résistant, graisses incrustées, contaminations croisées entre cycles de production.",
+      "impact": "Arrêts de production, non-conformités audit HACCP, mortalité accrue.",
+      "risk": "Impact Économique",
       "riskPercent": "85"
     },
     "water": {
-      "title": "Réseau d'Eau",
-      "description": "Le calcaire et les dépôts organiques dans les tuyauteries sont les vecteurs n°1 de maladies.",
-      "risk": "Vecteur de Maladie",
+      "title": "Eau et réseaux hydriques",
+      "description": "Biofilm dans les canalisations, prolifération bactérienne, eau de boisson contaminée.",
+      "impact": "Baisse des performances zootechniques, mortalité, non-conformité eau potable.",
+      "risk": "Impact Production",
       "riskPercent": "92"
     },
     "air": {
-      "title": "Qualité de l'Air",
-      "description": "L'ammoniac et les poussières saturent les défenses respiratoires de vos animaux.",
+      "title": "Ambiance et environnement",
+      "description": "Ammoniac, poussières, germes aérosolisés, pression microbienne aérienne.",
+      "impact": "Pathologies respiratoires, baisse de GMQ, odeurs, bien-être animal dégradé.",
       "risk": "Impact Respiratoire",
       "riskPercent": "78"
     }
   },
   "protocol": {
-    "badge": "La Méthode N2K",
-    "title": "Un Protocole Séquentiel en 2 Phases",
-    "subtitle": "Pour une biosécurité totale, l'ordre des actions est plus critique que les produits eux-mêmes.",
+    "badge": "Le Protocole N2K",
+    "title": "Nettoyer — Assainir — Maintenir",
+    "subtitle": "Un protocole en 3 temps pour une maîtrise sanitaire complète. L'ordre des actions est plus critique que les produits eux-mêmes.",
+    "step1": {
+      "label": "Avant cycle",
+      "name": "Nettoyer",
+      "description": "Nettoyage technique des surfaces : destruction du biofilm, élimination des graisses et dépôts organiques. Préparation indispensable avant désinfection.",
+      "products": "CLORAGRO / BIONETPRO / BIOACTIVE"
+    },
+    "step2": {
+      "label": "Pendant cycle",
+      "name": "Assainir",
+      "description": "Désinfection biocide à spectre complet après rinçage obligatoire. Stabilisation de la qualité de l'eau et de l'air.",
+      "products": "OPTIMAGRO / AQUACONTROL / AIRSAN"
+    },
+    "step3": {
+      "label": "Maintenance continue",
+      "name": "Maintenir",
+      "description": "Surveillance et traitement continu : qualité de l'eau, ambiance, contrôle microbiologique régulier.",
+      "products": "AQUACONTROL / AIRSAN"
+    },
     "phase1": {
       "label": "Phase 01",
       "name": "CLORAGRO",
@@ -179,10 +223,62 @@
     "quote": "« Notre mission n'est pas de vendre des bidons, mais d'assurer la réussite sanitaire de vos bandes. »",
     "quoteAuthor": "— Dr. Mahmoud Naffeti"
   },
+  "credibility": {
+    "badge": "Pourquoi N2K",
+    "title": "La confiance se mérite",
+    "titleHighlight": "sur le terrain",
+    "items": {
+      "expertise": {
+        "title": "Expertise terrain",
+        "desc": "Plus de 15 ans d'interventions directes dans les élevages, abattoirs et usines agroalimentaires en Tunisie."
+      },
+      "protocols": {
+        "title": "Protocoles validés",
+        "desc": "Chaque protocole est testé et validé in situ avant déploiement. Résultats mesurables et documentés."
+      },
+      "compliance": {
+        "title": "Conformité réglementaire",
+        "desc": "Produits homologués MS/DHMPE. Normes EN 1276, EN 13697, EN 1650. Classification biocide TP2/TP3/TP4."
+      },
+      "support": {
+        "title": "Accompagnement technique",
+        "desc": "Formation des équipes, suivi post-application, ajustement des dosages. Pas de vente sans accompagnement."
+      },
+      "mastery": {
+        "title": "Maîtrise industrielle",
+        "desc": "Formulations développées au Technopôle de Borj Cédria. R&D appliquée aux réalités du terrain maghrébin."
+      },
+      "serious": {
+        "title": "Sérieux professionnel",
+        "desc": "Direction scientifique par le Dr Mahmoud Naffeti. Chaque recommandation est scientifiquement fondée."
+      }
+    }
+  },
+  "homeProducts": {
+    "badge": "Nos Produits",
+    "title": "6 produits, 1 protocole",
+    "subtitle": "Chaque produit a un rôle précis dans le protocole de maîtrise sanitaire.",
+    "cloragro": "Nettoyage technique des surfaces — Phase 01",
+    "optimagro": "Désinfection biocide à spectre complet — Phase 02",
+    "bionet": "Nettoyage technique des canalisations d'eau",
+    "aquacontrol": "Traitement continu de l'eau potable",
+    "airsan": "Désinfection atmosphérique en présence d'animaux",
+    "bioactive": "Nettoyant enzymatique pour matières organiques",
+    "viewAll": "Voir tous les produits"
+  },
+  "homeBlog": {
+    "badge": "Expertise & Terrain",
+    "title": "Articles techniques",
+    "subtitle": "Conseils terrain, bonnes pratiques et actualités sanitaires.",
+    "readMore": "Lire l'article",
+    "viewAll": "Voir tous les articles"
+  },
   "cta": {
-    "title": "Prêt à sécuriser votre prochain cycle ?",
-    "subtitle": "Ne laissez pas la chance décider de votre rentabilité. Nos experts se déplacent partout en Tunisie pour auditer votre protocole actuel.",
-    "button": "Demander un Diagnostic Terrain Gratuit",
+    "title": "Sécurisez votre maîtrise sanitaire",
+    "subtitle": "Nos experts se déplacent partout en Tunisie pour auditer vos installations et concevoir un protocole adapté.",
+    "button": "Demander un audit sanitaire",
+    "button2": "Demander un protocole",
+    "button3": "Contact commercial",
     "call": "Appeler un expert"
   },
   "solutions": {
@@ -347,7 +443,8 @@
     "supportLinks": {
       "contact": "Contact Expert",
       "diagnostic": "Diagnostic Virtuel",
-      "about": "À propos"
+      "about": "À propos",
+      "faq": "Questions Fréquemment Posées"
     },
     "contactTitle": "Localisation & Contact",
     "address": "Pôle Technologique Borj Cédria, Soliman, Nabeul",
@@ -771,5 +868,27 @@
     "ctaTitle": "Optimisez votre protocole sanitaire dès aujourd'hui",
     "ctaDesc": "Contactez nos ingénieurs pour un audit de terrain complet et une proposition technique chiffrée.",
     "ctaButton": "Demander une expertise gratuite"
+  },
+  "sectorDetail": {
+    "problemsBadge": "Problèmes identifiés",
+    "problemsTitle": "Ce qui menace votre exploitation",
+    "risksBadge": "Impact économique",
+    "risksTitle": "Ce que ça vous coûte réellement",
+    "minimalBadge": "Protocole de base",
+    "minimalTitle": "Protocole minimal recommandé",
+    "minimalSubtitle": "La séquence de base pour une maîtrise sanitaire conforme. Applicable à toute exploitation de ce secteur.",
+    "reinforcedBadge": "Protocole renforcé",
+    "reinforcedTitle": "Quand renforcer le protocole",
+    "reinforcedSubtitle": "En complément du protocole de base, ces actions ciblent les zones à risque spécifiques de votre secteur.",
+    "casesBadge": "Cas spécifiques",
+    "casesTitle": "Situations particulières",
+    "casesProtocol": "Protocole recommandé",
+    "resultsBadge": "Résultats attendus",
+    "resultsTitle": "Ce que vous pouvez attendre",
+    "ctaBadge": "Prochaine étape",
+    "ctaTitle": "Demandez un protocole personnalisé",
+    "ctaSubtitle": "Nos experts analysent votre situation spécifique et conçoivent un protocole adapté à vos contraintes terrain, votre budget et vos objectifs sanitaires.",
+    "ctaButton1": "Demander un audit sanitaire",
+    "ctaButton2": "Voir les produits associés"
   }
 }

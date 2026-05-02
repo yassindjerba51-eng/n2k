@@ -18,22 +18,22 @@ export default function Footer() {
         </div>
         <div>
           <h5 className="text-white font-bold mb-6 uppercase tracking-widest text-xs font-heading">
-            {t("expertise")}
+            Secteurs
           </h5>
           <ul className="space-y-4 font-body text-sm">
             <li>
-              <Link href="/problemes-solutions/batiment" className="text-slate-400 hover:text-white hover:underline decoration-secondary-light decoration-2 underline-offset-4 transition-colors">
-                {t("expertiseLinks.technical")}
+              <Link href="/secteurs/elevage-avicole" className="text-slate-400 hover:text-white hover:underline decoration-secondary-light decoration-2 underline-offset-4 transition-colors">
+                Élevage avicole
               </Link>
             </li>
             <li>
-              <Link href="/problemes-solutions/batiment" className="text-slate-400 hover:text-white hover:underline decoration-secondary-light decoration-2 underline-offset-4 transition-colors">
-                {t("expertiseLinks.soil")}
+              <Link href="/secteurs/abattoirs" className="text-slate-400 hover:text-white hover:underline decoration-secondary-light decoration-2 underline-offset-4 transition-colors">
+                Abattoirs
               </Link>
             </li>
             <li>
-              <Link href="/problemes-solutions/water" className="text-slate-400 hover:text-white hover:underline decoration-secondary-light decoration-2 underline-offset-4 transition-colors">
-                {t("expertiseLinks.water")}
+              <Link href="/secteurs/industrie-agroalimentaire" className="text-slate-400 hover:text-white hover:underline decoration-secondary-light decoration-2 underline-offset-4 transition-colors">
+                Industrie agroalimentaire
               </Link>
             </li>
           </ul>
@@ -44,13 +44,23 @@ export default function Footer() {
           </h5>
           <ul className="space-y-4 font-body text-sm">
             <li>
-              <Link href="/diagnostic" className="text-slate-400 hover:text-white hover:underline decoration-secondary-light decoration-2 underline-offset-4 transition-colors">
-                {t("supportLinks.contact")}
+              <Link href="/problemes-solutions" className="text-slate-400 hover:text-white hover:underline decoration-secondary-light decoration-2 underline-offset-4 transition-colors">
+                Problèmes & Solutions
               </Link>
             </li>
             <li>
-              <Link href="/diagnostic" className="text-slate-400 hover:text-white hover:underline decoration-secondary-light decoration-2 underline-offset-4 transition-colors">
-                {t("supportLinks.diagnostic")}
+              <Link href="/produits" className="text-slate-400 hover:text-white hover:underline decoration-secondary-light decoration-2 underline-offset-4 transition-colors">
+                Produits
+              </Link>
+            </li>
+            <li>
+              <Link href="/faq" className="text-slate-400 hover:text-white hover:underline decoration-secondary-light decoration-2 underline-offset-4 transition-colors">
+                {t("supportLinks.faq")}
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="text-slate-400 hover:text-white hover:underline decoration-secondary-light decoration-2 underline-offset-4 transition-colors">
+                {t("supportLinks.contact")}
               </Link>
             </li>
             <li>

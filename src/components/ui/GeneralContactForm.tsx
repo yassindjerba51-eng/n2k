@@ -7,11 +7,14 @@ import * as z from "zod";
 import { useTranslations } from "next-intl";
 import { Send, Loader2 } from "lucide-react";
 
-// Form Schema
 const contactSchema = z.object({
   name: z.string().min(2, { message: "Name is required" }),
   email: z.string().email({ message: "Valid email is required" }),
+  sector: z.string().min(1, { message: "Sector is required" }),
+  problemType: z.string().min(1, { message: "Problem type is required" }),
   subject: z.string().min(1, { message: "Subject is required" }),
+  installationSize: z.string().optional(),
+  requestType: z.string().min(1, { message: "Request type is required" }),
   message: z.string().min(10, { message: "Message is too short" }),
 });
 
@@ -32,7 +35,11 @@ export default function GeneralContactForm() {
     defaultValues: {
       name: "",
       email: "",
+      sector: "",
+      problemType: "",
       subject: "Zone Bâtiment",
+      installationSize: "",
+      requestType: "audit",
       message: "",
     },
   });
@@ -80,6 +87,7 @@ export default function GeneralContactForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+      {/* Row 1: Name + Email */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-2">
           <label className="text-[10px] font-bold tracking-widest text-slate-500 uppercase">
@@ -91,9 +99,7 @@ export default function GeneralContactForm() {
             placeholder={t("namePlaceholder")}
             type="text"
           />
-          {errors.name && (
-            <p className="text-red-500 text-xs font-semibold">{errors.name.message}</p>
-          )}
+          {errors.name && <p className="text-red-500 text-xs font-semibold">{errors.name.message}</p>}
         </div>
         <div className="space-y-2">
           <label className="text-[10px] font-bold tracking-widest text-slate-500 uppercase">
@@ -105,30 +111,104 @@ export default function GeneralContactForm() {
             placeholder={t("emailPlaceholder")}
             type="email"
           />
-          {errors.email && (
-            <p className="text-red-500 text-xs font-semibold">{errors.email.message}</p>
-          )}
+          {errors.email && <p className="text-red-500 text-xs font-semibold">{errors.email.message}</p>}
         </div>
       </div>
-      
-      <div className="space-y-2">
-        <label className="text-[10px] font-bold tracking-widest text-slate-500 uppercase">
-          {t("subjectLabel")}
-        </label>
-        <select
-          {...register("subject")}
-          className="w-full bg-white border-none border-b-2 border-slate-200 focus:border-n2k-primary focus:ring-0 px-4 py-3 transition-colors outline-none cursor-pointer"
-        >
-          <option value="Zone Bâtiment">{t("subjects.batiment")}</option>
-          <option value="Analyse de l'Eau">{t("subjects.eau")}</option>
-          <option value="Ambiance & Environnement">{t("subjects.ambiance")}</option>
-          <option value="Autre Expertise">{t("subjects.autre")}</option>
-        </select>
-        {errors.subject && (
-          <p className="text-red-500 text-xs font-semibold">{errors.subject.message}</p>
-        )}
+
+      {/* Row 2: Sector + Problem Type */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="space-y-2">
+          <label className="text-[10px] font-bold tracking-widest text-slate-500 uppercase">
+            Secteur d&apos;activité
+          </label>
+          <select
+            {...register("sector")}
+            className="w-full bg-white border-none border-b-2 border-slate-200 focus:border-n2k-primary focus:ring-0 px-4 py-3 transition-colors outline-none cursor-pointer"
+          >
+            <option value="">— Sélectionnez —</option>
+            <option value="elevage">Élevage avicole</option>
+            <option value="abattoir">Abattoir</option>
+            <option value="agroalimentaire">Industrie agroalimentaire</option>
+            <option value="autre">Autre secteur</option>
+          </select>
+          {errors.sector && <p className="text-red-500 text-xs font-semibold">{errors.sector.message}</p>}
+        </div>
+        <div className="space-y-2">
+          <label className="text-[10px] font-bold tracking-widest text-slate-500 uppercase">
+            Type de problème
+          </label>
+          <select
+            {...register("problemType")}
+            className="w-full bg-white border-none border-b-2 border-slate-200 focus:border-n2k-primary focus:ring-0 px-4 py-3 transition-colors outline-none cursor-pointer"
+          >
+            <option value="">— Sélectionnez —</option>
+            <option value="surfaces">Hygiène bâtiments & surfaces</option>
+            <option value="eau">Eau & réseaux hydriques</option>
+            <option value="ambiance">Ambiance & environnement</option>
+            <option value="multiple">Toutes les zones</option>
+          </select>
+          {errors.problemType && <p className="text-red-500 text-xs font-semibold">{errors.problemType.message}</p>}
+        </div>
       </div>
 
+      {/* Row 3: Subject + Installation Size */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="space-y-2">
+          <label className="text-[10px] font-bold tracking-widest text-slate-500 uppercase">
+            {t("subjectLabel")}
+          </label>
+          <select
+            {...register("subject")}
+            className="w-full bg-white border-none border-b-2 border-slate-200 focus:border-n2k-primary focus:ring-0 px-4 py-3 transition-colors outline-none cursor-pointer"
+          >
+            <option value="Zone Bâtiment">{t("subjects.batiment")}</option>
+            <option value="Analyse de l'Eau">{t("subjects.eau")}</option>
+            <option value="Ambiance & Environnement">{t("subjects.ambiance")}</option>
+            <option value="Autre Expertise">{t("subjects.autre")}</option>
+          </select>
+        </div>
+        <div className="space-y-2">
+          <label className="text-[10px] font-bold tracking-widest text-slate-500 uppercase">
+            Taille de l&apos;installation
+          </label>
+          <input
+            {...register("installationSize")}
+            className="w-full bg-white border-none border-b-2 border-slate-200 focus:border-n2k-primary focus:ring-0 px-4 py-3 transition-colors outline-none"
+            placeholder="Ex: 3 bâtiments, 10 000 m², ..."
+            type="text"
+          />
+        </div>
+      </div>
+
+      {/* Row 4: Request Type */}
+      <div className="space-y-3">
+        <label className="text-[10px] font-bold tracking-widest text-slate-500 uppercase block">
+          Besoin principal
+        </label>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          {[
+            { value: "audit", label: "Audit sanitaire" },
+            { value: "protocole", label: "Protocole personnalisé" },
+            { value: "conseil", label: "Conseil technique" },
+            { value: "devis", label: "Demande de devis" },
+          ].map((option) => (
+            <label
+              key={option.value}
+              className="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-slate-200 cursor-pointer hover:border-n2k-secondary transition-colors text-sm"
+            >
+              <input
+                type="radio"
+                value={option.value}
+                {...register("requestType")}
+                className="accent-n2k-secondary"
+              />
+              <span className="font-medium text-n2k-on-surface">{option.label}</span>
+            </label>
+          ))}
+        </div>
+      </div>
+
+      {/* Message */}
       <div className="space-y-2">
         <label className="text-[10px] font-bold tracking-widest text-slate-500 uppercase">
           {t("messageLabel")}
@@ -139,9 +219,7 @@ export default function GeneralContactForm() {
           placeholder={t("messagePlaceholder")}
           rows={4}
         />
-        {errors.message && (
-          <p className="text-red-500 text-xs font-semibold">{errors.message.message}</p>
-        )}
+        {errors.message && <p className="text-red-500 text-xs font-semibold">{errors.message.message}</p>}
       </div>
 
       <button
