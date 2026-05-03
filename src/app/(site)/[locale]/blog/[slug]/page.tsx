@@ -1,10 +1,11 @@
 import { getTranslations } from "next-intl/server";
-import { Link } from "@/i18n/navigation";
+import { Link, redirect } from "@/i18n/navigation";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { Calendar, Clock, ArrowRight, Download, Beaker } from "lucide-react";
+import { Calendar, Clock, ArrowRight, Download, Beaker, ChevronRight, Home } from "lucide-react";
 import { prisma } from "@/lib/prisma";
 import SchemaOrg from "@/components/seo/SchemaOrg";
+import CategoryPostsList from "@/components/blog/CategoryPostsList";
 
 function calculateReadingTime(text: string): number {
   const wordsPerMinute = 200;
@@ -22,12 +23,38 @@ async function findPostBySlug(slug: string) {
   return post;
 }
 
+async function findCategoryBySlug(slug: string) {
+  let cat = await prisma.blogCategory.findFirst({
+    where: {
+      OR: [
+        { slugFr: slug },
+        { slugEn: slug },
+        { slugAr: slug }
+      ]
+    },
+    include: {
+      posts: {
+        orderBy: { publishedAt: 'desc' },
+        include: { categories: true }
+      }
+    }
+  });
+  return cat;
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
   const post = await findPostBySlug(slug);
   const t = await getTranslations({ locale, namespace: "common" });
   
   if (!post) {
+    const category = await findCategoryBySlug(slug);
+    if (category) {
+      const title = locale === "ar" ? category.titleAr : locale === "en" ? category.titleEn : category.titleFr;
+      return {
+        title: `${title} | ${t("brandName")}`,
+      };
+    }
     return { title: t("notFound") };
   }
 
@@ -49,11 +76,93 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function BlogPostPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
   const t = await getTranslations("blog");
+  const tNav = await getTranslations("nav");
 
   const post = await findPostBySlug(slug);
 
+  if (post) {
+    const localizedSlug = locale === "ar" ? post.slugAr : locale === "en" ? post.slugEn : post.slugFr;
+    if (slug !== localizedSlug && localizedSlug) {
+      redirect({ href: `/blog/${localizedSlug}`, locale: locale as any });
+    }
+  }
+
   if (!post) {
-    notFound();
+    const category = await findCategoryBySlug(slug);
+    if (!category) {
+      notFound();
+    }
+
+    const localizedSlug = locale === "ar" ? category.slugAr : locale === "en" ? category.slugEn : category.slugFr;
+    if (slug !== localizedSlug) {
+      redirect({ href: `/blog/${localizedSlug}`, locale: locale as any });
+    }
+
+    // Render Category Listing
+    const catName = locale === "ar" ? category.nameAr : locale === "en" ? category.nameEn : category.nameFr;
+    const catTitle = locale === "ar" ? category.titleAr : locale === "en" ? category.titleEn : category.titleFr;
+    const catSubtitle = locale === "ar" ? category.subtitleAr : locale === "en" ? category.subtitleEn : category.subtitleFr;
+    const posts = category.posts;
+
+    return (
+      <main className="bg-n2k-surface min-h-screen">
+        {/* Category Hero */}
+        <section className="relative h-[450px] flex items-center overflow-hidden bg-n2k-primary">
+          {category.headerImage && (
+            <div className="absolute inset-0 z-0 opacity-40">
+              <Image
+                src={category.headerImage}
+                alt={catTitle}
+                fill
+                className="object-cover grayscale"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-n2k-primary via-n2k-primary/80 to-transparent" />
+            </div>
+          )}
+          <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-10 w-full">
+            <div className="max-w-4xl">
+              <span className="inline-block py-1 px-3 bg-n2k-secondary text-white font-heading text-[10px] uppercase tracking-widest font-bold mb-6">
+                {catName}
+              </span>
+              <h1 className="font-heading text-4xl md:text-6xl font-black text-white tracking-tighter mb-6 leading-tight">
+                {catTitle}
+              </h1>
+              {catSubtitle && (
+                <p className="text-lg md:text-xl text-white/70 max-w-2xl font-body leading-relaxed">
+                  {catSubtitle}
+                </p>
+              )}
+
+              {/* Breadcrumbs */}
+              <nav className="flex items-center gap-3 text-white text-xs uppercase tracking-widest font-bold mt-10">
+                <Link href="/" className="hover:text-n2k-secondary transition-colors flex items-center gap-1.5">
+                  <Home size={14} />
+                  {tNav("home")}
+                </Link>
+                <ChevronRight size={12} className="opacity-50" />
+                <Link href="/blog" className="hover:text-n2k-secondary transition-colors">{tNav("blog")}</Link>
+                <ChevronRight size={12} className="opacity-50" />
+                <span className="text-n2k-secondary-light">{catName}</span>
+              </nav>
+            </div>
+          </div>
+        </section>
+
+        {/* Category Posts listing with switcher */}
+        <section className="py-20 max-w-[1400px] mx-auto px-6 md:px-10">
+          <CategoryPostsList 
+            posts={posts as any} 
+            locale={locale} 
+            translations={{
+              readStudy: t("readStudy"),
+              noArticlesInCategory: t("noArticlesInCategory"),
+              viewMode: t("viewMode")
+            }} 
+          />
+        </section>
+      </main>
+    );
   }
 
   // Fetch related posts
@@ -101,9 +210,18 @@ export default async function BlogPostPage({ params }: { params: Promise<{ local
         
         <div className="relative w-full max-w-[1400px] mx-auto px-6 md:px-10 pb-24 grid grid-cols-12 z-20">
           <div className="col-span-12 md:col-span-10 lg:col-span-8">
-            <span className="inline-block py-1 px-3 bg-n2k-secondary text-white font-heading text-[10px] uppercase tracking-widest font-bold mb-6">
-              {(post as any).categories?.[0]?.nameFr || t("featuredBadge")}
-            </span>
+            {post.categories && post.categories.length > 0 ? (
+              <Link
+                href={`/blog/${locale === "ar" ? post.categories[0].slugAr : locale === "en" ? post.categories[0].slugEn : post.categories[0].slugFr}`}
+                className="inline-block py-1 px-3 bg-n2k-secondary text-white font-heading text-[10px] uppercase tracking-widest font-bold mb-6 hover:bg-n2k-secondary/80 transition-colors"
+              >
+                {locale === "ar" ? post.categories[0].nameAr : locale === "en" ? post.categories[0].nameEn : post.categories[0].nameFr}
+              </Link>
+            ) : (
+              <span className="inline-block py-1 px-3 bg-n2k-secondary text-white font-heading text-[10px] uppercase tracking-widest font-bold mb-6">
+                {t("featuredBadge")}
+              </span>
+            )}
             <h1 className="font-heading text-4xl md:text-6xl font-black text-white tracking-tighter mb-8 leading-[1.1]">
               {title}
             </h1>

@@ -71,7 +71,7 @@ export default async function AboutPage({
 
       {/* ====== HERO SECTION ====== */}
       <section className="bg-n2k-surface-low relative overflow-hidden">
-        <div className="max-w-[1400px] mx-auto px-4 md:px-8 py-16 md:py-24 lg:py-32">
+        <div className="max-w-[1400px] mx-auto px-4 md:px-8 py-15 md:py-15 lg:py-15">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
             {/* Left Column — Content */}
             <div className="lg:col-span-8">
@@ -91,23 +91,17 @@ export default async function AboutPage({
                 {t("heroTitleEnd")}
               </h1>
 
-              <p className="font-body text-base md:text-lg text-n2k-on-surface-variant leading-relaxed max-w-2xl mb-10">
+              <p className="font-body text-base md:text-lg text-n2k-on-surface-variant leading-relaxed max-w mb-10">
                 {t("heroSubtitle")}
               </p>
 
-              <div className="flex flex-wrap gap-4">
+              <div className="w-full">
                 <Link
                   href="/contact"
-                  className="bg-n2k-secondary text-white px-8 py-4 font-heading font-bold rounded-lg shadow-xl hover:bg-[#007444] transition-all flex items-center gap-2"
+                  className="w-full bg-n2k-secondary text-white px-8 py-5 font-heading font-black rounded-xl shadow-xl hover:bg-[#007444] transition-all flex items-center justify-center gap-3 text-lg md:text-xl"
                 >
                   {t("heroCta1")}
-                  <span className="material-symbols-outlined text-xl">analytics</span>
-                </Link>
-                <Link
-                  href="/produits"
-                  className="border border-n2k-outline-variant/30 text-n2k-primary px-8 py-4 font-heading font-bold rounded-lg hover:bg-n2k-surface transition-all"
-                >
-                  {t("heroCta2")}
+                  <span className="material-symbols-outlined text-2xl">analytics</span>
                 </Link>
               </div>
             </div>
@@ -129,7 +123,7 @@ export default async function AboutPage({
       </section>
 
       {/* ====== WHO WE ARE ====== */}
-      <section className="py-20 md:py-24 bg-n2k-surface">
+      <section className="py-15 md:py-15 bg-n2k-surface">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20 items-center">
             {/* Left — Image */}
@@ -165,7 +159,7 @@ export default async function AboutPage({
       </section>
 
       {/* ====== 4 PILLARS ====== */}
-      <section className="py-20 md:py-24 bg-n2k-surface-low">
+      <section className="py-15 md:py-15 bg-n2k-surface-low">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
           {/* Header */}
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-14 gap-6">
@@ -203,7 +197,7 @@ export default async function AboutPage({
       </section>
 
       {/* ====== EXPERTISE DOMAINS (Bento Grid) ====== */}
-      <section className="py-20 md:py-24 bg-n2k-surface">
+      <section className="py-15 md:py-15 bg-n2k-surface">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
           <h2 className="font-heading text-3xl md:text-4xl font-black text-n2k-primary mb-14 text-center italic">
             {t("domainsTitle")}
@@ -246,7 +240,7 @@ export default async function AboutPage({
       </section>
 
       {/* ====== METHODOLOGY ====== */}
-      <section className="py-20 md:py-24 bg-n2k-primary text-white overflow-hidden relative">
+      <section className="py-15 md:py-15 bg-n2k-primary text-white overflow-hidden relative">
         <div className="absolute right-0 top-0 w-1/3 h-full opacity-10">
           <Image
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAR9yy8XW-gGLpXctn4ciLu6PdR2H3r3K25UmrZzUxJKAJLlskOLmc9Dhibrr5B7HR7W5UafxZcyn0-RnINDJgLOK-yOyk44VoxwcO-2HrDQ_8CGYdjSI-IPgnX8xtoYpSke3s5zxJkGi2MRfgPv822AsTgbn529qM88qheqUjDfEEavDpiSVcS2Vh-p7mld2S4ISN6Av21VcxsqTKVrt85Xy38O62LAMrqcuKPs0w6Ma8rv1C7z7LHq383FVu28CCgyqTQ2pDMu6c"
@@ -277,7 +271,7 @@ export default async function AboutPage({
       </section>
 
       {/* ====== RESULTS (Before/After) ====== */}
-      <section className="py-20 md:py-24 bg-n2k-surface">
+      <section className="py-15 md:py-15 bg-n2k-surface">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
           <div className="text-center max-w-3xl mx-auto mb-14">
             <h2 className="font-heading text-3xl md:text-4xl font-black text-n2k-primary mb-6">
@@ -326,7 +320,7 @@ export default async function AboutPage({
       </section>
 
       {/* ====== ERRORS + PROTOCOL ====== */}
-      <section className="py-20 md:py-24 bg-n2k-surface-high">
+      <section className="py-15 md:py-15 bg-n2k-surface-high">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12">
             {/* Left — Errors */}
@@ -376,7 +370,7 @@ export default async function AboutPage({
 
 
       {/* ====== TEAM SECTION ====== */}
-      <section className="py-20 md:py-24 bg-white">
+      <section className="py-15 md:py-15 bg-white">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
           <div className="text-center mb-16">
             <h2 className="font-heading text-3xl md:text-5xl font-black text-n2k-primary mb-6">
@@ -418,7 +412,7 @@ export default async function AboutPage({
 
       {/* ====== FINAL CTA ====== */}
 
-      <section className="py-20 md:py-24 bg-white">
+      <section className="py-15 md:py-15 bg-white">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
           <div className="bg-n2k-primary p-10 md:p-16 rounded-2xl text-center relative overflow-hidden shadow-inner">
             <div className="relative z-10">

@@ -28,7 +28,7 @@ export default async function ProduitsPage() {
               <span className="w-8 h-px bg-n2k-secondary shrink-0"></span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black font-heading text-n2k-primary leading-[0.95] tracking-tight mb-8">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black font-heading text-n2k-primary leading-[1.1] tracking-tighter mb-8">
               {t("heroTitle")}
             </h1>
 

@@ -23,7 +23,7 @@ export const products: Product[] = [
     zone: "01",
     zoneName: "Le Bâtiment",
     zoneLabel: "Zone 01",
-    subtitle: "Détergent Désinfectant Alcalin Chloré moussant avec inhibiteur de corrosion — Phase 01 du protocole N2K",
+    subtitle: "Détergent désinfectant alcalin chloré moussant — Nettoyage et désinfection des surfaces — Phase 01 du protocole N2K",
     problem:
       "Les bâtiments d'élevage accumulent des biofilms résistants, des graisses, des dépôts organiques et des résidus incrustés dans les surfaces poreuses. Ces souillures compromettent toute désinfection ultérieure si elles ne sont pas éliminées en premier lieu.",
     solution:
@@ -43,6 +43,7 @@ export const products: Product[] = [
       { label: "Concentration d'emploi", value: "2 à 4% v/v" },
       { label: "Aspect", value: "Liquide clair, incolore à jaune clair" },
       { label: "Normes", value: "EN 1276, EN 13697, EN 1650" },
+      { label: "Spectre d'action", value: "Bactéricide, Levuricide, Fongicide" },
       { label: "Application", value: "Appareil à mousse, haute pression, aspersion, manuel" },
       { label: "Rinçage", value: "Obligatoire à l'eau potable avant Phase 02" },
       { label: "Homologation", value: "MS/DHMPE/HOM/0002/03/01/2023" },
@@ -177,6 +178,7 @@ export const products: Product[] = [
       "Contrôle de l'ammoniac en bâtiment clos",
     ],
     specs: [
+      { label: "Principe actif", value: "Acide hypochloreux (HOCl)" },
       { label: "Nature", value: "Solution désinfectante à large spectre" },
       { label: "Mode d'application", value: "Thermo-nébulisation / brumisation" },
       { label: "Dosage", value: "1 à 3 mL/m³ selon volume" },
@@ -184,7 +186,6 @@ export const products: Product[] = [
       { label: "Utilisation en présence", value: "Oui (animaux et opérateurs)" },
       { label: "Conditionnement", value: "Bidon 5L / 20L" },
       { label: "Effet résiduel", value: "Jusqu'à 48h" },
-      { label: "Norme", value: "EN 1040, EN 1275" },
     ],
     color: "#EA580C",
     accentBg: "bg-orange-600/10",
@@ -251,7 +252,7 @@ export function getLocalizedZones(locale: string) {
 // ─── Multilingual subtitle overrides ──────────────────
 const subtitleOverrides: Record<string, Record<string, string>> = {
   en: {
-    cloragro: "Foaming Alkaline Chlorinated Detergent Disinfectant with corrosion inhibitor — Phase 01 of the N2K protocol",
+    cloragro: "Foaming alkaline chlorinated detergent disinfectant — Cleaning and disinfection of surfaces — Phase 01 of the N2K protocol",
     optimagro: "Broad-spectrum biocidal disinfectant — Glutaraldehyde + Quaternary Ammonium — Phase 02 of the N2K protocol — Dosage 2%",
     bionet: "Alkaline Chlorinated Antibiofilm Detergent — Poultry drinking circuit cleaning — Poultry farming only",
     aquacontrol: "Bacteriological stabilizer for drinking water — Daily maintenance of microbiological quality — Poultry farming only",
@@ -259,7 +260,7 @@ const subtitleOverrides: Record<string, Record<string, string>> = {
     bioactive: "Concentrated enzymatic cleaner — Degradation of organic matter on surfaces and equipment — Poultry farming only",
   },
   ar: {
-    cloragro: "منظف مطهر قلوي كلوري رغوي مع مثبط للتآكل — المرحلة 01 من بروتوكول N2K",
+    cloragro: "منظف مطهر قلوي كلوري رغوي — تنظيف وتطهير الأسطح — المرحلة 01 من بروتوكول N2K",
     optimagro: "مطهر حيوي واسع الطيف — غلوتارالدهيد + أمونيوم رباعي — المرحلة 02 من بروتوكول N2K — الجرعة 2%",
     bionet: "منظف قلوي كلوري مضاد للبيوفيلم — تنظيف دوائر الشرب في تربية الدواجن — للدواجن فقط",
     aquacontrol: "مثبت بكتيري لمياه الشرب — الحفاظ اليومي على الجودة الميكروبيولوجية — للدواجن فقط",
@@ -267,7 +268,7 @@ const subtitleOverrides: Record<string, Record<string, string>> = {
     bioactive: "منظف إنزيمي مركز — تحليل المواد العضوية على الأسطح والمعدات — للدواجن فقط",
   },
   fr: {
-    cloragro: "Détergent Désinfectant Alcalin Chloré moussant avec inhibiteur de corrosion — Phase 01 du protocole N2K",
+    cloragro: "Détergent désinfectant alcalin chloré moussant — Nettoyage et désinfection des surfaces — Phase 01 du protocole N2K",
     optimagro: "Désinfectant biocide large spectre — Glutaraldéhyde + Ammoniums Quaternaires — Phase 02 du protocole N2K — Dosage 2%",
     bionet: "Détergent Alcalin Chloré Antibiofilm — Nettoyage des circuits d'abreuvement avicole — Élevage uniquement",
     aquacontrol: "Stabilisateur bactériologique de l'eau de boisson — Maintien quotidien de la qualité microbiologique — Élevage uniquement",

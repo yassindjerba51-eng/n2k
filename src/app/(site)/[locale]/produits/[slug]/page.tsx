@@ -204,13 +204,15 @@ export default async function ProductDetailPage({
                   </div>
                   
                   {/* 7. Rinçage */}
-                  <div className="bg-white p-5 rounded-xl border border-border/30 flex items-start gap-4">
-                    <Droplets className="w-6 h-6 text-blue-500 shrink-0 mt-1" />
-                    <div>
-                      <h3 className="font-heading font-bold text-n2k-primary text-xs uppercase tracking-wider mb-1">{ph("titles.rinsing")}</h3>
-                      <p className="text-n2k-on-surface-variant font-body">{pt("rinsing")}</p>
+                  {product.slug !== "bioactive" && (
+                    <div className="bg-white p-5 rounded-xl border border-border/30 flex items-start gap-4">
+                      <Droplets className="w-6 h-6 text-blue-500 shrink-0 mt-1" />
+                      <div>
+                        <h3 className="font-heading font-bold text-n2k-primary text-xs uppercase tracking-wider mb-1">{ph("titles.rinsing")}</h3>
+                        <p className="text-n2k-on-surface-variant font-body">{pt("rinsing")}</p>
+                      </div>
                     </div>
-                  </div>
+                  )}
                   
                   {/* 8. Aération */}
                   <div className="bg-white p-5 rounded-xl border border-border/30 flex items-start gap-4">
@@ -299,14 +301,14 @@ export default async function ProductDetailPage({
                 {t("relatedTitle")}
               </h2>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-3xl mx-auto">
+            <div className="flex flex-col md:flex-row justify-center gap-6 mx-auto">
               {relatedProducts.map((rp) => {
                 const RPIcon = zoneIcons[rp.zone] || FlaskConical;
                 return (
                   <Link
                     key={rp.slug}
                     href={`/produits/${rp.slug}` as any}
-                    className="group bg-white rounded-2xl border border-border/30 p-6 shadow-ambient hover:shadow-ambient-lg transition-all hover:-translate-y-1"
+                    className="w-full md:w-1/2 group bg-white rounded-2xl border border-border/30 p-6 shadow-ambient hover:shadow-ambient-lg transition-all hover:-translate-y-1"
                   >
                     <div className="flex items-center gap-3 mb-4">
                       <div

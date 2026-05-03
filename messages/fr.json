@@ -398,6 +398,7 @@
     "activityType": "Secteur d'Activité",
     "poultry": "Élevage Avicole",
     "agrifood": "Industrie Agroalimentaire",
+    "slaughterhouse": "Abattoir & Découpe",
     "capacity": "Capacité (Nombre de têtes / m²)",
     "capacityPlaceholder": "Ex: 10000 sujets",
     "cycleInfo": "Nombre de cycles par an",
@@ -561,7 +562,10 @@
     "downloadProtocol": "Télécharger le protocole",
     "midCtaTitle": "Problèmes de contamination récurrents ?",
     "midCtaSubtitle": "Demandez un audit complet de vos installations par nos experts en biosécurité.",
-    "midCtaButton": "Demander un Audit Terrain"
+    "midCtaButton": "Demander un Audit Terrain",
+    "categoryBadge": "Catégorie",
+    "noArticlesInCategory": "Aucun article dans cette catégorie pour le moment.",
+    "viewMode": "Affichage :"
   },
   "merci": {
     "title": "Demande Envoyée !",
@@ -651,8 +655,8 @@
   },
   "solutionsPage": {
     "badge": "Les Laboratoires N2K — Nos Solutions",
-    "heroTitle": "L'efficacité d'un produit ne dépend pas de sa composition seule,",
-    "heroTitleHighlight": "mais de son intégration dans un protocole rigoureux.",
+    "heroTitle": "L’efficacité d’un produit dépend de sa composition",
+    "heroTitleHighlight": "ainsi que de son protocole d’utilisation",
     "heroSubtitle": "Développées au Pôle Technologique de Borj Cédria sous la direction du Dr Mahmoud Naffati, nos formulations sont conçues pour les réalités du terrain tunisien. Chaque protocole suit une séquence précise : Nettoyage → Désinfection ou Stabilisation.",
     "learnMore": "En savoir plus",
     "step": "Étape",

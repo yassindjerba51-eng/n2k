@@ -86,42 +86,59 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-n2k-secondary rounded-full blur-[200px] -translate-y-1/2 translate-x-1/3" />
         </div>
         <div className="max-w-[1400px] mx-auto px-4 md:px-8 py-20 md:py-28 lg:py-36 relative">
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-3 mb-8">
-              <span className="w-10 h-px bg-n2k-secondary-light shrink-0"></span>
-              <span className="text-xs font-black tracking-[0.2em] text-n2k-secondary-light uppercase">
-                {t("hero.badge")}
-              </span>
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+            {/* Left Column: Content */}
+            <div className="w-full lg:w-2/3 max-w-3xl">
+              <div className="flex items-center gap-3 mb-8">
+                <span className="w-10 h-px bg-n2k-secondary-light shrink-0"></span>
+                <span className="text-xs font-black tracking-[0.2em] text-n2k-secondary-light uppercase">
+                  {t("hero.badge")}
+                </span>
+              </div>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black font-heading text-white leading-[1.1] tracking-tighter mb-8">
+                {t("hero.title1")}{" "}
+                <span className="text-n2k-secondary-light">{t("hero.title2")}</span>{" "}
+                <span className="text-white/60">{t("hero.title3")}</span>
+              </h1>
+              <p className="text-lg md:text-xl text-white/60 font-body leading-relaxed mb-10 text-justify">
+                {t("hero.subtitle")}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 w-full">
+                <Link
+                  href="/diagnostic"
+                  className="w-full sm:flex-1 inline-flex items-center justify-center gap-2 bg-n2k-secondary-light hover:bg-n2k-secondary text-white px-8 py-4 rounded-xl text-sm font-black tracking-tight shadow-lg shadow-n2k-secondary/20 transition-all"
+                >
+                  {t("hero.cta")}
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  href="/problemes-solutions"
+                  className="w-full sm:flex-1 inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl text-sm font-bold tracking-tight transition-all border border-white/15"
+                >
+                  {t("hero.ctaSecondary")}
+                </Link>
+              </div>
             </div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black font-heading text-white leading-[0.92] tracking-tight mb-8">
-              {t("hero.title1")}{" "}
-              <span className="text-n2k-secondary-light">{t("hero.title2")}</span>{" "}
-              <span className="text-white/60">{t("hero.title3")}</span>
-            </h1>
-            <p className="text-lg md:text-xl text-white/60 font-body leading-relaxed mb-10 max-w-2xl">
-              {t("hero.subtitle")}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-n2k-secondary-light hover:bg-n2k-secondary text-white px-8 py-4 rounded-xl text-sm font-black tracking-tight shadow-lg shadow-n2k-secondary/20 transition-all"
-              >
-                {t("hero.cta")}
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-              <Link
-                href="/problemes-solutions"
-                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl text-sm font-bold tracking-tight transition-all border border-white/15"
-              >
-                {t("hero.ctaSecondary")}
-              </Link>
+            {/* Right Column: Image */}
+            <div className="w-full lg:w-1/3 relative mt-12 lg:mt-0">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10 h-[300px] md:h-[450px] w-full bg-n2k-surface-high">
+                <Image
+                  src="/images/hero_industry.png"
+                  alt={t("hero.imageAlt")}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  className="object-cover hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+              {/* Decorative glow behind image */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-n2k-secondary/20 blur-3xl -z-10 rounded-full mix-blend-screen" />
             </div>
           </div>
         </div>
       </section>
 
       {/* ====== BLOC 2 — SECTEURS ====== */}
-      <section className="bg-n2k-surface py-16 md:py-24">
+      <section className="bg-n2k-surface py-15 md:py-15">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8">
           <div className="text-center mb-12">
             <div className="flex items-center gap-3 mb-4 justify-center">
@@ -150,7 +167,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       </section>
 
       {/* ====== BLOC 3 — PROBLÈMES ====== */}
-      <section className="bg-n2k-surface-low py-16 md:py-24">
+      <section className="bg-n2k-surface-low py-15 md:py-15">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8">
           <div className="max-w-3xl mb-12">
             <div className="flex items-center gap-3 mb-4">
@@ -183,7 +200,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       </section>
 
       {/* ====== BLOC 4 — PROTOCOLE ====== */}
-      <section className="bg-n2k-primary py-16 md:py-24">
+      <section className="bg-n2k-primary py-15 md:py-15">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8">
           <div className="text-center mb-12">
             <div className="flex items-center gap-3 mb-4 justify-center">
@@ -215,7 +232,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       </section>
 
       {/* ====== BLOC 5 — CRÉDIBILITÉ ====== */}
-      <section className="bg-n2k-surface py-16 md:py-24">
+      <section className="bg-n2k-surface py-15 md:py-15">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8">
           <div className="text-center mb-12">
             <div className="flex items-center gap-3 mb-4 justify-center">
@@ -240,7 +257,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       </section>
 
       {/* ====== BLOC 6 — PRODUITS ====== */}
-      <section className="bg-n2k-surface-low py-16 md:py-24">
+      <section className="bg-n2k-surface-low py-15 md:py-15">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8">
           <div className="text-center mb-12">
             <div className="flex items-center gap-3 mb-4 justify-center">
@@ -273,7 +290,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       </section>
 
       {/* ====== BLOC 7 — BLOG PREVIEW ====== */}
-      <section className="bg-n2k-surface py-16 md:py-24">
+      <section className="bg-n2k-surface py-15 md:py-15">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12 gap-4">
             <div>
@@ -298,7 +315,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       </section>
 
       {/* ====== BLOC 8 — CTA FINAL ====== */}
-      <section className="bg-n2k-primary py-16 md:py-24">
+      <section className="bg-n2k-primary py-15 md:py-15">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-white tracking-tight mb-6">{t("cta.title")}</h2>
           <p className="text-white/60 font-body text-lg mb-10 max-w-2xl mx-auto">{t("cta.subtitle")}</p>

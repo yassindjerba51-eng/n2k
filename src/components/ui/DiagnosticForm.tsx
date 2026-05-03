@@ -17,7 +17,7 @@ import { Building2, Droplets, Wind, Globe, ArrowRight, ArrowLeft } from "lucide-
 
 const diagnosticSchema = z.object({
   region: z.string().min(1, { message: "Required" }),
-  activityType: z.enum(["Poultry", "Agri-food"]),
+  activityType: z.enum(["Poultry", "Agri-food", "Slaughterhouse"]),
   capacity: z.string().min(1, { message: "Required" }),
   cycleInfo: z.string().optional(),
   problems: z.array(z.string()).min(1, { message: "Select at least one" }),
@@ -95,7 +95,7 @@ export default function DiagnosticForm() {
   };
 
   return (
-    <div className="bg-surface-lowest rounded-3xl p-8 md:p-12 shadow-ambient-lg ghost-border w-full max-w-3xl mx-auto">
+    <div className="bg-surface-lowest rounded-3xl p-8 md:p-12 shadow-ambient-lg ghost-border w-full max-w mx-auto">
       {/* Progress */}
       <div className="mb-12">
         <div className="flex justify-between mb-4 font-heading text-xs font-bold uppercase tracking-widest text-on-surface-variant">
@@ -142,14 +142,14 @@ export default function DiagnosticForm() {
                   <RadioGroup
                     onValueChange={field.onChange}
                     value={field.value ?? ""}
-                    className="grid grid-cols-1 md:grid-cols-2 gap-4"
+                    className="grid grid-cols-1 md:grid-cols-3 gap-4"
                   >
                     <div>
                       <RadioGroupItem value="Poultry" id="r-poultry" className="sr-only" />
                       <Label
                         htmlFor="r-poultry"
                         onClick={() => field.onChange("Poultry")}
-                        className={`flex flex-col items-center justify-between rounded-xl border-2 p-6 cursor-pointer transition-all ${
+                        className={`flex flex-col items-center justify-center text-center rounded-xl border-2 p-6 h-full cursor-pointer transition-all ${
                           field.value === "Poultry"
                             ? "border-secondary bg-secondary/10 text-secondary"
                             : "border-border bg-surface hover:bg-surface-high hover:text-primary"
@@ -163,13 +163,27 @@ export default function DiagnosticForm() {
                       <Label
                         htmlFor="r-agrifood"
                         onClick={() => field.onChange("Agri-food")}
-                        className={`flex flex-col items-center justify-between rounded-xl border-2 p-6 cursor-pointer transition-all ${
+                        className={`flex flex-col items-center justify-center text-center rounded-xl border-2 p-6 h-full cursor-pointer transition-all ${
                           field.value === "Agri-food"
                             ? "border-secondary bg-secondary/10 text-secondary"
                             : "border-border bg-surface hover:bg-surface-high hover:text-primary"
                         }`}
                       >
                         <span className="font-heading font-bold text-lg">{t("agrifood")}</span>
+                      </Label>
+                    </div>
+                    <div>
+                      <RadioGroupItem value="Slaughterhouse" id="r-slaughterhouse" className="sr-only" />
+                      <Label
+                        htmlFor="r-slaughterhouse"
+                        onClick={() => field.onChange("Slaughterhouse")}
+                        className={`flex flex-col items-center justify-center text-center rounded-xl border-2 p-6 h-full cursor-pointer transition-all ${
+                          field.value === "Slaughterhouse"
+                            ? "border-secondary bg-secondary/10 text-secondary"
+                            : "border-border bg-surface hover:bg-surface-high hover:text-primary"
+                        }`}
+                      >
+                        <span className="font-heading font-bold text-lg">{t("slaughterhouse")}</span>
                       </Label>
                     </div>
                   </RadioGroup>

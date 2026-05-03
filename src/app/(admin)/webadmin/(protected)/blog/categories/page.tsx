@@ -23,6 +23,7 @@ import {
   Loader2,
   ImageIcon,
   FileText,
+  ExternalLink,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -224,6 +225,15 @@ export default function CategoriesPage() {
                           <Pencil className="w-3.5 h-3.5 me-1" />
                           Modifier
                         </Link>
+                        <a
+                          href={`/blog/${cat.slugFr}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center rounded-lg text-xs text-blue-500 hover:text-blue-800 hover:bg-blue-50 h-8 px-2.5 whitespace-nowrap transition-colors font-medium"
+                        >
+                          <ExternalLink className="w-3.5 h-3.5 me-1" />
+                          Voir
+                        </a>
                         <Button
                           variant="ghost"
                           size="sm"

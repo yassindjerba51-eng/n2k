@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
-import { ShieldCheck, ChevronLeft, ChevronRight, User } from "lucide-react";
+import { ShieldCheck, User } from "lucide-react";
 
 export interface Profile {
   name: string;
@@ -24,8 +24,13 @@ interface TeamSliderProps {
 export function TeamSlider({ profiles, staff }: TeamSliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const next = () => setCurrentIndex((prev) => (prev + 1) % profiles.length);
-  const prev = () => setCurrentIndex((prev) => (prev - 1 + profiles.length) % profiles.length);
+  const next = () => setCurrentIndex((prevIndex) => (prevIndex + 1) % profiles.length);
+
+  useEffect(() => {
+    if (profiles.length <= 1) return;
+    const interval = setInterval(next, 5000);
+    return () => clearInterval(interval);
+  }, [profiles.length]);
 
   const currentProfile = profiles[currentIndex];
 
@@ -84,37 +89,6 @@ export function TeamSlider({ profiles, staff }: TeamSliderProps) {
         
       </div>
 
-      {/* Navigation Buttons */}
-      {profiles.length > 1 && (
-        <div className="flex justify-center items-center gap-6 mt-10">
-          <button 
-            onClick={prev} 
-            className="w-12 h-12 rounded-full border-2 border-n2k-primary/10 flex items-center justify-center text-n2k-primary hover:bg-n2k-primary hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-n2k-primary/50"
-            aria-label="Previous profile"
-          >
-            <ChevronLeft className="w-6 h-6" />
-          </button>
-          
-          <div className="flex gap-3">
-            {profiles.map((_, idx) => (
-              <button 
-                key={idx} 
-                onClick={() => setCurrentIndex(idx)} 
-                className={`w-3 h-3 rounded-full transition-colors focus:outline-none ${idx === currentIndex ? 'bg-n2k-secondary' : 'bg-n2k-primary/20 hover:bg-n2k-primary/40'}`}
-                aria-label={`Go to profile ${idx + 1}`}
-              />
-            ))}
-          </div>
-          
-          <button 
-            onClick={next} 
-            className="w-12 h-12 rounded-full border-2 border-n2k-primary/10 flex items-center justify-center text-n2k-primary hover:bg-n2k-primary hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-n2k-primary/50"
-            aria-label="Next profile"
-          >
-            <ChevronRight className="w-6 h-6" />
-          </button>
-        </div>
-      )}
     </div>
   );
 }

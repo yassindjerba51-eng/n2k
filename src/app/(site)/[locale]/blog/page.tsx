@@ -44,6 +44,11 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ loca
     include: { categories: true },
   });
 
+  // Fetch categories for the filter bar
+  const categories = await prisma.blogCategory.findMany({
+    orderBy: { nameFr: "asc" },
+  });
+
   // Featured posts first, then rest
   const featuredPosts = posts.filter((p: any) => p.featured).slice(0, 3);
   const remainingPosts = posts.filter((p: any) => !featuredPosts.includes(p));
@@ -66,11 +71,11 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ loca
 
         {/* Content */}
         <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-8 w-full">
-          <div className="max-w-3xl">
+          <div className="max-w-4xl">
             <span className="inline-block px-3 py-1 bg-n2k-secondary text-n2k-on-secondary text-[10px] font-bold tracking-[0.2em] uppercase mb-6 font-heading">
               {t("heroBadge")}
             </span>
-            <h1 className="font-heading text-4xl sm:text-5xl md:text-7xl font-extrabold text-white leading-tight tracking-tighter mb-8">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black font-heading text-white leading-[1.1] tracking-tighter mb-8">
               {t("heroTitle")}
             </h1>
             <p className="text-lg md:text-xl text-n2k-on-primary-container leading-relaxed mb-10 max-w-2xl">
@@ -168,18 +173,25 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ loca
                 {t("librarySubtitle")}
               </p>
               <div className="flex flex-wrap gap-2 border-b border-n2k-outline-variant/30 pb-4">
-                <button className="px-6 py-3 bg-n2k-surface-low border-b-2 border-n2k-secondary-light text-n2k-primary font-bold text-sm">
+                <Link 
+                  href="/blog"
+                  className="px-6 py-3 bg-n2k-surface-low border-b-2 border-n2k-secondary-light text-n2k-primary font-bold text-sm"
+                >
                   {t("filterAll")}
-                </button>
-                <button className="px-6 py-3 hover:bg-n2k-surface-low transition-colors text-n2k-on-surface-variant text-sm">
-                  {t("filterTraceability")}
-                </button>
-                <button className="px-6 py-3 hover:bg-n2k-surface-low transition-colors text-n2k-on-surface-variant text-sm">
-                  {t("filterAirPurification")}
-                </button>
-                <button className="px-6 py-3 hover:bg-n2k-surface-low transition-colors text-n2k-on-surface-variant text-sm">
-                  {t("filterSustainableDisinfection")}
-                </button>
+                </Link>
+                {categories.map((cat: any) => {
+                  const name = locale === 'ar' ? cat.nameAr : locale === 'en' ? cat.nameEn : cat.nameFr;
+                  const slug = locale === 'ar' ? cat.slugAr : locale === 'en' ? cat.slugEn : cat.slugFr;
+                  return (
+                    <Link
+                      key={cat.id}
+                      href={`/blog/${slug}`}
+                      className="px-6 py-3 hover:bg-n2k-surface-low transition-colors text-n2k-on-surface-variant text-sm font-bold"
+                    >
+                      {name}
+                    </Link>
+                  );
+                })}
               </div>
             </div>
 

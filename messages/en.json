@@ -398,6 +398,7 @@
     "activityType": "Secteur of Activity",
     "poultry": "Poultry Farming",
     "agrifood": "Agri-food Industry",
+    "slaughterhouse": "Slaughterhouse & Processing",
     "capacity": "Capacity (Heads / m²)",
     "capacityPlaceholder": "e.g. 10000 birds",
     "cycleInfo": "Number of cycles per year",
@@ -559,9 +560,12 @@
     "relatedTitle": "Related Articles",
     "downloadWhitepaper": "Technical Whitepaper",
     "downloadProtocol": "Download Protocol",
-    "midCtaTitle": "Recurring contamination issues?",
-    "midCtaSubtitle": "Request a full audit of your facilities by our biosecurity experts.",
-    "midCtaButton": "Request Field Audit"
+    "midCtaTitle": "Recurring contamination problems?",
+    "midCtaSubtitle": "Request a complete audit of your facilities by our biosecurity experts.",
+    "midCtaButton": "Request a Field Audit",
+    "categoryBadge": "Category",
+    "noArticlesInCategory": "No articles in this category at the moment.",
+    "viewMode": "View:"
   },
   "merci": {
     "title": "Request Sent!",
@@ -651,8 +655,8 @@
   },
   "solutionsPage": {
     "badge": "Les Laboratoires N2K — Our Solutions",
-    "heroTitle": "A product's effectiveness doesn't depend on its composition alone,",
-    "heroTitleHighlight": "but on its integration into a rigorous protocol.",
+    "heroTitle": "The effectiveness of a product depends on its composition",
+    "heroTitleHighlight": "as well as its usage protocol",
     "heroSubtitle": "Developed at the Borj Cédria Technology Park under the direction of Dr Mahmoud Naffati, our formulations are designed for Tunisian field realities. Each protocol follows a precise sequence: Cleaning → Disinfection or Stabilization.",
     "learnMore": "Learn more",
     "step": "Step",

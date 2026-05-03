@@ -27,7 +27,7 @@ export default function ContactPage() {
             <span className="inline-block px-4 py-1.5 mb-6 bg-n2k-secondary text-white text-[10px] font-bold tracking-[0.2em] uppercase rounded-full">
               {t("hero.badge")}
             </span>
-            <h1 className="text-5xl md:text-7xl font-heading font-extrabold text-white tracking-tight leading-tight mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black font-heading text-white leading-[1.1] tracking-tighter mb-8">
               {t("hero.title")}
             </h1>
             <p className="text-xl text-slate-200 leading-relaxed font-light">
