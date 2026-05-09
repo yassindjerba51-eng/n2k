@@ -21,6 +21,7 @@ export default async function IndustrieAgroalimentaire({ params }: { params: Pro
       title={t("title")}
       subtitle={t("desc")}
       icon={<Factory className="w-7 h-7" />}
+      image="/images/hero_industrie_agroalimentaire.png"
     />
   );
 }

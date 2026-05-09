@@ -5,14 +5,14 @@ import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata() {
   return {
-    title: "Élevage Avicole — Protocoles de Biosécurité | Les Laboratoires N2K",
-    description: "Protocoles de maîtrise sanitaire pour l'élevage avicole : nettoyage inter-bandes, traitement de l'eau, contrôle de l'ambiance. Réduisez la mortalité et améliorez vos performances.",
+    title: "Élevage — Protocoles de Biosécurité | Les Laboratoires N2K",
+    description: "Protocoles de maîtrise sanitaire pour l'élevage : nettoyage technique, traitement de l'eau, contrôle de l'ambiance. Réduisez la mortalité et améliorez vos performances.",
   };
 }
 
-export default async function ElevageAvicole({ params }: { params: Promise<{ locale: string }> }) {
+export default async function ElevagePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const sector = getSectorData("elevage-avicole", locale);
+  const sector = getSectorData("elevage", locale);
   const t = await getTranslations("sectors.elevage");
 
   return (
@@ -21,6 +21,7 @@ export default async function ElevageAvicole({ params }: { params: Promise<{ loc
       title={t("title")}
       subtitle={t("desc")}
       icon={<Bird className="w-7 h-7" />}
+      image="/images/hero_elevage.png"
     />
   );
 }

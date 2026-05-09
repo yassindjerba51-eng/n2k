@@ -22,7 +22,7 @@ export default function Footer() {
           </h5>
           <ul className="space-y-4 font-body text-sm">
             <li>
-              <Link href="/secteurs/elevage-avicole" className="text-slate-400 hover:text-white hover:underline decoration-secondary-light decoration-2 underline-offset-4 transition-colors">
+              <Link href="/secteurs/elevage" className="text-slate-400 hover:text-white hover:underline decoration-secondary-light decoration-2 underline-offset-4 transition-colors">
                 {t("sectors.elevage")}
               </Link>
             </li>

@@ -28,9 +28,9 @@
     "title": "Your industry, our expertise",
     "subtitle": "Identify your field of activity. We adapt our protocols to your specific constraints.",
     "elevage": {
-      "title": "Poultry Farming",
-      "desc": "Biosecurity protocols adapted to breeding cycles: inter-batch cleaning, water treatment, environment control.",
-      "link": "See poultry protocol"
+      "title": "Livestock Farming",
+      "desc": "Biosecurity and sanitary mastery protocols for all types of livestock: technical cleaning, water treatment, and environment control.",
+      "link": "See livestock protocol"
     },
     "abattoirs": {
       "title": "Slaughterhouses",
@@ -68,14 +68,14 @@
     "heroTitle": "Problems & Solutions",
     "heroSubtitle": "Each sector has its specific risks. Discover the protocol adapted to your situation.",
     "metaTitle": "Problems & Solutions — Les Laboratoires N2K",
-    "metaDescription": "Sanitary control protocols adapted by sector: poultry farming, slaughterhouse, and food industry.",
+    "metaDescription": "Sanitary control protocols adapted by sector: livestock, slaughterhouse, and food industry.",
     "tabs": {
-      "elevage": "Poultry Farming",
+      "elevage": "Livestock",
       "abattoir": "Slaughterhouse & Processing",
       "agroalimentaire": "Food Industry"
     },
     "elevage": {
-      "accroche": "Poultry farming concentrates all three sanitary risks simultaneously: contaminated surfaces, infected drinking water, air laden with pathogens. The N2K protocol covers all three zones in a mandatory sequence.",
+      "accroche": "Intensive livestock farming concentrates all three sanitary risks simultaneously: contaminated surfaces, infected drinking water, air laden with pathogens. The N2K protocol covers all three zones in a mandatory sequence.",
       "steps": [
         {
           "num": "01",
@@ -544,7 +544,7 @@
     "privacy": "Privacy Policy",
     "sectors": {
       "title": "Sectors",
-      "elevage": "Poultry Farming",
+      "elevage": "Livestock",
       "abattoirs": "Slaughterhouses",
       "agroalimentaire": "Food Industry"
     }
@@ -793,7 +793,7 @@
       "sectorLabel": "Sector of activity",
       "sectorPlaceholder": "— Select —",
       "sectorOptions": {
-        "elevage": "Poultry farming",
+        "elevage": "Livestock",
         "abattoir": "Slaughterhouse & Processing",
         "agroalimentaire": "Food industry",
         "autre": "Other"

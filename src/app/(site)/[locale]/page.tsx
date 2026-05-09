@@ -40,7 +40,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   };
 
   const sectorCards = [
-    { key: "elevage", href: "/secteurs/elevage-avicole", Icon: Bird, color: "bg-emerald-50 text-emerald-700 border-emerald-200" },
+    { key: "elevage", href: "/secteurs/elevage", Icon: Bird, color: "bg-emerald-50 text-emerald-700 border-emerald-200" },
     { key: "abattoirs", href: "/secteurs/abattoirs", Icon: Beef, color: "bg-red-50 text-red-700 border-red-200" },
     { key: "agroalimentaire", href: "/secteurs/industrie-agroalimentaire", Icon: Factory, color: "bg-blue-50 text-blue-700 border-blue-200" },
   ];

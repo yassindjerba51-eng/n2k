@@ -28,13 +28,13 @@
     "title": "Votre secteur, notre expertise",
     "subtitle": "Identifiez votre domaine d'activité. Nous adaptons nos protocoles à vos contraintes spécifiques.",
     "elevage": {
-      "title": "Élevage avicole",
-      "desc": "Protocoles de biosécurité adaptés aux cycles d'élevage : nettoyage inter-bandes, traitement de l'eau, contrôle de l'ambiance.",
+      "title": "Élevage",
+      "desc": "Protocoles de biosécurité et de maîtrise sanitaire pour tous types d'élevages : nettoyage technique, traitement de l'eau et contrôle de l'ambiance.",
       "link": "Voir le protocole élevage"
     },
     "abattoirs": {
       "title": "Abattoirs",
-      "desc": "Hygiène de la chaîne d'abattage : surfaces, eau de process, chambres froides. Conformité HACCP garantie.",
+      "desc": "Hygiène de la chaîne d'abattage : surfaces, eau de process, chambres froides. Conformité HACCP.",
       "link": "Voir le protocole abattoir"
     },
     "agroalimentaire": {
@@ -68,14 +68,14 @@
     "heroTitle": "Problèmes & Solutions",
     "heroSubtitle": "Chaque secteur a ses risques spécifiques. Découvrez le protocole adapté à votre situation.",
     "metaTitle": "Problèmes & Solutions — Les Laboratoires N2K",
-    "metaDescription": "Protocoles de maîtrise sanitaire adaptés par secteur : élevage avicole, abattoir et industrie agroalimentaire.",
+    "metaDescription": "Protocoles de maîtrise sanitaire adaptés par secteur : élevage, abattoir et industrie agroalimentaire.",
     "tabs": {
-      "elevage": "Élevage Avicole",
+      "elevage": "Élevage",
       "abattoir": "Abattoir & Découpe",
       "agroalimentaire": "Industrie Agroalimentaire"
     },
     "elevage": {
-      "accroche": "L'élevage avicole concentre les trois risques sanitaires simultanément : surfaces contaminées, eau de boisson infectée, air chargé en pathogènes. Le protocole N2K couvre les trois zones en séquence obligatoire.",
+      "accroche": "L'élevage intensif concentre les trois risques sanitaires simultanément : surfaces contaminées, eau d'abreuvement infectée, air chargé en pathogènes. Le protocole N2K couvre les trois zones en séquence obligatoire.",
       "steps": [
         {
           "num": "01",
@@ -544,7 +544,7 @@
     "privacy": "Confidentialité",
     "sectors": {
       "title": "Secteurs",
-      "elevage": "Élevage avicole",
+      "elevage": "Élevage",
       "abattoirs": "Abattoirs",
       "agroalimentaire": "Industrie agroalimentaire"
     }
@@ -793,7 +793,7 @@
       "sectorLabel": "Secteur d'activité",
       "sectorPlaceholder": "— Sélectionnez —",
       "sectorOptions": {
-        "elevage": "Élevage avicole",
+        "elevage": "Élevage",
         "abattoir": "Abattoir & Découpe",
         "agroalimentaire": "Industrie agroalimentaire",
         "autre": "Autre"

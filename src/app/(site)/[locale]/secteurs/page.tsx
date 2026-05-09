@@ -8,14 +8,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const t = await getTranslations({ locale, namespace: "meta" });
   return {
     title: "Secteurs d'activité — Les Laboratoires N2K",
-    description: "Élevage avicole, abattoirs, industrie agroalimentaire : découvrez nos protocoles de maîtrise sanitaire adaptés à votre secteur.",
+    description: "Élevage, abattoirs, industrie agroalimentaire : découvrez nos protocoles de maîtrise sanitaire adaptés à votre secteur.",
   };
 }
 
 const sectors = [
   {
     key: "elevage" as const,
-    href: "/secteurs/elevage-avicole",
+    href: "/secteurs/elevage",
     Icon: Bird,
     color: "bg-emerald-50 text-emerald-700",
     accent: "border-emerald-200",

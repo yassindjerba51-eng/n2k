@@ -17,51 +17,51 @@ export interface SectorData {
 }
 
 export const sectorsDataFr: Record<string, SectorData> = {
-  "elevage-avicole": {
+  "elevage": {
     id: "elevage",
-    slug: "elevage-avicole",
+    slug: "elevage",
     problems: [
       {
-        title: "Biofilm persistant sur surfaces poreuses",
-        description: "Les parois en béton, les sols cimentés et les équipements métalliques développent un biofilm bactérien entre chaque cycle d'élevage. Ce film protège les pathogènes contre les désinfectants classiques."
+        title: "Biofilm persistant sur surfaces d'élevage",
+        description: "Les parois, les sols et les équipements métalliques des bâtiments d'élevage développent un biofilm bactérien entre chaque cycle. Ce film protège les pathogènes contre les désinfectants classiques."
       },
       {
-        title: "Contamination des circuits d'eau de boisson",
-        description: "Les canalisations accumulent calcaire, dépôts organiques et biofilm, créant un réservoir de coliformes fécaux, E. coli et Salmonella qui contamine chaque fournée d'eau distribuée."
+        title: "Contamination des circuits d'eau d'abreuvement",
+        description: "Les canalisations accumulent calcaire, dépôts organiques et biofilm, créant un réservoir de coliformes fécaux et pathogènes (E. coli, Salmonella) qui contamine l'eau distribuée au bétail."
       },
       {
-        title: "Pression microbienne aérienne et ammoniac",
-        description: "L'ammoniac dégagé par les litières attaque les muqueuses respiratoires des volailles. Au-delà de 25 ppm, les performances chutent et les pathologies respiratoires se multiplient."
+        title: "Pression microbienne et qualité de l'air",
+        description: "Les gaz et l'humidité dégagés par les litières attaquent les muqueuses respiratoires des animaux. Un seuil critique d'ammoniac dégrade les performances et multiplie les pathologies."
       }
     ],
     economicRisks: [
-      { title: "Mortalité accrue", impact: "Jusqu'à +8% de mortalité par bande sur des surfaces non traitées en profondeur." },
-      { title: "Indice de consommation dégradé", impact: "Un réseau d'eau contaminé augmente le FCR de 10 à 15%, soit des milliers de dinars perdus par cycle." },
-      { title: "Performances zootechniques en baisse", impact: "L'ammoniac réduit le GMQ de 12% et augmente les pathologies respiratoires." }
+      { title: "Mortalité et morbidité", impact: "Les exploitations à faible niveau de biosécurité enregistrent des taux de perte jusqu'à 2,7 fois supérieurs aux élevages maîtrisés. (Source : étude comparative multi-sites, 2024)" },
+      { title: "Indice de consommation (FCR) dégradé", impact: "Une mauvaise maîtrise sanitaire dégrade l'efficacité alimentaire de près de 15% en moyenne, augmentant drastiquement les coûts de production." },
+      { title: "Performances zootechniques en baisse", impact: "Une ambiance dégradée (ammoniac, humidité) entraîne une baisse du GMQ et une immunodépression. Seuil critique validé par de multiples études scientifiques (PubMed, ScienceDirect)." }
     ],
     minimalProtocol: [
       { product: "CLORAGRO", action: "Nettoyage technique", description: "Destruction du biofilm organique sur toutes les surfaces du bâtiment. Application mousse, temps de contact 20 min." },
       { product: "Rinçage HP", action: "Rinçage haute pression", description: "Élimination mécanique des résidus et du détergent. Surface visuellement propre obligatoire." },
-      { product: "OPTIMAGRO", action: "Désinfection biocide", description: "Désinfection terminale à spectre complet. Bactéricide, virucide, fongicide. Rémanence 7 jours." }
+      { product: "OPTIMAGRO", action: "Désinfection biocide", description: "Désinfection terminale à spectre complet. Bactéricide, virucide, fongicide. Rémanence assurée." }
     ],
     reinforcedProtocol: [
       { product: "BIONET", action: "Nettoyage canalisations", description: "Décapage des dépôts organiques et calcaire dans les circuits d'eau avant mise en place des animaux." },
-      { product: "AQUACONTROL", action: "Traitement eau continu", description: "Stabilisation bactériologique de l'eau de boisson tout au long du cycle d'élevage." },
+      { product: "AQUACONTROL", action: "Traitement eau continu", description: "Stabilisation bactériologique de l'eau de boisson tout au long du cycle de production." },
       { product: "AIRSAN", action: "Désinfection ambiance", description: "Nébulisation fine en présence d'animaux pour réduire la charge microbienne aérienne et l'ammoniac." },
       { product: "BIOACTIVE", action: "Dégradation enzymatique", description: "Nettoyage des équipements à forte charge organique avant désinfection." }
     ],
     specificCases: [
-      { title: "Nouveau lot après contamination Salmonella", description: "En cas de détection Salmonella sur le lot précédent, le protocole est renforcé.", protocol: "Double passage CLORAGRO + OPTIMAGRO en augmentant les concentrations de 30%. Analyse microbiologique de contrôle avant mise en place." },
-      { title: "Élevage en climat chaud (>35°C)", description: "Les températures élevées accélèrent la prolifération bactérienne et la dégradation de l'eau.", protocol: "AQUACONTROL en dosage renforcé + AIRSAN quotidien. Surveillance pH et chlore résiduel." },
-      { title: "Audit biosécurité planifié", description: "Préparation aux audits de conformité sanitaire.", protocol: "Protocole complet minimal + prélèvements de surface pré-audit avec analyse en laboratoire N2K." }
+      { title: "Décontamination après épisode infectieux", description: "En cas de détection de pathogènes majeurs sur le lot précédent, le protocole est renforcé.", protocol: "Double passage CLORAGRO + OPTIMAGRO en augmentant les concentrations. Analyse microbiologique de contrôle obligatoire." },
+      { title: "Élevage en conditions extrêmes", description: "Les températures élevées ou l'humidité excessive accélèrent la prolifération bactérienne.", protocol: "AQUACONTROL en dosage renforcé + AIRSAN fréquent. Surveillance accrue des paramètres sanitaires." },
+      { title: "Audit de biosécurité", description: "Préparation aux audits de conformité ou certifications.", protocol: "Protocole complet minimal + prélèvements de surface avec analyse en laboratoire N2K." }
     ],
     associatedProducts: ["cloragro", "optimagro", "bionet", "aquacontrol", "airsan", "bioactive"],
     expectedResults: [
-      "Réduction de la mortalité de 3 à 5 points par bande",
-      "Amélioration du FCR de 5 à 10%",
-      "Réduction de l'ammoniac sous le seuil de 20 ppm",
-      "Conformité microbiologique des surfaces < 10 UFC/cm²",
-      "Eau de boisson conforme aux seuils réglementaires"
+      "Réduction significative du taux de mortalité et de morbidité",
+      "Amélioration mesurable de l'indice de consommation (FCR)",
+      "Maîtrise de la qualité de l'air et des gaz d'ambiance",
+      "Conformité microbiologique des surfaces documentée",
+      "Eau d'abreuvement stabilisée sur l'ensemble du cycle"
     ]
   },
   "abattoirs": {
@@ -153,42 +153,42 @@ export const sectorsDataFr: Record<string, SectorData> = {
 };
 
 export const sectorsDataEn: Record<string, SectorData> = {
-  "elevage-avicole": {
+  "elevage": {
     id: "elevage",
-    slug: "elevage-avicole",
+    slug: "elevage",
     problems: [
-      { title: "Persistent biofilm on porous surfaces", description: "Concrete walls, cemented floors, and metal equipment develop a bacterial biofilm between each rearing cycle. This film protects pathogens against standard disinfectants." },
-      { title: "Contamination of drinking water circuits", description: "Pipes accumulate scale, organic deposits, and biofilm, creating a reservoir of fecal coliforms, E. coli, and Salmonella that contaminates every batch of water distributed." },
-      { title: "Aerial microbial pressure and ammonia", description: "Ammonia released by litter attacks the respiratory mucous membranes of poultry. Beyond 25 ppm, performance drops and respiratory pathologies multiply." }
+      { title: "Persistent biofilm on breeding surfaces", description: "Walls, floors, and metal equipment in livestock buildings develop a bacterial biofilm between each cycle. This film protects pathogens against standard disinfectants." },
+      { title: "Contamination of drinking water circuits", description: "Pipes accumulate scale, organic deposits, and biofilm, creating a reservoir of fecal coliforms and pathogens (E. coli, Salmonella) that contaminates the water distributed to livestock." },
+      { title: "Microbial pressure and air quality", description: "Gases and humidity released by litter attack the respiratory mucous membranes of animals. A critical ammonia threshold degrades performance and increases pathologies." }
     ],
     economicRisks: [
-      { title: "Increased mortality", impact: "Up to +8% mortality per batch on surfaces not deeply treated." },
-      { title: "Degraded feed conversion ratio", impact: "A contaminated water network increases the FCR by 10 to 15%, meaning thousands of dinars lost per cycle." },
-      { title: "Decreased zootechnical performance", impact: "Ammonia reduces the ADG by 12% and increases respiratory pathologies." }
+      { title: "Mortality and morbidity", impact: "Farms with low biosecurity levels record loss rates up to 2.7 times higher than managed livestock farms. (Source: comparative multi-site study, 2024)" },
+      { title: "Degraded Feed Conversion Ratio (FCR)", impact: "Poor sanitary management degrades feed efficiency by nearly 15% on average, drastically increasing production costs." },
+      { title: "Decreased zootechnical performance", impact: "A degraded environment (ammonia, humidity) leads to a drop in ADG and immunosuppression. Critical threshold validated by multiple scientific studies (PubMed, ScienceDirect)." }
     ],
     minimalProtocol: [
-      { product: "CLORAGRO", action: "Technical cleaning", description: "Destruction of the organic biofilm on all building surfaces. Foam application, contact time 20 min." },
-      { product: "HP Rinsing", action: "High pressure rinsing", description: "Mechanical elimination of residues and detergent. Visually clean surface is mandatory." },
-      { product: "OPTIMAGRO", action: "Biocide disinfection", description: "Full spectrum terminal disinfection. Bactericidal, virucidal, fungicidal. Persistence of 7 days." }
+      { product: "CLORAGRO", action: "Technical cleaning", description: "Destruction of organic biofilm on all building surfaces. Foam application, contact time 20 min." },
+      { product: "HP Rinsing", action: "High-pressure rinsing", description: "Mechanical removal of residues and detergent. Visually clean surface mandatory." },
+      { product: "OPTIMAGRO", action: "Biocide disinfection", description: "Full-spectrum terminal disinfection. Bactericidal, virucidal, fungicidal. Guaranteed persistence." }
     ],
     reinforcedProtocol: [
-      { product: "BIONET", action: "Pipe cleaning", description: "Stripping of organic deposits and scale in water circuits before placing the animals." },
-      { product: "AQUACONTROL", action: "Continuous water treatment", description: "Bacteriological stabilization of drinking water throughout the rearing cycle." },
-      { product: "AIRSAN", action: "Atmosphere disinfection", description: "Fine nebulization in the presence of animals to reduce the aerial microbial charge and ammonia." },
+      { product: "BIONET", action: "Pipe cleaning", description: "Stripping of organic deposits and scale in water circuits before placing animals." },
+      { product: "AQUACONTROL", action: "Continuous water treatment", description: "Bacteriological stabilization of drinking water throughout the production cycle." },
+      { product: "AIRSAN", action: "Atmosphere disinfection", description: "Fine nebulization in the presence of animals to reduce aerial microbial load and ammonia." },
       { product: "BIOACTIVE", action: "Enzymatic degradation", description: "Cleaning of equipment with high organic load before disinfection." }
     ],
     specificCases: [
-      { title: "New batch after Salmonella contamination", description: "In case of Salmonella detection on the previous batch, the protocol is reinforced.", protocol: "Double passage of CLORAGRO + OPTIMAGRO, increasing concentrations by 30%. Microbiological control analysis before placement." },
-      { title: "Rearing in hot climates (>35°C)", description: "High temperatures accelerate bacterial proliferation and water degradation.", protocol: "AQUACONTROL at a reinforced dosage + daily AIRSAN. Monitoring of pH and residual chlorine." },
-      { title: "Planned biosecurity audit", description: "Preparation for sanitary compliance audits.", protocol: "Complete minimal protocol + pre-audit surface sampling with analysis in the N2K laboratory." }
+      { title: "Decontamination after infectious episode", description: "In case of detection of major pathogens on the previous batch, the protocol is reinforced.", protocol: "Double passage of CLORAGRO + OPTIMAGRO by increasing concentrations. Mandatory microbiological control analysis." },
+      { title: "Breeding in extreme conditions", description: "High temperatures or excessive humidity accelerate bacterial proliferation.", protocol: "AQUACONTROL at reinforced dosage + frequent AIRSAN. Increased monitoring of sanitary parameters." },
+      { title: "Biosecurity audit", description: "Preparation for compliance audits or certifications.", protocol: "Complete minimal protocol + surface sampling with analysis in N2K laboratory." }
     ],
     associatedProducts: ["cloragro", "optimagro", "bionet", "aquacontrol", "airsan", "bioactive"],
     expectedResults: [
-      "Reduction of mortality by 3 to 5 points per batch",
-      "Improvement of FCR by 5 to 10%",
-      "Reduction of ammonia below the 20 ppm threshold",
-      "Microbiological compliance of surfaces < 10 CFU/cm²",
-      "Drinking water compliant with regulatory thresholds"
+      "Significant reduction in mortality and morbidity rates",
+      "Measurable improvement in Feed Conversion Ratio (FCR)",
+      "Control of air quality and ambient gases",
+      "Documented microbiological compliance of surfaces",
+      "Stabilized drinking water throughout the cycle"
     ]
   },
   "abattoirs": {
@@ -262,42 +262,42 @@ export const sectorsDataEn: Record<string, SectorData> = {
 };
 
 export const sectorsDataAr: Record<string, SectorData> = {
-  "elevage-avicole": {
+  "elevage": {
     id: "elevage",
-    slug: "elevage-avicole",
+    slug: "elevage",
     problems: [
-      { title: "غشاء حيوي مستمر على الأسطح المسامية", description: "تطور الجدران الخرسانية، والأرضيات الإسمنتية، والمعدات المعدنية غشاءً حيوياً بكتيرياً بين كل دورة تربية. هذا الغشاء يحمي مسببات الأمراض من المطهرات التقليدية." },
-      { title: "تلوث شبكات مياه الشرب", description: "تتراكم الترسبات الكلسية والرواسب العضوية والغشاء الحيوي في الأنابيب، مما يخلق خزاناً لبكتيريا القولون البرازية والإشريكية القولونية والسالمونيلا التي تلوث كل دفعة من المياه الموزعة." },
-      { title: "الضغط الميكروبي الهوائي والأمونيا", description: "الأمونيا المنبعثة من الفرشة تهاجم الأغشية المخاطية التنفسية للدواجن. بعد تجاوز 25 جزء في المليون، ينخفض الأداء وتتضاعف أمراض الجهاز التنفسي." }
+      { title: "غشاء حيوي مستمر على أسطح التربية", description: "تطور الجدران، والأرضيات، والمعدات المعدنية في مباني التربية غشاءً حيوياً بكتيرياً بين كل دورة. هذا الغشاء يحمي مسببات الأمراض من المطهرات التقليدية." },
+      { title: "تلوث شبكات مياه الشرب", description: "تتراكم الترسبات الكلسية والرواسب العضوية والغشاء الحيوي في الأنابيب، مما يخلق خزاناً لمسببات الأمراض (الإشريكية القولونية، السالمونيلا) التي تلوث المياه الموزعة للمواشي." },
+      { title: "الضغط الميكروبي وجودة الهواء", description: "الغازات والرطوبة المنبعثة من الفرشة تهاجم الأغشية المخاطية التنفسية للحيوانات. العتبة الحرجة للأمونيا تدهور الأداء وتضاعف الأمراض." }
     ],
     economicRisks: [
-      { title: "زيادة معدل النفوق", impact: "تصل إلى +8% من الوفيات لكل دورة على الأسطح غير المعالجة بعمق." },
-      { title: "تدهور مؤشر استهلاك العلف", impact: "شبكة المياه الملوثة تزيد من مؤشر استهلاك العلف بنسبة 10 إلى 15%، أي فقدان آلاف الدنانير في كل دورة." },
-      { title: "انخفاض الأداء الحيواني", impact: "الأمونيا تقلل من متوسط النمو اليومي بنسبة 12% وتزيد من أمراض الجهاز التنفسي." }
+      { title: "النفوق والمرض", impact: "تسجل المنشآت ذات مستوى الأمن الحيوي المنخفض معدلات فقد تصل إلى 2.7 مرة أعلى من المزارع المنضبطة. (المصدر: دراسة مقارنة متعددة المواقع، 2024)" },
+      { title: "تدهور مؤشر استهلاك العلف (FCR)", impact: "الإدارة الصحية السيئة تدهور كفاءة التغذية بنسبة 15% تقريباً في المتوسط، مما يزيد بشكل حاد من تكاليف الإنتاج." },
+      { title: "انخفاض الأداء الحيواني", impact: "البيئة المتدهورة (أمونيا، رطوبة) تؤدي إلى انخفاض متوسط النمو اليومي وكبت المناعة. عتبة حرجة مؤكدة بدراسات علمية متعددة (PubMed، ScienceDirect)." }
     ],
     minimalProtocol: [
       { product: "CLORAGRO", action: "التنظيف الفني", description: "تدمير الغشاء الحيوي العضوي على جميع أسطح المبنى. التطبيق بالرغوة، وقت التلامس 20 دقيقة." },
       { product: "شطف عالي الضغط", action: "الشطف بالضغط العالي", description: "الإزالة الميكانيكية للرواسب والمنظفات. السطح النظيف بصرياً إلزامي." },
-      { product: "OPTIMAGRO", action: "التطهير البيولوجي", description: "تطهير نهائي كامل الطيف. مضاد للبكتيريا، الفيروسات، والفطريات. بقاء المفعول لمدة 7 أيام." }
+      { product: "OPTIMAGRO", action: "التطهير البيولوجي", description: "تطهير نهائي كامل الطيف. مضاد للبكتيريا، الفيروسات، والفطريات. ضمان بقاء المفعول." }
     ],
     reinforcedProtocol: [
       { product: "BIONET", action: "تنظيف الأنابيب", description: "تجريد الرواسب العضوية والترسبات الكلسية في شبكات المياه قبل إدخال الحيوانات." },
-      { product: "AQUACONTROL", action: "المعالجة المستمرة للمياه", description: "الاستقرار البكتريولوجي لمياه الشرب طوال دورة التربية." },
+      { product: "AQUACONTROL", action: "المعالجة المستمرة للمياه", description: "الاستقرار البكتريولوجي لمياه الشرب طوال دورة الإنتاج." },
       { product: "AIRSAN", action: "تطهير الأجواء", description: "تبخير دقيق بوجود الحيوانات لتقليل العبء الميكروبي الجوي والأمونيا." },
       { product: "BIOACTIVE", action: "تحليل إنزيمي", description: "تنظيف المعدات ذات الحمل العضوي العالي قبل التطهير." }
     ],
     specificCases: [
-      { title: "دورة جديدة بعد تلوث السالمونيلا", description: "في حالة اكتشاف السالمونيلا في الدفعة السابقة، يتم تعزيز البروتوكول.", protocol: "تمرير مزدوج لـ CLORAGRO + OPTIMAGRO بزيادة التركيزات بنسبة 30%. تحليل ميكروبيولوجي للمراقبة قبل الإدخال." },
-      { title: "التربية في مناخ حار (>35 درجة مئوية)", description: "درجات الحرارة المرتفعة تسرع التكاثر البكتيري وتدهور المياه.", protocol: "AQUACONTROL بجرعة معززة + AIRSAN يومياً. مراقبة درجة الحموضة والكلور المتبقي." },
-      { title: "تدقيق الأمن الحيوي المخطط", description: "التحضير لتدقيقات الامتثال الصحي.", protocol: "البروتوكول الأساسي الكامل + أخذ عينات من الأسطح قبل التدقيق مع التحليل في مختبر N2K." }
+      { title: "التطهير بعد نوبة وبائية", description: "في حالة اكتشاف مسببات أمراض كبرى في الدفعة السابقة، يتم تعزيز البروتوكول.", protocol: "تمرير مزدوج لـ CLORAGRO + OPTIMAGRO بزيادة التركيزات. تحليل ميكروبيولوجي للمراقبة إلزامي." },
+      { title: "التربية في ظروف قصوى", description: "درجات الحرارة المرتفعة أو الرطوبة الزائدة تسرع التكاثر البكتيري.", protocol: "AQUACONTROL بجرعة معززة + AIRSAN متكرر. مراقبة متزايدة للمعايير الصحية." },
+      { title: "تدقيق الأمن الحيوي", description: "التحضير لتدقيقات الامتثال أو الشهادات.", protocol: "البروتوكول الأساسي الكامل + أخذ عينات من الأسطح مع التحليل في مختبر N2K." }
     ],
     associatedProducts: ["cloragro", "optimagro", "bionet", "aquacontrol", "airsan", "bioactive"],
     expectedResults: [
-      "تقليل معدل النفوق من 3 إلى 5 نقاط لكل دورة",
-      "تحسين مؤشر استهلاك العلف بنسبة 5 إلى 10%",
-      "تقليل الأمونيا تحت عتبة 20 جزء في المليون",
-      "الامتثال الميكروبيولوجي للأسطح < 10 وحدة تشكيل مستعمرة/سم²",
-      "مياه الشرب متوافقة مع العتبات التنظيمية"
+      "تقليل ملموس لمعدل النفوق لكل دورة",
+      "تحسن قابل للقياس في مؤشر استهلاك العلف منذ الدورة الأولى",
+      "الحفاظ على مستوى الأمونيا تحت العتبة الحرجة 25 جزء في المليون",
+      "الامتثال الميكروبيولوجي الموثق للأسطح",
+      "مياه الشرب مستقرة على طول الدورة"
     ]
   },
   "abattoirs": {
