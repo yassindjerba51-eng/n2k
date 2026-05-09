@@ -11,7 +11,10 @@
     "contactPageLink": "Contact",
     "aPropos": "À propos",
     "blog": "Blog",
-    "lang": "Langue"
+    "lang": "Langue",
+    "zoneBatiment": "Bâtiment",
+    "zoneEau": "Canalisation d'eau",
+    "zoneAmbiance": "Ambiance"
   },
   "hero": {
     "badge": "Maîtrise Sanitaire Professionnelle",
@@ -761,6 +764,397 @@
     "authorityQuote": "« Un produit sans méthode est un coût. Un produit avec notre protocole est un investissement rentable. »",
     "authorityQuoteAuthor": "— Dr Mahmoud Naffati",
     "authorityDesc": "Pôle d'excellence en biosécurité industrielle et agricole au cœur du Technoparc de Borj Cédria."
+  },
+  "zonesDetail": {
+    "backLink": "← Retour aux solutions",
+    "breadcrumbHome": "Accueil",
+    "breadcrumbParent": "Problèmes & Solutions",
+    "sectorBadges": "Élevage | Abattoir | Agroalimentaire",
+    "problemSectionTitle": "Le Problème",
+    "protocolSectionTitle": "Notre Protocole",
+    "tableSectionTitle": "Applications par Secteur",
+    "resultsSectionTitle": "Résultats Terrain",
+    "faqSectionTitle": "FAQ Technique",
+    "ctaDiagnostic": "Demander un diagnostic sanitaire gratuit",
+    "ctaProduits": "Voir la fiche technique complète",
+    "batiment": {
+      "metaTitle": "Hygiène des Surfaces & Sols en Élevage — Protocole Biosécurité N2K",
+      "metaDescription": "Protocole séquentiel CLORAGRO + OPTIMAGRO pour la destruction du biofilm et la désinfection des surfaces en élevage, abattoir et industrie agroalimentaire.",
+      "heroTitle": "Zone 01 — Le Bâtiment : Briser le cycle pathogène sur chaque surface",
+      "heroSubtitle": "Le biofilm est une forteresse microbienne invisible. Une désinfection appliquée directement sur un biofilm est un investissement perdu. Nos protocoles séquentiels garantissent une surface réellement stérile.",
+      "problem": {
+        "p1": "Le biofilm est une matrice polysaccharidique sécrétée par les colonies bactériennes pour se protéger de leur environnement. Cette structure, invisible à l'œil nu, adhère aux parois en béton, aux sols cimentés, aux équipements métalliques et aux surfaces poreuses des bâtiments d'élevage. Elle constitue un bouclier physique et chimique qui empêche les désinfectants d'atteindre les micro-organismes.",
+        "p2": "L'erreur la plus répandue consiste à appliquer un désinfectant directement sur un biofilm intact. Le produit agit sur la couche superficielle mais ne pénètre pas la matrice. Les pathogènes protégés — Salmonella, E. coli, Campylobacter — survivent et recolonisent la surface dès la mise en place du lot suivant. C'est un investissement chimique perdu.",
+        "p3": "Les conséquences zootechniques sont mesurables : mortalité en hausse, indice de consommation (FCR) dégradé de 10 à 15%, apparition de résistances bactériennes aux désinfectants classiques. Sur le long terme, le cycle contamination → traitement inefficace → recontamination s'auto-entretient.",
+        "p4": "En contexte tunisien, les conditions climatiques aggravent le problème : chaleur constante, humidité relative élevée et cycles de bandes courts ne laissent pas le temps aux surfaces de sécher naturellement. Le biofilm se reforme en 24 à 48 heures dans un environnement favorable."
+      },
+      "step1": {
+        "badge": "Étape 01",
+        "name": "CLORAGRO",
+        "type": "Détergent Désinfectant Alcalin Chloré",
+        "desc": "CLORAGRO est un détergent alcalin chloré haute performance conçu pour la destruction mécanique et chimique du biofilm organique. Son mode d'action repose sur trois mécanismes simultanés : saponification des graisses, dénaturation des protéines et déstructuration de la matrice polysaccharidique du biofilm.",
+        "features": [
+          "Saponification des graisses et dissolution des résidus lipidiques",
+          "Dénaturation protéique — destruction des structures biologiques du biofilm",
+          "Dilution recommandée : 2% à 5% selon le niveau d'encrassement",
+          "Temps de contact : 15 à 20 minutes — application mousse ou basse pression",
+          "Port obligatoire d'EPI : lunettes, gants, bottes, combinaison"
+        ]
+      },
+      "rinse": {
+        "title": "⚠ RINÇAGE OBLIGATOIRE — Étape intermédiaire critique",
+        "desc": "Après application de CLORAGRO, un rinçage complet à l'eau potable est OBLIGATOIRE avant toute application d'OPTIMAGRO. Cette exigence est chimique : les résidus chlorés de CLORAGRO sont incompatibles avec le glutaraldéhyde d'OPTIMAGRO. Un contact direct neutraliserait les deux agents actifs. Rincer abondamment toutes les surfaces jusqu'à élimination visuelle de toute mousse résiduelle. Vérifier le pH de surface si nécessaire (pH neutre requis)."
+      },
+      "step2": {
+        "badge": "Étape 02",
+        "name": "OPTIMAGRO",
+        "type": "Désinfectant Biocide à Spectre Complet",
+        "desc": "OPTIMAGRO combine Glutaraldéhyde et Ammoniums Quaternaires pour une désinfection terminale à spectre complet. Il s'applique exclusivement sur une surface préalablement nettoyée et rincée. Son action est bactéricide, virucide et fongicide avec une rémanence prolongée jusqu'à 7 jours.",
+        "features": [
+          "Spectre complet : Bactéricide, Virucide, Fongicide",
+          "Cibles : Salmonella, E. coli, Newcastle, Gumboro, Aspergillus",
+          "Rémanence jusqu'à 7 jours entre bandes",
+          "Dilution : 2% — application basse pression ou pulvérisation",
+          "Aération 4h minimum avant réintroduction des animaux"
+        ]
+      },
+      "tableHeaders": [
+        "Paramètre",
+        "Élevage",
+        "Abattoir",
+        "Industrie Agroalimentaire"
+      ],
+      "tableRows": [
+        [
+          "Fréquence",
+          "Chaque vide sanitaire",
+          "Quotidien",
+          "Selon PMS/HACCP"
+        ],
+        [
+          "Dilution CLORAGRO",
+          "2% — mousse",
+          "2% à 3% — mousse",
+          "2% — CIP ou mousse"
+        ],
+        [
+          "Dilution OPTIMAGRO",
+          "2% — pulvérisation",
+          "2% — pulvérisation",
+          "2% — hors contact alimentaire"
+        ],
+        [
+          "Surfaces cibles",
+          "Sols, parois, équipements",
+          "Chaîne, tables, sols",
+          "Lignes, cuves, sols"
+        ],
+        [
+          "Temps de contact",
+          "15-20 min chaque étape",
+          "20 min chaque étape",
+          "15 min chaque étape"
+        ]
+      ],
+      "kpi": [
+        {
+          "value": ">99,9%",
+          "label": "Réduction de la charge microbienne sur surfaces traitées",
+          "icon": "reduction"
+        },
+        {
+          "value": "7 jours",
+          "label": "Rémanence garantie d'OPTIMAGRO entre deux bandes",
+          "icon": "clock"
+        },
+        {
+          "value": "15+ ans",
+          "label": "De validation terrain en conditions réelles tunisiennes",
+          "icon": "shield"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Peut-on utiliser CLORAGRO en présence d'animaux ?",
+          "a": "Non. CLORAGRO est un produit alcalin chloré corrosif. Il s'utilise exclusivement pendant le vide sanitaire, en l'absence totale d'animaux. Le port d'EPI complet (lunettes, gants, bottes, combinaison) est obligatoire pour l'opérateur."
+        },
+        {
+          "q": "Quel est le délai obligatoire entre CLORAGRO et OPTIMAGRO ?",
+          "a": "Il n'y a pas de délai temporel fixe, mais un prérequis technique : le rinçage complet et abondant de toutes les surfaces est obligatoire entre les deux produits. L'eau de rinçage doit être potable. On vérifie l'absence de mousse résiduelle avant d'appliquer OPTIMAGRO."
+        },
+        {
+          "q": "OPTIMAGRO est-il compatible avec les surfaces en inox ?",
+          "a": "Oui. OPTIMAGRO est compatible avec l'inox, l'aluminium, le PVC, le béton et les surfaces carrelées. Il ne corrode pas les métaux dans les dilutions recommandées (2%). Éviter tout contact prolongé avec le zinc non traité."
+        },
+        {
+          "q": "Comment doser pour un bâtiment de 1000 m² ?",
+          "a": "Pour CLORAGRO à 2% : prévoir environ 200 à 300 litres de solution (200 à 300 mL/m² de surface au sol, plus les parois). Pour OPTIMAGRO à 2% : environ 150 à 200 litres de solution en pulvérisation basse pression. Ces volumes varient selon la porosité et la géométrie des surfaces."
+        },
+        {
+          "q": "Peut-on combiner OPTIMAGRO avec d'autres produits ?",
+          "a": "Non. OPTIMAGRO ne doit jamais être mélangé avec d'autres produits chimiques, notamment les produits chlorés (dont CLORAGRO), les acides forts ou les produits à base d'iode. Le mélange peut générer des réactions chimiques dangereuses et neutraliser l'effet biocide."
+        }
+      ],
+      "heroTitleStart": "Le Bâtiment :",
+      "heroTitleHighlight": " Briser le cycle pathogène",
+      "heroTitleEnd": " sur chaque surface",
+      "breadcrumbCurrent": "Le Bâtiment"
+    },
+    "canalisations": {
+      "metaTitle": "Traitement des Canalisations d'Abreuvement — N2K Biosécurité",
+      "metaDescription": "Protocole BIONET + AQUACONTROL pour le nettoyage et la stabilisation des réseaux d'eau en élevage. Élimination du biofilm et du tartre dans les canalisations.",
+      "heroTitle": "Zone 02 — L'Eau : Le réseau d'abreuvement, premier vecteur de contamination",
+      "heroSubtitle": "Un réseau d'eau non maîtrisé transmet en quelques heures des pathogènes à l'ensemble du cheptel. Le contrôle commence à la source et se maintient jusqu'au dernier abreuvoir.",
+      "problem": {
+        "p1": "Le cycle de contamination de l'eau en élevage suit un chemin prévisible : réservoir → canalisation principale → sous-lignes → pipettes/nipples → animal. À chaque point de jonction, le biofilm bactérien se développe dans les zones mortes du réseau, les coudes, les réducteurs et les surfaces internes des tuyaux.",
+        "p2": "Les dépôts s'accumulent en couches successives : tartre calcaire dû à la dureté de l'eau, biofilm bactérien (E. coli, Pseudomonas, Salmonella), résidus de médicaments et vitamines, et dépôts organiques provenant des animaux eux-mêmes. Cette stratification crée un réservoir pathogène auto-entretenu.",
+        "p3": "L'impact sur les performances est direct : baisse de la consommation d'eau (obstructions partielles), dégradation du FCR, augmentation des pathologies digestives et respiratoires. Un animal qui boit une eau contaminée développe une inflammation intestinale chronique qui réduit l'absorption des nutriments.",
+        "p4": "En Tunisie, la dureté de l'eau (souvent >30°F) accélère la formation de tartre calcaire. Le chlore résiduel dans l'eau de réseau est fréquemment insuffisant pour maintenir une qualité bactériologique acceptable jusqu'aux derniers points de distribution."
+      },
+      "step1": {
+        "badge": "Étape 01",
+        "name": "BIONET",
+        "type": "Nettoyage Technique Curatif des Canalisations",
+        "desc": "BIONET est un agent combinant détartrant, désincrustant et détergent pour le nettoyage choc des canalisations d'abreuvement. Il dissout les dépôts calcaires, déstructure le biofilm et élimine les résidus organiques accumulés dans les circuits.",
+        "features": [
+          "Triple action : détartrant + désincrustant + détergent",
+          "Dissolution du tartre calcaire et des dépôts minéraux",
+          "Destruction du biofilm dans les pipettes et circuits d'abreuvement",
+          "Traitement choc entre bandes : concentration 1% à 3%, trempage 2 à 4 heures",
+          "Compatible PVC, polyéthylène, inox, caoutchouc des joints"
+        ]
+      },
+      "step2": {
+        "badge": "Étape 02",
+        "name": "AQUACONTROL",
+        "type": "Stabilisation Bactériologique Continue",
+        "desc": "AQUACONTROL est un stabilisateur bactériologique de l'eau de boisson. Il maintient une qualité microbiologique constante du réservoir jusqu'au dernier abreuvoir, tout au long du cycle de production. Son mode d'action contrôle la charge microbienne sans créer de résistances.",
+        "features": [
+          "Stabilisation bactériologique continue de l'eau de boisson",
+          "Dosage automatique : compatible systèmes proportionnels (Dosatron, etc.)",
+          "Dosage recommandé : 0,1% en continu",
+          "Sans résidu dans les tissus animaux aux doses recommandées",
+          "Monitoring terrain : tests bandelettes ou kits rapides disponibles"
+        ]
+      },
+      "tableHeaders": [
+        "Indicateur",
+        "Sans protocole N2K",
+        "Avec protocole N2K"
+      ],
+      "tableRows": [
+        [
+          "Charge bactérienne eau (UFC/mL)",
+          ">10 000 UFC/mL",
+          "<100 UFC/mL"
+        ],
+        [
+          "Dépôts dans canalisations",
+          "Tartre + biofilm épais",
+          "Surfaces propres, flux libre"
+        ],
+        [
+          "Consommation d'eau",
+          "Réduite (obstructions)",
+          "Optimale (+15 à 20%)"
+        ],
+        [
+          "Incidents sanitaires liés à l'eau",
+          "Fréquents",
+          "Rares à nuls"
+        ],
+        [
+          "Intervalle de nettoyage",
+          "Non planifié",
+          "Choc entre bandes + continu"
+        ]
+      ],
+      "compatibility": {
+        "title": "Compatibilité & Sécurité",
+        "items": [
+          "Compatible avec vaccination par eau de boisson (respecter un délai de 24h après traitement BIONET)",
+          "Compatible avec médicaments et vitamines hydrosolubles (vérifier les interactions spécifiques)",
+          "Sans résidu dans les tissus animaux aux doses recommandées",
+          "BIONET : rinçage obligatoire et abondant avant remise en eau de boisson"
+        ]
+      },
+      "kpi": [
+        {
+          "value": "<100",
+          "label": "UFC/mL — Charge bactérienne eau après traitement",
+          "icon": "reduction"
+        },
+        {
+          "value": "+20%",
+          "label": "Consommation d'eau restaurée après décapage BIONET",
+          "icon": "shield"
+        },
+        {
+          "value": "Continu",
+          "label": "Protection AQUACONTROL tout au long du cycle",
+          "icon": "clock"
+        }
+      ],
+      "faq": [
+        {
+          "q": "AQUACONTROL peut-il être utilisé avec des poussins dès J1 ?",
+          "a": "Oui. AQUACONTROL est conçu pour un usage continu dès la mise en place des animaux. Le dosage à 0,1% est sûr pour les poussins dès le premier jour. Il est recommandé de démarrer le traitement avant l'arrivée des animaux pour stabiliser le réseau."
+        },
+        {
+          "q": "Comment nettoyer des pipettes très incrustées de tartre ?",
+          "a": "Pour un tartre sévère, utiliser BIONET à concentration renforcée (3%) avec un trempage prolongé de 4 à 6 heures. Pour les pipettes individuelles très incrustées, un démontage et trempage direct peut être nécessaire. Rincer abondamment avant remise en service."
+        },
+        {
+          "q": "Quel délai respecter entre BIONET et la mise en eau de boisson ?",
+          "a": "Après traitement BIONET, rincer abondamment l'ensemble du circuit avec de l'eau potable. Vérifier l'absence de mousse et de résidus. La mise en eau de boisson peut se faire immédiatement après rinçage complet. Prévoir 2 à 3 volumes du réseau en eau de rinçage."
+        },
+        {
+          "q": "Peut-on utiliser AQUACONTROL en continu toute la bande ?",
+          "a": "Oui, c'est même la recommandation. AQUACONTROL est conçu pour un dosage continu à 0,1% tout au long du cycle de production. L'arrêt du traitement expose le réseau à une recontamination rapide, surtout en conditions climatiques chaudes."
+        },
+        {
+          "q": "Comment calculer le dosage pour un élevage de 20 000 sujets ?",
+          "a": "La consommation d'eau moyenne est d'environ 200 à 250 mL/sujet/jour en poulet de chair (variable selon l'âge et la température). Pour 20 000 sujets : environ 4 000 à 5 000 litres/jour. À 0,1% AQUACONTROL : 4 à 5 litres de produit pur par jour, via doseur proportionnel."
+        }
+      ],
+      "heroTitleStart": "L'Eau :",
+      "heroTitleHighlight": " Le réseau d'abreuvement,",
+      "heroTitleEnd": " premier vecteur de contamination",
+      "breadcrumbCurrent": "Canalisation d'eau"
+    },
+    "ambiance": {
+      "metaTitle": "Contrôle de l'Ambiance & Aéro-Biocontamination en Élevage — N2K",
+      "metaDescription": "Protocole AIRSAN + BIOACTIVE pour la maîtrise de l'ammoniac, des poussières et de la charge microbienne aérienne en bâtiments d'élevage.",
+      "heroTitle": "Zone 03 — L'Ambiance : Neutraliser la menace invisible dans l'air",
+      "heroSubtitle": "L'ammoniac corrode les muqueuses. Les pathogènes aériens colonisent les voies respiratoires avant tout contact direct. Contrôler l'ambiance, c'est protéger le cheptel à la source.",
+      "problem": {
+        "p1": "L'air des bâtiments d'élevage contient trois menaces simultanées : l'ammoniac (NH₃) issu de la fermentation des déjections, les particules fines (poussières de litière, squames, plumes) et la charge microbienne aérienne (bactéries, virus, spores fongiques). Ces trois facteurs agissent en synergie pour dégrader la santé respiratoire du cheptel.",
+        "p2": "L'ammoniac attaque les muqueuses respiratoires dès 15 ppm. Au-delà de 25 ppm — seuil critique documenté par de multiples études scientifiques — les cellules ciliées de l'épithélium bronchique sont détruites. L'animal perd sa première ligne de défense immunitaire. Les pathogènes aériens (Mycoplasma, virus de la bronchite infectieuse, Newcastle) pénètrent alors sans résistance.",
+        "p3": "Les conséquences économiques sont directes : dégradation du FCR, baisse du gain moyen quotidien (GMQ), augmentation des saisies à l'abattoir pour lésions respiratoires, mortalité intercurrente. Une ambiance dégradée coûte plus cher que le traitement préventif.",
+        "p4": "En Tunisie, les conditions aggravent la situation : ventilation insuffisante dans de nombreux bâtiments, litière humide en saison froide, densités d'élevage élevées. Le contrôle de l'ambiance est souvent le maillon le plus négligé du protocole sanitaire."
+      },
+      "step1": {
+        "badge": "Étape 01",
+        "name": "AIRSAN",
+        "type": "Solution de Nébulisation en Présence d'Animaux",
+        "desc": "AIRSAN est une solution nébulisable à spectre biocide aérien. Les particules fines en suspension neutralisent les pathogènes avant qu'ils n'atteignent les muqueuses respiratoires des animaux. Utilisable en présence du cheptel sans stress ni irritation.",
+        "features": [
+          "Utilisation en présence des animaux — sans stress, sans irritation",
+          "Réduction de l'ammoniac (NH₃) : jusqu'à -60% en 30 minutes",
+          "Neutralisation des pathogènes aériens (bactéries, virus, spores)",
+          "Nébulisateur recommandé : haute pression, gouttelettes <50 μm",
+          "Fréquence préventive : 1 à 2 fois/jour — curatif : 3 à 4 fois/jour"
+        ]
+      },
+      "step2": {
+        "badge": "Étape 02",
+        "name": "BIOACTIVE",
+        "type": "Nettoyant Enzymatique des Surfaces",
+        "desc": "BIOACTIVE est un cocktail enzymatique concentré (protéases, lipases, amylases) qui dégrade les matières organiques sur les surfaces et équipements sans friction ni vapeur chimique. Il prépare l'environnement à la nébulisation AIRSAN en réduisant la source des émissions.",
+        "features": [
+          "Triple cocktail enzymatique : protéases, lipases, amylases",
+          "Dégradation enzymatique sans friction ni vapeur chimique",
+          "Préparation des surfaces avant nébulisation AIRSAN",
+          "Biodégradable — sans résidu toxique",
+          "Application mousse ou pulvérisation sur surfaces fortement chargées"
+        ]
+      },
+      "thresholdsTitle": "Paramètres de Contrôle de l'Ambiance",
+      "thresholdHeaders": [
+        "Paramètre",
+        "Seuil critique",
+        "Seuil optimal",
+        "Action N2K"
+      ],
+      "thresholdRows": [
+        [
+          "NH₃ (Ammoniac)",
+          ">25 ppm",
+          "<10 ppm",
+          "AIRSAN nébulisation"
+        ],
+        [
+          "CO₂",
+          ">3 000 ppm",
+          "<2 000 ppm",
+          "Ventilation + AIRSAN"
+        ],
+        [
+          "Humidité relative",
+          ">75%",
+          "55-65%",
+          "BIOACTIVE litière"
+        ],
+        [
+          "Charge bactérienne air",
+          ">10⁵ UFC/m³",
+          "<10³ UFC/m³",
+          "AIRSAN préventif"
+        ]
+      ],
+      "equipmentTitle": "Guide Matériel de Nébulisation",
+      "equipment": [
+        {
+          "type": "Nébuliseur statique",
+          "desc": "Fixé en hauteur. Couvre 200-300 m². Idéal pour les traitements automatisés."
+        },
+        {
+          "type": "Nébuliseur mobile",
+          "desc": "Portatif sur chariot. Flexible, adapté aux bâtiments de taille variable."
+        },
+        {
+          "type": "Haute pression",
+          "desc": "Gouttelettes <50 μm. Meilleure suspension dans l'air. Recommandé par N2K."
+        },
+        {
+          "type": "Ultrasonique",
+          "desc": "Gouttelettes très fines. Plus coûteux mais excellente couverture volumique."
+        }
+      ],
+      "kpi": [
+        {
+          "value": "-60%",
+          "label": "Réduction NH₃ en 30 minutes après nébulisation AIRSAN",
+          "icon": "reduction"
+        },
+        {
+          "value": ">95%",
+          "label": "Réduction de la charge microbienne aérienne",
+          "icon": "shield"
+        },
+        {
+          "value": "0 cas",
+          "label": "De stress animal documenté lors de l'utilisation d'AIRSAN",
+          "icon": "clock"
+        }
+      ],
+      "faq": [
+        {
+          "q": "AIRSAN est-il compatible avec les vaccinations par spray ?",
+          "a": "Ne pas nébuliser AIRSAN pendant les 48 heures suivant une vaccination par spray ou aérosol. Le produit pourrait interférer avec les souches vaccinales vivantes atténuées. Reprendre le traitement préventif 48h après vaccination."
+        },
+        {
+          "q": "Quel type de nébulisateur utiliser pour un bâtiment de 1500 m² ?",
+          "a": "Pour un bâtiment de 1500 m², prévoir 5 à 6 nébuliseurs statiques haute pression répartis uniformément, ou 2 passages avec un nébuliseur mobile haute pression. Privilégier des gouttelettes <50 μm pour une suspension optimale."
+        },
+        {
+          "q": "Peut-on utiliser AIRSAN et BIOACTIVE le même jour ?",
+          "a": "Oui. BIOACTIVE s'applique sur les surfaces (sols, équipements) et AIRSAN se nébulise dans l'air. Les deux produits sont complémentaires : BIOACTIVE réduit la source des émissions organiques, AIRSAN traite les pathogènes déjà en suspension."
+        },
+        {
+          "q": "À quelle fréquence nébuliser en période de forte chaleur ?",
+          "a": "En période de forte chaleur (>35°C), augmenter la fréquence à 3-4 nébulisations par jour. La chaleur accélère la prolifération bactérienne et augmente les concentrations d'ammoniac. Maintenir une ventilation maximale en parallèle."
+        },
+        {
+          "q": "AIRSAN laisse-t-il des résidus sur les œufs ou la viande ?",
+          "a": "Non. Aux doses recommandées (1 mL/m³), AIRSAN ne laisse pas de résidus détectables sur les produits d'élevage. Le produit agit en phase gazeuse et se dégrade rapidement. Il est conçu pour un usage en présence d'animaux de production."
+        }
+      ],
+      "heroTitleStart": "L'Ambiance :",
+      "heroTitleHighlight": " Neutraliser la menace invisible",
+      "heroTitleEnd": " dans l'air",
+      "breadcrumbCurrent": "Ambiance"
+    }
   },
   "contactPage": {
     "hero": {

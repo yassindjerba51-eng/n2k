@@ -1,23 +1,50 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
-import { Menu, ArrowRight, PhoneCall, ChevronRight } from "lucide-react";
+import { Menu, ArrowRight, PhoneCall, ChevronRight, ChevronDown, Building2, Droplets, Wind } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import LocaleSwitcher from "./LocaleSwitcher";
 import Image from "next/image";
+
+type NavLink = {
+  name: string;
+  path: string;
+  mobileOnly?: boolean;
+  subItems?: { name: string; path: string; icon: React.ReactNode }[];
+};
 
 export default function Navbar({ locale }: { locale: string }) {
   const t = useTranslations("nav");
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [mobileSubOpen, setMobileSubOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const navLinks = [
+  // Close dropdown on outside click
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setDropdownOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, []);
+
+  const zoneSubItems = [
+    { name: t("zoneBatiment"), path: "/problemes-solutions/batiment", icon: <Building2 className="w-4 h-4" /> },
+    { name: t("zoneEau"), path: "/problemes-solutions/canalisations-eau", icon: <Droplets className="w-4 h-4" /> },
+    { name: t("zoneAmbiance"), path: "/problemes-solutions/ambiance", icon: <Wind className="w-4 h-4" /> },
+  ];
+
+  const navLinks: NavLink[] = [
     { name: t("home"), path: "/", mobileOnly: true },
     { name: t("secteurs"), path: "/secteurs" },
-    { name: t("problemesSolutions"), path: "/problemes-solutions" },
+    { name: t("problemesSolutions"), path: "/problemes-solutions", subItems: zoneSubItems },
     { name: t("produits"), path: "/produits" },
     { name: t("blog"), path: "/blog" },
     { name: t("aPropos"), path: "/a-propos" },
@@ -44,7 +71,62 @@ export default function Navbar({ locale }: { locale: string }) {
         {/* Desktop Links */}
         <div className="hidden lg:flex items-center gap-8">
           {navLinks.filter((link) => !link.mobileOnly).map((link) => {
-            const isActive = pathname === link.path;
+            const isActive = pathname === link.path || (link.subItems && pathname.startsWith(link.path + "/"));
+
+            // Item with dropdown
+            if (link.subItems) {
+              return (
+                <div key={link.name} className="relative" ref={dropdownRef}>
+                  <button
+                    onClick={() => setDropdownOpen(!dropdownOpen)}
+                    className={`flex items-center gap-1 font-heading font-bold tracking-tight uppercase text-sm transition-colors cursor-pointer ${
+                      isActive
+                        ? "text-secondary border-b-2 border-secondary pb-1"
+                        : "text-muted-foreground hover:text-primary"
+                    }`}
+                  >
+                    {link.name}
+                    <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${dropdownOpen ? "rotate-180" : ""}`} />
+                  </button>
+
+                  {/* Dropdown */}
+                  {dropdownOpen && (
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 bg-white rounded-xl shadow-xl border border-border/50 py-2 min-w-[260px] z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                      {/* Parent link */}
+                      <Link
+                        href={link.path as any}
+                        onClick={() => setDropdownOpen(false)}
+                        className="flex items-center gap-3 px-4 py-2.5 text-sm font-bold font-heading text-n2k-primary hover:bg-n2k-surface transition-colors"
+                      >
+                        {link.name}
+                      </Link>
+                      <div className="mx-3 my-1 h-px bg-border/50" />
+                      {/* Sub-items */}
+                      {link.subItems.map((sub) => {
+                        const isSubActive = pathname === sub.path;
+                        return (
+                          <Link
+                            key={sub.path}
+                            href={sub.path as any}
+                            onClick={() => setDropdownOpen(false)}
+                            className={`flex items-center gap-3 px-4 py-2.5 text-sm font-body transition-colors ${
+                              isSubActive
+                                ? "text-n2k-primary bg-n2k-surface font-bold"
+                                : "text-n2k-on-surface-variant hover:text-n2k-primary hover:bg-n2k-surface"
+                            }`}
+                          >
+                            <span className="text-n2k-primary/60">{sub.icon}</span>
+                            {sub.name}
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  )}
+                </div>
+              );
+            }
+
+            // Regular item
             return (
               <Link
                 key={link.name}
@@ -106,10 +188,58 @@ export default function Navbar({ locale }: { locale: string }) {
                 </div>
 
                 {/* Navigation Links */}
-                <div className="flex flex-col flex-1 px-6 py-8">
+                <div className="flex flex-col flex-1 px-6 py-8 overflow-y-auto">
                   <div className="flex flex-col gap-1">
                     {navLinks.map((link) => {
                       const isActive = pathname === link.path;
+
+                      // Mobile item with sub-items
+                      if (link.subItems) {
+                        return (
+                          <div key={link.name}>
+                            <button
+                              onClick={() => setMobileSubOpen(!mobileSubOpen)}
+                              className={`flex items-center justify-between w-full py-3 px-3 rounded-xl font-heading text-sm sm:text-base font-bold tracking-tight uppercase transition-all cursor-pointer ${
+                                isActive || pathname.startsWith(link.path + "/")
+                                  ? "text-white bg-white/10"
+                                  : "text-white/60 hover:text-white hover:bg-white/5"
+                              }`}
+                            >
+                              <span>{link.name}</span>
+                              <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileSubOpen ? "rotate-180" : ""} ${isActive ? "text-[#2BB673]" : "text-white/20"}`} />
+                            </button>
+                            {/* Sub-items */}
+                            <div className={`overflow-hidden transition-all duration-300 ${mobileSubOpen ? "max-h-60 mt-1" : "max-h-0"}`}>
+                              <Link
+                                href={link.path as any}
+                                onClick={() => setMobileOpen(false)}
+                                className={`flex items-center justify-between py-2.5 px-6 rounded-lg font-heading text-xs font-bold tracking-tight uppercase transition-all ${
+                                  pathname === link.path ? "text-[#2BB673]" : "text-white/40 hover:text-white/70"
+                                }`}
+                              >
+                                <span>{link.name}</span>
+                              </Link>
+                              {link.subItems.map((sub) => {
+                                const isSubActive = pathname === sub.path;
+                                return (
+                                  <Link
+                                    key={sub.path}
+                                    href={sub.path as any}
+                                    onClick={() => setMobileOpen(false)}
+                                    className={`flex items-center gap-3 py-2.5 px-6 rounded-lg font-body text-sm transition-all ${
+                                      isSubActive ? "text-[#2BB673]" : "text-white/40 hover:text-white/70"
+                                    }`}
+                                  >
+                                    <span className="opacity-60">{sub.icon}</span>
+                                    <span>{sub.name}</span>
+                                  </Link>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        );
+                      }
+
                       return (
                         <Link
                           key={link.name}

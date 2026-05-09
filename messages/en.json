@@ -11,7 +11,10 @@
     "contactPageLink": "Contact",
     "aPropos": "About",
     "blog": "Blog",
-    "lang": "Language"
+    "lang": "Language",
+    "zoneBatiment": "Building",
+    "zoneEau": "Water Pipelines",
+    "zoneAmbiance": "Atmosphere"
   },
   "hero": {
     "badge": "Professional Sanitary Mastery",
@@ -761,6 +764,397 @@
     "authorityQuote": "\"A product without method is a cost. A product with our protocol is a profitable investment.\"",
     "authorityQuoteAuthor": "— Dr Mahmoud Naffati",
     "authorityDesc": "Center of excellence in industrial and agricultural biosecurity at the heart of Borj Cédria Technopark."
+  },
+  "zonesDetail": {
+    "backLink": "← Back to solutions",
+    "breadcrumbHome": "Home",
+    "breadcrumbParent": "Problems & Solutions",
+    "sectorBadges": "Livestock | Slaughterhouse | Food Industry",
+    "problemSectionTitle": "The Problem",
+    "protocolSectionTitle": "Our Protocol",
+    "tableSectionTitle": "Applications by Sector",
+    "resultsSectionTitle": "Field Results",
+    "faqSectionTitle": "Technical FAQ",
+    "ctaDiagnostic": "Request a free sanitary diagnostic",
+    "ctaProduits": "View the complete technical sheet",
+    "batiment": {
+      "metaTitle": "Surface & Floor Hygiene in Livestock — N2K Biosecurity Protocol",
+      "metaDescription": "Sequential CLORAGRO + OPTIMAGRO protocol for biofilm destruction and surface disinfection in livestock, slaughterhouses and food industry.",
+      "heroTitle": "Zone 01 — The Building: Breaking the pathogen cycle on every surface",
+      "heroSubtitle": "Biofilm is an invisible microbial fortress. Disinfection applied directly on biofilm is a wasted investment. Our sequential protocols guarantee a truly sterile surface.",
+      "problem": {
+        "p1": "Biofilm is a polysaccharide matrix secreted by bacterial colonies to protect themselves from their environment. This structure, invisible to the naked eye, adheres to concrete walls, cemented floors, metal equipment and porous surfaces of livestock buildings. It forms a physical and chemical shield that prevents disinfectants from reaching micro-organisms.",
+        "p2": "The most common mistake is applying a disinfectant directly on intact biofilm. The product acts on the superficial layer but does not penetrate the matrix. Protected pathogens — Salmonella, E. coli, Campylobacter — survive and recolonize the surface as soon as the next batch is placed. It is a wasted chemical investment.",
+        "p3": "The zootechnical consequences are measurable: increased mortality, feed conversion ratio (FCR) degraded by 10 to 15%, emergence of bacterial resistance to conventional disinfectants. In the long term, the contamination → ineffective treatment → recontamination cycle is self-sustaining.",
+        "p4": "In the Tunisian context, climatic conditions worsen the problem: constant heat, high relative humidity and short flock cycles do not allow surfaces to dry naturally. Biofilm reforms in 24 to 48 hours in a favorable environment."
+      },
+      "step1": {
+        "badge": "Step 01",
+        "name": "CLORAGRO",
+        "type": "Alkaline Chlorinated Detergent Disinfectant",
+        "desc": "CLORAGRO is a high-performance alkaline chlorinated detergent designed for the mechanical and chemical destruction of organic biofilm. Its mode of action relies on three simultaneous mechanisms: fat saponification, protein denaturation and destruction of the biofilm polysaccharide matrix.",
+        "features": [
+          "Fat saponification and dissolution of lipid residues",
+          "Protein denaturation — destruction of biofilm biological structures",
+          "Recommended dilution: 2% to 5% depending on soiling level",
+          "Contact time: 15 to 20 minutes — foam or low pressure application",
+          "Mandatory PPE: goggles, gloves, boots, coverall"
+        ]
+      },
+      "rinse": {
+        "title": "⚠ MANDATORY RINSING — Critical intermediate step",
+        "desc": "After CLORAGRO application, a complete rinse with potable water is MANDATORY before any OPTIMAGRO application. This requirement is chemical: chlorinated residues from CLORAGRO are incompatible with OPTIMAGRO's glutaraldehyde. Direct contact would neutralize both active agents. Rinse all surfaces thoroughly until visual elimination of any residual foam. Check surface pH if necessary (neutral pH required)."
+      },
+      "step2": {
+        "badge": "Step 02",
+        "name": "OPTIMAGRO",
+        "type": "Full Spectrum Biocide Disinfectant",
+        "desc": "OPTIMAGRO combines Glutaraldehyde and Quaternary Ammonium for full-spectrum terminal disinfection. It is applied exclusively on a previously cleaned and rinsed surface. Its action is bactericidal, virucidal and fungicidal with extended residual activity up to 7 days.",
+        "features": [
+          "Full spectrum: Bactericidal, Virucidal, Fungicidal",
+          "Targets: Salmonella, E. coli, Newcastle, Gumboro, Aspergillus",
+          "Residual activity up to 7 days between flocks",
+          "Dilution: 2% — low pressure or spray application",
+          "Minimum 4h ventilation before animal reintroduction"
+        ]
+      },
+      "tableHeaders": [
+        "Parameter",
+        "Livestock",
+        "Slaughterhouse",
+        "Food Industry"
+      ],
+      "tableRows": [
+        [
+          "Frequency",
+          "Each sanitary void",
+          "Daily",
+          "Per PMS/HACCP"
+        ],
+        [
+          "CLORAGRO Dilution",
+          "2% — foam",
+          "2% to 3% — foam",
+          "2% — CIP or foam"
+        ],
+        [
+          "OPTIMAGRO Dilution",
+          "2% — spray",
+          "2% — spray",
+          "2% — no direct food contact"
+        ],
+        [
+          "Target surfaces",
+          "Floors, walls, equipment",
+          "Chain, tables, floors",
+          "Lines, tanks, floors"
+        ],
+        [
+          "Contact time",
+          "15-20 min each step",
+          "20 min each step",
+          "15 min each step"
+        ]
+      ],
+      "kpi": [
+        {
+          "value": ">99.9%",
+          "label": "Microbial load reduction on treated surfaces",
+          "icon": "reduction"
+        },
+        {
+          "value": "7 days",
+          "label": "Guaranteed OPTIMAGRO residual activity between flocks",
+          "icon": "clock"
+        },
+        {
+          "value": "15+ years",
+          "label": "Field validation under real Tunisian conditions",
+          "icon": "shield"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Can CLORAGRO be used in the presence of animals?",
+          "a": "No. CLORAGRO is a corrosive alkaline chlorinated product. It is used exclusively during the sanitary void, in the total absence of animals. Full PPE (goggles, gloves, boots, coverall) is mandatory for the operator."
+        },
+        {
+          "q": "What is the mandatory delay between CLORAGRO and OPTIMAGRO?",
+          "a": "There is no fixed time delay, but a technical prerequisite: complete and thorough rinsing of all surfaces is mandatory between the two products. Rinse water must be potable. Verify absence of residual foam before applying OPTIMAGRO."
+        },
+        {
+          "q": "Is OPTIMAGRO compatible with stainless steel surfaces?",
+          "a": "Yes. OPTIMAGRO is compatible with stainless steel, aluminum, PVC, concrete and tiled surfaces. It does not corrode metals at recommended dilutions (2%). Avoid prolonged contact with untreated zinc."
+        },
+        {
+          "q": "How to dose for a 1000 m² building?",
+          "a": "For CLORAGRO at 2%: plan approximately 200 to 300 liters of solution (200 to 300 mL/m² of floor surface, plus walls). For OPTIMAGRO at 2%: approximately 150 to 200 liters of solution by low pressure spray. These volumes vary according to surface porosity and geometry."
+        },
+        {
+          "q": "Can OPTIMAGRO be combined with other products?",
+          "a": "No. OPTIMAGRO must never be mixed with other chemical products, particularly chlorinated products (including CLORAGRO), strong acids or iodine-based products. Mixing can generate dangerous chemical reactions and neutralize the biocidal effect."
+        }
+      ],
+      "heroTitleStart": "The Building:",
+      "heroTitleHighlight": " Breaking the pathogen cycle",
+      "heroTitleEnd": " on every surface",
+      "breadcrumbCurrent": "Building"
+    },
+    "canalisations": {
+      "metaTitle": "Drinking Water Pipeline Treatment — N2K Biosecurity",
+      "metaDescription": "BIONET + AQUACONTROL protocol for cleaning and stabilization of water networks in livestock. Biofilm and scale elimination in pipelines.",
+      "heroTitle": "Zone 02 — Water: The drinking network, primary contamination vector",
+      "heroSubtitle": "An uncontrolled water network transmits pathogens to the entire flock within hours. Control starts at the source and is maintained to the last drinker.",
+      "problem": {
+        "p1": "The water contamination cycle in livestock follows a predictable path: reservoir → main pipeline → sub-lines → nipples/drinkers → animal. At each junction point, bacterial biofilm develops in dead zones of the network, elbows, reducers and internal pipe surfaces.",
+        "p2": "Deposits accumulate in successive layers: limestone scale due to water hardness, bacterial biofilm (E. coli, Pseudomonas, Salmonella), medication and vitamin residues, and organic deposits from the animals themselves. This stratification creates a self-sustaining pathogenic reservoir.",
+        "p3": "The impact on performance is direct: decreased water consumption (partial obstructions), FCR degradation, increased digestive and respiratory pathologies. An animal drinking contaminated water develops chronic intestinal inflammation that reduces nutrient absorption.",
+        "p4": "In Tunisia, water hardness (often >30°F) accelerates limestone scale formation. Residual chlorine in the network water is frequently insufficient to maintain acceptable bacteriological quality to the last distribution points."
+      },
+      "step1": {
+        "badge": "Step 01",
+        "name": "BIONET",
+        "type": "Curative Technical Pipeline Cleaning",
+        "desc": "BIONET is an agent combining descaler, decruster and detergent for shock cleaning of drinking pipelines. It dissolves limestone deposits, destroys biofilm and eliminates organic residues accumulated in circuits.",
+        "features": [
+          "Triple action: descaler + decruster + detergent",
+          "Dissolution of limestone scale and mineral deposits",
+          "Biofilm destruction in nipples and drinking circuits",
+          "Shock treatment between flocks: concentration 1% to 3%, soaking 2 to 4 hours",
+          "Compatible with PVC, polyethylene, stainless steel, rubber gaskets"
+        ]
+      },
+      "step2": {
+        "badge": "Step 02",
+        "name": "AQUACONTROL",
+        "type": "Continuous Bacteriological Stabilization",
+        "desc": "AQUACONTROL is a bacteriological stabilizer for drinking water. It maintains constant microbiological quality from reservoir to last drinker, throughout the production cycle. Its mode of action controls microbial load without creating resistance.",
+        "features": [
+          "Continuous bacteriological stabilization of drinking water",
+          "Automatic dosing: compatible with proportional systems (Dosatron, etc.)",
+          "Recommended dosage: 0.1% continuous",
+          "No residue in animal tissues at recommended doses",
+          "Field monitoring: test strips or rapid kits available"
+        ]
+      },
+      "tableHeaders": [
+        "Indicator",
+        "Without N2K protocol",
+        "With N2K protocol"
+      ],
+      "tableRows": [
+        [
+          "Water bacterial load (CFU/mL)",
+          ">10,000 CFU/mL",
+          "<100 CFU/mL"
+        ],
+        [
+          "Pipeline deposits",
+          "Thick scale + biofilm",
+          "Clean surfaces, free flow"
+        ],
+        [
+          "Water consumption",
+          "Reduced (obstructions)",
+          "Optimal (+15 to 20%)"
+        ],
+        [
+          "Water-related sanitary incidents",
+          "Frequent",
+          "Rare to none"
+        ],
+        [
+          "Cleaning interval",
+          "Unplanned",
+          "Shock between flocks + continuous"
+        ]
+      ],
+      "compatibility": {
+        "title": "Compatibility & Safety",
+        "items": [
+          "Compatible with water vaccination (respect 24h delay after BIONET treatment)",
+          "Compatible with water-soluble medications and vitamins (check specific interactions)",
+          "No residue in animal tissues at recommended doses",
+          "BIONET: mandatory and thorough rinsing before restoring drinking water"
+        ]
+      },
+      "kpi": [
+        {
+          "value": "<100",
+          "label": "CFU/mL — Water bacterial load after treatment",
+          "icon": "reduction"
+        },
+        {
+          "value": "+20%",
+          "label": "Water consumption restored after BIONET descaling",
+          "icon": "shield"
+        },
+        {
+          "value": "Continuous",
+          "label": "AQUACONTROL protection throughout the cycle",
+          "icon": "clock"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Can AQUACONTROL be used with chicks from Day 1?",
+          "a": "Yes. AQUACONTROL is designed for continuous use from animal placement. The 0.1% dosage is safe for chicks from day one. It is recommended to start treatment before animal arrival to stabilize the network."
+        },
+        {
+          "q": "How to clean heavily scaled nipples?",
+          "a": "For severe scale, use BIONET at reinforced concentration (3%) with extended soaking of 4 to 6 hours. For heavily scaled individual nipples, disassembly and direct soaking may be necessary. Rinse thoroughly before restoring service."
+        },
+        {
+          "q": "What delay between BIONET and restoring drinking water?",
+          "a": "After BIONET treatment, rinse the entire circuit thoroughly with potable water. Verify absence of foam and residues. Drinking water can be restored immediately after complete rinsing. Plan 2 to 3 network volumes in rinse water."
+        },
+        {
+          "q": "Can AQUACONTROL be used continuously throughout the flock?",
+          "a": "Yes, this is the recommendation. AQUACONTROL is designed for continuous dosing at 0.1% throughout the production cycle. Stopping treatment exposes the network to rapid recontamination, especially in hot climatic conditions."
+        },
+        {
+          "q": "How to calculate dosage for a 20,000 bird farm?",
+          "a": "Average water consumption is approximately 200 to 250 mL/bird/day in broilers (variable by age and temperature). For 20,000 birds: approximately 4,000 to 5,000 liters/day. At 0.1% AQUACONTROL: 4 to 5 liters of pure product per day, via proportional doser."
+        }
+      ],
+      "heroTitleStart": "Water:",
+      "heroTitleHighlight": " The drinking network,",
+      "heroTitleEnd": " primary contamination vector",
+      "breadcrumbCurrent": "Water Pipelines"
+    },
+    "ambiance": {
+      "metaTitle": "Atmosphere Control & Aero-Biocontamination in Livestock — N2K",
+      "metaDescription": "AIRSAN + BIOACTIVE protocol for ammonia, dust and airborne microbial load control in livestock buildings.",
+      "heroTitle": "Zone 03 — Atmosphere: Neutralizing the invisible airborne threat",
+      "heroSubtitle": "Ammonia corrodes mucous membranes. Airborne pathogens colonize respiratory tracts before any direct contact. Controlling the atmosphere means protecting the flock at the source.",
+      "problem": {
+        "p1": "Livestock building air contains three simultaneous threats: ammonia (NH₃) from manure fermentation, fine particles (litter dust, dander, feathers) and airborne microbial load (bacteria, viruses, fungal spores). These three factors act synergistically to degrade flock respiratory health.",
+        "p2": "Ammonia attacks respiratory mucous membranes from 15 ppm. Above 25 ppm — a critical threshold documented by multiple scientific studies — ciliated cells of the bronchial epithelium are destroyed. The animal loses its first line of immune defense. Airborne pathogens (Mycoplasma, infectious bronchitis virus, Newcastle) then penetrate without resistance.",
+        "p3": "The economic consequences are direct: FCR degradation, decreased average daily gain (ADG), increased condemnations at slaughter for respiratory lesions, intercurrent mortality. A degraded atmosphere costs more than preventive treatment.",
+        "p4": "In Tunisia, conditions worsen the situation: insufficient ventilation in many buildings, wet litter in cold season, high stocking densities. Atmosphere control is often the most neglected link in the sanitary protocol."
+      },
+      "step1": {
+        "badge": "Step 01",
+        "name": "AIRSAN",
+        "type": "Nebulization Solution in Animal Presence",
+        "desc": "AIRSAN is a nebulizable solution with airborne biocidal spectrum. Fine suspended particles neutralize pathogens before they reach animal respiratory mucous membranes. Can be used in the presence of livestock without stress or irritation.",
+        "features": [
+          "Use in animal presence — no stress, no irritation",
+          "Ammonia (NH₃) reduction: up to -60% in 30 minutes",
+          "Airborne pathogen neutralization (bacteria, viruses, spores)",
+          "Recommended nebulizer: high pressure, droplets <50 μm",
+          "Preventive frequency: 1 to 2 times/day — curative: 3 to 4 times/day"
+        ]
+      },
+      "step2": {
+        "badge": "Step 02",
+        "name": "BIOACTIVE",
+        "type": "Enzymatic Surface Cleaner",
+        "desc": "BIOACTIVE is a concentrated enzymatic cocktail (proteases, lipases, amylases) that degrades organic matter on surfaces and equipment without friction or chemical vapor. It prepares the environment for AIRSAN nebulization by reducing emission sources.",
+        "features": [
+          "Triple enzymatic cocktail: proteases, lipases, amylases",
+          "Enzymatic degradation without friction or chemical vapor",
+          "Surface preparation before AIRSAN nebulization",
+          "Biodegradable — no toxic residue",
+          "Foam or spray application on heavily soiled surfaces"
+        ]
+      },
+      "thresholdsTitle": "Atmosphere Control Parameters",
+      "thresholdHeaders": [
+        "Parameter",
+        "Critical threshold",
+        "Optimal threshold",
+        "N2K Action"
+      ],
+      "thresholdRows": [
+        [
+          "NH₃ (Ammonia)",
+          ">25 ppm",
+          "<10 ppm",
+          "AIRSAN nebulization"
+        ],
+        [
+          "CO₂",
+          ">3,000 ppm",
+          "<2,000 ppm",
+          "Ventilation + AIRSAN"
+        ],
+        [
+          "Relative humidity",
+          ">75%",
+          "55-65%",
+          "BIOACTIVE litter"
+        ],
+        [
+          "Airborne bacterial load",
+          ">10⁵ CFU/m³",
+          "<10³ CFU/m³",
+          "AIRSAN preventive"
+        ]
+      ],
+      "equipmentTitle": "Nebulization Equipment Guide",
+      "equipment": [
+        {
+          "type": "Static nebulizer",
+          "desc": "Ceiling-mounted. Covers 200-300 m². Ideal for automated treatments."
+        },
+        {
+          "type": "Mobile nebulizer",
+          "desc": "Cart-mounted. Flexible, suited for variable-size buildings."
+        },
+        {
+          "type": "High pressure",
+          "desc": "Droplets <50 μm. Better air suspension. Recommended by N2K."
+        },
+        {
+          "type": "Ultrasonic",
+          "desc": "Very fine droplets. More expensive but excellent volumetric coverage."
+        }
+      ],
+      "kpi": [
+        {
+          "value": "-60%",
+          "label": "NH₃ reduction in 30 minutes after AIRSAN nebulization",
+          "icon": "reduction"
+        },
+        {
+          "value": ">95%",
+          "label": "Airborne microbial load reduction",
+          "icon": "shield"
+        },
+        {
+          "value": "0 cases",
+          "label": "Of documented animal stress during AIRSAN use",
+          "icon": "clock"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is AIRSAN compatible with spray vaccinations?",
+          "a": "Do not nebulize AIRSAN during the 48 hours following a spray or aerosol vaccination. The product could interfere with live attenuated vaccine strains. Resume preventive treatment 48h after vaccination."
+        },
+        {
+          "q": "What type of nebulizer for a 1500 m² building?",
+          "a": "For a 1500 m² building, plan 5 to 6 static high-pressure nebulizers evenly distributed, or 2 passes with a mobile high-pressure nebulizer. Prefer droplets <50 μm for optimal suspension."
+        },
+        {
+          "q": "Can AIRSAN and BIOACTIVE be used on the same day?",
+          "a": "Yes. BIOACTIVE is applied to surfaces (floors, equipment) and AIRSAN is nebulized in the air. The two products are complementary: BIOACTIVE reduces the source of organic emissions, AIRSAN treats pathogens already in suspension."
+        },
+        {
+          "q": "How often to nebulize during high heat periods?",
+          "a": "During high heat periods (>35°C), increase frequency to 3-4 nebulizations per day. Heat accelerates bacterial proliferation and increases ammonia concentrations. Maintain maximum ventilation in parallel."
+        },
+        {
+          "q": "Does AIRSAN leave residues on eggs or meat?",
+          "a": "No. At recommended doses (1 mL/m³), AIRSAN leaves no detectable residues on livestock products. The product acts in gas phase and degrades rapidly. It is designed for use in the presence of production animals."
+        }
+      ],
+      "heroTitleStart": "Atmosphere:",
+      "heroTitleHighlight": " Neutralizing the invisible threat",
+      "heroTitleEnd": " in the air",
+      "breadcrumbCurrent": "Atmosphere"
+    }
   },
   "contactPage": {
     "hero": {

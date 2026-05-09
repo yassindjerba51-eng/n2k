@@ -191,7 +191,7 @@ export default async function ProblemesSolutionsHub() {
           {/* Learn More CTA */}
           <div className="flex justify-center lg:justify-start mt-8">
             <Link
-              href={"/problemes-solutions/water" as any}
+              href={"/problemes-solutions/canalisations-eau" as any}
               className="inline-flex items-center gap-3 bg-n2k-primary text-white px-8 py-4 rounded-xl font-bold font-heading shadow-lg transition-all group text-sm md:text-base hover:opacity-90"
             >
               {t("learnMore")}
@@ -233,7 +233,7 @@ export default async function ProblemesSolutionsHub() {
 {/* Learn More CTA */}
           <div className="flex justify-center lg:justify-start">
             <Link
-              href={"/problemes-solutions/air" as any}
+              href={"/problemes-solutions/ambiance" as any}
               className="inline-flex items-center gap-3 bg-n2k-orange text-white px-8 py-4 rounded-xl font-bold font-heading shadow-lg transition-all group text-sm md:text-base hover:opacity-90"
             >
               {t("learnMore")}
