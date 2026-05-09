@@ -286,6 +286,30 @@
     "quote": "« Our mission is not to sell jerrycans, but to ensure the sanitary success of your flocks. »",
     "quoteAuthor": "— Dr. Mahmoud Naffati"
   },
+  "solutionsIntro": {
+    "badge": "Our approach",
+    "title": "Structured chemical solutions",
+    "titleHighlight": "to prevent disinfection failures",
+    "subtitle": "Most failures don't come from the product, but from skipping steps. Each N2K product corresponds to a specific phase of the protocol.",
+    "clean": {
+      "step": "Step 01",
+      "title": "Clean",
+      "desc": "Without prior biofilm destruction, no disinfectant can reach pathogens. CLORAGRO prepares the surface.",
+      "products": "Products: CLORAGRO / BIONET / BIOACTIVE"
+    },
+    "disinfect": {
+      "step": "Step 02",
+      "title": "Disinfect",
+      "desc": "On a clean, rinsed surface, OPTIMAGRO eliminates residual pathogens at full spectrum. Not before.",
+      "products": "Products: OPTIMAGRO / AQUACONTROL / AIRSAN"
+    },
+    "maintain": {
+      "step": "Step 03",
+      "title": "Maintain",
+      "desc": "Without continuous control, contamination restarts within the first days. AQUACONTROL and AIRSAN maintain controlled microbial pressure.",
+      "products": "Products: AQUACONTROL / AIRSAN"
+    }
+  },
   "credibility": {
     "badge": "Why N2K",
     "title": "Trust is earned",
@@ -305,15 +329,15 @@
       },
       "support": {
         "title": "Technical support",
-        "desc": "Team training, post-application follow-up, dosage adjustment. No sales without support."
+        "desc": "Our products are delivered with their application protocols. Our technical team remains available for any on-site usage questions."
       },
       "mastery": {
         "title": "Industrial mastery",
-        "desc": "Formulations developed at the Borj Cédria Technopark. Applied R&D to North African field realities."
+        "desc": "Products developed and manufactured by N2K Laboratories at the Borj Cédria Technology Park. Continuous R&D with validation under real production conditions."
       },
       "serious": {
         "title": "Professionalism",
-        "desc": "Scientific direction by Dr. Mahmoud Naffati. Every recommendation is scientifically founded."
+        "desc": "Range designed by Dr. Mahmoud Naffati and a multidisciplinary team: chemical engineers, field technicians, and consulting veterinarians, with validation under real farming conditions."
       }
     }
   },
@@ -337,10 +361,10 @@
     "viewAll": "View all articles"
   },
   "cta": {
-    "title": "Secure your sanitary mastery",
-    "subtitle": "Our experts travel throughout Tunisia to audit your facilities and design a tailored protocol.",
-    "button": "Discover why your disinfection is failing",
-    "button2": "Request a protocol",
+    "title": "Choose a solution adapted to your field reality",
+    "subtitle": "Our products are developed and manufactured by N2K Laboratories. Our technical team supports their implementation on-site.",
+    "button": "View solutions",
+    "button2": "Technical assistance",
     "button3": "Commercial contact",
     "call": "Call an expert"
   },

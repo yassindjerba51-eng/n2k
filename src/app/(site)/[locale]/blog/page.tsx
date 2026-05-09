@@ -71,11 +71,11 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ loca
 
         {/* Content */}
         <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-8 w-full">
-          <div className="max-w-4xl">
+          <div className="max-w-3xl">
             <span className="inline-block px-3 py-1 bg-n2k-secondary text-n2k-on-secondary text-[10px] font-bold tracking-[0.2em] uppercase mb-6 font-heading">
               {t("heroBadge")}
             </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black font-heading text-white leading-[1.1] tracking-tighter mb-8">
+            <h1 className="font-heading text-4xl sm:text-5xl md:text-7xl font-extrabold text-white leading-tight tracking-tighter mb-8">
               {t("heroTitle")}
             </h1>
             <p className="text-lg md:text-xl text-n2k-on-primary-container leading-relaxed mb-10 max-w-2xl">

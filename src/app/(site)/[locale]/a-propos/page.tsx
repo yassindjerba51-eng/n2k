@@ -70,53 +70,59 @@ export default async function AboutPage({
     <div className="bg-n2k-surface min-h-screen">
 
       {/* ====== HERO SECTION ====== */}
-      <section className="bg-n2k-surface-low relative overflow-hidden">
-        <div className="max-w-[1400px] mx-auto px-4 md:px-8 py-15 md:py-15 lg:py-15">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+      <section className="relative bg-n2k-primary overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-n2k-secondary rounded-full blur-[200px] -translate-y-1/2 translate-x-1/3" />
+        </div>
+        <div className="max-w-[1400px] mx-auto px-4 md:px-8 py-20 md:py-28 lg:py-36 relative">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             {/* Left Column — Content */}
-            <div className="lg:col-span-8">
-              <div className="flex items-center gap-3 mb-6">
-                <span className="w-8 h-px bg-n2k-secondary shrink-0" />
-                <span className="text-xs font-black tracking-[0.2em] text-n2k-secondary uppercase">
+            <div className="w-full lg:w-2/3 max-w-3xl">
+              <div className="flex items-center gap-3 mb-8">
+                <span className="w-10 h-px bg-n2k-secondary-light shrink-0" />
+                <span className="text-xs font-black tracking-[0.2em] text-n2k-secondary-light uppercase">
                   {t("heroBadge")}
                 </span>
               </div>
 
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black font-heading text-n2k-primary leading-[1.1] tracking-tighter mb-8">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black font-heading text-white leading-[1.1] tracking-tighter mb-8">
                 {t("heroTitle")}
                 <br />
-                <span className="text-n2k-secondary">
+                <span className="text-n2k-secondary-light">
                   {t("heroTitleHighlight")}
                 </span>
                 {t("heroTitleEnd")}
               </h1>
 
-              <p className="font-body text-base md:text-lg text-n2k-on-surface-variant leading-relaxed max-w mb-10">
+              <p className="font-body text-lg md:text-xl text-white/60 leading-relaxed max-w-2xl mb-10 text-justify">
                 {t("heroSubtitle")}
               </p>
 
               <div className="w-full">
                 <Link
                   href="/contact"
-                  className="w-full bg-n2k-secondary text-white px-8 py-5 font-heading font-black rounded-xl shadow-xl hover:bg-[#007444] transition-all flex items-center justify-center gap-3 text-lg md:text-xl"
+                  className="w-full bg-n2k-secondary-light hover:bg-n2k-secondary text-white px-8 py-5 font-heading font-black rounded-xl shadow-xl shadow-n2k-secondary/20 transition-all flex items-center justify-center gap-3 text-lg md:text-xl"
                 >
                   {t("heroCta1")}
-                  <span className="material-symbols-outlined text-2xl">analytics</span>
+                  <ArrowRight className="w-5 h-5" />
                 </Link>
               </div>
             </div>
 
             {/* Right Column — Hero Image */}
-            <div className="lg:col-span-4 hidden lg:flex items-center justify-center">
-              <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-ambient-lg ghost-border">
+            <div className="w-full lg:w-1/3 relative mt-12 lg:mt-0">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10 h-[300px] md:h-[450px] w-full bg-n2k-surface-high">
                 <Image
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoZHMeNLkkHSznJxWTYIy3Zw9A4ZR9svU260XQuOHY_lmDpwtwfrKmmN7uIpk2JU6LDzG9loDrBtYTRI2s3Q6UGgxot7cTwf18R24tMd4fw0ubTLVWlSR0xBU65k15B2NCvV91zFNsOMOl-2EKZkQdWyPyH3XWj9cZW-E5XipdgSKay62ZEOY-ht3XVBi8QkPXyVJPf7cGd6syITUZrqK3YFC4ViZ6eUFXiuWsrm2H1Ja56s2MGdCkL4iffwpAyQoO0l2wTUQwxiM"
                   alt={t("heroBadge")}
                   fill
-                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  className="object-cover hover:scale-105 transition-transform duration-700"
                   priority
                 />
               </div>
+              {/* Decorative glow behind image */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-n2k-secondary/20 blur-3xl -z-10 rounded-full mix-blend-screen" />
             </div>
           </div>
         </div>

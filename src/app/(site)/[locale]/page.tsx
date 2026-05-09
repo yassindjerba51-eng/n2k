@@ -199,34 +199,40 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         </div>
       </section>
 
-      {/* ====== BLOC 4 — PROTOCOLE ====== */}
-      <section className="bg-n2k-primary py-15 md:py-15">
+      {/* ====== BLOC 3b — SOLUTIONS STRUCTURÉES ====== */}
+      <section className="bg-n2k-surface py-15 md:py-15">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8">
           <div className="text-center mb-12">
             <div className="flex items-center gap-3 mb-4 justify-center">
-              <span className="w-8 h-px bg-n2k-secondary-light shrink-0"></span>
-              <span className="text-xs font-black tracking-[0.2em] text-n2k-secondary-light uppercase">{t("protocol.badge")}</span>
-              <span className="w-8 h-px bg-n2k-secondary-light shrink-0"></span>
+              <span className="w-8 h-px bg-n2k-secondary shrink-0"></span>
+              <span className="text-xs font-black tracking-[0.2em] text-n2k-secondary uppercase">{t("solutionsIntro.badge")}</span>
+              <span className="w-8 h-px bg-n2k-secondary shrink-0"></span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-white tracking-tight mb-4">{t("protocol.title")}</h2>
-            <p className="text-white/60 font-body text-lg max-w-2xl mx-auto">{t("protocol.subtitle")}</p>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-n2k-primary tracking-tight mb-4">
+              {t("solutionsIntro.title")} <span className="text-n2k-secondary">{t("solutionsIntro.titleHighlight")}</span>
+            </h2>
+            <p className="text-n2k-on-surface-variant font-body text-lg max-w-2xl mx-auto">{t("solutionsIntro.subtitle")}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            {protocolSteps.map((step) => (
-              <div key={step.key} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/15">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className={`w-10 h-10 rounded-lg ${step.color} flex items-center justify-center`}>
-                    <step.Icon className="w-5 h-5 text-white" />
+            {(["clean", "disinfect", "maintain"] as const).map((key, idx) => {
+              const colors = ["bg-n2k-secondary", "bg-n2k-primary", "bg-n2k-orange"];
+              const numbers = ["01", "02", "03"];
+              return (
+                <div key={key} className="bg-white rounded-2xl p-8 border border-n2k-outline-variant/20 shadow-ambient">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className={`w-10 h-10 rounded-lg ${colors[idx]} flex items-center justify-center`}>
+                      <span className="text-white text-sm font-black">{numbers[idx]}</span>
+                    </div>
+                    <span className="text-xs font-black tracking-[0.15em] text-n2k-on-surface-variant/40 uppercase">{t(`solutionsIntro.${key}.step`)}</span>
                   </div>
-                  <span className="text-xs font-black tracking-[0.15em] text-white/40 uppercase">{t(`protocol.${step.key}.label`)}</span>
+                  <h3 className="text-2xl font-black font-heading text-n2k-primary mb-3">{t(`solutionsIntro.${key}.title`)}</h3>
+                  <p className="text-n2k-on-surface-variant font-body text-sm leading-relaxed mb-4">{t(`solutionsIntro.${key}.desc`)}</p>
+                  <div className="bg-n2k-surface-low rounded-lg px-4 py-2">
+                    <span className="text-n2k-secondary-light text-xs font-bold">{t(`solutionsIntro.${key}.products`)}</span>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-black font-heading text-white mb-3">{t(`protocol.${step.key}.name`)}</h3>
-                <p className="text-white/60 font-body text-sm leading-relaxed mb-4">{t(`protocol.${step.key}.description`)}</p>
-                <div className="bg-white/5 rounded-lg px-4 py-2">
-                  <span className="text-n2k-secondary-light text-xs font-bold">{t(`protocol.${step.key}.products`)}</span>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -320,10 +326,10 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-white tracking-tight mb-6">{t("cta.title")}</h2>
           <p className="text-white/60 font-body text-lg mb-10 max-w-2xl mx-auto">{t("cta.subtitle")}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-n2k-secondary-light hover:bg-n2k-secondary text-white px-8 py-4 rounded-xl text-sm font-black tracking-tight shadow-lg transition-all">
+            <Link href="/problemes-solutions" className="inline-flex items-center justify-center gap-2 bg-n2k-secondary-light hover:bg-n2k-secondary text-white px-8 py-4 rounded-xl text-sm font-black tracking-tight shadow-lg transition-all">
               {t("cta.button")} <ArrowRight className="w-4 h-4" />
             </Link>
-            <Link href="/diagnostic" className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl text-sm font-bold tracking-tight transition-all border border-white/15">
+            <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl text-sm font-bold tracking-tight transition-all border border-white/15">
               {t("cta.button2")}
             </Link>
           </div>

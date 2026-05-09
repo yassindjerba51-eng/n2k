@@ -286,6 +286,30 @@
     "quote": "« Notre mission n'est pas de vendre des bidons, mais d'assurer la réussite sanitaire de vos bandes. »",
     "quoteAuthor": "— Dr. Mahmoud Naffati"
   },
+  "solutionsIntro": {
+    "badge": "Notre approche",
+    "title": "Des solutions chimiques structurées",
+    "titleHighlight": "pour éviter les échecs de désinfection",
+    "subtitle": "La majorité des échecs ne vient pas du produit, mais du non-respect des étapes. Chaque produit N2K correspond à une phase précise du protocole.",
+    "clean": {
+      "step": "Étape 01",
+      "title": "Nettoyer",
+      "desc": "Sans destruction préalable du biofilm, aucun désinfectant ne peut atteindre les pathogènes. CLORAGRO prépare la surface.",
+      "products": "Produits : CLORAGRO / BIONET / BIOACTIVE"
+    },
+    "disinfect": {
+      "step": "Étape 02",
+      "title": "Désinfecter",
+      "desc": "Sur surface propre et rincée, OPTIMAGRO élimine les pathogènes résiduels à spectre complet. Pas avant.",
+      "products": "Produits : OPTIMAGRO / AQUACONTROL / AIRSAN"
+    },
+    "maintain": {
+      "step": "Étape 03",
+      "title": "Maintenir",
+      "desc": "Sans contrôle continu, la contamination redémarre dès les premiers jours. AQUACONTROL et AIRSAN maintiennent une pression microbienne maîtrisée.",
+      "products": "Produits : AQUACONTROL / AIRSAN"
+    }
+  },
   "credibility": {
     "badge": "Pourquoi N2K",
     "title": "La confiance se mérite",
@@ -305,15 +329,15 @@
       },
       "support": {
         "title": "Accompagnement technique",
-        "desc": "Formation des équipes, suivi post-application, ajustement des dosages. Pas de vente sans accompagnement."
+        "desc": "Nos produits sont livrés avec leurs protocoles d’application. Notre équipe technique reste disponible pour toute question d’utilisation sur site."
       },
       "mastery": {
         "title": "Maîtrise industrielle",
-        "desc": "Formulations développées au Technopôle de Borj Cédria. R&D appliquée aux réalités du terrain maghrébin."
+        "desc": "Produits développés et fabriqués par Les Laboratoires N2K au Pôle Technologique de Borj Cédria. R&D continue avec validation sur conditions réelles de production."
       },
       "serious": {
         "title": "Sérieux professionnel",
-        "desc": "Direction scientifique par le Dr Mahmoud Naffati. Chaque recommandation est scientifiquement fondée."
+        "desc": "Gamme conçue par le Dr Mahmoud Naffati et une équipe pluridisciplinaire : ingénieurs en chimie, techniciens terrain et vétérinaires consultants, avec validation sur conditions réelles d’élevage."
       }
     }
   },
@@ -337,10 +361,10 @@
     "viewAll": "Voir tous les articles"
   },
   "cta": {
-    "title": "Sécurisez votre maîtrise sanitaire",
-    "subtitle": "Nos experts se déplacent partout en Tunisie pour auditer vos installations et concevoir un protocole adapté.",
-    "button": "Découvrir pourquoi votre désinfection échoue",
-    "button2": "Demander un protocole",
+    "title": "Choisissez une solution adaptée à votre réalité terrain",
+    "subtitle": "Nos produits sont développés et fabriqués par Les Laboratoires N2K. Notre équipe technique accompagne leur mise en oeuvre sur site.",
+    "button": "Voir les solutions",
+    "button2": "Assistance technique",
     "button3": "Contact commercial",
     "call": "Appeler un expert"
   },
