@@ -192,24 +192,28 @@ export default async function BlogPostPage({ params }: { params: Promise<{ local
   };
 
   return (
-    <main className="bg-n2k-surface min-h-screen">
+    <main className="bg-n2k-surface min-h-screen overflow-x-hidden">
       <SchemaOrg schema={articleSchema} />
 
       {/* ====== IMMERSIVE HERO ====== */}
-      <section className="relative w-full h-[600px] flex items-end overflow-hidden bg-n2k-primary">
-        <div className="absolute inset-0 z-0 opacity-40 mix-blend-overlay">
+      <section className="relative w-full h-[350px] md:h-[600px] flex items-end overflow-hidden bg-n2k-primary">
+        {/* Background image — same style as blog index */}
+        <div className="absolute inset-0 z-0">
           <Image
             src={post.coverImage || "https://lh3.googleusercontent.com/aida-public/AB6AXuBrsjrv5zkdj5tGLBU9nqCJZve1PVKEir9StbXH9grZi6zZWsMx9uqrFopawSiwDoCzn2hvDCxYP6PspcSSpSBRQfqQUYYp8uylrrlPy-LHE_rBIKZicNuxu3VbVPbI1TNOXZu60lSNCfF6oBheunFeafq7cDYSbkit3AXdJXwGo6uBrsI1oUY4jI062uqS7kdzRbA5roW7shMURpnVImmd_1HpEOX4b5qMcpBA6Xfv5QfBjMoh21BPATL4XZbBSK6dj9XowDwxC4M"}
             alt={title || "Blog cover"}
             fill
+            sizes="100vw"
             className="object-cover"
             priority
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-n2k-primary via-n2k-primary/90 to-transparent" />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-n2k-primary via-n2k-primary/40 to-transparent z-10"></div>
         
-        <div className="relative w-full max-w-[1400px] mx-auto px-6 md:px-10 pb-24 grid grid-cols-12 z-20">
-          <div className="col-span-12 md:col-span-10 lg:col-span-8">
+        <div className="relative w-full max-w-[1400px] mx-auto px-4 md:px-10 pb-12 md:pb-24 grid grid-cols-12 z-20">
+          <div className="col-span-12 md:col-span-12 lg:col-span-8">
+     
+
             {post.categories && post.categories.length > 0 ? (
               <Link
                 href={`/blog/${locale === "ar" ? post.categories[0].slugAr : locale === "en" ? post.categories[0].slugEn : post.categories[0].slugFr}`}
@@ -222,7 +226,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ local
                 {t("featuredBadge")}
               </span>
             )}
-            <h1 className="font-heading text-4xl md:text-6xl font-black text-white tracking-tighter mb-8 leading-[1.1]">
+            <h1 className="font-heading text-2xl sm:text-4xl md:text-5xl font-black text-white tracking-tighter mb-6 md:mb-8 leading-[1.1]">
               {title}
             </h1>
             <div className="flex items-center space-x-6 rtl:space-x-reverse text-white/70 font-heading text-xs uppercase tracking-wider font-bold">
@@ -235,12 +239,36 @@ export default async function BlogPostPage({ params }: { params: Promise<{ local
                 {t("readingTime", { minutes: readingTime })}
               </span>
             </div>
+            {/* Breadcrumb */}
+            <nav className="flex items-center gap-3 text-white text-xs uppercase tracking-widest font-bold mt-6 md:mt-10 overflow-hidden whitespace-nowrap">
+              <Link href="/" className="hover:text-n2k-secondary transition-colors flex items-center gap-1.5 shrink-0">
+                <Home size={14} />
+                {tNav("home")}
+              </Link>
+              <ChevronRight size={12} className="opacity-50 shrink-0" />
+              <Link href="/blog" className="hover:text-n2k-secondary transition-colors shrink-0">{tNav("blog")}</Link>
+              {post.categories && post.categories.length > 0 && (
+                <>
+                  <ChevronRight size={12} className="opacity-50 shrink-0" />
+                  <Link
+                    href={`/blog/${locale === "ar" ? post.categories[0].slugAr : locale === "en" ? post.categories[0].slugEn : post.categories[0].slugFr}`}
+                    className="hover:text-n2k-secondary transition-colors shrink-0"
+                  >
+                    {locale === "ar" ? post.categories[0].nameAr : locale === "en" ? post.categories[0].nameEn : post.categories[0].nameFr}
+                  </Link>
+                </>
+              )}
+              <ChevronRight size={12} className="opacity-50 shrink-0" />
+              <span className="text-n2k-secondary-light truncate min-w-0">
+                {title}
+              </span>
+            </nav>
           </div>
         </div>
       </section>
 
       {/* ====== ARTICLE CONTENT ====== */}
-      <article className="max-w-[1400px] mx-auto px-6 md:px-10 mt-24 grid grid-cols-12 gap-12">
+      <article className="max-w-[1400px] mx-auto px-4 md:px-10 mt-12 md:mt-24 grid grid-cols-12 gap-6 md:gap-12">
         {/* Main Column */}
         <div className="col-span-12 lg:col-span-8 space-y-16">
           <div 
@@ -288,9 +316,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ local
                   >
                     <div className="aspect-video mb-4 overflow-hidden rounded-lg bg-n2k-surface-low relative">
                       <Image
-                        src={related.coverImage || "https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=800"}
+                        src={related.coverImage || "/images/placeholder-blog.jpg"}
                         alt={rTitle || "Related post"}
                         fill
+                        sizes="(max-width: 1024px) 100vw, 33vw"
                         className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
                       />
                     </div>

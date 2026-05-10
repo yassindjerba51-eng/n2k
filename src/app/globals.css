@@ -300,7 +300,9 @@ section + section {
 }
 
 .blog-content p {
-  @apply text-n2k-on-surface-variant leading-relaxed text-lg mb-6;
+  @apply text-n2k-on-surface-variant leading-relaxed text-base md:text-lg mb-6;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .blog-content ul {

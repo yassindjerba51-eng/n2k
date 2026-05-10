@@ -2,7 +2,9 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { prisma } from "@/lib/prisma";
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { ArrowRight, ExternalLink, Home, ChevronRight } from "lucide-react";
+import FeaturedCarousel from "@/components/blog/FeaturedCarousel";
+import BlogGrid from "@/components/blog/BlogGrid";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -37,6 +39,7 @@ function getPostField(post: any, field: string, locale: string): string {
 export default async function BlogIndexPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations("blog");
+  const tNav = await getTranslations("nav");
 
   // Fetch published blog posts directly from Prisma
   const posts = await prisma.blogPost.findMany({
@@ -50,7 +53,7 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ loca
   });
 
   // Featured posts first, then rest
-  const featuredPosts = posts.filter((p: any) => p.featured).slice(0, 3);
+  const featuredPosts = posts.filter((p: any) => p.featured);
   const remainingPosts = posts.filter((p: any) => !featuredPosts.includes(p));
 
   return (
@@ -72,9 +75,6 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ loca
         {/* Content */}
         <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-8 w-full">
           <div className="max-w-7xl">
-            <span className="inline-block px-3 py-1 bg-n2k-secondary text-n2k-on-secondary text-[10px] font-bold tracking-[0.2em] uppercase mb-6 font-heading">
-              {t("heroBadge")}
-            </span>
             <h1 className="font-heading text-4xl sm:text-5xl md:text-5xl font-extrabold text-white leading-tight tracking-tighter mb-8">
               {t("heroTitle")}
             </h1>
@@ -88,161 +88,89 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ loca
               {t("heroCta")}
               <ArrowRight className="w-4 h-4" />
             </Link>
+
+            {/* Breadcrumb */}
+            <nav className="flex items-center gap-3 text-white text-xs uppercase tracking-widest font-bold mt-10">
+              <Link href="/" className="hover:text-n2k-secondary transition-colors flex items-center gap-1.5">
+                <Home size={14} />
+                {tNav("home")}
+              </Link>
+              <ChevronRight size={12} className="opacity-50" />
+              <span className="text-n2k-secondary-light">{tNav("blog")}</span>
+            </nav>
           </div>
         </div>
       </section>
 
-      {/* ===== Featured Articles ===== */}
+      {/* ===== Les plus populaires — Carousel ===== */}
       {featuredPosts.length > 0 && (
-        <section className="bg-n2k-surface-low py-16 md:py-24">
-          <div className="max-w-[1400px] mx-auto px-6 md:px-8">
-            {/* Section header */}
-            <div className="mb-12 md:mb-16">
-              <p className="label-md font-bold text-n2k-secondary-light tracking-widest uppercase mb-2">
-                {t("featuredBadge")}
-              </p>
-              <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-n2k-primary">
-                {t("featuredTitle")}
-              </h2>
-            </div>
-
-            {/* Featured cards grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {featuredPosts.map((post: any, index: number) => {
-                const title = getPostField(post, "title", locale);
-                const content = getPostField(post, "content", locale);
-                const excerpt = content.replace(/<[^>]*>/g, "").substring(0, 150);
-                const tagColors = [
-                  "bg-n2k-red",
-                  "bg-n2k-orange",
-                  "bg-n2k-secondary",
-                ];
-                const tagLabels = [
-                  t("tagProblematique"),
-                  t("tagErreurCritique"),
-                  t("tagSolutionN2K"),
-                ];
-
-                return (
-                  <Link
-                    key={post.id}
-                    href={`/blog/${post.slug}`}
-                    className="bg-n2k-surface-lowest group overflow-hidden transition-all duration-500 hover:-translate-y-2 flex flex-col h-full shadow-ambient"
-                  >
-                    <div className="h-64 overflow-hidden relative">
-                      <Image
-                        src={post.coverImage || CARD_IMAGES[index % CARD_IMAGES.length]}
-                        alt={title || "Blog post"}
-                        fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
-                      <div className={`absolute top-4 left-4 ${tagColors[index % 3]} text-white text-[10px] font-bold px-3 py-1 uppercase tracking-wider font-heading`}>
-                        {tagLabels[index % 3]}
-                      </div>
-                    </div>
-                    <div className="p-6 md:p-8 flex-grow flex flex-col">
-                      <h3 className="font-heading text-xl font-bold text-n2k-primary mb-4 leading-snug group-hover:text-n2k-secondary transition-colors">
-                        {title}
-                      </h3>
-                      <p className="text-n2k-on-surface-variant text-sm leading-relaxed mb-8 line-clamp-3">
-                        {excerpt}
-                      </p>
-                      <span className="mt-auto text-n2k-secondary-light font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all">
-                        {t("readStudy")}
-                        <ArrowRight className="w-4 h-4" />
-                      </span>
-                    </div>
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-        </section>
+        <FeaturedCarousel
+          locale={locale}
+          posts={featuredPosts.map((post: any, index: number) => {
+            const title = getPostField(post, "title", locale);
+            const content = getPostField(post, "content", locale);
+            const excerpt = content.replace(/<[^>]*>/g, "").substring(0, 150);
+            const cat = post.categories?.[0];
+            const catName = cat
+              ? (locale === "ar" ? cat.nameAr : locale === "en" ? cat.nameEn : cat.nameFr)
+              : "";
+            const catSlug = cat
+              ? (locale === "ar" ? cat.slugAr : locale === "en" ? cat.slugEn : cat.slugFr)
+              : "";
+            return {
+              id: post.id,
+              slug: post.slug,
+              title,
+              excerpt,
+              coverImage: post.coverImage || CARD_IMAGES[index % CARD_IMAGES.length],
+              categoryName: catName,
+              categorySlug: catSlug,
+              publishedAt: post.publishedAt?.toISOString() || "",
+            };
+          })}
+          translations={{
+            readStudy: t("readStudy"),
+            popularTitle: t("popularTitle"),
+            popularBadge: t("popularBadge"),
+          }}
+        />
       )}
 
-      {/* ===== Article List (Remaining posts) ===== */}
-      {remainingPosts.length > 0 && (
-        <section className="py-16 md:py-24 bg-n2k-surface">
-          <div className="max-w-[1400px] mx-auto px-6 md:px-8">
-            {/* Section header */}
-            <div className="mb-12">
-              <h3 className="font-heading text-2xl md:text-3xl font-bold text-n2k-primary mb-4">
-                {t("libraryTitle")}
-              </h3>
-              <p className="text-n2k-on-surface-variant mb-8">
-                {t("librarySubtitle")}
-              </p>
-              <div className="flex flex-wrap gap-2 border-b border-n2k-outline-variant/30 pb-4">
-                <Link 
-                  href="/blog"
-                  className="px-6 py-3 bg-n2k-surface-low border-b-2 border-n2k-secondary-light text-n2k-primary font-bold text-sm"
-                >
-                  {t("filterAll")}
-                </Link>
-                {categories.map((cat: any) => {
-                  const name = locale === 'ar' ? cat.nameAr : locale === 'en' ? cat.nameEn : cat.nameFr;
-                  const slug = locale === 'ar' ? cat.slugAr : locale === 'en' ? cat.slugEn : cat.slugFr;
-                  return (
-                    <Link
-                      key={cat.id}
-                      href={`/blog/${slug}`}
-                      className="px-6 py-3 hover:bg-n2k-surface-low transition-colors text-n2k-on-surface-variant text-sm font-bold"
-                    >
-                      {name}
-                    </Link>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Article list rows */}
-            <div className="space-y-12">
-              {remainingPosts.map((post: any, index: number) => {
-                const title = getPostField(post, "title", locale);
-                const content = getPostField(post, "content", locale);
-                const excerpt = content.replace(/<[^>]*>/g, "").substring(0, 200);
-
-                return (
-                  <Link
-                    key={post.id}
-                    href={`/blog/${post.slug}`}
-                    className="flex flex-col md:flex-row gap-6 md:gap-8 items-center border-b border-n2k-outline-variant/30 pb-12 group"
-                  >
-                    {/* Thumbnail */}
-                    <div className="w-full md:w-1/3 aspect-video bg-n2k-surface-high overflow-hidden relative">
-                      <Image
-                        src={post.coverImage || CARD_IMAGES[(index + 3) % CARD_IMAGES.length]}
-                        alt={title || "Article"}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                    </div>
-
-                    {/* Content */}
-                    <div className="flex-1">
-                      {post.publishedAt && (
-                        <span className="text-[10px] font-bold text-n2k-on-surface-variant tracking-widest uppercase">
-                          {new Date(post.publishedAt).toLocaleDateString(locale, { month: "long", year: "numeric" })}
-                        </span>
-                      )}
-                      <h4 className="font-heading text-xl md:text-2xl font-bold text-n2k-primary mt-2 mb-4 group-hover:text-n2k-secondary transition-colors">
-                        {title}
-                      </h4>
-                      <p className="text-n2k-on-surface-variant mb-6 line-clamp-2">
-                        {excerpt}
-                      </p>
-                      <span className="text-n2k-secondary-light font-bold text-xs uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all">
-                        {t("readArticle")}
-                        <ExternalLink className="w-3.5 h-3.5" />
-                      </span>
-                    </div>
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-      )}
+      {/* ===== Bibliothèque Technique — Tabbed Grid ===== */}
+      <BlogGrid
+        locale={locale}
+        posts={remainingPosts.map((post: any, index: number) => {
+          const title = getPostField(post, "title", locale);
+          const content = getPostField(post, "content", locale);
+          const excerpt = content.replace(/<[^>]*>/g, "").substring(0, 150);
+          const cats = post.categories || [];
+          const catName = cats
+            .map((c: any) => locale === "ar" ? c.nameAr : locale === "en" ? c.nameEn : c.nameFr)
+            .filter(Boolean)
+            .join(" · ");
+          return {
+            id: post.id,
+            slug: post.slug,
+            title,
+            excerpt,
+            coverImage: post.coverImage || CARD_IMAGES[(index + 3) % CARD_IMAGES.length],
+            categoryName: catName,
+            categoryIds: cats.map((c: any) => c.id),
+            publishedAt: post.publishedAt?.toISOString() || "",
+          };
+        })}
+        categories={categories.map((cat: any) => ({
+          id: cat.id,
+          name: locale === "ar" ? cat.nameAr : locale === "en" ? cat.nameEn : cat.nameFr,
+        }))}
+        translations={{
+          filterAll: t("filterAll"),
+          libraryTitle: t("libraryTitle"),
+          librarySubtitle: t("librarySubtitle"),
+          readArticle: t("readArticle"),
+          noArticles: t("noArticlesInCategory"),
+        }}
+      />
 
       {/* ===== Empty State ===== */}
       {posts.length === 0 && (
