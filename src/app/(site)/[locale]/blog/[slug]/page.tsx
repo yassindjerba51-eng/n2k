@@ -121,7 +121,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ local
             </div>
           )}
           <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-10 w-full">
-            <div className="max-w-4xl">
+            <div className="max-w-6xl">
               <span className="inline-block py-1 px-3 bg-n2k-secondary text-white font-heading text-[10px] uppercase tracking-widest font-bold mb-6">
                 {catName}
               </span>
@@ -129,7 +129,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ local
                 {catTitle}
               </h1>
               {catSubtitle && (
-                <p className="text-lg md:text-xl text-white/70 max-w-2xl font-body leading-relaxed">
+                <p className="text-lg md:text-xl text-white/70 max-w-6xl font-body leading-relaxed text-justify">
                   {catSubtitle}
                 </p>
               )}

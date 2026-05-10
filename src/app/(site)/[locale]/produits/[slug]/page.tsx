@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getProductBySlug, getLocalizedProduct, getProductsByZone } from "@/data/products";
 import {
@@ -18,7 +19,9 @@ import {
   Info,
   Clock,
   ShieldAlert,
-  Headset
+  Headset,
+  Home,
+  ChevronRight
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
@@ -56,6 +59,7 @@ export default async function ProductDetailPage({
   const tCTA = await getTranslations("ctas");
   const pt = await getTranslations(`productDetailBlocks.${product.slug}`);
   const ph = await getTranslations("productDetailHeadings");
+  const tn = await getTranslations("nav");
 
   const ZoneIcon = zoneIcons[product.zone] || FlaskConical;
   const relatedProducts = getProductsByZone(product.zone).filter(
@@ -75,17 +79,10 @@ export default async function ProductDetailPage({
         <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full opacity-10 bg-white -translate-y-1/2 translate-x-1/3" />
         <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full opacity-5 bg-white translate-y-1/2 -translate-x-1/3" />
 
-        <div className="max-w-[1400px] mx-auto px-4 md:px-8 py-16 md:py-24 lg:py-32 relative z-10">
-          {/* Breadcrumb */}
-          <Link
-            href="/produits"
-            className="inline-flex items-center gap-2 text-white/70 hover:text-white text-sm font-heading font-bold tracking-tight mb-8 transition-colors group"
-          >
-            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform rtl:rotate-180 rtl:group-hover:translate-x-1" />
-            {t("backToCatalog")}
-          </Link>
+        <div className="max-w-[1400px] mx-auto px-4 md:px-8 py-16 md:py-10 lg:py-10 relative z-10">
+      
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8">
               {/* Zone Badge */}
               <div className="flex items-center gap-3 mb-6">
@@ -103,13 +100,26 @@ export default async function ProductDetailPage({
               </h1>
 
               {/* Subtitle */}
-              <p className="text-xl md:text-2xl text-white/90 font-body leading-relaxed max-w-2xl">
+              <p className="text-xl md:text-2xl text-white/90 font-body leading-relaxed max-w text-justify">
                 {product.subtitle}
               </p>
             </div>
 
-            <div className="lg:col-span-4 flex lg:justify-end">
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 max-w-xs w-full">
+            <div className="lg:col-span-4 flex flex-col items-center lg:items-end gap-6">
+              {/* Product Image */}
+              {product.image && (
+                <div className="relative w-[280px] h-[360px] md:w-[440px] md:h-[450px] shrink-0 drop-shadow-2xl">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    sizes="260px"
+                    className="object-contain"
+                    priority
+                  />
+                </div>
+              )}
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 max-w w-full">
                 <div className="text-white/60 text-[10px] font-black tracking-[0.2em] uppercase mb-2">
                   {t("productZone")}
                 </div>
@@ -122,6 +132,22 @@ export default async function ProductDetailPage({
               </div>
             </div>
           </div>
+
+          {/* Breadcrumb — bottom of header */}
+          <nav className="flex items-center gap-2 text-base md:text-lg text-white/60 font-body mt-4 md:mt-4 border-t border-white/10 pt-2">
+            <Home className="w-5 h-5" />
+            <Link href="/" className="hover:text-white transition-colors">
+              {tn("home")}
+            </Link>
+            <span className="text-white/30 mx-1">&gt;</span>
+            <Link href="/produits" className="hover:text-white transition-colors">
+              {tn("produits")}
+            </Link>
+            <span className="text-white/30 mx-1">&gt;</span>
+            <span className="text-white/90 font-bold">
+              {product.name}
+            </span>
+          </nav>
         </div>
       </section>
 

@@ -202,7 +202,7 @@ export default function ArticleForm({ initialData, mode }: Props) {
   ];
 
   return (
-    <div className="space-y-6 max-w-5xl">
+    <div className="space-y-6 max-w">
       {/* Header */}
       <div className="flex items-center gap-4">
         <Button
@@ -302,8 +302,9 @@ export default function ArticleForm({ initialData, mode }: Props) {
                   <Input
                     value={form.slugFr}
                     onChange={(e) => {
-                      updateField("slugFr", e.target.value);
-                      updateField("slug", e.target.value);
+                      const slugified = generateSlug(e.target.value);
+                      updateField("slugFr", slugified);
+                      updateField("slug", slugified);
                     }}
                     className="bg-slate-50 font-mono text-sm mt-1"
                   />
@@ -312,7 +313,7 @@ export default function ArticleForm({ initialData, mode }: Props) {
                   <Label className="text-xs text-slate-500 font-medium">🇬🇧 English</Label>
                   <Input
                     value={form.slugEn}
-                    onChange={(e) => updateField("slugEn", e.target.value)}
+                    onChange={(e) => updateField("slugEn", generateSlug(e.target.value))}
                     className="bg-slate-50 font-mono text-sm mt-1"
                   />
                 </div>
@@ -320,7 +321,7 @@ export default function ArticleForm({ initialData, mode }: Props) {
                   <Label className="text-xs text-slate-500 font-medium">🇸🇦 العربية</Label>
                   <Input
                     value={form.slugAr}
-                    onChange={(e) => updateField("slugAr", e.target.value)}
+                    onChange={(e) => updateField("slugAr", generateSlug(e.target.value))}
                     className="bg-slate-50 font-mono text-sm mt-1"
                     dir="rtl"
                   />

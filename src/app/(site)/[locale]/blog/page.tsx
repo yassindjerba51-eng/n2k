@@ -56,7 +56,7 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ loca
   return (
     <div className="bg-n2k-surface min-h-screen">
       {/* ===== Hero Section ===== */}
-      <section className="relative h-[600px] md:h-[870px] flex items-center overflow-hidden">
+      <section className="relative h-[570px] md:h-[570px] flex items-center overflow-hidden">
         {/* Background image */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -71,14 +71,14 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ loca
 
         {/* Content */}
         <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-8 w-full">
-          <div className="max-w-3xl">
+          <div className="max-w-7xl">
             <span className="inline-block px-3 py-1 bg-n2k-secondary text-n2k-on-secondary text-[10px] font-bold tracking-[0.2em] uppercase mb-6 font-heading">
               {t("heroBadge")}
             </span>
-            <h1 className="font-heading text-4xl sm:text-5xl md:text-7xl font-extrabold text-white leading-tight tracking-tighter mb-8">
+            <h1 className="font-heading text-4xl sm:text-5xl md:text-5xl font-extrabold text-white leading-tight tracking-tighter mb-8">
               {t("heroTitle")}
             </h1>
-            <p className="text-lg md:text-xl text-n2k-on-primary-container leading-relaxed mb-10 max-w-2xl">
+            <p className="text-lg md:text-xl text-white leading-relaxed mb-10 max-w-7xl text-justify">
               {t("heroSubtitle")}
             </p>
             <Link

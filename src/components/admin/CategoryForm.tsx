@@ -153,7 +153,7 @@ export default function CategoryForm({ initialData, mode }: Props) {
   };
 
   return (
-    <div className="space-y-6 max-w-4xl">
+    <div className="space-y-6 max-w">
       {/* Header */}
       <div className="flex items-center gap-4">
         <Button

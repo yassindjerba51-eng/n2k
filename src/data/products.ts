@@ -13,6 +13,7 @@ export type Product = {
   accentBg: string;
   accentText: string;
   warning?: string;
+  image?: string;
 };
 
 export const products: Product[] = [
@@ -52,6 +53,7 @@ export const products: Product[] = [
     accentBg: "bg-[#0D7ED0]/10",
     accentText: "text-[#0D7ED0]",
     warning: "Rinçage à l'eau potable obligatoire après application avant passage à la Phase 02 (OPTIMAGRO).",
+    image: "/images/cloragro-produit.webp",
   },
   {
     slug: "optimagro",
@@ -87,6 +89,7 @@ export const products: Product[] = [
     accentBg: "bg-[#0D7ED0]/10",
     accentText: "text-[#0D7ED0]",
     warning: "INCOMPATIBLE avec les produits chlorés. Appliquer obligatoirement après rinçage complet à l'eau potable. Ne jamais mélanger avec CLORAGRO.",
+    image: "/images/optimagro-produit.webp",
   },
 
   // ─── ZONE 02 — CANALISATION D'EAU ────────────────────
@@ -124,6 +127,7 @@ export const products: Product[] = [
     accentBg: "bg-teal-600/10",
     accentText: "text-teal-600",
     warning: "Rinçage critique obligatoire jusqu'à pH neutre avant remise en service. Contrôle de pH obligatoire.",
+    image: "/images/bionet-produit.webp",
   },
   {
     slug: "aquacontrol",
@@ -156,6 +160,7 @@ export const products: Product[] = [
     color: "#0D9488",
     accentBg: "bg-teal-600/10",
     accentText: "text-teal-600",
+    image: "/images/aquacontrol-produit.webp",
   },
 
   // ─── ZONE 03 — L'AMBIANCE ────────────────────────────
@@ -190,6 +195,7 @@ export const products: Product[] = [
     color: "#EA580C",
     accentBg: "bg-orange-600/10",
     accentText: "text-orange-600",
+    image: "/images/airsan-produit.webp",
   },
   {
     slug: "bioactive",
@@ -222,6 +228,7 @@ export const products: Product[] = [
     color: "#EA580C",
     accentBg: "bg-orange-600/10",
     accentText: "text-orange-600",
+    image: "/images/bioactive-produit.webp",
   },
 ];
 
