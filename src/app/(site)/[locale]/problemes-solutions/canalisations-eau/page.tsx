@@ -9,8 +9,8 @@ import FaqAccordion from "@/components/zones/FaqAccordion";
 
 export async function generateMetadata() {
   return {
-    title: "Traitement des Canalisations d'Abreuvement — N2K Biosécurité",
-    description: "Protocole BIONET + AQUACONTROL pour le nettoyage et la stabilisation des réseaux d'eau en élevage. Élimination du biofilm et du tartre dans les canalisations.",
+    title: "Traitement des Canalisations d'Abreuvement — N2K Hygiène Opérationnelle",
+    description: "Protocole BIONET + OXYLIS HOCl pour le nettoyage et l'entretien des réseaux d'eau en élevage. Élimination du biofilm et du tartre dans les canalisations.",
   };
 }
 

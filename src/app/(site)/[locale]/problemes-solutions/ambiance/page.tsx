@@ -9,8 +9,8 @@ import FaqAccordion from "@/components/zones/FaqAccordion";
 
 export async function generateMetadata() {
   return {
-    title: "Contrôle de l'Ambiance & Aéro-Biocontamination en Élevage — N2K",
-    description: "Protocole AIRSAN + BIOACTIVE pour la maîtrise de l'ammoniac, des poussières et de la charge microbienne aérienne en bâtiments d'élevage.",
+    title: "Contrôle de l'Ambiance & Entretien des Environnements en Élevage — N2K",
+    description: "Protocole OXYLIS HOCl + BIOACTIVE pour l'entretien des environnements d'élevage et la maîtrise des conditions d'ambiance en bâtiments.",
   };
 }
 
@@ -169,7 +169,7 @@ export default async function AmbiancePage() {
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-border/30 h-[350px] md:h-[500px] w-full">
                   <Image
                     src="/images/sectors/ambiance-elevage.webp"
-                    alt="Nébulisation AIRSAN en bâtiment d'élevage"
+                    alt="Entretien OXYLIS HOCl en bâtiment d'élevage"
                     fill
                     sizes="(max-width: 1024px) 100vw, 40vw"
                     className="object-cover"

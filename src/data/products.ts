@@ -2,6 +2,7 @@ export type Product = {
   slug: string;
   name: string;
   zone: "01" | "02" | "03";
+  additionalZones?: ("01" | "02" | "03")[];
   zoneName: string;
   zoneLabel: string;
   subtitle: string;
@@ -24,11 +25,11 @@ export const products: Product[] = [
     zone: "01",
     zoneName: "Le Bâtiment",
     zoneLabel: "Zone 01",
-    subtitle: "Détergent désinfectant alcalin chloré moussant — Nettoyage et désinfection des surfaces — Phase 01 du protocole N2K",
+    subtitle: "Détergent alcalin chloré moussant — Nettoyage technique des surfaces — Phase 01 du protocole N2K",
     problem:
-      "Les bâtiments d'élevage accumulent des biofilms résistants, des graisses, des dépôts organiques et des résidus incrustés dans les surfaces poreuses. Ces souillures compromettent toute désinfection ultérieure si elles ne sont pas éliminées en premier lieu.",
+      "Les bâtiments d'élevage accumulent des biofilms résistants, des graisses, des dépôts organiques et des résidus incrustés dans les surfaces poreuses. Ces souillures compromettent toute opération d'hygiène ultérieure si elles ne sont pas éliminées en premier lieu.",
     solution:
-      "CLORAGRO moussant est le produit de la Phase 01 du protocole séquentiel N2K. Il assure le nettoyage technique des surfaces : destruction du biofilm, élimination des graisses et dépôts organiques, préparation des surfaces avant désinfection. Homologué MS/DHMPE/HOM/0002/03/01/2023. Principe actif : Hypochlorite de sodium (CAS 7681-52-9) + agents tensioactifs moussants + hydroxyde de sodium + inhibiteur de corrosion. Propriétés biocides certifiées EN 1276, EN 13697, EN 1650 : Bactéricide, Levuricide, Fongicide.",
+      "CLORAGRO moussant est le produit de la Phase 01 du protocole séquentiel N2K. Il assure le nettoyage technique des surfaces : déstructuration du biofilm, élimination des graisses et dépôts organiques, préparation des surfaces avant l'étape suivante. Principe actif : Hypochlorite de sodium (CAS 7681-52-9) + agents tensioactifs moussants + hydroxyde de sodium + inhibiteur de corrosion.",
     applications: [
       "Bâtiments d'élevage avicole (poulaillers, couvoirs)",
       "Abattoirs et salles de découpe",
@@ -44,10 +45,8 @@ export const products: Product[] = [
       { label: "Concentration d'emploi", value: "2 à 4% v/v" },
       { label: "Aspect", value: "Liquide clair, incolore à jaune clair" },
       { label: "Normes", value: "EN 1276, EN 13697, EN 1650" },
-      { label: "Spectre d'action", value: "Bactéricide, Levuricide, Fongicide" },
       { label: "Application", value: "Appareil à mousse, haute pression, aspersion, manuel" },
       { label: "Rinçage", value: "Obligatoire à l'eau potable avant Phase 02" },
-      { label: "Homologation", value: "MS/DHMPE/HOM/0002/03/01/2023" },
     ],
     color: "#0D7ED0",
     accentBg: "bg-[#0D7ED0]/10",
@@ -61,13 +60,13 @@ export const products: Product[] = [
     zone: "01",
     zoneName: "Le Bâtiment",
     zoneLabel: "Zone 01",
-    subtitle: "Désinfectant large spectre à base de Glutaraldéhyde et d'ammoniums quaternaires — Phase 02 du protocole N2K",
+    subtitle: "Solution technique de traitement des surfaces — Glutaraldéhyde et ammoniums quaternaires — Phase 02 du protocole N2K",
     problem:
-      "Après nettoyage et rinçage complet des surfaces, une désinfection biocide à spectre complet est nécessaire pour éliminer les pathogènes résiduels. Cette étape est distincte du nettoyage et ne peut s'effectuer sans rinçage préalable des résidus chlorés de la Phase 01.",
+      "Après nettoyage et rinçage complet des surfaces, une étape de traitement complémentaire est nécessaire pour compléter le protocole d'hygiène. Cette étape est distincte du nettoyage et ne peut s'effectuer sans rinçage préalable des résidus chlorés de la Phase 01.",
     solution:
-      "OPTIMAGRO Super moussant est le désinfectant biocide de la Phase 02 du protocole séquentiel N2K. Il s'applique obligatoirement après rinçage complet à l'eau potable des surfaces traitées au CLORAGRO. Matières actives : Glutaraldéhyde (CAS 111-30-8) + Chlorure d'alkyl diméthyl benzyl ammonium (CAS 68424-85-1) + Chlorure de didécyl diméthyl ammonium (CAS 7173-51-5). Classifié Biocide TP2, TP3, TP4. Bactéricide (EN 1276, EN 1656), Levuricide (EN 1657), Virucide (EN 14675), Fongicide. INCOMPATIBLE avec les produits chlorés — ne jamais mélanger avec CLORAGRO.",
+      "OPTIMAGRO Super moussant est le produit de la Phase 02 du protocole séquentiel N2K. Il s'applique obligatoirement après rinçage complet à l'eau potable des surfaces traitées au CLORAGRO. Matières actives : Glutaraldéhyde (CAS 111-30-8) + Chlorure d'alkyl diméthyl benzyl ammonium (CAS 68424-85-1) + Chlorure de didécyl diméthyl ammonium (CAS 7173-51-5). INCOMPATIBLE avec les produits chlorés — ne jamais mélanger avec CLORAGRO.",
     applications: [
-      "Désinfection finale après rinçage (bâtiments d'élevage avicole)",
+      "Traitement final après rinçage (bâtiments d'élevage avicole)",
       "Abattoirs et industries agroalimentaires",
       "Pulvérisation, trempage, nébulisation, thermonébulisation",
       "Pédiluves et rotoluves",
@@ -83,13 +82,43 @@ export const products: Product[] = [
       { label: "Traitement choc", value: "2%" },
       { label: "Temps de contact", value: "5 à 30 minutes" },
       { label: "Aération bâtiment", value: "4h minimum avant réintroduction des animaux" },
-      { label: "Classification biocide", value: "TP2, TP3, TP4" },
     ],
     color: "#0D7ED0",
     accentBg: "bg-[#0D7ED0]/10",
     accentText: "text-[#0D7ED0]",
     warning: "INCOMPATIBLE avec les produits chlorés. Appliquer obligatoirement après rinçage complet à l'eau potable. Ne jamais mélanger avec CLORAGRO.",
     image: "/images/optimagro-produit.webp",
+  },
+  {
+    slug: "alcosept-pro",
+    name: "ALCOSEPT PRO",
+    zone: "01",
+    zoneName: "Le Bâtiment",
+    zoneLabel: "Zone 01",
+    subtitle: "Solution de nettoyage à évaporation rapide pour surfaces et équipements techniques en environnements agroalimentaires",
+    problem:
+      "Entre les opérations de production, les surfaces de travail, les équipements et les outils accumulent des résidus organiques. Le nettoyage complet par canon à mousse n'est pas toujours possible entre deux séries de production en raison des contraintes de temps et de cadence industrielle.",
+    solution:
+      "ALCOSEPT PRO est une solution de nettoyage technique à évaporation rapide, conçue pour un usage entre les opérations de production. Sa formulation permet un nettoyage efficace des surfaces de contact, des équipements inox et plastiques, sans laisser de résidus significatifs et sans nécessiter de rinçage prolongé. Son format d'application est adapté aux contraintes de cadence industrielle.",
+    applications: [
+      "Nettoyage rapide des surfaces de travail entre opérations",
+      "Entretien des équipements inox et plastiques techniques",
+      "Nettoyage des outils et petits matériels de production",
+      "Zones de préparation et de conditionnement",
+      "Abattoirs et environnements agroalimentaires",
+    ],
+    specs: [
+      { label: "Nature", value: "Solution de nettoyage technique à évaporation rapide" },
+      { label: "Application", value: "Pulvérisation directe ou application manuelle" },
+      { label: "Compatibilité", value: "Inox, plastiques alimentaires, surfaces techniques" },
+      { label: "Évaporation", value: "Rapide — peu de résidus" },
+      { label: "Utilisation", value: "Entre opérations / nettoyage intermédiaire" },
+      { label: "Conditionnement", value: "Flacon spray / Bidon 5L" },
+    ],
+    color: "#0D7ED0",
+    accentBg: "bg-[#0D7ED0]/10",
+    accentText: "text-[#0D7ED0]",
+    image: "/images/alcosept-pro.webp",
   },
 
   // ─── ZONE 02 — CANALISATION D'EAU ────────────────────
@@ -101,9 +130,9 @@ export const products: Product[] = [
     zoneLabel: "Zone 02",
     subtitle: "Détergent Alcalin Chloré Antibiofilm Spécial Aviculture — Nettoyage des circuits d'abreuvement",
     problem:
-      "Les circuits d'abreuvement accumulent des biofilms bactériens, algues, encrassements des pipettes et nipples, et dépôts calcaires organiques. Ces formations réduisent le débit et contaminent l'eau de boisson.",
+      "Les circuits d'abreuvement accumulent des biofilms bactériens, algues, encrassements des pipettes et nipples, et dépôts calcaires organiques. Ces formations réduisent le débit et dégradent la qualité de l'eau de boisson.",
     solution:
-      "BIONET est un nettoyant technique spécial aviculture pour les canalisations d'eau. Il élimine les biofilms bactériens, les algues et les dépôts calcaires organiques dans les circuits d'abreuvement. Principe actif : Hypochlorite de sodium (CAS 7681-52-9) + inhibiteur de corrosion spécial métaux. Ce produit est un nettoyant technique des canalisations, non un désinfectant biocide systémique.",
+      "BIONET est un nettoyant technique spécial aviculture pour les canalisations d'eau. Il élimine les biofilms, les algues et les dépôts calcaires organiques dans les circuits d'abreuvement. Principe actif : Hypochlorite de sodium (CAS 7681-52-9) + inhibiteur de corrosion spécial métaux. Ce produit est un nettoyant technique des canalisations.",
     applications: [
       "Circuits d'abreuvement avicole (pipettes, nipples)",
       "Canalisations PVC et polyéthylène",
@@ -130,73 +159,45 @@ export const products: Product[] = [
     image: "/images/bionet-produit.webp",
   },
   {
-    slug: "aquacontrol",
-    name: "AQUACONTROL",
+    slug: "oxylis-hoci",
+    name: "OXYLIS HOCl",
     zone: "02",
-    zoneName: "Canalisation d'Eau",
-    zoneLabel: "Zone 02",
-    subtitle: "Traitement et purification des systèmes d'eau potable",
+    additionalZones: ["01", "03"],
+    zoneName: "Bâtiment - Eau - Ambiance",
+    zoneLabel: "Zone 01 - Zone 02 - Zone 03",
+    subtitle: "Solution technique à base d'acide hypochloreux (HOCl) — Entretien des réseaux d'eau, traitement des environnements et maintien de la qualité sanitaire en élevage et industrie agroalimentaire",
     problem:
-      "La qualité microbiologique de l'eau distribuée dans les élevages se dégrade entre le point de captage et les abreuvoirs. Les bactéries (E. coli, Pseudomonas, Legionella) prolifèrent dans les conduites, rendant l'eau impropre et augmentant la mortalité.",
+      "Les exploitations d'élevage et les unités de production agroalimentaire font face à un double défi : d'une part, les circuits d'eau et réseaux d'abreuvement accumulent biofilms, algues et dépôts organiques qui dégradent la qualité de l'eau distribuée aux animaux ; d'autre part, les environnements de production (ambiances, chambres froides, salles de découpe) nécessitent un entretien continu pour maintenir des conditions sanitaires optimales. Gérer ces deux problématiques avec des produits séparés complexifie les protocoles, multiplie les stocks et augmente les risques d'erreur sur le terrain.",
     solution:
-      "AQUACONTROL est une solution de traitement en continu de l'eau potable à base de dioxyde de chlore stabilisé. Il maintient une action résiduelle antimicrobienne tout au long du réseau, garantissant une eau saine du réservoir jusqu'au dernier abreuvoir.",
+      "OXYLIS HOCl est une solution technique polyvalente à base d'acide hypochloreux (HOCl) qui unifie l'entretien des circuits d'eau et le traitement des environnements de production en un seul produit. Pour les réseaux d'eau, elle assure l'entretien continu des canalisations d'abreuvement, le maintien de la qualité de l'eau distribuée et la prévention de la formation de biofilms dans les circuits. Pour les environnements, elle permet la nébulisation des ambiances de production, l'entretien des chambres froides et des salles de conditionnement, et le maintien d'une pression sanitaire maîtrisée — y compris en présence des animaux. Sa compatibilité avec les systèmes de dosage automatique et les équipements de nébulisation haute performance en fait une solution opérationnelle adaptée aux cadences industrielles.",
     applications: [
-      "Potabilisation de l'eau d'élevage en continu",
-      "Traitement choc des réseaux contaminés",
-      "Désinfection des forages et puits",
-      "Stations de traitement d'eau industrielles",
-      "Contrôle de Legionella dans les circuits chauds",
+      "Entretien continu des circuits d'eau et réseaux d'abreuvement avicole",
+      "Maintien de la qualité de l'eau de boisson distribuée aux animaux",
+      "Nébulisation des ambiances de production en élevage (compatible en présence des animaux)",
+      "Entretien des chambres froides, salles de découpe et zones de conditionnement",
+      "Traitement des environnements réfrigérés en abattoir (brumisation fine sans condensation)",
+      "Entretien des eaux de process en industrie agroalimentaire (rinçage, refroidissement, production)",
+      "Intégration dans les protocoles HACCP et plans d'hygiène opérationnelle",
+      "Dosage automatisé pour flux de production continu",
     ],
     specs: [
-      { label: "Principe actif", value: "Dioxyde de chlore stabilisé (ClO₂)" },
-      { label: "Concentration", value: "0,75% ClO₂" },
-      { label: "Dosage continu", value: "0,2 à 0,5 ppm" },
-      { label: "Dosage choc", value: "2 à 5 ppm" },
-      { label: "pH d'efficacité", value: "4 – 10 (large spectre)" },
-      { label: "Conditionnement", value: "Bidon 5L / 20L / 200L" },
-      { label: "Résiduel", value: "Action prolongée 72h" },
-      { label: "Norme", value: "EN 901, EN 12671" },
+      { label: "Principe actif", value: "Acide hypochloreux (HOCl)" },
+      { label: "Nature", value: "Solution technique polyvalente — eau et environnements" },
+      { label: "pH", value: "5,5 – 6,5 (légèrement acide)" },
+      { label: "Mode d'application", value: "Dosage en ligne / nébulisation / brumisation / pulvérisation" },
+      { label: "Domaines d'action", value: "Circuits d'eau, environnements de production, ambiances" },
+      { label: "Compatibilité", value: "Systèmes de dosage automatique, nébuliseurs, canalisations PVC/PEHD, inox" },
+      { label: "Utilisation", value: "Continue ou ponctuelle selon protocole — compatible présence animale" },
+      { label: "Traçabilité", value: "Mesure analytique en temps réel — conformité audits IFS/BRC" },
+      { label: "Conditionnement", value: "Bidon 5L / 20L / 200L / IBC 1000L" },
     ],
     color: "#0D9488",
     accentBg: "bg-teal-600/10",
     accentText: "text-teal-600",
-    image: "/images/aquacontrol-produit.webp",
+    image: "/images/oxylis-hoci.webp",
   },
 
   // ─── ZONE 03 — L'AMBIANCE ────────────────────────────
-  {
-    slug: "airsan",
-    name: "AIRSAN",
-    zone: "03",
-    zoneName: "L'Ambiance",
-    zoneLabel: "Zone 03",
-    subtitle: "Traitement de l'air et désinfection atmosphérique en présence d'animaux",
-    problem:
-      "L'air ambiant des bâtiments d'élevage est chargé de poussières, d'ammoniac, de germes aérosolisés et de spores fongiques. Cette pollution atmosphérique provoque des pathologies respiratoires, réduit les performances zootechniques et dégrade le bien-être animal.",
-    solution:
-      "AIRSAN est un désinfectant atmosphérique utilisable en présence d'animaux. Diffusé par thermo-nébulisation ou brumisation, il neutralise les pathogènes aéroportés, réduit la charge en ammoniac et assainit l'environnement respiratoire du cheptel.",
-    applications: [
-      "Désinfection aérienne en élevage avicole (en présence d'animaux)",
-      "Traitement de l'air dans les couvoirs",
-      "Assainissement des chambres froides",
-      "Nébulisation dans les salles de tri et d'emballage",
-      "Contrôle de l'ammoniac en bâtiment clos",
-    ],
-    specs: [
-      { label: "Principe actif", value: "Acide hypochloreux (HOCl)" },
-      { label: "Nature", value: "Solution désinfectante à large spectre" },
-      { label: "Mode d'application", value: "Thermo-nébulisation / brumisation" },
-      { label: "Dosage", value: "1 à 3 mL/m³ selon volume" },
-      { label: "Temps d'exposition", value: "30 min minimum" },
-      { label: "Utilisation en présence", value: "Oui (animaux et opérateurs)" },
-      { label: "Conditionnement", value: "Bidon 5L / 20L" },
-      { label: "Effet résiduel", value: "Jusqu'à 48h" },
-    ],
-    color: "#EA580C",
-    accentBg: "bg-orange-600/10",
-    accentText: "text-orange-600",
-    image: "/images/airsan-produit.webp",
-  },
   {
     slug: "bioactive",
     name: "BIOACTIVE",
@@ -205,13 +206,13 @@ export const products: Product[] = [
     zoneLabel: "Zone 03",
     subtitle: "Nettoyant enzymatique concentré pour l'élimination des matières organiques",
     problem:
-      "L'accumulation de matières organiques (graisses, protéines, biofilms) sur les surfaces et équipements crée un terrain favorable à la prolifération bactérienne. Les nettoyants classiques échouent face aux encrassements tenaces, compromettant l'efficacité des désinfections ultérieures.",
+      "L'accumulation de matières organiques (graisses, protéines, biofilms) sur les surfaces et équipements crée un terrain favorable à l'encrassement. Les nettoyants classiques échouent face aux encrassements tenaces, compromettant l'efficacité des traitements ultérieurs.",
     solution:
-      "BIOACTIVE est un nettoyant enzymatique concentré à base d'un complexe de protéases, lipases et amylases. Les enzymes dégradent les matières organiques en éléments solubles, facilitant leur élimination par rinçage ou action mécanique. Il prépare les surfaces à une désinfection optimale.",
+      "BIOACTIVE est un nettoyant enzymatique concentré à base d'un complexe de protéases, lipases et amylases. Les enzymes dégradent les matières organiques en éléments solubles, facilitant leur élimination par rinçage ou action mécanique. Il prépare les surfaces à un traitement optimal.",
     applications: [
       "Bâtiments d'élevage (surfaces et équipements)",
       "Zones fortement encrassées (graisses, protéines)",
-      "Nettoyage avant désinfection (étape préparatoire)",
+      "Nettoyage avant traitement (étape préparatoire)",
       "Surfaces poreuses et difficiles d'accès",
       "Équipements professionnels en milieu agroalimentaire",
     ],
@@ -259,27 +260,27 @@ export function getLocalizedZones(locale: string) {
 // ─── Multilingual subtitle overrides ──────────────────
 const subtitleOverrides: Record<string, Record<string, string>> = {
   en: {
-    cloragro: "Foaming alkaline chlorinated detergent disinfectant — Cleaning and disinfection of surfaces — Phase 01 of the N2K protocol",
-    optimagro: "Broad-spectrum biocidal disinfectant — Glutaraldehyde + Quaternary Ammonium — Phase 02 of the N2K protocol — Dosage 2%",
+    cloragro: "Foaming alkaline chlorinated detergent — Technical cleaning of surfaces — Phase 01 of the N2K protocol",
+    optimagro: "Surface treatment solution — Glutaraldehyde + Quaternary Ammonium — Phase 02 of the N2K protocol",
     bionet: "Alkaline Chlorinated Antibiofilm Detergent — Poultry drinking circuit cleaning — Poultry farming only",
-    aquacontrol: "Bacteriological stabilizer for drinking water — Daily maintenance of microbiological quality — Poultry farming only",
-    airsan: "Nebulization solution for airborne treatment — Safe for use in the presence of animals — Poultry farming only",
+    "oxylis-hoci": "HOCl-based technical solution — Water network maintenance, environment treatment and sanitary quality in farming and food industry",
+    "alcosept-pro": "Fast-evaporation cleaning solution for surfaces and technical equipment in food processing environments",
     bioactive: "Concentrated enzymatic cleaner — Degradation of organic matter on surfaces and equipment — Poultry farming only",
   },
   ar: {
-    cloragro: "منظف مطهر قلوي كلوري رغوي — تنظيف وتطهير الأسطح — المرحلة 01 من بروتوكول N2K",
-    optimagro: "مطهر حيوي واسع الطيف — غلوتارالدهيد + أمونيوم رباعي — المرحلة 02 من بروتوكول N2K — الجرعة 2%",
+    cloragro: "منظف قلوي كلوري رغوي — تنظيف تقني للأسطح — المرحلة 01 من بروتوكول N2K",
+    optimagro: "محلول معالجة الأسطح — غلوتارالدهيد + أمونيوم رباعي — المرحلة 02 من بروتوكول N2K",
     bionet: "منظف قلوي كلوري مضاد للبيوفيلم — تنظيف دوائر الشرب في تربية الدواجن — للدواجن فقط",
-    aquacontrol: "مثبت بكتيري لمياه الشرب — الحفاظ اليومي على الجودة الميكروبيولوجية — للدواجن فقط",
-    airsan: "محلول ضبابي لمعالجة الهواء — آمن للاستخدام في حضور الحيوانات — للدواجن فقط",
+    "oxylis-hoci": "محلول تقني قائم على حمض الهيبوكلوروز (HOCl) — صيانة شبكات المياه ومعالجة بيئات الإنتاج والحفاظ على الجودة الصحية في التربية والصناعة الغذائية",
+    "alcosept-pro": "محلول تنظيف سريع التبخر للأسطح والمعدات التقنية في البيئات الغذائية",
     bioactive: "منظف إنزيمي مركز — تحليل المواد العضوية على الأسطح والمعدات — للدواجن فقط",
   },
   fr: {
-    cloragro: "Détergent désinfectant alcalin chloré moussant — Nettoyage et désinfection des surfaces — Phase 01 du protocole N2K",
-    optimagro: "Désinfectant biocide large spectre — Glutaraldéhyde + Ammoniums Quaternaires — Phase 02 du protocole N2K — Dosage 2%",
+    cloragro: "Détergent alcalin chloré moussant — Nettoyage technique des surfaces — Phase 01 du protocole N2K",
+    optimagro: "Solution de traitement des surfaces — Glutaraldéhyde + Ammoniums Quaternaires — Phase 02 du protocole N2K",
     bionet: "Détergent Alcalin Chloré Antibiofilm — Nettoyage des circuits d'abreuvement avicole — Élevage uniquement",
-    aquacontrol: "Stabilisateur bactériologique de l'eau de boisson — Maintien quotidien de la qualité microbiologique — Élevage uniquement",
-    airsan: "Solution de nébulisation pour traitement aéroporté — Utilisable en présence des animaux — Élevage uniquement",
+    "oxylis-hoci": "Solution technique à base de HOCl — Entretien des réseaux d'eau, traitement des environnements et maintien de la qualité sanitaire — Élevage et industrie agroalimentaire",
+    "alcosept-pro": "Solution de nettoyage à évaporation rapide pour surfaces et équipements techniques — Agroalimentaire et abattoirs",
     bioactive: "Nettoyant enzymatique concentré — Dégradation des matières organiques sur surfaces et équipements — Élevage uniquement",
   },
 };
@@ -300,7 +301,7 @@ export function getLocalizedProduct(slug: string, locale: string): Product | und
 
 export function getProductsByZone(zone: string): Product[] {
   if (zone === "all") return products;
-  return products.filter((p) => p.zone === zone);
+  return products.filter((p) => p.zone === zone || (p.additionalZones && p.additionalZones.includes(zone as "01" | "02" | "03")));
 }
 
 export function getLocalizedProducts(locale: string): Product[] {

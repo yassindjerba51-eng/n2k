@@ -26,7 +26,7 @@ export default function ProductFilter() {
   const filteredProducts =
     activeZone === "all"
       ? products
-      : products.filter((p) => p.zone === activeZone);
+      : products.filter((p) => p.zone === activeZone || (p.additionalZones && p.additionalZones.includes(activeZone as "01" | "02" | "03")));
 
   return (
     <div>

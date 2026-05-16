@@ -53,8 +53,8 @@ async function main() {
       dosage: "1% à 3%",
     },
     {
-      name: "AQUACONTROL N2K",
-      slug: "aquacontrol-n2k",
+      name: "OXYLIS HOCl",
+      slug: "oxylis-hoci",
       category: Zone.EAU,
       isDisinfectant: false,
       step: 2, // Stabilisation
@@ -67,8 +67,8 @@ async function main() {
     },
     // ZONE: AMBIANCE
     {
-      name: "AIRSAN N2K",
-      slug: "airsan-n2k",
+      name: "OXYLIS HOCl",
+      slug: "oxylis-hoci",
       category: Zone.AMBIANCE,
       isDisinfectant: false,
       step: 1, // Réduction de charge
@@ -160,7 +160,7 @@ async function main() {
       titleEn: "Air Purification in Packaging Zones",
       titleAr: "تنقية الهواء في مناطق التعبئة",
       slug: "purification-air-conditionnement",
-      contentFr: "<p>Réduire la contamination aéroportée pour prolonger la DLC de vos produits sensibles sans conservateurs. La qualité de l'air dans les zones de conditionnement est un facteur critique souvent sous-estimé dans la chaîne de production alimentaire.</p><p>Nos solutions de nébulisation AIRSAN N2K permettent de réduire de 85% la charge microbienne aéroportée, contribuant directement à l'extension de la durée de vie des produits frais sans recourir à des additifs conservateurs.</p>",
+      contentFr: "<p>Réduire la contamination aéroportée pour prolonger la DLC de vos produits sensibles sans conservateurs. La qualité de l'air dans les zones de conditionnement est un facteur critique souvent sous-estimé dans la chaîne de production alimentaire.</p><p>Nos solutions de nébulisation OXYLIS HOCl permettent de réduire de 85% la charge microbienne aéroportée, contribuant directement à l'extension de la durée de vie des produits frais sans recourir à des additifs conservateurs.</p>",
       contentEn: "<p>Reduce airborne contamination to extend the shelf life of your sensitive products without preservatives. Air quality in packaging zones is a critical, often underestimated factor in the food production chain.</p>",
       contentAr: "<p>تقليل التلوث المحمول جواً لتمديد فترة صلاحية منتجاتك الحساسة بدون مواد حافظة.</p>",
       coverImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuAKk2R7m6GbX-_ttwc-ZP_jJKSH_y_-7cQB-frosMilsF7nr8xOzOatn1ndIMguJA4G8bLDikXPm90y05il48Cpr-e2lzGhUZCj1YT7KWHO68Hi-FIh-YJyuv7oyBEoQE-HFSC1eAfkkDBQrSm42HYT7O120k01RRemwZw1EjaTZyYGCUXADjFsFBBC-DRxPoAhDpOl4jzRY-Sy9XcKsrgGXX-aIjKLTknfMOymAIEhx2cfCDiQaz5mcKoWX-Y6hfC--thRYgWkRns",

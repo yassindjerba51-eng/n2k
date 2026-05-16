@@ -20,11 +20,13 @@ export default function ProductStepCard({
   return (
     <div className="bg-white rounded-2xl p-6 md:p-8 border border-border/50 shadow-ambient relative overflow-hidden">
       {/* Step Badge */}
-      <div
-        className={`absolute top-0 end-0 ${accentBg} text-white px-5 py-1.5 rounded-es-xl font-black uppercase tracking-widest text-[10px] font-heading`}
-      >
-        {step}
-      </div>
+      {step && (
+        <div
+          className={`absolute top-0 end-0 ${accentBg} text-white px-5 py-1.5 rounded-es-xl font-black uppercase tracking-widest text-[10px] font-heading`}
+        >
+          {step}
+        </div>
+      )}
 
       {/* Header */}
       <div className="mb-4 mt-1">

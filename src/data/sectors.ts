@@ -22,20 +22,20 @@ export const batimentSectors: ZoneSectorMap = {
   elevage: {
     product1: {
       name: "CLORAGRO",
-      type: "Détergent Désinfectant — Phase 01",
+      type: "Détergent Technique — Phase 01",
       desc: "Alcalin chloré ultra-puissant conçu pour déstructurer la matrice organique du biofilm et éliminer les graisses persistantes dans les poulaillers et bâtiments d'élevage avicole.",
       features: [
-        "Destruction radicale du biofilm organique sur sols et parois",
+        "Déstructuration du biofilm organique sur sols et parois",
         "Élimination des graisses et protéines persistantes en élevage",
-        "Préparation de surface optimale avant désinfection du poulailler",
+        "Préparation de surface optimale avant traitement du poulailler",
       ],
     },
     product2: {
       name: "OPTIMAGRO",
-      type: "Désinfectant — Spectre Complet",
-      desc: "Désinfectant biocide à spectre complet — Glutaraldéhyde + Ammoniums Quaternaires — Phase 02. S'applique obligatoirement après rinçage complet des résidus chlorés.",
+      type: "Traitement — Phase 02",
+      desc: "Solution de traitement des surfaces à spectre complet — Glutaraldéhyde + Ammoniums Quaternaires — Phase 02. S'applique obligatoirement après rinçage complet des résidus chlorés.",
       features: [
-        "Spectre complet : Bactéricide, Virucide, Fongicide",
+        "Spectre complet de traitement des surfaces",
         "Rémanence prolongée jusqu'à 7 jours entre bandes",
         "Protection maximale des poussins et nouveaux arrivants",
       ],
@@ -45,8 +45,8 @@ export const batimentSectors: ZoneSectorMap = {
   abattoir: {
     product1: {
       name: "CLORAGRO",
-      type: "Décontamination — Surfaces Abattoir",
-      desc: "Formulation chlorée haute performance pour le décapage et la décontamination des sols de chaîne d'abattage, tables de découpe et zones de saignée en abattoir de volaille.",
+      type: "Nettoyage — Surfaces Abattoir",
+      desc: "Formulation chlorée haute performance pour le décapage et le nettoyage des sols de chaîne d'abattage, tables de découpe et zones de saignée en abattoir de volaille.",
       features: [
         "Élimination des résidus sanguins et graisses animales",
         "Décapage des sols carrelés et surfaces inox",
@@ -55,10 +55,10 @@ export const batimentSectors: ZoneSectorMap = {
     },
     product2: {
       name: "OPTIMAGRO",
-      type: "Désinfection — Post-Nettoyage Abattoir",
-      desc: "Désinfectant de surface appliqué après le nettoyage CLORAGRO pour éliminer les pathogènes résiduels (Salmonella, Campylobacter) dans les zones sensibles de l'abattoir.",
+      type: "Traitement — Post-Nettoyage Abattoir",
+      desc: "Solution de traitement des surfaces appliquée après le nettoyage CLORAGRO pour compléter le protocole d'hygiène dans les zones sensibles de l'abattoir.",
       features: [
-        "Efficacité prouvée contre Salmonella et Campylobacter",
+        "Efficacité prouvée sur les zones critiques d'abattage",
         "Conforme aux normes d'hygiène HACCP",
         "Applicable sur surfaces en contact alimentaire après rinçage",
       ],
@@ -78,12 +78,12 @@ export const batimentSectors: ZoneSectorMap = {
     },
     product2: {
       name: "OPTIMAGRO",
-      type: "Désinfection — Process Agroalimentaire",
-      desc: "Désinfectant certifié pour les surfaces de production agroalimentaire. Garantit l'élimination des contaminations croisées entre lots de production.",
+      type: "Traitement — Process Agroalimentaire",
+      desc: "Solution de traitement certifiée pour les surfaces de production agroalimentaire. Complète le protocole d'hygiène entre lots de production.",
       features: [
         "Certifié pour contact alimentaire indirect",
         "Intégration dans les plans HACCP de production",
-        "Contrôle de Listeria monocytogenes en milieu laitier",
+        "Efficacité prouvée en milieu laitier et agroalimentaire",
       ],
     },
     image: "/images/sectors/batiment-agroalimentaire.webp",
@@ -104,13 +104,13 @@ export const eauSectors: ZoneSectorMap = {
       ],
     },
     product2: {
-      name: "AQUACONTROL",
-      type: "Stabilisation — Maintien Quotidien",
-      desc: "Stabilisation de la qualité de l'eau de boisson en élevage. Contrôle constant de la charge microbienne du réservoir jusqu'au dernier abreuvoir.",
+      name: "OXYLIS HOCl",
+      type: "Entretien — Maintien Quotidien",
+      desc: "Entretien opérationnel des circuits d'eau et des environnements techniques en élevage. S'intègre dans les protocoles de maintenance quotidienne des installations.",
       features: [
-        "Stabilisation bactériologique de l'eau de boisson",
-        "Réduction drastique du risque de contamination croisée",
+        "Entretien continu des réseaux d'eau et des équipements",
         "Compatibilité totale avec les systèmes de dosage automatique",
+        "Simplification des protocoles opérationnels",
       ],
     },
     image: "/images/sectors/eau-elevage.webp",
@@ -123,16 +123,16 @@ export const eauSectors: ZoneSectorMap = {
       features: [
         "Décapage des dépôts protéiques dans les échaudoirs",
         "Nettoyage des circuits de refroidissement à air et eau",
-        "Élimination des résidus médicamenteux dans les conduites",
+        "Élimination des résidus dans les conduites",
       ],
     },
     product2: {
-      name: "AQUACONTROL",
-      type: "Traitement — Eau de Process",
-      desc: "Traitement en continu de l'eau utilisée dans les process d'abattage. Garantit une eau conforme aux normes sanitaires pour le lavage des carcasses.",
+      name: "OXYLIS HOCl",
+      type: "Entretien — Eau de Process",
+      desc: "Entretien en continu des circuits d'eau utilisés dans les process d'abattage. S'intègre dans la maintenance opérationnelle des réseaux et équipements.",
       features: [
-        "Conformité eau potable pour lavage des carcasses",
-        "Contrôle de Pseudomonas et coliformes en circuit fermé",
+        "Entretien des circuits d'eau de process",
+        "Intégration dans les protocoles de maintenance quotidienne",
         "Dosage automatisé pour flux de production continu",
       ],
     },
@@ -150,12 +150,12 @@ export const eauSectors: ZoneSectorMap = {
       ],
     },
     product2: {
-      name: "AQUACONTROL",
-      type: "Purification — Eau Agroalimentaire",
-      desc: "Traitement de l'eau de process agroalimentaire. Contrôle microbiologique continu pour les eaux de rinçage, de refroidissement et de production.",
+      name: "OXYLIS HOCl",
+      type: "Entretien — Eau Agroalimentaire",
+      desc: "Entretien des circuits d'eau de process agroalimentaire. Maintenance opérationnelle continue des eaux de rinçage, de refroidissement et de production.",
       features: [
-        "Potabilisation continue des eaux de process",
-        "Prévention de la Legionella dans les tours de refroidissement",
+        "Entretien continu des circuits d'eau de process",
+        "Intégration dans les protocoles de maintenance industrielle",
         "Traçabilité analytique pour audits qualité (IFS/BRC)",
       ],
     },
@@ -167,22 +167,22 @@ export const eauSectors: ZoneSectorMap = {
 export const ambianceSectors: ZoneSectorMap = {
   elevage: {
     product1: {
-      name: "AIRSAN",
-      type: "Nébulisation — Élevage Avicole",
-      desc: "Solution fine en suspension pour neutraliser les pathogènes aériens dans les poulaillers sans mouiller les litières, utilisable en présence d'animaux.",
+      name: "OXYLIS HOCl",
+      type: "Entretien — Environnements Techniques",
+      desc: "Solution technique d'entretien des environnements de production en élevage avicole. S'intègre dans les protocoles de maintenance des ambiances de travail sans perturber les litières.",
       features: [
-        "Utilisation en présence des animaux (sans stress)",
-        "Réduction de l'ammoniac et des poussières en suspension",
+        "Utilisation compatible en présence des animaux (sans stress)",
+        "Entretien des environnements de production et ambiances",
         "Nébulisation haute performance pour grands volumes",
       ],
     },
     product2: {
       name: "BIOACTIVE",
       type: "Nettoyant Enzymatique — Surfaces",
-      desc: "Nettoyant enzymatique concentré pour l'élimination des matières organiques sur les surfaces et équipements d'élevage avant désinfection aérienne.",
+      desc: "Nettoyant enzymatique concentré pour l'élimination des matières organiques sur les surfaces et équipements d'élevage. Étape préparatoire avant entretien des ambiances.",
       features: [
         "Dégradation enzymatique des graisses et protéines",
-        "Préparation des surfaces avant nébulisation AIRSAN",
+        "Préparation des surfaces avant entretien des environnements",
         "Biodégradable et sans résidu toxique",
       ],
     },
@@ -190,12 +190,12 @@ export const ambianceSectors: ZoneSectorMap = {
   },
   abattoir: {
     product1: {
-      name: "AIRSAN",
-      type: "Traitement Aérien — Chambres Froides",
-      desc: "Désinfection atmosphérique des chambres froides, salles de découpe et zones de conditionnement en abattoir. Contrôle des moisissures et germes aérosolisés.",
+      name: "OXYLIS HOCl",
+      type: "Entretien — Environnements Réfrigérés",
+      desc: "Entretien technique des environnements réfrigérés, salles de découpe et zones de conditionnement en abattoir. Nébulisation fine adaptée aux contraintes du froid.",
       features: [
-        "Contrôle des Listeria et moisissures en chambre froide",
-        "Traitement sans interruption de la chaîne du froid",
+        "Entretien des chambres froides et environnements réfrigérés",
+        "Application sans interruption de la chaîne du froid",
         "Brumisation fine sans condensation sur les carcasses",
       ],
     },
@@ -203,13 +203,13 @@ export const ambianceSectors: ZoneSectorMap = {
   },
   agroalimentaire: {
     product1: {
-      name: "AIRSAN",
-      type: "Assainissement — Salles Blanches",
-      desc: "Désinfection atmosphérique des zones de production agroalimentaire : salles blanches, zones de conditionnement, chambres de maturation fromagère.",
+      name: "OXYLIS HOCl",
+      type: "Entretien — Zones de Production",
+      desc: "Entretien technique des zones de production agroalimentaire : salles blanches, zones de conditionnement, chambres de maturation fromagère.",
       features: [
-        "Contrôle de la charge microbienne en salle blanche",
-        "Traitement de l'air dans les caves d'affinage",
-        "Conformité aux exigences IFS/BRC pour la qualité de l'air",
+        "Entretien des environnements de production sensibles",
+        "Maintenance des zones de conditionnement et de stockage",
+        "Conformité aux exigences IFS/BRC pour la qualité des environnements",
       ],
     },
     image: "/images/sectors/ambiance-agroalimentaire.webp",

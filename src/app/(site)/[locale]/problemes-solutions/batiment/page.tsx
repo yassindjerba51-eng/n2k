@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { ArrowRight, Building2, Home } from "lucide-react";
+import { ArrowRight, Building2, Home, CheckCircle } from "lucide-react";
 import Image from "next/image";
 import ZoneNav from "@/components/zones/ZoneNav";
 import ProductStepCard from "@/components/zones/ProductStepCard";
@@ -168,8 +168,88 @@ export default async function BatimentPage() {
                   />
                 </div>
               </div>
+            </div> 
+          </div>
+
+
+
+{/* ALCOSEPT PRO - New Row */}
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 mt-12 lg:mt-16">
+            {/* Left Column — Product Card */}
+            <div className="w-full lg:w-3/5">
+              <ProductStepCard
+                step=""
+                name="ALCOSEPT PRO"
+                type="Nettoyage Rapide — Inter-Lots"
+                description="Solution de nettoyage technique à évaporation rapide, conçue pour un usage entre les opérations de production en environnements agroalimentaires."
+                features={[
+                  "Nettoyage rapide des surfaces de travail entre opérations",
+                  "Entretien des équipements inox et plastiques techniques",
+                  "Évaporation rapide sans laisser de résidus"
+                ]}
+                accentColor="text-[#0D7ED0]"
+                accentBg="bg-[#0D7ED0]"
+              />
+            </div>
+
+            {/* Right Column — Image */}
+            <div className="w-full lg:w-2/5 relative">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-border/30 aspect-[533/248] w-full">
+                <Image
+                  src="/images/alcosept_pro_slaughterhouse.png"
+                  alt="ALCOSEPT PRO application en abattoir"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
+
+{/* OXYLIS HOCl - New Row */}
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 mt-12 lg:mt-16">
+            {/* Left Column — Product Card */}
+            <div className="w-full lg:w-3/5">
+              <ProductStepCard
+                step=""
+                name="OXYLIS HOCl"
+                type="Entretien des Réseaux d'Eau & Environnements"
+                description="Solution technique polyvalente à base d'acide hypochloreux (HOCl) pour l'entretien continu des circuits d'eau et le traitement des environnements de production en élevage et industrie agroalimentaire."
+                features={[
+                  "Entretien continu des canalisations d'eau et réseaux d'abreuvement",
+                  "Nébulisation des ambiances de production",
+                  "Dosage automatisé pour flux de production continu"
+                ]}
+                accentColor="text-[#0D7ED0]"
+                accentBg="bg-[#0D7ED0]"
+              />
+            </div>
+
+            {/* Right Column — Image */}
+            <div className="w-full lg:w-2/5 relative">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-border/30 aspect-[533/248] w-full">
+                <Image
+                  src="/images/oxylis_hocl_composite.png"
+                  alt="OXYLIS HOCl — canalisations d'eau, bâtiment d'élevage, industrie agroalimentaire"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
       </section>
 

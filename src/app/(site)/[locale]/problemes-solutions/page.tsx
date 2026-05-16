@@ -5,6 +5,7 @@ import {
   ArrowRight,
   Quote,
   Microscope,
+  CheckCircle,
 } from "lucide-react";
 import SectorTabs from "@/components/ui/SectorTabs";
 import {
@@ -142,6 +143,110 @@ export default async function ProblemesSolutionsHub() {
                 <p className="text-white font-body text-sm md:text-base leading-relaxed">
                   Après application de CLORAGRO, un rinçage complet à l&apos;eau potable de toutes les surfaces est obligatoire avant l&apos;application d&apos;OPTIMAGRO (Phase 02). Cette exigence est chimique et réglementaire — elle n&apos;est pas optionnelle.
                 </p>
+              </div>
+            </div>
+          </div>
+
+          {/* ALCOSEPT PRO Card & Image Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 mb-8 mt-8">
+            {/* Left: Product Card */}
+            <div className="lg:col-span-7">
+              <div className="bg-n2k-surface-lowest rounded-2xl p-5 md:p-6 shadow-ambient ghost-border relative overflow-hidden group h-full">
+                {/* Header */}
+                <div className="mb-4 mt-1">
+                  <h3 className="text-lg md:text-xl font-black font-heading text-n2k-primary">
+                    ALCOSEPT PRO
+                  </h3>
+                  <p className="text-n2k-secondary font-bold uppercase tracking-widest text-[10px] font-heading">
+                    Nettoyage Rapide — Inter-Lots
+                  </p>
+                </div>
+
+                {/* Description */}
+                <p className="text-n2k-on-surface-variant font-body text-sm leading-relaxed mb-4">
+                  Solution de nettoyage technique à évaporation rapide, conçue pour un usage entre les opérations de production en environnements agroalimentaires.
+                </p>
+
+                {/* Features */}
+                <ul className="space-y-2 font-body text-sm">
+                  <li className="flex items-start gap-2 text-n2k-on-surface-variant leading-snug">
+                    <CheckCircle className="text-n2k-secondary shrink-0 w-4 h-4 mt-0.5" />
+                    <span className="text-xs md:text-sm">Nettoyage rapide des surfaces de travail entre opérations</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-n2k-on-surface-variant leading-snug">
+                    <CheckCircle className="text-n2k-secondary shrink-0 w-4 h-4 mt-0.5" />
+                    <span className="text-xs md:text-sm">Entretien des équipements inox et plastiques techniques</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-n2k-on-surface-variant leading-snug">
+                    <CheckCircle className="text-n2k-secondary shrink-0 w-4 h-4 mt-0.5" />
+                    <span className="text-xs md:text-sm">Évaporation rapide sans laisser de résidus</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Right: Image */}
+            <div className="lg:col-span-5 flex items-center">
+              <div className="relative w-full rounded-3xl overflow-hidden shadow-ambient-lg ghost-border aspect-[533/248]">
+                <Image
+                  src="/images/alcosept_pro_slaughterhouse.png"
+                  alt="ALCOSEPT PRO application en abattoir"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* OXYLIS HOCl Card & Image Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 mb-8 mt-8">
+            {/* Left: Product Card */}
+            <div className="lg:col-span-7">
+              <div className="bg-n2k-surface-lowest rounded-2xl p-5 md:p-6 shadow-ambient ghost-border relative overflow-hidden group h-full">
+                {/* Header */}
+                <div className="mb-4 mt-1">
+                  <h3 className="text-lg md:text-xl font-black font-heading text-n2k-primary">
+                    OXYLIS HOCl
+                  </h3>
+                  <p className="text-n2k-secondary font-bold uppercase tracking-widest text-[10px] font-heading">
+                    Entretien des Réseaux d&apos;Eau & Environnements
+                  </p>
+                </div>
+
+                {/* Description */}
+                <p className="text-n2k-on-surface-variant font-body text-sm leading-relaxed mb-4">
+                  Solution technique polyvalente à base d&apos;acide hypochloreux (HOCl) pour l&apos;entretien continu des circuits d&apos;eau et le traitement des environnements de production en élevage et industrie agroalimentaire.
+                </p>
+
+                {/* Features */}
+                <ul className="space-y-2 font-body text-sm">
+                  <li className="flex items-start gap-2 text-n2k-on-surface-variant leading-snug">
+                    <CheckCircle className="text-n2k-secondary shrink-0 w-4 h-4 mt-0.5" />
+                    <span className="text-xs md:text-sm">Entretien continu des canalisations d&apos;eau et réseaux d&apos;abreuvement</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-n2k-on-surface-variant leading-snug">
+                    <CheckCircle className="text-n2k-secondary shrink-0 w-4 h-4 mt-0.5" />
+                    <span className="text-xs md:text-sm">Nébulisation des ambiances de production</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-n2k-on-surface-variant leading-snug">
+                    <CheckCircle className="text-n2k-secondary shrink-0 w-4 h-4 mt-0.5" />
+                    <span className="text-xs md:text-sm">Dosage automatisé pour flux de production continu</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Right: Image */}
+            <div className="lg:col-span-5 flex items-center">
+              <div className="relative w-full rounded-3xl overflow-hidden shadow-ambient-lg ghost-border aspect-[533/248]">
+                <Image
+                  src="/images/oxylis_hocl_composite.png"
+                  alt="OXYLIS HOCl — canalisations d'eau, bâtiment d'élevage, industrie agroalimentaire"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                />
               </div>
             </div>
           </div>

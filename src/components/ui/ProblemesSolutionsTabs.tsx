@@ -37,10 +37,10 @@ interface Props {
 const productSlugs: Record<string, string> = {
   CLORAGRO: "cloragro",
   OPTIMAGRO: "optimagro",
-  "BIONET + AQUACONTROL": "bionet",
+  "BIONET + OXYLIS HOCl": "bionet",
   BIONET: "bionet",
-  AQUACONTROL: "aquacontrol",
-  AIRSAN: "airsan",
+  "OXYLIS HOCl": "oxylis-hoci",
+  "ALCOSEPT PRO": "alcosept-pro",
   BIOACTIVE: "bioactive",
 };
 

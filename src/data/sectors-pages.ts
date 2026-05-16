@@ -42,20 +42,19 @@ export const sectorsDataFr: Record<string, SectorData> = {
     minimalProtocol: [
       { product: "CLORAGRO", action: "Nettoyage technique", description: "Destruction du biofilm organique sur toutes les surfaces du bâtiment. Application mousse, temps de contact 20 min." },
       { product: "Rinçage HP", action: "Rinçage haute pression", description: "Élimination mécanique des résidus et du détergent. Surface visuellement propre obligatoire." },
-      { product: "OPTIMAGRO", action: "Désinfection biocide", description: "Désinfection terminale à spectre complet. Bactéricide, virucide, fongicide. Rémanence assurée." }
+      { product: "OPTIMAGRO", action: "Traitement des surfaces", description: "Traitement terminal à spectre complet des surfaces nettoyées. Rémanence assurée." }
     ],
     reinforcedProtocol: [
       { product: "BIONET", action: "Nettoyage canalisations", description: "Décapage des dépôts organiques et calcaire dans les circuits d'eau avant mise en place des animaux." },
-      { product: "AQUACONTROL", action: "Traitement eau continu", description: "Stabilisation bactériologique de l'eau de boisson tout au long du cycle de production." },
-      { product: "AIRSAN", action: "Désinfection ambiance", description: "Nébulisation fine en présence d'animaux pour réduire la charge microbienne aérienne et l'ammoniac." },
-      { product: "BIOACTIVE", action: "Dégradation enzymatique", description: "Nettoyage des équipements à forte charge organique avant désinfection." }
+      { product: "OXYLIS HOCl", action: "Entretien réseaux et environnements", description: "Entretien continu des réseaux d'eau et des environnements techniques tout au long du cycle de production." },
+      { product: "BIOACTIVE", action: "Dégradation enzymatique", description: "Nettoyage des équipements à forte charge organique avant traitement." }
     ],
     specificCases: [
       { title: "Décontamination après épisode infectieux", description: "En cas de détection de pathogènes majeurs sur le lot précédent, le protocole est renforcé.", protocol: "Double passage CLORAGRO + OPTIMAGRO en augmentant les concentrations. Analyse microbiologique de contrôle obligatoire." },
-      { title: "Élevage en conditions extrêmes", description: "Les températures élevées ou l'humidité excessive accélèrent la prolifération bactérienne.", protocol: "AQUACONTROL en dosage renforcé + AIRSAN fréquent. Surveillance accrue des paramètres sanitaires." },
+      { title: "Élevage en conditions extrêmes", description: "Les températures élevées ou l'humidité excessive accélèrent l'encrassement des installations.", protocol: "OXYLIS HOCl en dosage renforcé sur les réseaux et les environnements. Surveillance accrue des paramètres techniques." },
       { title: "Audit de biosécurité", description: "Préparation aux audits de conformité ou certifications.", protocol: "Protocole complet minimal + prélèvements de surface avec analyse en laboratoire N2K." }
     ],
-    associatedProducts: ["cloragro", "optimagro", "bionet", "aquacontrol", "airsan", "bioactive"],
+    associatedProducts: ["cloragro", "optimagro", "bionet", "oxylis-hoci", "bioactive"],
     expectedResults: [
       "Réduction significative du taux de mortalité et de morbidité",
       "Amélioration mesurable de l'indice de consommation (FCR)",
@@ -93,13 +92,13 @@ export const sectorsDataFr: Record<string, SectorData> = {
     ],
     reinforcedProtocol: [
       { product: "BIONET", action: "Nettoyage circuits eau", description: "Décapage des circuits d'eau de process et de refroidissement." },
-      { product: "AIRSAN", action: "Traitement chambres froides", description: "Nébulisation des chambres froides pour réduire la charge Listeria." }
+      { product: "OXYLIS HOCl", action: "Entretien environnements réfrigérés", description: "Entretien des chambres froides et environnements de stockage par nébulisation." }
     ],
     specificCases: [
-      { title: "Détection Listeria en chambre froide", description: "Contamination confirmée par analyse en chambre froide ou zone de stockage.", protocol: "Nettoyage CLORAGRO renforcé + OPTIMAGRO en concentration augmentée. AIRSAN en nébulisation froide. Prélèvements de contrôle à J+3." },
+      { title: "Détection Listeria en chambre froide", description: "Contamination confirmée par analyse en chambre froide ou zone de stockage.", protocol: "Nettoyage CLORAGRO renforcé + OPTIMAGRO en concentration augmentée. OXYLIS HOCl en nébulisation froide. Prélèvements de contrôle à J+3." },
       { title: "Préparation audit IFS/BRC", description: "Mise en conformité avant audit de certification internationale.", protocol: "Protocole complet sur 48h + prélèvements de surface 72h avant audit + rapport microbiologique documenté." }
     ],
-    associatedProducts: ["cloragro", "optimagro", "bionet", "airsan"],
+    associatedProducts: ["cloragro", "optimagro", "bionet", "oxylis-hoci"],
     expectedResults: [
       "Conformité HACCP sur 100% des points de contrôle",
       "Réduction Salmonella sous seuil de détection",
@@ -135,14 +134,13 @@ export const sectorsDataFr: Record<string, SectorData> = {
     ],
     reinforcedProtocol: [
       { product: "BIONET", action: "Détartrage circuits", description: "Traitement acide des circuits d'eau et de vapeur pour éliminer tartre et biofilm minéral." },
-      { product: "AQUACONTROL", action: "Traitement eau process", description: "Stabilisation microbiologique de l'eau utilisée en production." },
-      { product: "AIRSAN", action: "Traitement atmosphérique", description: "Nébulisation des zones de conditionnement pour maîtriser la pression microbienne aérienne." }
+      { product: "OXYLIS HOCl", action: "Entretien réseaux et environnements", description: "Entretien des circuits d'eau de process et des environnements de conditionnement." }
     ],
     specificCases: [
-      { title: "Contamination Listeria en zone de conditionnement", description: "Détection Listeria sur surfaces ou dans l'atmosphère de la zone de conditionnement.", protocol: "Arrêt de ligne, nettoyage CLORAGRO intensif, désinfection OPTIMAGRO renforcée, AIRSAN en nébulisation. Prélèvements de contrôle avant reprise." },
+      { title: "Contamination Listeria en zone de conditionnement", description: "Détection Listeria sur surfaces ou dans l'atmosphère de la zone de conditionnement.", protocol: "Arrêt de ligne, nettoyage CLORAGRO intensif, traitement OPTIMAGRO renforcé, OXYLIS HOCl en nébulisation. Prélèvements de contrôle avant reprise." },
       { title: "Audit IFS/BRC imminent", description: "Préparation express aux audits de certification.", protocol: "Protocole complet renforcé 72h avant audit. Documentation complète des actions, dosages et résultats. Rapport microbiologique fourni." }
     ],
-    associatedProducts: ["cloragro", "optimagro", "bionet", "aquacontrol", "airsan"],
+    associatedProducts: ["cloragro", "optimagro", "bionet", "oxylis-hoci"],
     expectedResults: [
       "Score IFS/BRC supérieur sur les critères d'hygiène",
       "Réduction de la charge microbienne atmosphérique de 90%",
@@ -169,20 +167,19 @@ export const sectorsDataEn: Record<string, SectorData> = {
     minimalProtocol: [
       { product: "CLORAGRO", action: "Technical cleaning", description: "Destruction of organic biofilm on all building surfaces. Foam application, contact time 20 min." },
       { product: "HP Rinsing", action: "High-pressure rinsing", description: "Mechanical removal of residues and detergent. Visually clean surface mandatory." },
-      { product: "OPTIMAGRO", action: "Biocide disinfection", description: "Full-spectrum terminal disinfection. Bactericidal, virucidal, fungicidal. Guaranteed persistence." }
+      { product: "OPTIMAGRO", action: "Surface treatment", description: "Full-spectrum terminal treatment of cleaned surfaces. Guaranteed persistence." }
     ],
     reinforcedProtocol: [
       { product: "BIONET", action: "Pipe cleaning", description: "Stripping of organic deposits and scale in water circuits before placing animals." },
-      { product: "AQUACONTROL", action: "Continuous water treatment", description: "Bacteriological stabilization of drinking water throughout the production cycle." },
-      { product: "AIRSAN", action: "Atmosphere disinfection", description: "Fine nebulization in the presence of animals to reduce aerial microbial load and ammonia." },
-      { product: "BIOACTIVE", action: "Enzymatic degradation", description: "Cleaning of equipment with high organic load before disinfection." }
+      { product: "OXYLIS HOCl", action: "Network and environment maintenance", description: "Continuous maintenance of water networks and technical environments throughout the production cycle." },
+      { product: "BIOACTIVE", action: "Enzymatic degradation", description: "Cleaning of equipment with high organic load before treatment." }
     ],
     specificCases: [
       { title: "Decontamination after infectious episode", description: "In case of detection of major pathogens on the previous batch, the protocol is reinforced.", protocol: "Double passage of CLORAGRO + OPTIMAGRO by increasing concentrations. Mandatory microbiological control analysis." },
-      { title: "Breeding in extreme conditions", description: "High temperatures or excessive humidity accelerate bacterial proliferation.", protocol: "AQUACONTROL at reinforced dosage + frequent AIRSAN. Increased monitoring of sanitary parameters." },
+      { title: "Breeding in extreme conditions", description: "High temperatures or excessive humidity accelerate installation fouling.", protocol: "OXYLIS HOCl at reinforced dosage on networks and environments. Increased monitoring of technical parameters." },
       { title: "Biosecurity audit", description: "Preparation for compliance audits or certifications.", protocol: "Complete minimal protocol + surface sampling with analysis in N2K laboratory." }
     ],
-    associatedProducts: ["cloragro", "optimagro", "bionet", "aquacontrol", "airsan", "bioactive"],
+    associatedProducts: ["cloragro", "optimagro", "bionet", "oxylis-hoci", "bioactive"],
     expectedResults: [
       "Significant reduction in mortality and morbidity rates",
       "Measurable improvement in Feed Conversion Ratio (FCR)",
@@ -211,13 +208,13 @@ export const sectorsDataEn: Record<string, SectorData> = {
     ],
     reinforcedProtocol: [
       { product: "BIONET", action: "Water circuit cleaning", description: "Stripping of process and cooling water circuits." },
-      { product: "AIRSAN", action: "Cold room treatment", description: "Nebulization of cold rooms to reduce the Listeria load." }
+      { product: "OXYLIS HOCl", action: "Refrigerated environment maintenance", description: "Maintenance of cold rooms and storage environments via nebulization." }
     ],
     specificCases: [
-      { title: "Listeria detection in cold room", description: "Confirmed contamination by analysis in cold room or storage area.", protocol: "Reinforced CLORAGRO cleaning + OPTIMAGRO at increased concentration. AIRSAN cold nebulization. Control swabs at D+3." },
+      { title: "Listeria detection in cold room", description: "Confirmed contamination by analysis in cold room or storage area.", protocol: "Reinforced CLORAGRO cleaning + OPTIMAGRO at increased concentration. OXYLIS HOCl cold nebulization. Control swabs at D+3." },
       { title: "IFS/BRC audit preparation", description: "Compliance preparation before international certification audit.", protocol: "Complete 48h protocol + surface swabs 72h before audit + documented microbiological report." }
     ],
-    associatedProducts: ["cloragro", "optimagro", "bionet", "airsan"],
+    associatedProducts: ["cloragro", "optimagro", "bionet", "oxylis-hoci"],
     expectedResults: [
       "HACCP compliance on 100% of control points",
       "Salmonella reduction below detection threshold",
@@ -244,14 +241,13 @@ export const sectorsDataEn: Record<string, SectorData> = {
     ],
     reinforcedProtocol: [
       { product: "BIONET", action: "Circuit descaling", description: "Acid treatment of water and steam circuits to remove scale and mineral biofilm." },
-      { product: "AQUACONTROL", action: "Process water treatment", description: "Microbiological stabilization of the water used in production." },
-      { product: "AIRSAN", action: "Atmospheric treatment", description: "Nebulization of packaging areas to master aerial microbial pressure." }
+      { product: "OXYLIS HOCl", action: "Network and environment maintenance", description: "Maintenance of process water circuits and packaging environments." }
     ],
     specificCases: [
-      { title: "Listeria contamination in packaging area", description: "Listeria detection on surfaces or in the atmosphere of the packaging zone.", protocol: "Line stop, intensive CLORAGRO cleaning, reinforced OPTIMAGRO disinfection, AIRSAN nebulization. Control swabs before resuming." },
+      { title: "Listeria contamination in packaging area", description: "Listeria detection on surfaces or in the atmosphere of the packaging zone.", protocol: "Line stop, intensive CLORAGRO cleaning, reinforced OPTIMAGRO treatment, OXYLIS HOCl nebulization. Control swabs before resuming." },
       { title: "Imminent IFS/BRC audit", description: "Express preparation for certification audits.", protocol: "Complete reinforced protocol 72h before audit. Full documentation of actions, dosages, and results. Microbiological report provided." }
     ],
-    associatedProducts: ["cloragro", "optimagro", "bionet", "aquacontrol", "airsan"],
+    associatedProducts: ["cloragro", "optimagro", "bionet", "oxylis-hoci"],
     expectedResults: [
       "Higher IFS/BRC score on hygiene criteria",
       "90% reduction of atmospheric microbial load",
@@ -282,16 +278,15 @@ export const sectorsDataAr: Record<string, SectorData> = {
     ],
     reinforcedProtocol: [
       { product: "BIONET", action: "تنظيف الأنابيب", description: "تجريد الرواسب العضوية والترسبات الكلسية في شبكات المياه قبل إدخال الحيوانات." },
-      { product: "AQUACONTROL", action: "المعالجة المستمرة للمياه", description: "الاستقرار البكتريولوجي لمياه الشرب طوال دورة الإنتاج." },
-      { product: "AIRSAN", action: "تطهير الأجواء", description: "تبخير دقيق بوجود الحيوانات لتقليل العبء الميكروبي الجوي والأمونيا." },
-      { product: "BIOACTIVE", action: "تحليل إنزيمي", description: "تنظيف المعدات ذات الحمل العضوي العالي قبل التطهير." }
+      { product: "OXYLIS HOCl", action: "صيانة الشبكات والبيئات", description: "صيانة مستمرة لشبكات المياه والبيئات التقنية طوال دورة الإنتاج." },
+      { product: "BIOACTIVE", action: "تحليل إنزيمي", description: "تنظيف المعدات ذات الحمل العضوي العالي قبل المعالجة." }
     ],
     specificCases: [
       { title: "التطهير بعد نوبة وبائية", description: "في حالة اكتشاف مسببات أمراض كبرى في الدفعة السابقة، يتم تعزيز البروتوكول.", protocol: "تمرير مزدوج لـ CLORAGRO + OPTIMAGRO بزيادة التركيزات. تحليل ميكروبيولوجي للمراقبة إلزامي." },
-      { title: "التربية في ظروف قصوى", description: "درجات الحرارة المرتفعة أو الرطوبة الزائدة تسرع التكاثر البكتيري.", protocol: "AQUACONTROL بجرعة معززة + AIRSAN متكرر. مراقبة متزايدة للمعايير الصحية." },
+      { title: "التربية في ظروف قصوى", description: "درجات الحرارة المرتفعة أو الرطوبة الزائدة تسرع اتساخ المنشآت.", protocol: "OXYLIS HOCl بجرعة معززة على الشبكات والبيئات. مراقبة متزايدة للمعايير التقنية." },
       { title: "تدقيق الأمن الحيوي", description: "التحضير لتدقيقات الامتثال أو الشهادات.", protocol: "البروتوكول الأساسي الكامل + أخذ عينات من الأسطح مع التحليل في مختبر N2K." }
     ],
-    associatedProducts: ["cloragro", "optimagro", "bionet", "aquacontrol", "airsan", "bioactive"],
+    associatedProducts: ["cloragro", "optimagro", "bionet", "oxylis-hoci", "bioactive"],
     expectedResults: [
       "تقليل ملموس لمعدل النفوق لكل دورة",
       "تحسن قابل للقياس في مؤشر استهلاك العلف منذ الدورة الأولى",
@@ -320,13 +315,13 @@ export const sectorsDataAr: Record<string, SectorData> = {
     ],
     reinforcedProtocol: [
       { product: "BIONET", action: "تنظيف شبكات المياه", description: "تجريد شبكات مياه التصنيع والتبريد." },
-      { product: "AIRSAN", action: "معالجة الغرف الباردة", description: "تبخير الغرف الباردة لتقليل عبء الليستيريا." }
+      { product: "OXYLIS HOCl", action: "صيانة البيئات المبردة", description: "صيانة الغرف الباردة وبيئات التخزين عبر التبخير." }
     ],
     specificCases: [
-      { title: "اكتشاف الليستيريا في الغرفة الباردة", description: "تأكيد التلوث من خلال التحليل في الغرفة الباردة أو منطقة التخزين.", protocol: "تنظيف معزز بـ CLORAGRO + OPTIMAGRO بتركيز زائد. التبخير البارد باستخدام AIRSAN. عينات مراقبة في اليوم الثالث." },
+      { title: "اكتشاف الليستيريا في الغرفة الباردة", description: "تأكيد التلوث من خلال التحليل في الغرفة الباردة أو منطقة التخزين.", protocol: "تنظيف معزز بـ CLORAGRO + OPTIMAGRO بتركيز زائد. التبخير البارد باستخدام OXYLIS HOCl. عينات مراقبة في اليوم الثالث." },
       { title: "التحضير لتدقيق IFS/BRC", description: "التحضير للامتثال قبل تدقيق الشهادات الدولية.", protocol: "بروتوكول كامل على مدار 48 ساعة + مسحات سطحية 72 ساعة قبل التدقيق + تقرير ميكروبيولوجي موثق." }
     ],
-    associatedProducts: ["cloragro", "optimagro", "bionet", "airsan"],
+    associatedProducts: ["cloragro", "optimagro", "bionet", "oxylis-hoci"],
     expectedResults: [
       "امتثال الهاسب بنسبة 100% في نقاط المراقبة",
       "خفض السالمونيلا إلى ما دون عتبة الكشف",
@@ -353,14 +348,13 @@ export const sectorsDataAr: Record<string, SectorData> = {
     ],
     reinforcedProtocol: [
       { product: "BIONET", action: "إزالة الترسبات من الشبكات", description: "معالجة حمضية لدوائر المياه والبخار لإزالة الترسبات والغشاء الحيوي المعدني." },
-      { product: "AQUACONTROL", action: "معالجة مياه التصنيع", description: "التثبيت الميكروبيولوجي للمياه المستخدمة في الإنتاج." },
-      { product: "AIRSAN", action: "معالجة الأجواء", description: "تبخير مناطق التعبئة للسيطرة على الضغط الميكروبي الهوائي." }
+      { product: "OXYLIS HOCl", action: "صيانة الشبكات والبيئات", description: "صيانة دوائر مياه التصنيع وبيئات التعبئة." }
     ],
     specificCases: [
-      { title: "تلوث الليستيريا في منطقة التعبئة", description: "اكتشاف الليستيريا على الأسطح أو في هواء منطقة التعبئة.", protocol: "توقف الخط، تنظيف مكثف بـ CLORAGRO، تطهير معزز بـ OPTIMAGRO، التبخير بـ AIRSAN. مسحات المراقبة قبل الاستئناف." },
+      { title: "تلوث الليستيريا في منطقة التعبئة", description: "اكتشاف الليستيريا على الأسطح أو في هواء منطقة التعبئة.", protocol: "توقف الخط، تنظيف مكثف بـ CLORAGRO، معالجة معززة بـ OPTIMAGRO، التبخير بـ OXYLIS HOCl. مسحات المراقبة قبل الاستئناف." },
       { title: "تدقيق IFS/BRC وشيك", description: "تحضير سريع لتدقيقات الشهادات.", protocol: "بروتوكول معزز كامل 72 ساعة قبل التدقيق. توثيق كامل للإجراءات والجرعات والنتائج. توفير تقرير ميكروبيولوجي." }
     ],
-    associatedProducts: ["cloragro", "optimagro", "bionet", "aquacontrol", "airsan"],
+    associatedProducts: ["cloragro", "optimagro", "bionet", "oxylis-hoci"],
     expectedResults: [
       "تسجيل درجة أعلى في معايير IFS/BRC على معايير النظافة",
       "خفض العبء الميكروبي الجوي بنسبة 90%",

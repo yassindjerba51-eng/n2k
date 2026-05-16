@@ -32,11 +32,11 @@ const faqData: Record<string, FAQData> = {
       },
       {
         question: "Quand faut-il traiter les circuits d'eau ?",
-        answer: "Les circuits d'abreuvement doivent être traités à chaque vide sanitaire avec BIONET (traitement choc à 1-3%) pour éliminer les biofilms accumulés. En parallèle, AQUACONTROL est utilisé en continu à 0,1% dans l'eau de boisson pour maintenir la qualité microbiologique au quotidien. Un circuit non traité est une source permanente de recontamination, même si les surfaces du bâtiment sont parfaitement désinfectées."
+        answer: "Les circuits d'abreuvement doivent être traités à chaque vide sanitaire avec BIONET (traitement choc à 1-3%) pour éliminer les biofilms accumulés. En parallèle, OXYLIS HOCl est utilisé en continu à 0,1% dans l'eau de boisson pour maintenir la qualité microbiologique au quotidien. Un circuit non traité est une source permanente de recontamination, même si les surfaces du bâtiment sont parfaitement désinfectées."
       },
       {
         question: "Pourquoi l'ammoniac réduit-il les performances de l'élevage ?",
-        answer: "L'ammoniac (NH₃) est un gaz irritant produit par la décomposition des déjections. Au-delà de 25 ppm, il provoque des lésions des voies respiratoires supérieures chez les volailles, augmente la sensibilité aux infections (Mycoplasma, E. coli), réduit la consommation alimentaire et dégrade l'indice de conversion. AIRSAN, utilisé en nébulisation à 1 ml/m³, réduit la charge microbienne aéroportée et contribue à stabiliser l'ambiance sans mouiller les litières."
+        answer: "L'ammoniac (NH₃) est un gaz irritant produit par la décomposition des déjections. Au-delà de 25 ppm, il provoque des lésions des voies respiratoires supérieures chez les volailles, augmente la sensibilité aux infections (Mycoplasma, E. coli), réduit la consommation alimentaire et dégrade l'indice de conversion. OXYLIS HOCl, utilisé en nébulisation à 1 ml/m³, réduit la charge microbienne aéroportée et contribue à stabiliser l'ambiance sans mouiller les litières."
       },
       {
         question: "Quand un protocole minimal suffit-il ?",
@@ -44,11 +44,11 @@ const faqData: Record<string, FAQData> = {
       },
       {
         question: "Quand faut-il renforcer le protocole ?",
-        answer: "Le protocole doit être renforcé dans les situations suivantes : mortalité supérieure à 5% sur un cycle, présence confirmée de Salmonella ou E. coli dans les prélèvements, échec d'un audit HACCP ou vétérinaire, bâtiments anciens avec surfaces poreuses ou dégradées, épisode de maladie respiratoire. Le renforcement implique l'ajout de BIONET (canalisations), AQUACONTROL (eau de boisson), AIRSAN (ambiance) et BIOACTIVE (équipements à forte charge organique)."
+        answer: "Le protocole doit être renforcé dans les situations suivantes : mortalité supérieure à 5% sur un cycle, présence confirmée de Salmonella ou E. coli dans les prélèvements, échec d'un audit HACCP ou vétérinaire, bâtiments anciens avec surfaces poreuses ou dégradées, épisode de maladie respiratoire. Le renforcement implique l'ajout de BIONET (canalisations), OXYLIS HOCl (eau de boisson), OXYLIS HOCl (ambiance) et BIOACTIVE (équipements à forte charge organique)."
       },
       {
         question: "Pourquoi ne pas utiliser tous les produits partout ?",
-        answer: "Chaque produit N2K a une formulation spécifique pour une zone et une fonction précise. AIRSAN est formulé pour la nébulisation en présence d'animaux — il ne convient pas au nettoyage des surfaces. BIONET est conçu pour les canalisations — il n'est pas efficace en pulvérisation sur les murs. Utiliser un produit hors de son champ d'application gaspille des ressources et peut compromettre la sécurité. Le protocole N2K attribue chaque produit à sa zone : le bon produit, au bon endroit, au bon moment."
+        answer: "Chaque produit N2K a une formulation spécifique pour une zone et une fonction précise. OXYLIS HOCl est formulé pour la nébulisation en présence d'animaux — il ne convient pas au nettoyage des surfaces. BIONET est conçu pour les canalisations — il n'est pas efficace en pulvérisation sur les murs. Utiliser un produit hors de son champ d'application gaspille des ressources et peut compromettre la sécurité. Le protocole N2K attribue chaque produit à sa zone : le bon produit, au bon endroit, au bon moment."
       }
     ]
   },
@@ -70,11 +70,11 @@ const faqData: Record<string, FAQData> = {
       },
       {
         question: "When should water circuits be treated?",
-        answer: "Drinking circuits must be treated at each sanitary void with BIONET (shock treatment at 1-3%) to eliminate accumulated biofilms. In parallel, AQUACONTROL is used continuously at 0.1% in drinking water to maintain daily microbiological quality. An untreated circuit is a permanent source of recontamination, even if building surfaces are perfectly disinfected."
+        answer: "Drinking circuits must be treated at each sanitary void with BIONET (shock treatment at 1-3%) to eliminate accumulated biofilms. In parallel, OXYLIS HOCl is used continuously at 0.1% in drinking water to maintain daily microbiological quality. An untreated circuit is a permanent source of recontamination, even if building surfaces are perfectly disinfected."
       },
       {
         question: "Why does ammonia reduce farming performance?",
-        answer: "Ammonia (NH₃) is an irritant gas produced by the decomposition of droppings. Above 25 ppm, it causes lesions in the upper respiratory tract of poultry, increases susceptibility to infections (Mycoplasma, E. coli), reduces feed consumption, and degrades feed conversion ratio. AIRSAN, used in nebulization at 1 ml/m³, reduces airborne microbial load and helps stabilize the atmosphere without wetting litter."
+        answer: "Ammonia (NH₃) is an irritant gas produced by the decomposition of droppings. Above 25 ppm, it causes lesions in the upper respiratory tract of poultry, increases susceptibility to infections (Mycoplasma, E. coli), reduces feed consumption, and degrades feed conversion ratio. OXYLIS HOCl, used in nebulization at 1 ml/m³, reduces airborne microbial load and helps stabilize the atmosphere without wetting litter."
       },
       {
         question: "When is a minimal protocol sufficient?",
@@ -82,11 +82,11 @@ const faqData: Record<string, FAQData> = {
       },
       {
         question: "When should the protocol be strengthened?",
-        answer: "The protocol should be strengthened in the following situations: mortality above 5% on a cycle, confirmed presence of Salmonella or E. coli in samples, failed HACCP or veterinary audit, old buildings with porous or degraded surfaces, respiratory disease episode. Strengthening involves adding BIONET (pipes), AQUACONTROL (drinking water), AIRSAN (atmosphere) and BIOACTIVE (equipment with high organic load)."
+        answer: "The protocol should be strengthened in the following situations: mortality above 5% on a cycle, confirmed presence of Salmonella or E. coli in samples, failed HACCP or veterinary audit, old buildings with porous or degraded surfaces, respiratory disease episode. Strengthening involves adding BIONET (pipes), OXYLIS HOCl (drinking water), OXYLIS HOCl (atmosphere) and BIOACTIVE (equipment with high organic load)."
       },
       {
         question: "Why not use all products everywhere?",
-        answer: "Each N2K product has a specific formulation for a specific zone and function. AIRSAN is formulated for nebulization in the presence of animals — it is not suitable for surface cleaning. BIONET is designed for pipes — it is not effective in spray application on walls. Using a product outside its field of application wastes resources and can compromise safety. The N2K protocol assigns each product to its zone: the right product, in the right place, at the right time."
+        answer: "Each N2K product has a specific formulation for a specific zone and function. OXYLIS HOCl is formulated for nebulization in the presence of animals — it is not suitable for surface cleaning. BIONET is designed for pipes — it is not effective in spray application on walls. Using a product outside its field of application wastes resources and can compromise safety. The N2K protocol assigns each product to its zone: the right product, in the right place, at the right time."
       }
     ]
   },
@@ -108,11 +108,11 @@ const faqData: Record<string, FAQData> = {
       },
       {
         question: "متى يجب معالجة دوائر المياه؟",
-        answer: "يجب معالجة دوائر الشرب في كل فراغ صحي باستخدام BIONET (معالجة صدمية بنسبة 1-3%) للقضاء على البيوفيلم المتراكم. بالتوازي، يستخدم AQUACONTROL باستمرار بنسبة 0.1% في مياه الشرب للحفاظ على الجودة الميكروبيولوجية اليومية. الدائرة غير المعالجة هي مصدر دائم لإعادة التلوث، حتى لو كانت أسطح المبنى مطهرة بشكل مثالي."
+        answer: "يجب معالجة دوائر الشرب في كل فراغ صحي باستخدام BIONET (معالجة صدمية بنسبة 1-3%) للقضاء على البيوفيلم المتراكم. بالتوازي، يستخدم OXYLIS HOCl باستمرار بنسبة 0.1% في مياه الشرب للحفاظ على الجودة الميكروبيولوجية اليومية. الدائرة غير المعالجة هي مصدر دائم لإعادة التلوث، حتى لو كانت أسطح المبنى مطهرة بشكل مثالي."
       },
       {
         question: "لماذا يقلل الأمونياك من أداء التربية؟",
-        answer: "الأمونياك (NH₃) هو غاز مهيج ينتج عن تحلل الفضلات. فوق 25 جزء في المليون، يسبب آفات في الجهاز التنفسي العلوي للدواجن، ويزيد من القابلية للعدوى (الميكوبلازما، الإشريكية القولونية)، ويقلل استهلاك العلف، ويضعف معدل تحويل الأعلاف. AIRSAN، المستخدم في التضبيب بمعدل 1 مل/م³، يقلل الحمل الميكروبي المحمول جواً ويساهم في تثبيت الأجواء دون تبليل الفرشة."
+        answer: "الأمونياك (NH₃) هو غاز مهيج ينتج عن تحلل الفضلات. فوق 25 جزء في المليون، يسبب آفات في الجهاز التنفسي العلوي للدواجن، ويزيد من القابلية للعدوى (الميكوبلازما، الإشريكية القولونية)، ويقلل استهلاك العلف، ويضعف معدل تحويل الأعلاف. OXYLIS HOCl، المستخدم في التضبيب بمعدل 1 مل/م³، يقلل الحمل الميكروبي المحمول جواً ويساهم في تثبيت الأجواء دون تبليل الفرشة."
       },
       {
         question: "متى يكفي البروتوكول الأدنى؟",
@@ -120,11 +120,11 @@ const faqData: Record<string, FAQData> = {
       },
       {
         question: "متى يجب تعزيز البروتوكول؟",
-        answer: "يجب تعزيز البروتوكول في الحالات التالية: وفيات تتجاوز 5% في دورة واحدة، وجود مؤكد للسالمونيلا أو الإشريكية القولونية في العينات، فشل في تدقيق HACCP أو بيطري، مباني قديمة بأسطح مسامية أو متدهورة، نوبة مرض تنفسي. التعزيز يتضمن إضافة BIONET (الأنابيب)، AQUACONTROL (مياه الشرب)، AIRSAN (الأجواء) وBIOACTIVE (المعدات ذات الحمل العضوي العالي)."
+        answer: "يجب تعزيز البروتوكول في الحالات التالية: وفيات تتجاوز 5% في دورة واحدة، وجود مؤكد للسالمونيلا أو الإشريكية القولونية في العينات، فشل في تدقيق HACCP أو بيطري، مباني قديمة بأسطح مسامية أو متدهورة، نوبة مرض تنفسي. التعزيز يتضمن إضافة BIONET (الأنابيب)، OXYLIS HOCl (مياه الشرب)، OXYLIS HOCl (الأجواء) وBIOACTIVE (المعدات ذات الحمل العضوي العالي)."
       },
       {
         question: "لماذا لا نستخدم جميع المنتجات في كل مكان؟",
-        answer: "كل منتج من N2K له تركيبة محددة لمنطقة ووظيفة محددة. AIRSAN مصمم للتضبيب في حضور الحيوانات — وليس مناسباً لتنظيف الأسطح. BIONET مصمم للأنابيب — وليس فعالاً في الرش على الجدران. استخدام منتج خارج مجال تطبيقه يهدر الموارد وقد يضر بالسلامة. بروتوكول N2K يخصص كل منتج لمنطقته: المنتج المناسب، في المكان المناسب، في الوقت المناسب."
+        answer: "كل منتج من N2K له تركيبة محددة لمنطقة ووظيفة محددة. OXYLIS HOCl مصمم للتضبيب في حضور الحيوانات — وليس مناسباً لتنظيف الأسطح. BIONET مصمم للأنابيب — وليس فعالاً في الرش على الجدران. استخدام منتج خارج مجال تطبيقه يهدر الموارد وقد يضر بالسلامة. بروتوكول N2K يخصص كل منتج لمنطقته: المنتج المناسب، في المكان المناسب، في الوقت المناسب."
       }
     ]
   }

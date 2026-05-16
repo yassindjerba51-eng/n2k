@@ -20,7 +20,7 @@
     "badge": "Maîtrise Sanitaire Professionnelle",
     "title1": "Maîtrise sanitaire",
     "title2": "professionnelle",
-    "title3": "pour l'industrie",
+    "title3": "pour l'industrie et l'élevage",
     "subtitle": "Protocoles complets de nettoyage, assainissement et maintenance préventive pour élevage avicole, abattoirs et industrie agroalimentaire.",
     "cta": "Demander un diagnostic sanitaire",
     "ctaSecondary": "Découvrir nos solutions",
@@ -109,16 +109,16 @@
         },
         {
           "num": "04",
-          "product": "BIONET + AQUACONTROL",
+          "product": "BIONET + OXYLIS HOCl",
           "title": "Nettoyage et désinfection des canalisations",
           "context": "Début de cycle",
-          "role": "Phase 01 — BIONET : traitement choc des circuits d'abreuvement. Élimination tartre, biofilm, dépôts organiques. Dosage 1% à 3% — rinçage complet obligatoire après.\nPhase 02 — AQUACONTROL : introduction en continu dans l'eau de boisson. Maintien de la qualité microbiologique tout au long du cycle. Dosage 0,1%.",
+          "role": "Phase 01 — BIONET : traitement choc des circuits d'abreuvement. Élimination tartre, biofilm, dépôts organiques. Dosage 1% à 3% — rinçage complet obligatoire après.\nPhase 02 — OXYLIS HOCl : introduction en continu dans l'eau de boisson. Maintien de la qualité microbiologique tout au long du cycle. Dosage 0,1%.",
           "dosage": "",
           "constraint": ""
         },
         {
           "num": "05",
-          "product": "AIRSAN",
+          "product": "OXYLIS HOCl",
           "title": "Traitement de l'ambiance",
           "context": "Durant le cycle",
           "role": "Nébulisation périodique en présence des animaux. Réduction de la charge microbienne aérienne et des concentrations d'ammoniac.",
@@ -240,13 +240,13 @@
       "label": "Pendant cycle",
       "name": "Assainir",
       "description": "Désinfection biocide à spectre complet après rinçage obligatoire. Stabilisation de la qualité de l'eau et de l'air.",
-      "products": "OPTIMAGRO / AQUACONTROL / AIRSAN"
+      "products": "OPTIMAGRO / OXYLIS HOCl / OXYLIS HOCl"
     },
     "step3": {
       "label": "Maintenance continue",
       "name": "Maintenir",
       "description": "Surveillance et traitement continu : qualité de l'eau, ambiance, contrôle microbiologique régulier.",
-      "products": "AQUACONTROL / AIRSAN"
+      "products": "OXYLIS HOCl / OXYLIS HOCl"
     },
     "phase1": {
       "label": "Phase 01",
@@ -298,19 +298,19 @@
       "step": "Étape 01",
       "title": "Nettoyer",
       "desc": "Sans destruction préalable du biofilm, aucun désinfectant ne peut atteindre les pathogènes. CLORAGRO prépare la surface.",
-      "products": "Produits : CLORAGRO / BIONET / BIOACTIVE"
+      "products": "Produits : CLORAGRO / BIONET / OXYLIS HOCl"
     },
     "disinfect": {
       "step": "Étape 02",
       "title": "Désinfecter",
       "desc": "Sur surface propre et rincée, OPTIMAGRO élimine les pathogènes résiduels à spectre complet. Pas avant.",
-      "products": "Produits : OPTIMAGRO / AQUACONTROL / AIRSAN"
+      "products": "Produits : OPTIMAGRO / OXYLIS HOCl"
     },
     "maintain": {
       "step": "Étape 03",
       "title": "Maintenir",
-      "desc": "Sans contrôle continu, la contamination redémarre dès les premiers jours. AQUACONTROL et AIRSAN maintiennent une pression microbienne maîtrisée.",
-      "products": "Produits : AQUACONTROL / AIRSAN"
+      "desc": "Sans contrôle continu, la contamination redémarre dès les premiers jours. OXYLIS HOCl maintiennent une pression microbienne maîtrisée.",
+      "products": "Produits : OXYLIS HOCl / BIONET"
     }
   },
   "credibility": {
@@ -346,13 +346,13 @@
   },
   "homeProducts": {
     "badge": "Nos Produits",
-    "title": "6 produits, 1 protocole",
+    "title": "Des produits conçus pour des protocoles adaptés",
     "subtitle": "Chaque produit a un rôle précis dans le protocole de maîtrise sanitaire.",
     "cloragro": "Nettoyage technique des surfaces — Phase 01",
     "optimagro": "Désinfection biocide à spectre complet — Phase 02",
     "bionet": "Nettoyage technique des canalisations d'eau",
-    "aquacontrol": "Traitement continu de l'eau potable",
-    "airsan": "Désinfection atmosphérique en présence d'animaux",
+    "oxylis-hoci": "Solution technique d'entretien des réseaux et environnements",
+    "alcosept-pro": "Nettoyage rapide à évaporation pour surfaces techniques",
     "bioactive": "Nettoyant enzymatique pour matières organiques — Élevage avicole uniquement",
     "viewAll": "Voir tous les produits"
   },
@@ -736,7 +736,7 @@
         ]
       },
       "product2": {
-        "name": "AQUACONTROL",
+        "name": "OXYLIS HOCl",
         "type": "Stabilisation — Maintien Quotidien",
         "desc": "Stabilisation de la qualité de l'eau. Contrôle constant de la charge microbienne.",
         "features": [
@@ -751,7 +751,7 @@
       "title": "Aéro-Biocontamination : Quand l'air devient une menace",
       "subtitle": "L'ammoniac et la charge microbienne aérienne attaquent les muqueuses respiratoires. Le contrôle de l'ambiance est un levier de performance souvent négligé.",
       "product1": {
-        "name": "AIRSAN",
+        "name": "OXYLIS HOCl",
         "type": "Nébulisation High-Tech",
         "desc": "Une solution fine qui reste en suspension pour neutraliser les pathogènes aériens sans mouiller les litières."
       },
@@ -904,7 +904,7 @@
     },
     "canalisations": {
       "metaTitle": "Traitement des Canalisations d'Abreuvement — N2K Biosécurité",
-      "metaDescription": "Protocole BIONET + AQUACONTROL pour le nettoyage et la stabilisation des réseaux d'eau en élevage. Élimination du biofilm et du tartre dans les canalisations.",
+      "metaDescription": "Protocole BIONET + OXYLIS HOCl pour le nettoyage et la stabilisation des réseaux d'eau en élevage. Élimination du biofilm et du tartre dans les canalisations.",
       "heroTitle": "Zone 02 — L'Eau : Le réseau d'abreuvement, premier vecteur de contamination",
       "heroSubtitle": "Un réseau d'eau non maîtrisé transmet en quelques heures des pathogènes à l'ensemble du cheptel. Le contrôle commence à la source et se maintient jusqu'au dernier abreuvoir.",
       "problem": {
@@ -928,9 +928,9 @@
       },
       "step2": {
         "badge": "Étape 02",
-        "name": "AQUACONTROL",
+        "name": "OXYLIS HOCl",
         "type": "Stabilisation Bactériologique Continue",
-        "desc": "AQUACONTROL est un stabilisateur bactériologique de l'eau de boisson. Il maintient une qualité microbiologique constante du réservoir jusqu'au dernier abreuvoir, tout au long du cycle de production. Son mode d'action contrôle la charge microbienne sans créer de résistances.",
+        "desc": "OXYLIS HOCl est un stabilisateur bactériologique de l'eau de boisson. Il maintient une qualité microbiologique constante du réservoir jusqu'au dernier abreuvoir, tout au long du cycle de production. Son mode d'action contrôle la charge microbienne sans créer de résistances.",
         "features": [
           "Stabilisation bactériologique continue de l'eau de boisson",
           "Dosage automatique : compatible systèmes proportionnels (Dosatron, etc.)",
@@ -993,14 +993,14 @@
         },
         {
           "value": "Continu",
-          "label": "Protection AQUACONTROL tout au long du cycle",
+          "label": "Protection OXYLIS HOCl tout au long du cycle",
           "icon": "clock"
         }
       ],
       "faq": [
         {
-          "q": "AQUACONTROL peut-il être utilisé avec des poussins dès J1 ?",
-          "a": "Oui. AQUACONTROL est conçu pour un usage continu dès la mise en place des animaux. Le dosage à 0,1% est sûr pour les poussins dès le premier jour. Il est recommandé de démarrer le traitement avant l'arrivée des animaux pour stabiliser le réseau."
+          "q": "OXYLIS HOCl peut-il être utilisé avec des poussins dès J1 ?",
+          "a": "Oui. OXYLIS HOCl est conçu pour un usage continu dès la mise en place des animaux. Le dosage à 0,1% est sûr pour les poussins dès le premier jour. Il est recommandé de démarrer le traitement avant l'arrivée des animaux pour stabiliser le réseau."
         },
         {
           "q": "Comment nettoyer des pipettes très incrustées de tartre ?",
@@ -1011,12 +1011,12 @@
           "a": "Après traitement BIONET, rincer abondamment l'ensemble du circuit avec de l'eau potable. Vérifier l'absence de mousse et de résidus. La mise en eau de boisson peut se faire immédiatement après rinçage complet. Prévoir 2 à 3 volumes du réseau en eau de rinçage."
         },
         {
-          "q": "Peut-on utiliser AQUACONTROL en continu toute la bande ?",
-          "a": "Oui, c'est même la recommandation. AQUACONTROL est conçu pour un dosage continu à 0,1% tout au long du cycle de production. L'arrêt du traitement expose le réseau à une recontamination rapide, surtout en conditions climatiques chaudes."
+          "q": "Peut-on utiliser OXYLIS HOCl en continu toute la bande ?",
+          "a": "Oui, c'est même la recommandation. OXYLIS HOCl est conçu pour un dosage continu à 0,1% tout au long du cycle de production. L'arrêt du traitement expose le réseau à une recontamination rapide, surtout en conditions climatiques chaudes."
         },
         {
           "q": "Comment calculer le dosage pour un élevage de 20 000 sujets ?",
-          "a": "La consommation d'eau moyenne est d'environ 200 à 250 mL/sujet/jour en poulet de chair (variable selon l'âge et la température). Pour 20 000 sujets : environ 4 000 à 5 000 litres/jour. À 0,1% AQUACONTROL : 4 à 5 litres de produit pur par jour, via doseur proportionnel."
+          "a": "La consommation d'eau moyenne est d'environ 200 à 250 mL/sujet/jour en poulet de chair (variable selon l'âge et la température). Pour 20 000 sujets : environ 4 000 à 5 000 litres/jour. À 0,1% OXYLIS HOCl : 4 à 5 litres de produit pur par jour, via doseur proportionnel."
         }
       ],
       "heroTitleStart": "L'Eau :",
@@ -1026,7 +1026,7 @@
     },
     "ambiance": {
       "metaTitle": "Contrôle de l'Ambiance & Aéro-Biocontamination en Élevage — N2K",
-      "metaDescription": "Protocole AIRSAN + BIOACTIVE pour la maîtrise de l'ammoniac, des poussières et de la charge microbienne aérienne en bâtiments d'élevage.",
+      "metaDescription": "Protocole OXYLIS HOCl + BIOACTIVE pour la maîtrise de l'ammoniac, des poussières et de la charge microbienne aérienne en bâtiments d'élevage.",
       "heroTitle": "Zone 03 — L'Ambiance : Neutraliser la menace invisible dans l'air",
       "heroSubtitle": "L'ammoniac corrode les muqueuses. Les pathogènes aériens colonisent les voies respiratoires avant tout contact direct. Contrôler l'ambiance, c'est protéger le cheptel à la source.",
       "problem": {
@@ -1037,9 +1037,9 @@
       },
       "step1": {
         "badge": "Étape 01",
-        "name": "AIRSAN",
+        "name": "OXYLIS HOCl",
         "type": "Solution de Nébulisation en Présence d'Animaux",
-        "desc": "AIRSAN est une solution nébulisable à spectre biocide aérien. Les particules fines en suspension neutralisent les pathogènes avant qu'ils n'atteignent les muqueuses respiratoires des animaux. Utilisable en présence du cheptel sans stress ni irritation.",
+        "desc": "OXYLIS HOCl est une solution nébulisable à spectre biocide aérien. Les particules fines en suspension neutralisent les pathogènes avant qu'ils n'atteignent les muqueuses respiratoires des animaux. Utilisable en présence du cheptel sans stress ni irritation.",
         "features": [
           "Utilisation en présence des animaux — sans stress, sans irritation",
           "Réduction de l'ammoniac (NH₃) : jusqu'à -60% en 30 minutes",
@@ -1052,11 +1052,11 @@
         "badge": "Étape 02",
         "name": "BIOACTIVE",
         "type": "Nettoyant Enzymatique des Surfaces",
-        "desc": "BIOACTIVE est un cocktail enzymatique concentré (protéases, lipases, amylases) qui dégrade les matières organiques sur les surfaces et équipements sans friction ni vapeur chimique. Il prépare l'environnement à la nébulisation AIRSAN en réduisant la source des émissions.",
+        "desc": "BIOACTIVE est un cocktail enzymatique concentré (protéases, lipases, amylases) qui dégrade les matières organiques sur les surfaces et équipements sans friction ni vapeur chimique. Il prépare l'environnement à la nébulisation OXYLIS HOCl en réduisant la source des émissions.",
         "features": [
           "Triple cocktail enzymatique : protéases, lipases, amylases",
           "Dégradation enzymatique sans friction ni vapeur chimique",
-          "Préparation des surfaces avant nébulisation AIRSAN",
+          "Préparation des surfaces avant nébulisation OXYLIS HOCl",
           "Biodégradable — sans résidu toxique",
           "Application mousse ou pulvérisation sur surfaces fortement chargées"
         ]
@@ -1073,13 +1073,13 @@
           "NH₃ (Ammoniac)",
           ">25 ppm",
           "<10 ppm",
-          "AIRSAN nébulisation"
+          "OXYLIS HOCl nébulisation"
         ],
         [
           "CO₂",
           ">3 000 ppm",
           "<2 000 ppm",
-          "Ventilation + AIRSAN"
+          "Ventilation + OXYLIS HOCl"
         ],
         [
           "Humidité relative",
@@ -1091,7 +1091,7 @@
           "Charge bactérienne air",
           ">10⁵ UFC/m³",
           "<10³ UFC/m³",
-          "AIRSAN préventif"
+          "OXYLIS HOCl préventif"
         ]
       ],
       "equipmentTitle": "Guide Matériel de Nébulisation",
@@ -1116,7 +1116,7 @@
       "kpi": [
         {
           "value": "-60%",
-          "label": "Réduction NH₃ en 30 minutes après nébulisation AIRSAN",
+          "label": "Réduction NH₃ en 30 minutes après nébulisation OXYLIS HOCl",
           "icon": "reduction"
         },
         {
@@ -1126,30 +1126,30 @@
         },
         {
           "value": "0 cas",
-          "label": "De stress animal documenté lors de l'utilisation d'AIRSAN",
+          "label": "De stress animal documenté lors de l'utilisation d'OXYLIS HOCl",
           "icon": "clock"
         }
       ],
       "faq": [
         {
-          "q": "AIRSAN est-il compatible avec les vaccinations par spray ?",
-          "a": "Ne pas nébuliser AIRSAN pendant les 48 heures suivant une vaccination par spray ou aérosol. Le produit pourrait interférer avec les souches vaccinales vivantes atténuées. Reprendre le traitement préventif 48h après vaccination."
+          "q": "OXYLIS HOCl est-il compatible avec les vaccinations par spray ?",
+          "a": "Ne pas nébuliser OXYLIS HOCl pendant les 48 heures suivant une vaccination par spray ou aérosol. Le produit pourrait interférer avec les souches vaccinales vivantes atténuées. Reprendre le traitement préventif 48h après vaccination."
         },
         {
           "q": "Quel type de nébulisateur utiliser pour un bâtiment de 1500 m² ?",
           "a": "Pour un bâtiment de 1500 m², prévoir 5 à 6 nébuliseurs statiques haute pression répartis uniformément, ou 2 passages avec un nébuliseur mobile haute pression. Privilégier des gouttelettes <50 μm pour une suspension optimale."
         },
         {
-          "q": "Peut-on utiliser AIRSAN et BIOACTIVE le même jour ?",
-          "a": "Oui. BIOACTIVE s'applique sur les surfaces (sols, équipements) et AIRSAN se nébulise dans l'air. Les deux produits sont complémentaires : BIOACTIVE réduit la source des émissions organiques, AIRSAN traite les pathogènes déjà en suspension."
+          "q": "Peut-on utiliser OXYLIS HOCl et BIOACTIVE le même jour ?",
+          "a": "Oui. BIOACTIVE s'applique sur les surfaces (sols, équipements) et OXYLIS HOCl se nébulise dans l'air. Les deux produits sont complémentaires : BIOACTIVE réduit la source des émissions organiques, OXYLIS HOCl traite les pathogènes déjà en suspension."
         },
         {
           "q": "À quelle fréquence nébuliser en période de forte chaleur ?",
           "a": "En période de forte chaleur (>35°C), augmenter la fréquence à 3-4 nébulisations par jour. La chaleur accélère la prolifération bactérienne et augmente les concentrations d'ammoniac. Maintenir une ventilation maximale en parallèle."
         },
         {
-          "q": "AIRSAN laisse-t-il des résidus sur les œufs ou la viande ?",
-          "a": "Non. Aux doses recommandées (1 mL/m³), AIRSAN ne laisse pas de résidus détectables sur les produits d'élevage. Le produit agit en phase gazeuse et se dégrade rapidement. Il est conçu pour un usage en présence d'animaux de production."
+          "q": "OXYLIS HOCl laisse-t-il des résidus sur les œufs ou la viande ?",
+          "a": "Non. Aux doses recommandées (1 mL/m³), OXYLIS HOCl ne laisse pas de résidus détectables sur les produits d'élevage. Le produit agit en phase gazeuse et se dégrade rapidement. Il est conçu pour un usage en présence d'animaux de production."
         }
       ],
       "heroTitleStart": "L'Ambiance :",
@@ -1271,12 +1271,12 @@
     "zone03Name": "L'Ambiance",
     "zone03Desc": "Traitement de l'air et contrôle des odeurs",
     "catalogBadge": "Notre Gamme",
-    "catalogTitle": "6 Produits. 3 Zones. 1 Protocole.",
+    "catalogTitle": "Des produits et protocoles spécifiques pour chaque besoin",
     "catalogSubtitle": "Chaque produit répond à une problématique précise de votre exploitation. Filtrez par zone pour identifier la solution adaptée.",
     "filterAll": "Tous les produits",
     "viewProduct": "Voir la fiche technique",
     "backToCatalog": "Retour au catalogue",
-    "productZone": "Zone d'intervention",
+    "productZone": "Zones d'intervention",
     "problemTitle": "Le Problème Identifié",
     "solutionTitle": "La Solution",
     "applicationsBadge": "Champs d'Application",
@@ -1500,36 +1500,36 @@
       "aeration": "Non applicable.",
       "compliance": "Réservé exclusivement à l'élevage avicole.",
       "whenAlone": "Pour le détartrage périodique en vide sanitaire.",
-      "whenComplete": "À relayer par AQUACONTROL en continu lors de la mise en place des animaux.",
+      "whenComplete": "À relayer par OXYLIS HOCl en continu lors de la mise en place des animaux.",
       "whenNot": "Ne jamais utiliser en présence des animaux. Ne pas utiliser en abattoir ou IAA."
     },
-    "aquacontrol": {
-      "problem": "Contamination continue de l'eau de boisson et multiplication microbienne en bout de ligne.",
-      "where": "Systèmes d'abreuvement continu (Élevage avicole uniquement).",
-      "how": "Dosage continu (0,1%) via pompe doseuse pendant la présence des animaux.",
-      "why": "Stabilisation bactériologique constante sans altérer l'appétence de l'eau.",
-      "results": "Baisse de la mortalité, eau saine jusqu'à la dernière pipette, amélioration de l'IC.",
-      "contactTime": "Action continue",
-      "rinsing": "Non applicable (consommé par les animaux).",
-      "aeration": "Non applicable.",
-      "compliance": "Réservé exclusivement à l'élevage avicole.",
-      "whenAlone": "Pour la maintenance quotidienne d'une ligne saine.",
-      "whenComplete": "Nécessite un nettoyage préalable des lignes au BIONET pour une pleine efficacité.",
-      "whenNot": "Ne pas surdoser. Ne pas utiliser en abattoir ou IAA."
+    "oxylis-hoci": {
+      "problem": "Préservez les canalisations d’eau et améliorez l’ambiance des bâtiments d’élevage et d'industrie agroalimentaire",
+      "where": "Réseaux d'eau et environnements en élevage et industrie agroalimentaire.",
+      "how": "Dosage en ligne, nébulisation ou pulvérisation selon protocole d'entretien.",
+      "why": "Solution technique polyvalente d'entretien des installations, compatible avec un large éventail d'applications.",
+      "results": "Installations propres et bien entretenues, simplification des protocoles opérationnels.",
+      "contactTime": "Selon protocole",
+      "rinsing": "Selon application.",
+      "aeration": "Selon application.",
+      "compliance": "Compatible élevage avicole et industrie agroalimentaire.",
+      "whenAlone": "Pour l'entretien quotidien des réseaux et environnements.",
+      "whenComplete": "S'intègre dans le protocole complet après nettoyage BIONET des canalisations.",
+      "whenNot": "Respecter les dosages recommandés."
     },
-    "airsan": {
-      "problem": "Charge ammoniacale élevée et germes aérosolisés causant des troubles respiratoires.",
-      "where": "Ambiance des bâtiments d'élevage (Élevage avicole uniquement).",
-      "how": "Nébulisation aérienne ultra-fine (1 ml/m³).",
-      "why": "Action neutralisante sur l'ammoniac et abattement des poussières porteuses de germes.",
-      "results": "Air respirable, stress animal réduit, prévention des pathologies respiratoires.",
-      "contactTime": "Immédiat",
-      "rinsing": "Non applicable.",
-      "aeration": "Ventilation normale du bâtiment.",
-      "compliance": "Sûr pour une utilisation en présence des animaux. Réservé à l'élevage avicole.",
-      "whenAlone": "Pour améliorer rapidement le confort respiratoire en cas de pic d'ammoniac.",
-      "whenComplete": "S'intègre dans le suivi global du lot.",
-      "whenNot": "Ne jamais mouiller directement les animaux ou la litière. Ne pas utiliser en abattoir ou IAA."
+    "alcosept-pro": {
+      "problem": "Résidus organiques sur surfaces de travail entre les opérations de production.",
+      "where": "Surfaces de contact, équipements inox et plastiques, zones de conditionnement.",
+      "how": "Pulvérisation directe ou application manuelle entre opérations.",
+      "why": "Nettoyage rapide à évaporation pour les contraintes de cadence industrielle.",
+      "results": "Surfaces propres entre opérations, sans résidus, sans rinçage prolongé.",
+      "contactTime": "Rapide — évaporation",
+      "rinsing": "Pas de rinçage prolongé nécessaire.",
+      "aeration": "Non applicable.",
+      "compliance": "Adapté aux environnements agroalimentaires et abattoirs.",
+      "whenAlone": "Pour le nettoyage intermédiaire rapide entre deux séries de production.",
+      "whenComplete": "Complément au protocole complet de nettoyage.",
+      "whenNot": "Ne remplace pas le protocole complet Phase 01 + Phase 02."
     },
     "bioactive": {
       "problem": "Matière organique tenace (graisses, protéines) incrustée sur les équipements.",

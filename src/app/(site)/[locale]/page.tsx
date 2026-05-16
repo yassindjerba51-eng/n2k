@@ -7,6 +7,7 @@ import {
   Microscope, FlaskConical, BookOpen,
 } from "lucide-react";
 import StickyDiagnosticCTA from "@/components/ui/StickyDiagnosticCTA";
+import { HeroSlideshow } from "@/components/ui/HeroSlideshow";
 import SchemaOrg from "@/components/seo/SchemaOrg";
 import { products } from "@/data/products";
 
@@ -70,8 +71,8 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
     cloragro: t("homeProducts.cloragro"),
     optimagro: t("homeProducts.optimagro"),
     bionet: t("homeProducts.bionet"),
-    aquacontrol: t("homeProducts.aquacontrol"),
-    airsan: t("homeProducts.airsan"),
+    "oxylis-hoci": t("homeProducts.oxylis-hoci"),
+    "alcosept-pro": t("homeProducts.alcosept-pro"),
     bioactive: t("homeProducts.bioactive"),
   };
 
@@ -122,13 +123,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             {/* Right Column: Image */}
             <div className="w-full lg:w-1/3 relative mt-12 lg:mt-0">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10 h-[300px] md:h-[450px] w-full bg-n2k-surface-high">
-                <Image
-                  src="/images/hero_industry.png"
-                  alt={t("hero.imageAlt")}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 33vw"
-                  className="object-cover hover:scale-105 transition-transform duration-700"
-                />
+                <HeroSlideshow altText={t("hero.imageAlt")} />
               </div>
               {/* Decorative glow behind image */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-n2k-secondary/20 blur-3xl -z-10 rounded-full mix-blend-screen" />
