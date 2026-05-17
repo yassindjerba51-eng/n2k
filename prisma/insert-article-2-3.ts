@@ -7,93 +7,57 @@ async function main() {
 
   // --- Article 2: Ammoniac ---
   const contentFr2 = `
-<p>Dès les premières semaines d'élevage, une odeur piquante vous prend à la gorge en entrant dans le bâtiment. Vous augmentez la ventilation, ce qui coûte cher en énergie, mais l'odeur d'ammoniac revient rapidement. Les animaux commencent à tousser et la litière devient humide.</p>
-<h2>Ce que pensent la plupart des éleveurs</h2>
-<p>L'idée reçue est que l'ammoniac est uniquement dû à une mauvaise ventilation ou à une surdensité. La solution classique consiste à augmenter le renouvellement d'air et à rajouter de la litière neuve. \"On ventile plus, l'odeur partira\".</p>
-<h2>Ce qui se passe réellement à l'échelle chimique</h2>
-<p>L'ammoniac (NH3) n'apparaît pas par magie. Il est le résultat d'une réaction chimique : la dégradation de l'acide urique contenu dans les fientes des volailles par des bactéries uréolytiques présentes dans la litière. Plus la litière est riche en azote et en humidité, plus ces bactéries prolifèrent et produisent de l'ammoniac. C'est un problème d'équilibre microbien et enzymatique, pas seulement de renouvellement d'air.</p>
-<h2>Ce qu'on observe sur le terrain</h2>
-<p>Sur le terrain, une ventilation forcée règle le problème temporairement mais refroidit le bâtiment, entraînant une surconsommation de chauffage. Pire, l'ammoniac irrite les muqueuses respiratoires des volailles, créant une porte d'entrée royale pour des pathogènes comme E. coli ou les virus respiratoires. Les animaux sont moins actifs, l'indice de consommation se dégrade, et les saisies à l'abattoir (brûlures de bréchet) augmentent.</p>
-<h2>Pourquoi la sur-ventilation échoue-t-elle ?</h2>
-<p>Ventiler pour éliminer l'ammoniac revient à écoper l'eau d'un bateau percé sans boucher le trou. L'usine à gaz (les fientes et les bactéries) continue de fonctionner à plein régime. Tant que la dégradation bactérienne n'est pas stoppée ou orientée différemment, l'ammoniac continuera d'être produit.</p>
-<h2>Les erreurs les plus courantes</h2>
+<p>Dès la deuxième semaine d'élevage, une odeur d'ammoniac (NH3) commence souvent à saturer l'air du bâtiment. Ce symptôme concret se manifeste par un picotement oculaire immédiat chez l'opérateur et une toux réflexe chez les volailles. Sur le terrain, l'erreur fréquente consiste à augmenter aveuglément le taux de ventilation. Cette réaction d'urgence refroidit le bâtiment, provoquant un stress thermique et une surconsommation de chauffage ruineuse pour l'éleveur. Sur le plan économique, le maintien d'une concentration de seulement 25 ppm d'ammoniac suffit à dégrader l'indice de consommation (IC) de 3 à 5 % et à augmenter le taux de saisie à l'abattoir pour cause de pododermatites et de brûlures du bréchet.</p>
+<h2>La dynamique biochimique cachée de la litière</h2>
+<p>L'ammoniac n'est pas un gaz émis spontanément, mais le produit final d'une réaction enzymatique. Les fientes de volailles sont riches en acide urique. Sous l'action d'enzymes uréases produites par des bactéries uréolytiques opportunistes, cet acide est dégradé en ammoniac. Une erreur opérateur typique est d'attendre que la litière "croûte" pour intervenir. En réalité, le processus démarre dès qu'un déséquilibre se crée, souvent exacerbé par une simple fuite au niveau des pipettes d'abreuvement. Ce micro-environnement humide favorise l'explosion des bactéries uréolytiques. Ventiler ne fait que chasser l'ammoniac gazeux ; l'usine microbiologique, elle, continue de tourner à plein régime dans la litière.</p>
+<h2>Agir à la source : Bloquer le cycle lors du vide sanitaire</h2>
+<p>L'intervention la plus stratégique se situe en amont, lors du vide sanitaire. Un cas typique observé sur une installation réelle montre que le lavage haute pression classique ne suffit pas : il lisse les surfaces mais laisse un biofilm résiduel et des protéines coagulées incrustés dans la porosité du béton. Ce substrat organique devient le point de départ de la fermentation au lot suivant. L'application d'une solution de décapage enzymatique performante comme notre gamme <a href="/fr/produits/bioactive">BIOACTIVE</a> permet de déstructurer en profondeur cette matrice organique. En hydrolysant les protéines et les lipides incrustés, on prive la flore uréolytique de son support nutritionnel originel, retardant considérablement le démarrage de la fermentation lors de la mise en place du nouveau lot.</p>
+<h2>Neutraliser l'atmosphère en présence d'animaux</h2>
+<p>Une fois le lot en place, si l'hygrométrie de la litière dérape, il faut agir sur l'ambiance sans rajouter d'eau. Pulvériser un produit liquide directement sur une litière humide est une erreur technique majeure qui aggrave la prolifération bactérienne. L'approche microbiologique appliquée exige la maîtrise de la flore aérienne. C'est ici que l'assainissement de l'air par nébulisation d'une solution d'hygiène de l'air de la gamme <a href="/fr/produits/oxylis-hoci">OXYLIS HOCl</a> fait la différence. En réduisant la pression bactérienne en suspension de manière sèche, ce procédé neutralise les molécules odorantes et protège le tractus respiratoire des oiseaux, sans dégrader l'hygrométrie du bâtiment. Le confort animal est rétabli, et l'éleveur reprend le contrôle de ses paramètres d'ambiance.</p>
+<h2>Recommandations opérationnelles</h2>
+<p>Le contrôle de l'ammoniac est une discipline de prévention active, non de réaction :</p>
 <ul>
-<li>Sur-ventiler en plein hiver, entraînant un stress thermique pour les animaux et une facture énergétique exorbitante.</li>
-<li>Négliger les fuites d'eau des nipponnes qui créent des zones humides favorisant la fermentation.</li>
-<li>Croire qu'un simple traitement d'air parfumé masque le danger pour les animaux.</li>
-<li>Attendre que l'odeur soit insupportable pour l'homme (à 20 ppm, c'est déjà néfaste pour le poulet).</li>
+<li>Réparez les fuites de lignes d'eau en temps réel pour supprimer les zones de fermentation.</li>
+<li>Respectez scrupuleusement les temps de contact des détergents enzymatiques lors du vide sanitaire pour garantir une hydrolyse complète.</li>
+<li>Gérez la ventilation pour l'oxygène et le contrôle de l'humidité, et non comme un simple extracteur d'odeurs.</li>
+<li>Surveillez la litière sous les lignes d'abreuvement : l'apparition de plaques croûtées signe le début de la réaction uréolytique.</li>
 </ul>
-<h2>Solutions pratiques et curatives</h2>
-<ul>
-<li><strong>Contrôle de l'humidité :</strong> Réparez les fuites d'abreuvoirs immédiatement. Retirez les zones de litière \"croûtée\" et humide.</li>
-<li><strong>Gestion de la flore :</strong> Utilisez un traitement enzymatique et probiotique de litière pour concurrencer les bactéries uréolytiques.</li>
-<li><strong>Traitement de l'air :</strong> Appliquez une solution de nébulisation (comme AIRSAN N2K) qui neutralise les pathogènes aériens en suspension sans humidifier davantage la litière.</li>
-<li><strong>Dégradation organique :</strong> Lors du vide sanitaire, utilisez un nettoyant enzymatique (comme BIOACTIVE N2K) pour dégrader en profondeur les résidus organiques qui pourraient initier une fermentation précoce sur la bande suivante.</li>
-</ul>
-<h2>L'approche d'un expert en hygiène</h2>
-<p>Chez N2K, nous abordons l'ammoniac comme un indicateur d'un déséquilibre biologique, pas comme un simple gaz à évacuer. L'approche professionnelle consiste à combiner le contrôle de l'humidité, la neutralisation de l'air ambiant par nébulisation fine, et la préparation enzymatique du bâtiment en vide sanitaire. Cette stratégie s'attaque à la source du problème.</p>
-<h2>Conclusion</h2>
-<p>L'ammoniac persistant est le symptôme d'une litière malade. Ne combattez pas seulement l'odeur, combattez le processus de fermentation. Un contrôle de l'ambiance rigoureux réduit les pathologies respiratoires de 15% et optimise vos coûts de chauffage.</p>
 `.trim();
 
   const contentEn2 = `
-<p>From the first weeks of the flock, a pungent smell hits your throat as you enter the house. You increase the ventilation, which is expensive in energy, but the ammonia smell quickly returns. The animals start coughing, and the litter becomes damp.</p>
-<h2>What most farmers believe</h2>
-<p>The common belief is that ammonia is solely due to poor ventilation or overstocking. The classic solution is to increase air exchange and add new litter. \"Ventilate more, the smell will go away\".</p>
-<h2>What really happens on a chemical scale</h2>
-<p>Ammonia (NH3) doesn't appear by magic. It is the result of a chemical reaction: the breakdown of uric acid contained in poultry droppings by ureolytic bacteria present in the litter. The richer the litter is in nitrogen and moisture, the more these bacteria proliferate and produce ammonia. It is a microbial and enzymatic balance problem, not just an air exchange issue.</p>
-<h2>What we observe in the field</h2>
-<p>In the field, forced ventilation solves the problem temporarily but cools the building, leading to overconsumption of heating. Worse, ammonia irritates the poultry's respiratory mucous membranes, creating a prime entry point for pathogens like E. coli or respiratory viruses. Animals are less active, the feed conversion ratio deteriorates, and slaughterhouse condemnations (breast blisters) increase.</p>
-<h2>Why does over-ventilation fail?</h2>
-<p>Ventilating to remove ammonia is like bailing water from a leaky boat without plugging the hole. The gas factory (droppings and bacteria) continues to operate at full capacity. As long as bacterial degradation is not stopped or redirected, ammonia will continue to be produced.</p>
-<h2>The most common mistakes</h2>
+<p>From the second week of the flock, an ammonia (NH3) odor often begins to saturate the building's air. This concrete symptom manifests as an immediate eye-stinging sensation for the operator and a reflex cough among the poultry. In the field, a common mistake is to blindly increase the ventilation rate. This emergency reaction cools the building, causing thermal stress and a ruinous overconsumption of heating for the farmer. Economically, maintaining a concentration of just 25 ppm of ammonia is enough to degrade the Feed Conversion Ratio (FCR) by 3 to 5% and increase slaughterhouse condemnations due to pododermatitis and breast blisters.</p>
+<h2>The Hidden Biochemical Dynamics of the Litter</h2>
+<p>Ammonia is not a spontaneously emitted gas, but the final product of an enzymatic reaction. Poultry droppings are rich in uric acid. Under the action of urease enzymes produced by opportunistic ureolytic bacteria, this acid is broken down into ammonia. A typical operator error is waiting for the litter to "crust" before intervening. In reality, the process starts as soon as an imbalance occurs, often exacerbated by a simple leak at the drinking nipples. This moist micro-environment favors the explosion of ureolytic bacteria. Ventilating only flushes out the gaseous ammonia; the microbiological factory itself continues to run at full capacity within the litter.</p>
+<h2>Acting at the Source: Blocking the Cycle During Turnaround</h2>
+<p>The most strategic intervention occurs upstream, during the sanitary turnaround. A typical case observed in a real installation shows that standard high-pressure washing is not enough: it smooths the surfaces but leaves a residual biofilm and coagulated proteins embedded in the concrete's porosity. This organic substrate becomes the starting point for fermentation in the next flock. The application of a high-performance enzymatic stripping solution like our <a href="/en/produits/bioactive">BIOACTIVE</a> range deeply restructures this organic matrix. By hydrolyzing embedded proteins and lipids, the ureolytic flora is deprived of its original nutritional support, significantly delaying the start of fermentation when the new flock is introduced.</p>
+<h2>Neutralizing the Atmosphere in the Presence of Animals</h2>
+<p>Once the flock is in place, if the litter's humidity slips out of control, action must be taken on the ambient environment without adding water. Spraying a liquid product directly onto wet litter is a major technical error that worsens bacterial proliferation. The applied microbiological approach requires controlling the airborne flora. This is where air sanitation through the fogging of an air hygiene solution from the <a href="/en/produits/oxylis-hoci">OXYLIS HOCl</a> range makes the difference. By reducing the suspended bacterial pressure in a dry manner, this process neutralizes odorous molecules and protects the birds' respiratory tracts without degrading the building's humidity. Animal comfort is restored, and the farmer regains control of their environmental parameters.</p>
+<h2>Operational Recommendations</h2>
+<p>Ammonia control is a discipline of active prevention, not reaction:</p>
 <ul>
-<li>Over-ventilating in the middle of winter, leading to thermal stress for the animals and an exorbitant energy bill.</li>
-<li>Neglecting drinker leaks that create wet spots promoting fermentation.</li>
-<li>Believing that a simple scented air treatment masks the danger to the animals.</li>
-<li>Waiting until the smell is unbearable for humans (at 20 ppm, it is already harmful to the chicken).</li>
+<li>Repair water line leaks in real-time to eliminate fermentation zones.</li>
+<li>Strictly respect the contact times of enzymatic detergents during the turnaround to guarantee complete hydrolysis.</li>
+<li>Manage ventilation for oxygen and moisture control, not simply as an odor extractor.</li>
+<li>Monitor the litter under the drinking lines: the appearance of crusted patches signals the start of the ureolytic reaction.</li>
 </ul>
-<h2>Practical and curative solutions</h2>
-<ul>
-<li><strong>Moisture control:</strong> Repair drinker leaks immediately. Remove areas of \"crusted\" and wet litter.</li>
-<li><strong>Flora management:</strong> Use an enzymatic and probiotic litter treatment to compete with ureolytic bacteria.</li>
-<li><strong>Air treatment:</strong> Apply a fogging solution (like AIRSAN N2K) that neutralizes suspended airborne pathogens without further moistening the litter.</li>
-<li><strong>Organic degradation:</strong> During turnaround, use an enzymatic cleaner (like BIOACTIVE N2K) to deeply degrade organic residues that could initiate early fermentation in the next flock.</li>
-</ul>
-<h2>The approach of a hygiene expert</h2>
-<p>At N2K, we approach ammonia as an indicator of biological imbalance, not just a gas to be vented. The professional approach is to combine moisture control, ambient air neutralization through fine fogging, and enzymatic preparation of the building during turnaround. This strategy tackles the source of the problem.</p>
-<h2>Conclusion</h2>
-<p>Persistent ammonia is the symptom of sick litter. Don't just fight the smell, fight the fermentation process. Rigorous ambient control reduces respiratory pathologies by 15% and optimizes your heating costs.</p>
 `.trim();
 
   const contentAr2 = `
-<p>منذ الأسابيع الأولى من الدورة، تضربك رائحة نفاذة في الحلق عند دخول المبنى. تزيد من التهوية، مما يكلف طاقة غالية، لكن رائحة الأمونيا تعود بسرعة. تبدأ الحيوانات في السعال، ويصبح الفرش رطبًا.</p>
-<h2>ما يعتقده معظم المربين</h2>
-<p>الاعتقاد السائد هو أن الأمونيا ناتجة فقط عن سوء التهوية أو الاكتظاظ. الحل الكلاسيكي هو زيادة تجديد الهواء وإضافة فرش جديد. "قم بزيادة التهوية، ستختفي الرائحة".</p>
-<h2>ما يحدث فعليًا على المستوى الكيميائي</h2>
-<p>الأمونيا (NH3) لا تظهر بسحر ساحر. إنها نتيجة تفاعل كيميائي: تحلل حمض اليوريك الموجود في زرق الدواجن بواسطة بكتيريا محللة لليوريا موجودة في الفرش. كلما كان الفرش غنيًا بالنيتروجين والرطوبة، تكاثرت هذه البكتيريا وأنتجت الأمونيا. إنها مشكلة توازن ميكروبي وإنزيمي، وليست مجرد مشكلة تجديد هواء.</p>
-<h2>ما نلاحظه في الميدان</h2>
-<p>في الميدان، تحل التهوية القسرية المشكلة مؤقتًا لكنها تبرد المبنى، مما يؤدي إلى استهلاك مفرط للتدفئة. الأسوأ من ذلك، الأمونيا تهيج الأغشية المخاطية التنفسية للدواجن، مما يخلق بوابة دخول رئيسية لمسببات الأمراض مثل الإشريكية القولونية أو فيروسات الجهاز التنفسي. تكون الحيوانات أقل نشاطًا، ويتدهور معامل التحويل الغذائي، وتزداد المصادرات في المسلخ (حروق الصدر).</p>
-<h2>لماذا تفشل التهوية المفرطة؟</h2>
-<p>التهوية لإزالة الأمونيا تشبه تفريغ الماء من قارب مثقوب دون سد الثقب. مصنع الغاز (الزرق والبكتيريا) يستمر في العمل بكامل طاقته. طالما لم يتم إيقاف التحلل البكتيري أو توجيهه بشكل مختلف، سيستمر إنتاج الأمونيا.</p>
-<h2>الأخطاء الأكثر شيوعًا</h2>
+<p>بدءًا من الأسبوع الثاني من دورة التربية، غالبًا ما تبدأ رائحة الأمونيا (NH3) في تشبع هواء المبنى. يتجلى هذا العرض الملموس في إحساس فوري بوخز في العين للمشغل وسعال انعكاسي لدى الدواجن. في الميدان، يتمثل الخطأ الشائع في زيادة معدل التهوية بشكل أعمى. يؤدي رد الفعل الطارئ هذا إلى تبريد المبنى، مما يتسبب في إجهاد حراري واستهلاك مفرط ومكلف للتدفئة بالنسبة للمربي. من الناحية الاقتصادية، يكفي الحفاظ على تركيز 25 جزءًا في المليون فقط من الأمونيا لتدهور معدل التحويل الغذائي (FCR) بنسبة 3 إلى 5٪ وزيادة المصادرات في المسلخ بسبب التهاب الجلد التقرحي وحروق الصدر.</p>
+<h2>الديناميكيات الكيميائية الحيوية الخفية للفرش</h2>
+<p>الأمونيا ليست غازًا ينبعث تلقائيًا، بل هي المنتج النهائي لتفاعل إنزيمي. زرق الدواجن غني بحمض اليوريك. تحت تأثير إنزيمات اليورياز التي تنتجها البكتيريا الانتهازية المحللة لليوريا، يتحلل هذا الحمض إلى أمونيا. من الأخطاء النمطية للمشغل انتظار "تصلب" الفرش قبل التدخل. في الواقع، تبدأ العملية بمجرد حدوث خلل، وغالبًا ما يتفاقم بسبب تسرب بسيط في حلمات الشرب. تعزز هذه البيئة الدقيقة الرطبة الانفجار البكتيري. التهوية لا تؤدي إلا إلى طرد غاز الأمونيا؛ أما المصنع الميكروبيولوجي نفسه فيستمر في العمل بكامل طاقته داخل الفرش.</p>
+<h2>العمل من المصدر: كسر الدورة أثناء فترة الراحة الصحية</h2>
+<p>يحدث التدخل الأكثر استراتيجية في مرحلة مبكرة، أثناء فترة الراحة الصحية. تظهر حالة نموذجية لوحظت في منشأة حقيقية أن الغسيل القياسي بالضغط العالي لا يكفي: فهو ينعم الأسطح لكنه يترك غشاءً حيويًا متبقيًا وبروتينات متخثرة مدمجة في مسام الخرسانة. تصبح هذه المادة العضوية نقطة الانطلاق للتخمر في القطيع التالي. يتيح تطبيق محلول تقشير إنزيمي عالي الأداء مثل مجموعة <a href="/ar/produits/bioactive">BIOACTIVE</a> تفكيك هذه المصفوفة العضوية بعمق. من خلال التحلل المائي للبروتينات والدهون المدمجة، تُحرم الفلورا المحللة لليوريا من دعمها الغذائي الأصلي، مما يؤخر بشكل كبير بدء التخمر عند إدخال القطيع الجديد.</p>
+<h2>تحييد الأجواء في وجود الحيوانات</h2>
+<p>بمجرد وضع القطيع، إذا خرجت رطوبة الفرش عن السيطرة، يجب اتخاذ إجراء بشأن البيئة المحيطة دون إضافة الماء. يعد رش منتج سائل مباشرة على فرش رطب خطأً فنيًا كبيرًا يؤدي إلى تفاقم التكاثر البكتيري. يتطلب النهج الميكروبيولوجي التطبيقي التحكم في الفلورا المحمولة جواً. هنا يُحدث تعقيم الهواء من خلال التغشية الدقيقة لمحلول نظافة الهواء من مجموعة <a href="/ar/produits/oxylis-hoci">OXYLIS HOCl</a> فرقًا. من خلال تقليل الضغط البكتيري المعلق بطريقة جافة، تعمل هذه العملية على تحييد الجزيئات المسببة للرائحة وحماية المسالك التنفسية للطيور دون الإضرار برطوبة المبنى. تتم استعادة راحة الحيوان، ويستعيد المربي السيطرة على معاييره البيئية.</p>
+<h2>توصيات تشغيلية</h2>
+<p>التحكم في الأمونيا هو تخصص للوقاية النشطة، وليس رد فعل:</p>
 <ul>
-<li>التهوية المفرطة في منتصف الشتاء، مما يؤدي إلى إجهاد حراري للحيوانات وفاتورة طاقة باهظة.</li>
-<li>إهمال تسربات الحلمات التي تخلق مناطق رطبة تعزز التخمر.</li>
-<li>الاعتقاد بأن معالجة الهواء المعطرة البسيطة تخفي الخطر على الحيوانات.</li>
-<li>الانتظار حتى تصبح الرائحة لا تطاق للبشر (عند 20 جزء في المليون، تكون ضارة بالفعل للدجاج).</li>
+<li>إصلاح تسربات خطوط المياه في الوقت الفعلي للقضاء على مناطق التخمر.</li>
+<li>احترام أوقات تلامس المنظفات الإنزيمية بدقة أثناء فترة الراحة لضمان التحلل المائي الكامل.</li>
+<li>إدارة التهوية لتوفير الأكسجين والتحكم في الرطوبة، وليس كمجرد مستخرج للروائح.</li>
+<li>مراقبة الفرش تحت خطوط الشرب: ظهور بقع متصلبة يشير إلى بداية تفاعل تحلل اليوريا.</li>
 </ul>
-<h2>حلول عملية وعلاجية</h2>
-<ul>
-<li><strong>التحكم في الرطوبة:</strong> إصلاح تسربات المشارب على الفور. إزالة مناطق الفرش "المتصلبة" والرطبة.</li>
-<li><strong>إدارة الفلورا:</strong> استخدم علاجًا إنزيميًا وبروبيوتيك للفرش للتنافس مع البكتيريا المحللة لليوريا.</li>
-<li><strong>معالجة الهواء:</strong> تطبيق محلول رذاذ (مثل AIRSAN N2K) يحيد مسببات الأمراض المحمولة جواً والمعلقة دون زيادة ترطيب الفرش.</li>
-<li><strong>التحلل العضوي:</strong> أثناء فترة الراحة الصحية، استخدم منظفًا إنزيميًا (مثل BIOACTIVE N2K) لتحليل البقايا العضوية بعمق والتي يمكن أن تبدأ في تخمر مبكر في الدفعة التالية.</li>
-</ul>
-<h2>نهج خبير النظافة</h2>
-<p>في N2K، نتعامل مع الأمونيا كمؤشر على عدم توازن بيولوجي، وليس مجرد غاز يجب التخلص منه. النهج المهني هو الجمع بين التحكم في الرطوبة، وتحييد الهواء المحيط من خلال التغشية الدقيقة، والإعداد الإنزيمي للمبنى أثناء فترة الراحة الصحية. هذه الاستراتيجية تعالج مصدر المشكلة.</p>
-<h2>خاتمة</h2>
-<p>الأمونيا المستمرة هي عرض لفرش مريض. لا تحارب الرائحة فقط، حارب عملية التخمر. يقلل التحكم الصارم في البيئة المحيطة من أمراض الجهاز التنفسي بنسبة 15٪ ويحسن تكاليف التدفئة.</p>
 `.trim();
 
 
@@ -194,7 +158,7 @@ async function main() {
       contentFr: contentFr2,
       contentEn: contentEn2,
       contentAr: contentAr2,
-      coverImage: "https://images.unsplash.com/photo-1548848221-0c2e497ed557?q=80&w=1200",
+      coverImage: "/images/blog/poultry-air-quality.png",
       publishedAt: new Date("2024-10-25"),
     },
     create: {
@@ -205,7 +169,7 @@ async function main() {
       contentFr: contentFr2,
       contentEn: contentEn2,
       contentAr: contentAr2,
-      coverImage: "https://images.unsplash.com/photo-1548848221-0c2e497ed557?q=80&w=1200",
+      coverImage: "/images/blog/poultry-air-quality.png",
       publishedAt: new Date("2024-10-25"),
     }
   });

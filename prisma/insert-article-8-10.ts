@@ -116,7 +116,7 @@ async function main() {
 <p>Ces zones sont évitées car elles sont difficiles d'accès, dangereuses (proximité électrique) ou simplement non incluses dans les fiches de poste standard. Le nettoyage à la lance est inadapté pour les plafonds ou les évaporateurs à cause du risque électrique et de la retombée immédiate de l'eau sale sur l'opérateur.</p>
 <h2>Solutions pratiques pour éliminer les angles morts</h2>
 <ul>
-<li><strong>Désinfection par Voie Aérienne (DSVA) :</strong> C'est l'arme absolue pour atteindre les zones inaccessibles. Après le nettoyage classique, utilisez un nébulisateur (avec un produit comme AIRSAN N2K) pour saturer le volume de la pièce d'un brouillard désinfectant sec qui va se déposer sur les évaporateurs, les plafonds et l'arrière des machines.</li>
+<li><strong>Assainissement par Voie Aérienne (DSVA) :</strong> C'est l'approche complémentaire indispensable pour atteindre les zones inaccessibles. Après le nettoyage classique, utilisez un équipement de nébulisation (avec une solution comme OXYLIS HOCl N2K) pour assainir l'environnement technique de la pièce, en ciblant les évaporateurs, les plafonds et les zones difficiles d'accès.</li>
 <li><strong>Traitement spécifique des siphons :</strong> Ne dirigez jamais la haute pression dans un siphon. Utilisez un détergent moussant puissant, laissez agir, et rincez à faible pression. Placez-y ensuite une pastille chlorée ou un désinfectant rémanent.</li>
 <li><strong>Nettoyage cryogénique ou mousse sèche :</strong> Pour les armoires électriques et les moteurs, utilisez des techniques sans eau (cryogénie) ou des mousses très sèches qui ne risquent pas de créer de courts-circuits.</li>
 </ul>
@@ -145,7 +145,7 @@ async function main() {
 <p>These zones are avoided because they are difficult to access, dangerous (electrical proximity), or simply not included in standard job descriptions. Hose cleaning is unsuitable for ceilings or evaporators due to electrical risk and the immediate fallout of dirty water on the operator.</p>
 <h2>Practical solutions to eliminate blind spots</h2>
 <ul>
-<li><strong>Airborne Surface Disinfection (DSVA):</strong> This is the ultimate weapon to reach inaccessible areas. After classic cleaning, use a fogger (with a product like AIRSAN N2K) to saturate the room volume with a dry disinfectant fog that will settle on evaporators, ceilings, and the back of machines.</li>
+<li><strong>Airborne Environmental Sanitation (DSVA):</strong> This is the essential complementary approach to reach inaccessible areas. After classic cleaning, use fogging equipment (with a solution like OXYLIS HOCl N2K) to sanitize the technical environment of the room, targeting evaporators, ceilings, and hard-to-reach areas.</li>
 <li><strong>Specific treatment of drains:</strong> Never point high pressure into a drain. Use a powerful foaming detergent, let it act, and rinse at low pressure. Then place a chlorine tablet or a residual disinfectant in it.</li>
 <li><strong>Dry ice blasting or dry foam:</strong> For electrical cabinets and motors, use waterless techniques (cryogenics) or very dry foams that do not risk creating short circuits.</li>
 </ul>
@@ -174,7 +174,7 @@ async function main() {
 <p>يتم تجنب هذه المناطق لأن الوصول إليها صعب، أو خطيرة (قرب كهربائي)، أو ببساطة غير مدرجة في التوصيفات الوظيفية القياسية. تنظيف الخراطيم غير مناسب للأسقف أو المبخرات بسبب المخاطر الكهربائية والسقوط الفوري للمياه القذرة على المشغل.</p>
 <h2>حلول عملية للقضاء على النقاط العمياء</h2>
 <ul>
-<li><strong>تطهير الأسطح المحمولة جواً (DSVA):</strong> هذا هو السلاح المطلق للوصول إلى المناطق التي يصعب الوصول إليها. بعد التنظيف الكلاسيكي، استخدم جهاز الرذاذ (مع منتج مثل AIRSAN N2K) لتشبع حجم الغرفة بضباب مطهر جاف سيستقر على المبخرات والأسقف والجزء الخلفي من الآلات.</li>
+<li><strong>التعقيم البيئي المحمول جواً (DSVA):</strong> هذا هو النهج التكميلي الأساسي للوصول إلى المناطق التي يصعب الوصول إليها. بعد التنظيف الكلاسيكي، استخدم معدات الرذاذ (مع محلول مثل OXYLIS HOCl N2K) لتعقيم البيئة التقنية للغرفة، مع استهداف المبخرات والأسقف والمناطق التي يصعب الوصول إليها.</li>
 <li><strong>معالجة خاصة للمصارف:</strong> لا توجه الضغط العالي أبدًا إلى المصرف. استخدم منظفًا رغويًا قويًا، واتركه ليعمل، واشطفه بضغط منخفض. ثم ضع قرص كلور أو مطهرًا متبقيًا فيه.</li>
 <li><strong>التنظيف بالجليد الجاف أو الرغوة الجافة:</strong> بالنسبة للخزائن والمحركات الكهربائية، استخدم تقنيات خالية من الماء (المبردات) أو رغوة جافة جدًا لا تخاطر بإحداث دوائر قصر.</li>
 </ul>

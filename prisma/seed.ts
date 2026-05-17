@@ -81,7 +81,7 @@ async function main() {
     },
     {
       name: "BIOACTIVE N2K",
-      slug: "bioactive-n2k",
+      slug: "bioactive",
       category: Zone.AMBIANCE,
       isDisinfectant: false,
       step: 2, // Nettoyage enzymatique

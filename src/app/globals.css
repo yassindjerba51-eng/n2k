@@ -324,6 +324,10 @@ section + section {
   @apply text-n2k-primary font-bold;
 }
 
+.blog-content a {
+  @apply text-n2k-secondary-light font-bold hover:underline transition-colors duration-200;
+}
+
 /* RTL Adjustments */
 [dir="rtl"] .blog-content h2::before {
   @apply order-last;

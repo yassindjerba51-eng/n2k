@@ -27,7 +27,7 @@ async function main() {
 <ul>
 <li><strong>Zonage strict et codes couleurs :</strong> Attribuez des couleurs spécifiques pour les outils, les vêtements et le matériel de nettoyage selon la zone de risque (ex: rouge pour l'éviscération, bleu pour la découpe).</li>
 <li><strong>Nettoyage en basse pression :</strong> Préférez le nettoyage en basse pression ou l'application de mousse pour éviter la formation d'aérosols porteurs de bactéries.</li>
-<li><strong>Désinfection de l'air et de l'ambiance :</strong> Appliquez une nébulisation désinfectante (comme AIRSAN N2K) dans les zones critiques après le nettoyage de fin de journée pour assainir l'air et traiter les surfaces inaccessibles.</li>
+<li><strong>Assainissement de l'air et de l'ambiance :</strong> Appliquez une nébulisation d'assainissement (comme OXYLIS HOCl N2K) dans les zones critiques après le nettoyage de fin de journée, en complément des protocoles de nettoyage et désinfection existants.</li>
 <li><strong>Hygiène du personnel et des flux :</strong> Multipliez les points de lavage des mains et de désinfection des semelles, avec une obligation stricte de changement de tenue entre les zones à risques différents.</li>
 </ul>
 <h2>L'approche d'un expert en hygiène</h2>
@@ -57,7 +57,7 @@ async function main() {
 <ul>
 <li><strong>Strict zoning and color coding:</strong> Assign specific colors for tools, clothing, and cleaning equipment according to the risk zone (e.g., red for evisceration, blue for cutting).</li>
 <li><strong>Low-pressure cleaning:</strong> Prefer low-pressure cleaning or foam application to avoid the formation of bacteria-carrying aerosols.</li>
-<li><strong>Air and ambient disinfection:</strong> Apply a disinfectant fogging (like AIRSAN N2K) in critical areas after end-of-day cleaning to sanitize the air and treat inaccessible surfaces.</li>
+<li><strong>Air and ambient sanitation:</strong> Apply a sanitation fogging (like OXYLIS HOCl N2K) in critical areas after end-of-day cleaning, as a complement to existing cleaning and disinfection protocols.</li>
 <li><strong>Personnel hygiene and workflows:</strong> Increase handwashing and sole disinfection points, with a strict obligation to change clothing between different risk zones.</li>
 </ul>
 <h2>The approach of a hygiene expert</h2>
@@ -87,7 +87,7 @@ async function main() {
 <ul>
 <li><strong>التقسيم الصارم للمناطق والترميز اللوني:</strong> قم بتعيين ألوان محددة للأدوات والملابس ومعدات التنظيف وفقًا لمنطقة الخطر (مثل: الأحمر لنزع الأحشاء، الأزرق للتقطيع).</li>
 <li><strong>التنظيف بضغط منخفض:</strong> فضل التنظيف بضغط منخفض أو تطبيق الرغوة لتجنب تكوين الهباء الحامل للبكتيريا.</li>
-<li><strong>تطهير الهواء والبيئة المحيطة:</strong> قم بتطبيق رذاذ مطهر (مثل AIRSAN N2K) في المناطق الحرجة بعد التنظيف في نهاية اليوم لتعقيم الهواء ومعالجة الأسطح التي يتعذر الوصول إليها.</li>
+<li><strong>تعقيم الهواء والبيئة المحيطة:</strong> قم بتطبيق رذاذ تعقيم بيئي (مثل OXYLIS HOCl N2K) في المناطق الحرجة بعد التنظيف في نهاية اليوم، كإجراء مكمّل لبروتوكولات النظافة والتطهير القائمة.</li>
 <li><strong>نظافة الأفراد وسير العمل:</strong> ضاعف نقاط غسل اليدين وتطهير نعال الأحذية، مع التزام صارم بتغيير الملابس بين المناطق ذات المخاطر المختلفة.</li>
 </ul>
 <h2>نهج خبير النظافة</h2>
