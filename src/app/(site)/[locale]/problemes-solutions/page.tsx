@@ -6,6 +6,8 @@ import {
   Quote,
   Microscope,
   CheckCircle,
+  Home,
+  ChevronRight,
 } from "lucide-react";
 import SectorTabs from "@/components/ui/SectorTabs";
 import {
@@ -33,6 +35,7 @@ export async function generateMetadata({
 export default async function ProblemesSolutionsHub() {
   const t = await getTranslations("solutionsPage");
   const tCta = await getTranslations("cta");
+  const tNav = await getTranslations("nav");
 
   const sectorLabels: Record<Sector, string> = {
     elevage: t("sectorTabs.elevage"),
@@ -50,7 +53,7 @@ export default async function ProblemesSolutionsHub() {
         <div className="max-w-[1400px] mx-auto px-4 md:px-8 py-20 md:py-28 lg:py-36 relative">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             {/* Left Column: Content */}
-            <div className="w-full lg:w-2/3 max-w-4xl">
+            <div className="w-full lg:w-2/3 max-w">
               <div className="flex items-center gap-3 mb-8">
                 <span className="w-10 h-px bg-n2k-secondary-light shrink-0"></span>
                 <span className="text-xs font-black tracking-[0.2em] text-n2k-secondary-light uppercase">
@@ -82,6 +85,16 @@ export default async function ProblemesSolutionsHub() {
                   Découvrir nos secteurs
                 </Link>
               </div>
+
+              {/* Breadcrumb */}
+              <nav className="flex items-center gap-3 text-white text-xs uppercase tracking-widest font-bold mt-10">
+                <Link href="/" className="hover:text-n2k-secondary transition-colors flex items-center gap-1.5">
+                  <Home size={14} />
+                  {tNav("home")}
+                </Link>
+                <ChevronRight size={12} className="opacity-50" />
+                <span className="text-n2k-secondary-light">{tNav("problemesSolutions")}</span>
+              </nav>
             </div>
 
             {/* Right Column: Image */}

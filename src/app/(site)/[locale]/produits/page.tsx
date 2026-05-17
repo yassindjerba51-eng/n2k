@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { FlaskConical, ArrowRight } from "lucide-react";
+import { FlaskConical, ArrowRight, Home, ChevronRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import ProductFilter from "@/components/ui/ProductFilter";
@@ -15,6 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function ProduitsPage() {
   const t = await getTranslations("products");
+  const tNav = await getTranslations("nav");
 
   return (
     <div className="bg-surface min-h-[calc(100vh-80px)]">
@@ -26,7 +27,7 @@ export default async function ProduitsPage() {
         <div className="max-w-[1400px] mx-auto px-4 md:px-8 py-20 md:py-28 lg:py-36 relative">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             {/* Left Column: Content */}
-            <div className="w-full lg:w-2/3 max-w-3xl">
+            <div className="w-full lg:w-2/3 max-w">
               <div className="flex items-center gap-3 mb-8">
                 <span className="w-10 h-px bg-n2k-secondary-light shrink-0"></span>
                 <span className="text-xs font-black tracking-[0.2em] text-n2k-secondary-light uppercase">
@@ -54,6 +55,16 @@ export default async function ProduitsPage() {
                   Découvrir nos solutions
                 </Link>
               </div>
+
+              {/* Breadcrumb */}
+              <nav className="flex items-center gap-3 text-white text-xs uppercase tracking-widest font-bold mt-10">
+                <Link href="/" className="hover:text-n2k-secondary transition-colors flex items-center gap-1.5">
+                  <Home size={14} />
+                  {tNav("home")}
+                </Link>
+                <ChevronRight size={12} className="opacity-50" />
+                <span className="text-n2k-secondary-light">{tNav("produits")}</span>
+              </nav>
             </div>
             {/* Right Column: Image */}
             <div className="w-full lg:w-1/3 relative mt-12 lg:mt-0">
@@ -74,7 +85,7 @@ export default async function ProduitsPage() {
       </section>
 
       {/* ====== PRODUCT CATALOG ====== */}
-      <section className="bg-n2k-surface py-16 md:py-24">
+      <section className="bg-n2k-surface py-15 md:py-15">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8">
           <div className="text-center mb-12">
             <div className="flex items-center gap-3 mb-4 justify-center">

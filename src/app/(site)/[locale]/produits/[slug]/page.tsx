@@ -100,9 +100,39 @@ export default async function ProductDetailPage({
               </h1>
 
               {/* Subtitle */}
-              <p className="text-xl md:text-2xl text-white/90 font-body leading-relaxed max-w text-justify">
+              <p className="text-xl md:text-2xl text-white/90 font-body leading-relaxed max-w text-justify mb-8">
                 {product.subtitle}
               </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 w-full">
+                <Link
+                  href="/diagnostic"
+                  className="w-full sm:flex-1 inline-flex items-center justify-center gap-2 bg-n2k-secondary-light hover:bg-n2k-secondary text-white px-8 py-4 rounded-xl text-sm font-black tracking-tight shadow-lg shadow-n2k-secondary/20 transition-all"
+                >
+                  Demander un diagnostic sanitaire
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  href="/secteurs"
+                  className="w-full sm:flex-1 inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl text-sm font-bold tracking-tight transition-all border border-white/15"
+                >
+                  Découvrir nos secteurs
+                </Link>
+              </div>
+
+              {/* Breadcrumb */}
+              <nav className="flex items-center gap-3 text-white text-xs uppercase tracking-widest font-bold mt-10">
+                <Link href="/" className="hover:text-n2k-secondary transition-colors flex items-center gap-1.5">
+                  <Home size={14} />
+                  {tn("home")}
+                </Link>
+                <ChevronRight size={12} className="opacity-50" />
+                <Link href="/produits" className="hover:text-n2k-secondary transition-colors">
+                  {tn("produits")}
+                </Link>
+                <ChevronRight size={12} className="opacity-50" />
+                <span className="text-n2k-secondary-light">{product.name}</span>
+              </nav>
             </div>
 
             <div className="lg:col-span-4 flex flex-col items-center lg:items-end gap-6">
@@ -133,26 +163,11 @@ export default async function ProductDetailPage({
             </div>
           </div>
 
-          {/* Breadcrumb — bottom of header */}
-          <nav className="flex items-center gap-2 text-base md:text-lg text-white/60 font-body mt-4 md:mt-4 border-t border-white/10 pt-2">
-            <Home className="w-5 h-5" />
-            <Link href="/" className="hover:text-white transition-colors">
-              {tn("home")}
-            </Link>
-            <span className="text-white/30 mx-1">&gt;</span>
-            <Link href="/produits" className="hover:text-white transition-colors">
-              {tn("produits")}
-            </Link>
-            <span className="text-white/30 mx-1">&gt;</span>
-            <span className="text-white/90 font-bold">
-              {product.name}
-            </span>
-          </nav>
         </div>
       </section>
 
       {/* ====== 13-POINT TECHNICAL STRUCTURE ====== */}
-      <section className="bg-n2k-surface py-16 md:py-24">
+      <section className="bg-n2k-surface py-15 md:py-15">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
             
@@ -320,7 +335,7 @@ export default async function ProductDetailPage({
 
       {/* ====== RELATED PRODUCTS ====== */}
       {relatedProducts.length > 0 && (
-        <section className="bg-n2k-surface-low py-16 md:py-24 border-t border-border/30">
+        <section className="bg-n2k-surface-low py-15 md:py-15 border-t border-border/30">
           <div className="max-w-[1400px] mx-auto px-4 md:px-8">
             <div className="text-center mb-12">
               <h2 className="text-2xl sm:text-3xl font-black font-heading text-n2k-primary tracking-tight">

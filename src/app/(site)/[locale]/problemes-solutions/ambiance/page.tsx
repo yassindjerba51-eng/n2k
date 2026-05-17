@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { ArrowRight, Wind, Cpu, Home } from "lucide-react";
+import { ArrowRight, Wind, Cpu, Home, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import ZoneNav from "@/components/zones/ZoneNav";
 import ProductStepCard from "@/components/zones/ProductStepCard";
@@ -17,6 +17,7 @@ export async function generateMetadata() {
 export default async function AmbiancePage() {
   const t = await getTranslations("zonesDetail");
   const z = await getTranslations("zonesDetail.ambiance");
+  const tNav = await getTranslations("nav");
 
   const faqItems = [0, 1, 2, 3, 4].map((i) => ({
     question: z(`faq.${i}.q`),
@@ -49,7 +50,7 @@ export default async function AmbiancePage() {
         <div className="max-w-[1400px] mx-auto px-4 md:px-8 py-20 md:py-28 lg:py-36 relative">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             {/* Left Column — Content */}
-            <div className="w-full lg:w-2/3 max-w-3xl">
+            <div className="w-full lg:w-2/3 max-w">
               <div className="flex items-center gap-3 mb-8">
                 <span className="w-10 h-px bg-n2k-orange shrink-0"></span>
                 <span className="text-xs font-black tracking-[0.2em] text-n2k-orange uppercase">{t("sectorBadges")}</span>
@@ -64,17 +65,36 @@ export default async function AmbiancePage() {
                 {z("heroTitleEnd")}
               </h1>
 
-              <p className="font-body text-lg md:text-xl text-white/60 leading-relaxed max-w-2xl mb-10 text-justify">
+              <p className="font-body text-lg md:text-xl text-white/60 leading-relaxed max-w mb-10 text-justify">
                 {z("heroSubtitle")}
               </p>
 
-              <nav className="flex items-center gap-2 text-sm text-white/50 font-body">
-                <Home className="w-4 h-4" />
-                <Link href="/" className="hover:text-white transition-colors">{t("breadcrumbHome")}</Link>
-                <span>/</span>
-                <Link href="/problemes-solutions" className="hover:text-white transition-colors">{t("breadcrumbParent")}</Link>
-                <span>/</span>
-                <span className="text-white/80 font-medium">{z("breadcrumbCurrent")}</span>
+              <div className="flex flex-col sm:flex-row gap-4 w-full">
+                <Link
+                  href="/diagnostic"
+                  className="w-full sm:flex-1 inline-flex items-center justify-center gap-2 bg-n2k-secondary-light hover:bg-n2k-secondary text-white px-8 py-4 rounded-xl text-sm font-black tracking-tight shadow-lg shadow-n2k-secondary/20 transition-all"
+                >
+                  Demander un diagnostic sanitaire
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  href="/secteurs"
+                  className="w-full sm:flex-1 inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl text-sm font-bold tracking-tight transition-all border border-white/15"
+                >
+                  Découvrir nos secteurs
+                </Link>
+              </div>
+
+              {/* Breadcrumb — bottom of hero */}
+              <nav className="flex items-center gap-3 text-white text-xs uppercase tracking-widest font-bold mt-10">
+                <Link href="/" className="hover:text-n2k-secondary transition-colors flex items-center gap-1.5">
+                  <Home size={14} />
+                  {tNav("home")}
+                </Link>
+                <ChevronRight size={12} className="opacity-50" />
+                <Link href="/problemes-solutions" className="hover:text-n2k-secondary transition-colors">{tNav("problemesSolutions")}</Link>
+                <ChevronRight size={12} className="opacity-50" />
+                <span className="text-n2k-secondary-light">{z("breadcrumbCurrent")}</span>
               </nav>
             </div>
 

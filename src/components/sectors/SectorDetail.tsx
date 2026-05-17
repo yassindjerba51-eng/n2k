@@ -13,6 +13,8 @@ import {
   FileText,
   CheckCircle2,
   FlaskConical,
+  Home,
+  ChevronRight,
 } from "lucide-react";
 
 interface SectorDetailProps {
@@ -25,6 +27,7 @@ interface SectorDetailProps {
 
 export default function SectorDetail({ sector, title, subtitle, icon, image }: SectorDetailProps) {
   const t = useTranslations("sectorDetail");
+  const tNav = useTranslations("nav");
 
   return (
     <div className="bg-n2k-surface min-h-[calc(100vh-80px)]">
@@ -36,7 +39,7 @@ export default function SectorDetail({ sector, title, subtitle, icon, image }: S
         <div className="max-w-[1400px] mx-auto px-4 md:px-8 py-20 md:py-28 lg:py-36 relative">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             {/* Left Column: Content */}
-            <div className="w-full lg:w-2/3 max-w-3xl">
+            <div className="w-full lg:w-2/3 max-w">
               <div className="flex items-center gap-3 mb-8">
                 <span className="w-10 h-px bg-n2k-secondary-light shrink-0"></span>
                 <span className="text-xs font-black tracking-[0.2em] text-n2k-secondary-light uppercase">
@@ -69,6 +72,20 @@ export default function SectorDetail({ sector, title, subtitle, icon, image }: S
                   Découvrir nos solutions
                 </Link>
               </div>
+
+              {/* Breadcrumb */}
+              <nav className="flex items-center gap-3 text-white text-xs uppercase tracking-widest font-bold mt-10">
+                <Link href="/" className="hover:text-n2k-secondary transition-colors flex items-center gap-1.5">
+                  <Home size={14} />
+                  {tNav("home")}
+                </Link>
+                <ChevronRight size={12} className="opacity-50" />
+                <Link href="/secteurs" className="hover:text-n2k-secondary transition-colors">
+                  {tNav("secteurs")}
+                </Link>
+                <ChevronRight size={12} className="opacity-50" />
+                <span className="text-n2k-secondary-light">{title}</span>
+              </nav>
             </div>
             {/* Right Column: Image */}
             {image && (
@@ -92,7 +109,7 @@ export default function SectorDetail({ sector, title, subtitle, icon, image }: S
       </section>
 
       {/* ====== 1. PROBLÈMES ====== */}
-      <section className="bg-n2k-surface py-16 md:py-24">
+      <section className="bg-n2k-surface py-15 md:py-15">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8">
           <div className="flex items-center gap-3 mb-4">
             <AlertTriangle className="w-5 h-5 text-n2k-orange" />
@@ -126,7 +143,7 @@ export default function SectorDetail({ sector, title, subtitle, icon, image }: S
       </section>
 
       {/* ====== 2. RISQUES ÉCONOMIQUES ====== */}
-      <section className="bg-n2k-surface-low py-16 md:py-24">
+      <section className="bg-n2k-surface-low py-15 md:py-15">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8">
           <div className="flex items-center gap-3 mb-4">
             <TrendingDown className="w-5 h-5 text-n2k-red" />
@@ -157,7 +174,7 @@ export default function SectorDetail({ sector, title, subtitle, icon, image }: S
       </section>
 
       {/* ====== 3. PROTOCOLE MINIMAL ====== */}
-      <section className="bg-n2k-surface py-16 md:py-24">
+      <section className="bg-n2k-surface py-15 md:py-15">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8">
           <div className="flex items-center gap-3 mb-4">
             <Shield className="w-5 h-5 text-n2k-secondary" />
@@ -202,7 +219,7 @@ export default function SectorDetail({ sector, title, subtitle, icon, image }: S
       </section>
 
       {/* ====== 4. PROTOCOLE RENFORCÉ ====== */}
-      <section className="bg-n2k-primary py-16 md:py-24">
+      <section className="bg-n2k-primary py-15 md:py-15">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8">
           <div className="flex items-center gap-3 mb-4">
             <ShieldPlus className="w-5 h-5 text-n2k-secondary-light" />
@@ -241,7 +258,7 @@ export default function SectorDetail({ sector, title, subtitle, icon, image }: S
       </section>
 
       {/* ====== 5. CAS SPÉCIFIQUES ====== */}
-      <section className="bg-n2k-surface py-16 md:py-24">
+      <section className="bg-n2k-surface py-15 md:py-15">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8">
           <div className="flex items-center gap-3 mb-4">
             <FileText className="w-5 h-5 text-n2k-primary" />
@@ -280,7 +297,7 @@ export default function SectorDetail({ sector, title, subtitle, icon, image }: S
       </section>
 
       {/* ====== 6. RÉSULTATS ATTENDUS ====== */}
-      <section className="bg-n2k-surface-low py-16 md:py-24">
+      <section className="bg-n2k-surface-low py-15 md:py-15">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8">
           <div className="flex items-center gap-3 mb-4">
             <CheckCircle2 className="w-5 h-5 text-n2k-secondary" />
@@ -309,7 +326,7 @@ export default function SectorDetail({ sector, title, subtitle, icon, image }: S
       </section>
 
       {/* ====== 7. CTA ====== */}
-      <section className="bg-n2k-primary py-16 md:py-24">
+      <section className="bg-n2k-primary py-15 md:py-15">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8 text-center">
           <div className="flex items-center gap-3 mb-6 justify-center">
             <FlaskConical className="w-5 h-5 text-n2k-secondary-light" />

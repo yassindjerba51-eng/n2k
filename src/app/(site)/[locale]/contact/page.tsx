@@ -1,11 +1,12 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
-import { Link as LinkIcon, MapPin, Phone, Clock, Mail, ArrowRight } from "lucide-react";
+import { Link as LinkIcon, MapPin, Phone, Clock, Mail, ArrowRight, Home, ChevronRight } from "lucide-react";
 import GeneralContactForm from "@/components/ui/GeneralContactForm";
 
 export default function ContactPage() {
   const t = useTranslations("contactPage");
+  const tNav = useTranslations("nav");
 
   return (
     <main className="bg-n2k-bg text-n2k-text min-h-screen">
@@ -17,7 +18,7 @@ export default function ContactPage() {
         <div className="max-w-[1400px] mx-auto px-4 md:px-8 py-20 md:py-28 lg:py-36 relative">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             {/* Left Column: Content */}
-            <div className="w-full lg:w-2/3 max-w-3xl">
+            <div className="w-full lg:w-2/3 max-w">
               <div className="flex items-center gap-3 mb-8">
                 <span className="w-10 h-px bg-n2k-secondary-light shrink-0"></span>
                 <span className="text-xs font-black tracking-[0.2em] text-n2k-secondary-light uppercase">
@@ -45,6 +46,16 @@ export default function ContactPage() {
                   Découvrir nos solutions
                 </Link>
               </div>
+
+              {/* Breadcrumb */}
+              <nav className="flex items-center gap-3 text-white text-xs uppercase tracking-widest font-bold mt-10">
+                <Link href="/" className="hover:text-n2k-secondary transition-colors flex items-center gap-1.5">
+                  <Home size={14} />
+                  {tNav("home")}
+                </Link>
+                <ChevronRight size={12} className="opacity-50" />
+                <span className="text-n2k-secondary-light">{tNav("contactPageLink")}</span>
+              </nav>
             </div>
             {/* Right Column: Image */}
             <div className="w-full lg:w-1/3 relative mt-12 lg:mt-0">

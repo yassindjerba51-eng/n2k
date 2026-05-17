@@ -12,6 +12,8 @@ import {
   Quote,
   Microscope,
   TrendingUp,
+  Home,
+  ChevronRight,
 } from "lucide-react";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
@@ -26,68 +28,86 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function ReferencesPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations("references");
+  const tNav = await getTranslations("nav");
 
   const partners = t.raw("partners") as string[];
 
   return (
     <div className="bg-surface min-h-[calc(100vh-80px)]">
       {/* ====== HERO SECTION ====== */}
-      <section className="bg-n2k-surface-low relative overflow-hidden">
-        <div className="max-w-[1400px] mx-auto px-4 md:px-8 py-16 md:py-24 lg:py-32">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
-            {/* Left — Text */}
-            <div className="lg:col-span-7">
-              <div className="flex items-center gap-3 mb-6">
-                <span className="w-8 h-px bg-n2k-secondary shrink-0"></span>
-                <span className="text-xs font-black tracking-[0.2em] text-n2k-secondary uppercase">
+      <section className="relative bg-n2k-primary overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-n2k-secondary rounded-full blur-[200px] -translate-y-1/2 translate-x-1/3" />
+        </div>
+        <div className="max-w-[1400px] mx-auto px-4 md:px-8 py-20 md:py-28 lg:py-36 relative">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+            {/* Left Column — Content */}
+            <div className="w-full lg:w-2/3 max-w">
+              <div className="flex items-center gap-3 mb-8">
+                <span className="w-10 h-px bg-n2k-secondary-light shrink-0" />
+                <span className="text-xs font-black tracking-[0.2em] text-n2k-secondary-light uppercase">
                   {t("badge")}
                 </span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black font-heading text-n2k-primary leading-[0.95] tracking-tight mb-8">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black font-heading text-white leading-[1.1] tracking-tighter mb-8">
                 {t("heroTitle")}
               </h1>
 
-              <p className="text-lg md:text-xl text-n2k-on-surface-variant font-body leading-relaxed max-w-2xl mb-6">
+              <p className="font-body text-lg md:text-xl text-white/60 leading-relaxed max-w mb-10 text-justify">
                 {t("heroSubtitle")}
               </p>
 
               {/* Highlighted tagline */}
-              <div className="flex items-center gap-3 p-4 bg-n2k-secondary/10 rounded-xl max-w-lg mb-8">
-                <Shield className="w-6 h-6 text-n2k-secondary shrink-0" />
-                <p className="text-n2k-secondary font-bold font-heading text-sm md:text-base">
+              <div className="flex items-center gap-3 p-4 bg-white/5 border border-white/10 rounded-xl max-w mb-8">
+                <Shield className="w-6 h-6 text-n2k-secondary-light shrink-0" />
+                <p className="text-white font-bold font-heading text-sm md:text-base">
                   {t("heroHighlight")}
                 </p>
               </div>
 
-              <Link
-                href="/diagnostic"
-                className="inline-flex items-center gap-3 bg-n2k-secondary text-white px-8 py-4 rounded-xl font-bold font-heading shadow-lg transition-all group text-sm md:text-base hover:opacity-90 hover:scale-[1.02] active:scale-95"
-              >
-                {t("ctaButton")}
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform rtl:group-hover:-translate-x-1 rtl:rotate-180 shrink-0" />
-              </Link>
+              <div className="w-full mb-8">
+                <Link
+                  href="/diagnostic"
+                  className="w-full inline-flex items-center justify-center gap-3 bg-n2k-secondary-light hover:bg-n2k-secondary text-white px-8 py-5 font-heading font-black rounded-xl shadow-xl shadow-n2k-secondary/20 transition-all text-lg md:text-xl group"
+                >
+                  {t("ctaButton")}
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform rtl:group-hover:-translate-x-1 rtl:rotate-180 shrink-0" />
+                </Link>
+              </div>
+              
+              {/* Breadcrumb */}
+              <nav className="flex items-center gap-3 text-white text-xs uppercase tracking-widest font-bold mt-10">
+                <Link href="/" className="hover:text-n2k-secondary transition-colors flex items-center gap-1.5">
+                  <Home size={14} />
+                  {tNav("home")}
+                </Link>
+                <ChevronRight size={12} className="opacity-50" />
+                <span className="text-n2k-secondary-light">{t("heroTitle")}</span>
+              </nav>
             </div>
 
-            {/* Right — Image */}
-            <div className="lg:col-span-5 hidden lg:flex items-center">
-              <div className="relative w-full rounded-3xl overflow-hidden shadow-ambient-lg ghost-border">
+            {/* Right Column — Hero Image */}
+            <div className="w-full lg:w-1/3 relative mt-12 lg:mt-0">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10 h-[300px] md:h-[450px] w-full bg-n2k-surface-high">
                 <Image
                   src="/images/poultry-farm.png"
                   alt={t("heroTitle")}
-                  width={600}
-                  height={600}
-                  className="w-full h-auto object-cover"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  className="object-cover hover:scale-105 transition-transform duration-700"
                   priority
                 />
               </div>
+              {/* Decorative glow behind image */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-n2k-secondary/20 blur-3xl -z-10 rounded-full mix-blend-screen" />
             </div>
           </div>
         </div>
       </section>
 
       {/* ====== STATS BANNER ====== */}
-      <section className="bg-[#0D7ED0] py-12 md:py-16">
+      <section className="bg-[#0D7ED0] py-12 md:py-12">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
             {[
@@ -112,7 +132,7 @@ export default async function ReferencesPage({ params }: { params: Promise<{ loc
 
 
       {/* ====== PARTNER NETWORK ====== */}
-      <section className="bg-n2k-surface-low py-16 md:py-24">
+      <section className="bg-n2k-surface-low py-15 md:py-15">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
             {/* Left — Grid */}
@@ -167,9 +187,9 @@ export default async function ReferencesPage({ params }: { params: Promise<{ loc
       </section>
 
       {/* ====== DIRECTOR QUOTE ====== */}
-      <section className="bg-[#0D7ED0] py-16 md:py-24">
+      <section className="bg-[#0D7ED0] py-15 md:py-15">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w mx-auto text-center">
             <Quote className="w-12 h-12 text-n2k-secondary mx-auto mb-8 opacity-60" />
             <p className="text-2xl md:text-3xl lg:text-4xl font-black font-heading text-white leading-snug tracking-tight mb-6">
               {t("directorQuote")}
@@ -185,7 +205,7 @@ export default async function ReferencesPage({ params }: { params: Promise<{ loc
       </section>
 
       {/* ====== CTA SECTION ====== */}
-      <section className="bg-n2k-surface py-16 md:py-24">
+      <section className="bg-n2k-surface py-15 md:py-15">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8">
           <div className="relative bg-gradient-to-br from-n2k-primary to-[#0D7ED0] rounded-3xl p-10 md:p-16 overflow-hidden">
             {/* Decorative */}
