@@ -60,6 +60,7 @@ export default async function ProductDetailPage({
   const pt = await getTranslations(`productDetailBlocks.${product.slug}`);
   const ph = await getTranslations("productDetailHeadings");
   const tn = await getTranslations("nav");
+  const tHero = await getTranslations("hero");
 
   const ZoneIcon = zoneIcons[product.zone] || FlaskConical;
   const relatedProducts = getProductsByZone(product.zone).filter(
@@ -109,14 +110,14 @@ export default async function ProductDetailPage({
                   href="/diagnostic"
                   className="w-full sm:flex-1 inline-flex items-center justify-center gap-2 bg-n2k-secondary-light hover:bg-n2k-secondary text-white px-8 py-4 rounded-xl text-sm font-black tracking-tight shadow-lg shadow-n2k-secondary/20 transition-all"
                 >
-                  Demander un diagnostic sanitaire
+                  {tHero("cta")}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/secteurs"
                   className="w-full sm:flex-1 inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl text-sm font-bold tracking-tight transition-all border border-white/15"
                 >
-                  Découvrir nos secteurs
+                  {tHero("ctaSectors")}
                 </Link>
               </div>
 

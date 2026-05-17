@@ -24,6 +24,7 @@
     "subtitle": "Comprehensive protocols for cleaning, sanitation, and preventive maintenance for poultry farming, slaughterhouses, and the food industry.",
     "cta": "Request a sanitary diagnostic",
     "ctaSecondary": "Discover our solutions",
+    "ctaSectors": "Discover our sectors",
     "imageAlt": "Professional hygiene industrial installation for the food industry"
   },
   "sectors": {
@@ -390,6 +391,7 @@
   "diagnostic": {
     "pageTitle": "Free Biosecurity Diagnostic",
     "pageSubtitle": "Answer these few questions to receive a personalized technical recommendation within 24h.",
+    "assistanceButton": "Technical assistance",
     "step1": "Activity & Region",
     "step2": "Farm Details",
     "step3": "Problem Areas",
@@ -785,10 +787,10 @@
       "heroTitle": "Zone 01 — The Building: Breaking the pathogen cycle on every surface",
       "heroSubtitle": "Biofilm is an invisible microbial fortress. Disinfection applied directly on biofilm is a wasted investment. Our sequential protocols guarantee a truly sterile surface.",
       "problem": {
-        "p1": "Biofilm is a polysaccharide matrix secreted by bacterial colonies to protect themselves from their environment. This structure, invisible to the naked eye, adheres to concrete walls, cemented floors, metal equipment and porous surfaces of livestock buildings. It forms a physical and chemical shield that prevents disinfectants from reaching micro-organisms.",
-        "p2": "The most common mistake is applying a disinfectant directly on intact biofilm. The product acts on the superficial layer but does not penetrate the matrix. Protected pathogens — Salmonella, E. coli, Campylobacter — survive and recolonize the surface as soon as the next batch is placed. It is a wasted chemical investment.",
-        "p3": "The zootechnical consequences are measurable: increased mortality, feed conversion ratio (FCR) degraded by 10 to 15%, emergence of bacterial resistance to conventional disinfectants. In the long term, the contamination → ineffective treatment → recontamination cycle is self-sustaining.",
-        "p4": "In the Tunisian context, climatic conditions worsen the problem: constant heat, high relative humidity and short flock cycles do not allow surfaces to dry naturally. Biofilm reforms in 24 to 48 hours in a favorable environment."
+        "p1": "Biofilm is an invisible protective layer produced by bacteria that adheres to livestock building surfaces (floors, equipment, pipes, walls) and acts as a barrier against disinfectants.",
+        "p2": "When a disinfectant is applied to an intact biofilm, its action often remains superficial, allowing pathogens such as Salmonella, E. coli, or Campylobacter to survive.",
+        "p3": "This persistent contamination has direct consequences on livestock performance: increased mortality, decreased zootechnical performance, and an increased risk of bacterial resistance.",
+        "p4": "In Tunisia, heat and humidity conditions accelerate the reformation of biofilm, sometimes in just 24 to 48 hours."
       },
       "step1": {
         "badge": "Step 01",

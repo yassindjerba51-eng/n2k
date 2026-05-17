@@ -19,6 +19,7 @@ export default async function BatimentPage() {
   const t = await getTranslations("zonesDetail");
   const z = await getTranslations("zonesDetail.batiment");
   const tNav = await getTranslations("nav");
+  const tHero = await getTranslations("hero");
 
   const faqItems = [0, 1, 2, 3, 4].map((i) => ({
     question: z(`faq.${i}.q`),
@@ -71,14 +72,14 @@ export default async function BatimentPage() {
                   href="/diagnostic"
                   className="w-full sm:flex-1 inline-flex items-center justify-center gap-2 bg-n2k-secondary-light hover:bg-n2k-secondary text-white px-8 py-4 rounded-xl text-sm font-black tracking-tight shadow-lg shadow-n2k-secondary/20 transition-all"
                 >
-                  Demander un diagnostic sanitaire
+                  {tHero("cta")}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/secteurs"
                   className="w-full sm:flex-1 inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl text-sm font-bold tracking-tight transition-all border border-white/15"
                 >
-                  Découvrir nos secteurs
+                  {tHero("ctaSectors")}
                 </Link>
               </div>
 
@@ -112,7 +113,7 @@ export default async function BatimentPage() {
       </section>
 
       {/* ====== LE PROBLÈME ====== */}
-      <section className="bg-white py-16 md:py-24">
+      <section className="bg-white py-15 md:py-15">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8">
           <div className="flex items-center gap-3 mb-6">
             <Building2 className="w-6 h-6 text-[#4da8e8]" />
@@ -120,10 +121,10 @@ export default async function BatimentPage() {
           </div>
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
             <div className="w-full lg:w-2/3 space-y-6">
-              <p className="text-n2k-primary font-body text-base md:text-lg leading-relaxed">{z("problem.p1")}</p>
-              <p className="text-n2k-primary font-body text-base md:text-lg leading-relaxed">{z("problem.p2")}</p>
-              <p className="text-n2k-primary font-body text-base md:text-lg leading-relaxed">{z("problem.p3")}</p>
-              <p className="text-n2k-primary font-body text-base md:text-lg leading-relaxed">{z("problem.p4")}</p>
+              <p className="text-n2k-primary font-body text-base md:text-lg leading-relaxed text-justify">{z("problem.p1")}</p>
+              <p className="text-n2k-primary font-body text-base md:text-lg leading-relaxed text-justify">{z("problem.p2")}</p>
+              <p className="text-n2k-primary font-body text-base md:text-lg leading-relaxed text-justify">{z("problem.p3")}</p>
+              <p className="text-n2k-primary font-body text-base md:text-lg leading-relaxed text-justify">{z("problem.p4")}</p>
             </div>
             <div className="w-full lg:w-1/3 relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-border/30 h-[350px] md:h-[480px] w-full">
@@ -141,7 +142,7 @@ export default async function BatimentPage() {
       </section>
 
       {/* ====== PROTOCOLE ====== */}
-      <section className="bg-n2k-surface py-16 md:py-24">
+      <section className="bg-n2k-surface py-15 md:py-15">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8">
           <div className="flex items-center gap-3 mb-10">
             <span className="w-8 h-px bg-[#0D7ED0] shrink-0"></span>
@@ -273,7 +274,7 @@ export default async function BatimentPage() {
       </section>
 
       {/* ====== TABLEAU ====== */}
-      <section className="bg-white py-16 md:py-24">
+      <section className="bg-white py-15 md:py-15">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8">
           <h2 className="text-2xl md:text-3xl font-black font-heading text-n2k-primary tracking-tight mb-10">{t("tableSectionTitle")}</h2>
           <div className="overflow-x-auto rounded-2xl border border-border/50 shadow-ambient">
@@ -300,7 +301,7 @@ export default async function BatimentPage() {
       </section>
 
       {/* ====== KPI ====== */}
-      <section className="bg-n2k-surface py-16 md:py-24">
+      <section className="bg-n2k-surface py-15 md:py-15">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8">
           <h2 className="text-2xl md:text-3xl font-black font-heading text-n2k-primary tracking-tight mb-10">{t("resultsSectionTitle")}</h2>
           <KpiCards items={kpiItems} accentColor="text-[#0D7ED0]" accentBg="bg-[#0D7ED0]/10" />
@@ -308,7 +309,7 @@ export default async function BatimentPage() {
       </section>
 
       {/* ====== FAQ ====== */}
-      <section className="bg-white py-16 md:py-24">
+      <section className="bg-white py-15 md:py-15">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8">
           <h2 className="text-2xl md:text-3xl font-black font-heading text-n2k-primary tracking-tight mb-10">{t("faqSectionTitle")}</h2>
           <FaqAccordion items={faqItems} columns={2} />
@@ -316,7 +317,7 @@ export default async function BatimentPage() {
       </section>
 
       {/* ====== CTA ====== */}
-      <section className="bg-[#0D7ED0] py-16 md:py-24">
+      <section className="bg-[#0D7ED0] py-15 md:py-15">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-black font-heading text-white tracking-tight mb-10">Prêt à sécuriser vos surfaces ?</h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

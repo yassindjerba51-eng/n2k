@@ -39,7 +39,7 @@ export default function SectorDetail({ sector, title, subtitle, icon, image }: S
         <div className="max-w-[1400px] mx-auto px-4 md:px-8 py-20 md:py-28 lg:py-36 relative">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             {/* Left Column: Content */}
-            <div className="w-full lg:w-2/3 max-w">
+            <div className="w-full lg:w-2/3 max-w ">
               <div className="flex items-center gap-3 mb-8">
                 <span className="w-10 h-px bg-n2k-secondary-light shrink-0"></span>
                 <span className="text-xs font-black tracking-[0.2em] text-n2k-secondary-light uppercase">

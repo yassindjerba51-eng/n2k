@@ -24,6 +24,7 @@
     "subtitle": "Protocoles complets de nettoyage, assainissement et maintenance préventive pour élevage avicole, abattoirs et industrie agroalimentaire.",
     "cta": "Demander un diagnostic sanitaire",
     "ctaSecondary": "Découvrir nos solutions",
+    "ctaSectors": "Découvrir nos secteurs",
     "imageAlt": "Installation industrielle d'hygiène professionnelle pour l'agroalimentaire"
   },
   "sectors": {
@@ -390,6 +391,7 @@
   "diagnostic": {
     "pageTitle": "Diagnostic Bio-Sécurité Gratuit",
     "pageSubtitle": "Répondez à ces quelques questions pour recevoir une recommandation technique personnalisée sous 24h.",
+    "assistanceButton": "Assistance technique",
     "step1": "Activité & Région",
     "step2": "Détails de l'Exploitation",
     "step3": "Problématiques",
@@ -785,10 +787,10 @@
       "heroTitle": "Zone 01 — Le Bâtiment : Briser le cycle pathogène sur chaque surface",
       "heroSubtitle": "Le biofilm est une forteresse microbienne invisible. Une désinfection appliquée directement sur un biofilm est un investissement perdu. Nos protocoles séquentiels garantissent une surface réellement stérile.",
       "problem": {
-        "p1": "Le biofilm est une matrice polysaccharidique sécrétée par les colonies bactériennes pour se protéger de leur environnement. Cette structure, invisible à l'œil nu, adhère aux parois en béton, aux sols cimentés, aux équipements métalliques et aux surfaces poreuses des bâtiments d'élevage. Elle constitue un bouclier physique et chimique qui empêche les désinfectants d'atteindre les micro-organismes.",
-        "p2": "L'erreur la plus répandue consiste à appliquer un désinfectant directement sur un biofilm intact. Le produit agit sur la couche superficielle mais ne pénètre pas la matrice. Les pathogènes protégés — Salmonella, E. coli, Campylobacter — survivent et recolonisent la surface dès la mise en place du lot suivant. C'est un investissement chimique perdu.",
-        "p3": "Les conséquences zootechniques sont mesurables : mortalité en hausse, indice de consommation (FCR) dégradé de 10 à 15%, apparition de résistances bactériennes aux désinfectants classiques. Sur le long terme, le cycle contamination → traitement inefficace → recontamination s'auto-entretient.",
-        "p4": "En contexte tunisien, les conditions climatiques aggravent le problème : chaleur constante, humidité relative élevée et cycles de bandes courts ne laissent pas le temps aux surfaces de sécher naturellement. Le biofilm se reforme en 24 à 48 heures dans un environnement favorable."
+        "p1": "Le biofilm est une couche protectrice invisible produite par les bactéries qui adhère aux surfaces des bâtiments d’élevage (sols, équipements, canalisations, murs) et agit comme une barrière contre les désinfectants.",
+        "p2": "Lorsqu’un désinfectant est appliqué sur un biofilm intact, son action reste souvent superficielle, laissant survivre des agents pathogènes comme Salmonella, E. coli ou Campylobacter.",
+        "p3": "Cette contamination persistante entraîne des conséquences directes sur les performances d’élevage : augmentation de la mortalité, baisse des performances zootechniques et risque accru de résistances bactériennes.",
+        "p4": "En Tunisie, les conditions de chaleur et d’humidité accélèrent la reformation du biofilm, parfois en seulement 24 à 48 heures."
       },
       "step1": {
         "badge": "Étape 01",

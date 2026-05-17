@@ -36,6 +36,7 @@ export default async function ProblemesSolutionsHub() {
   const t = await getTranslations("solutionsPage");
   const tCta = await getTranslations("cta");
   const tNav = await getTranslations("nav");
+  const tHero = await getTranslations("hero");
 
   const sectorLabels: Record<Sector, string> = {
     elevage: t("sectorTabs.elevage"),
@@ -75,14 +76,14 @@ export default async function ProblemesSolutionsHub() {
                   href="/diagnostic"
                   className="w-full sm:flex-1 inline-flex items-center justify-center gap-2 bg-n2k-secondary-light hover:bg-n2k-secondary text-white px-8 py-4 rounded-xl text-sm font-black tracking-tight shadow-lg shadow-n2k-secondary/20 transition-all"
                 >
-                  Demander un diagnostic sanitaire
+                  {tHero("cta")}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/secteurs"
                   className="w-full sm:flex-1 inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl text-sm font-bold tracking-tight transition-all border border-white/15"
                 >
-                  Découvrir nos secteurs
+                  {tHero("ctaSectors")}
                 </Link>
               </div>
 

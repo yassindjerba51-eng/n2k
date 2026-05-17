@@ -16,6 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function ProduitsPage() {
   const t = await getTranslations("products");
   const tNav = await getTranslations("nav");
+  const tHero = await getTranslations("hero");
 
   return (
     <div className="bg-surface min-h-[calc(100vh-80px)]">
@@ -45,14 +46,14 @@ export default async function ProduitsPage() {
                   href="/diagnostic"
                   className="w-full sm:flex-1 inline-flex items-center justify-center gap-2 bg-n2k-secondary-light hover:bg-n2k-secondary text-white px-8 py-4 rounded-xl text-sm font-black tracking-tight shadow-lg shadow-n2k-secondary/20 transition-all"
                 >
-                  Demander un diagnostic sanitaire
+                  {tHero("cta")}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/problemes-solutions"
                   className="w-full sm:flex-1 inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl text-sm font-bold tracking-tight transition-all border border-white/15"
                 >
-                  Découvrir nos solutions
+                  {tHero("ctaSecondary")}
                 </Link>
               </div>
 
