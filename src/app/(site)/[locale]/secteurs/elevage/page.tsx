@@ -22,6 +22,8 @@ export default async function ElevagePage({ params }: { params: Promise<{ locale
       subtitle={t("desc")}
       icon={<Bird className="w-7 h-7" />}
       image="/images/hero_elevage.png"
+      tag="Élevage"
+      locale={locale}
     />
   );
 }

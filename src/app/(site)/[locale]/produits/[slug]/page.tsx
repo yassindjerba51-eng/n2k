@@ -25,10 +25,21 @@ import {
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
+import RelatedArticlesCarousel from "@/components/blog/RelatedArticlesCarousel";
+
 const zoneIcons: Record<string, React.ElementType> = {
   "01": Building2,
   "02": Droplets,
   "03": Wind,
+};
+
+const SLUG_TO_TAG: Record<string, string> = {
+  "cloragro": "CLORAGRO",
+  "optimagro": "OPTIMAGRO",
+  "alcosept-pro": "ALCOSEPT PRO",
+  "oxylis-hoci": "OXYLIS HOCl",
+  "bionet": "BIONET",
+  "bioactive": "BIOACTIVE",
 };
 
 export async function generateMetadata({
@@ -385,6 +396,11 @@ export default async function ProductDetailPage({
             </div>
           </div>
         </section>
+      )}
+
+      {/* ====== RELATED BLOG POSTS ====== */}
+      {SLUG_TO_TAG[slug] && (
+        <RelatedArticlesCarousel tag={SLUG_TO_TAG[slug]} locale={locale} />
       )}
     </div>
   );

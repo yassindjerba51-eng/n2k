@@ -28,7 +28,7 @@ export async function POST(request: Request) {
       metaTitleFr, metaTitleEn, metaTitleAr,
       metaDescFr, metaDescEn, metaDescAr,
       contentFr, contentEn, contentAr,
-      publishedAt, categoryIds,
+      publishedAt, categoryIds, tags,
     } = body;
 
     if (!slugFr || !titleFr) {
@@ -59,6 +59,7 @@ export async function POST(request: Request) {
         contentEn: contentEn || "",
         contentAr: contentAr || "",
         publishedAt: publishedAt ? new Date(publishedAt) : new Date(),
+        tags: tags || [],
         categories: categoryIds?.length
           ? { connect: categoryIds.map((id: number) => ({ id })) }
           : undefined,

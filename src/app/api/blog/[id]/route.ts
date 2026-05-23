@@ -33,7 +33,7 @@ export async function PUT(request: Request, context: RouteContext) {
       metaTitleFr, metaTitleEn, metaTitleAr,
       metaDescFr, metaDescEn, metaDescAr,
       contentFr, contentEn, contentAr,
-      publishedAt, categoryIds,
+      publishedAt, categoryIds, tags,
     } = body;
 
     // Disconnect all existing categories, then reconnect selected ones
@@ -59,6 +59,7 @@ export async function PUT(request: Request, context: RouteContext) {
         contentEn: contentEn !== undefined ? contentEn : undefined,
         contentAr: contentAr !== undefined ? contentAr : undefined,
         publishedAt: publishedAt ? new Date(publishedAt) : undefined,
+        tags: tags !== undefined ? tags : undefined,
         categories: categoryIds !== undefined
           ? { set: categoryIds.map((cid: number) => ({ id: cid })) }
           : undefined,

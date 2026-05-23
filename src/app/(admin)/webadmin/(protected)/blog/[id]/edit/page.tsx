@@ -74,6 +74,7 @@ export default function EditArticlePage() {
           ? new Date(data.publishedAt).toISOString().split("T")[0]
           : new Date().toISOString().split("T")[0],
         categoryIds: data.categories?.map((c: any) => c.id) || [],
+        tags: Array.isArray(data.tags) ? data.tags : [],
       }}
     />
   );

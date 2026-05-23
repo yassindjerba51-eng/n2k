@@ -598,6 +598,10 @@
     "noArticlesInCategory": "Aucun article dans cette catégorie pour le moment.",
     "viewMode": "Affichage :"
   },
+  "relatedArticles": {
+    "sectionTitle": "Les articles associés",
+    "readArticle": "Lire l'article"
+  },
   "merci": {
     "title": "Demande Envoyée !",
     "subtitle": "Merci de nous faire confiance. Un expert N2K analysera vos données et vous contactera sous 24h.",

@@ -6,6 +6,7 @@ import ZoneNav from "@/components/zones/ZoneNav";
 import ProductStepCard from "@/components/zones/ProductStepCard";
 import KpiCards from "@/components/zones/KpiCards";
 import FaqAccordion from "@/components/zones/FaqAccordion";
+import RelatedArticlesCarousel from "@/components/blog/RelatedArticlesCarousel";
 
 export async function generateMetadata() {
   return {
@@ -14,7 +15,8 @@ export async function generateMetadata() {
   };
 }
 
-export default async function CanalisationsEauPage() {
+export default async function CanalisationsEauPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
   const t = await getTranslations("zonesDetail");
   const z = await getTranslations("zonesDetail.canalisations");
   const tNav = await getTranslations("nav");
@@ -256,6 +258,9 @@ export default async function CanalisationsEauPage() {
           <FaqAccordion items={faqItems} columns={2} />
         </div>
       </section>
+
+      {/* ====== RELATED BLOG POSTS ====== */}
+      <RelatedArticlesCarousel tag="Canalisation d'eau" locale={locale} />
 
       {/* ====== CTA ====== */}
       <section className="bg-n2k-primary py-16 md:py-24">

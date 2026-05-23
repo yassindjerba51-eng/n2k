@@ -598,6 +598,10 @@
     "noArticlesInCategory": "لا توجد مقالات في هذه الفئة حاليا.",
     "viewMode": "عرض:"
   },
+  "relatedArticles": {
+    "sectionTitle": "المقالات ذات الصلة",
+    "readArticle": "اقرأ المقال"
+  },
   "merci": {
     "title": "تم إرسال الطلب!",
     "subtitle": "شكراً لثقتكم. سيقوم خبير N2K بتحليل بياناتكم والاتصال بكم خلال 24 ساعة.",

@@ -19,6 +19,7 @@ import {
   CalendarIcon,
   FolderOpen,
   Search,
+  Tag,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -52,7 +53,23 @@ type ArticleFormData = {
   contentAr: string;
   publishedAt: string;
   categoryIds: number[];
+  tags: string[];
 };
+
+const TAG_GROUPS = [
+  {
+    label: "Produits",
+    tags: ["CLORAGRO", "OPTIMAGRO", "ALCOSEPT PRO", "OXYLIS HOCl", "BIONET", "BIOACTIVE"],
+  },
+  {
+    label: "Problèmes & Solutions",
+    tags: ["Bâtiment", "Canalisation d'eau", "Ambiance"],
+  },
+  {
+    label: "Secteurs d'activité",
+    tags: ["Élevage", "Abattoirs", "Industrie agroalimentaire"],
+  },
+];
 
 const EMPTY_FORM: ArticleFormData = {
   slug: "",
@@ -75,6 +92,7 @@ const EMPTY_FORM: ArticleFormData = {
   contentAr: "",
   publishedAt: new Date().toISOString().split("T")[0],
   categoryIds: [],
+  tags: [],
 };
 
 type Props = {
@@ -104,11 +122,20 @@ export default function ArticleForm({ initialData, mode }: Props) {
   }, []);
 
   const updateField = useCallback(
-    (field: keyof ArticleFormData, value: string | boolean | number[]) => {
+    (field: keyof ArticleFormData, value: string | boolean | number[] | string[]) => {
       setForm((prev) => ({ ...prev, [field]: value }));
     },
     []
   );
+
+  const toggleTag = (tag: string) => {
+    setForm((prev) => ({
+      ...prev,
+      tags: prev.tags.includes(tag)
+        ? prev.tags.filter((t) => t !== tag)
+        : [...prev.tags, tag],
+    }));
+  };
 
   const generateSlug = (name: string) =>
     name
@@ -623,6 +650,71 @@ export default function ArticleForm({ initialData, mode }: Props) {
                     </span>
                   </label>
                 ))
+              )}
+            </CardContent>
+          </Card>
+
+          {/* Tags */}
+          <Card className="border-slate-200/80 shadow-sm bg-white">
+            <CardHeader className="pb-3">
+              <CardTitle className="text-base flex items-center gap-2">
+                <Tag className="w-4 h-4 text-slate-400" />
+                Tags
+              </CardTitle>
+              <p className="text-xs text-slate-400 mt-1">
+                Associez des tags pour afficher cet article sur les pages correspondantes.
+              </p>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              {TAG_GROUPS.map((group) => (
+                <div key={group.label}>
+                  <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">
+                    {group.label}
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {group.tags.map((tag) => {
+                      const isSelected = form.tags.includes(tag);
+                      return (
+                        <button
+                          key={tag}
+                          type="button"
+                          onClick={() => toggleTag(tag)}
+                          className={`px-3 py-1.5 text-xs font-medium rounded-full border transition-colors ${
+                            isSelected
+                              ? "bg-[#0A2540] text-white border-[#0A2540]"
+                              : "bg-white text-slate-600 border-slate-200 hover:bg-slate-50 hover:border-slate-300"
+                          }`}
+                        >
+                          {isSelected && "✓ "}{tag}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
+
+              {/* Selected tags summary */}
+              {form.tags.length > 0 && (
+                <div className="pt-3 border-t border-slate-100">
+                  <p className="text-xs text-slate-400 mb-2">{form.tags.length} tag(s) sélectionné(s)</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {form.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="inline-flex items-center gap-1 px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-md font-medium"
+                      >
+                        {tag}
+                        <button
+                          type="button"
+                          onClick={() => toggleTag(tag)}
+                          className="text-slate-400 hover:text-red-500 transition-colors"
+                        >
+                          <X className="w-3 h-3" />
+                        </button>
+                      </span>
+                    ))}
+                  </div>
+                </div>
               )}
             </CardContent>
           </Card>

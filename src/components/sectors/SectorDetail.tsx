@@ -16,6 +16,7 @@ import {
   Home,
   ChevronRight,
 } from "lucide-react";
+import RelatedArticlesCarousel from "@/components/blog/RelatedArticlesCarousel";
 
 interface SectorDetailProps {
   sector: SectorData;
@@ -23,9 +24,11 @@ interface SectorDetailProps {
   subtitle: string;
   icon: React.ReactNode;
   image?: string;
+  tag?: string;
+  locale?: string;
 }
 
-export default function SectorDetail({ sector, title, subtitle, icon, image }: SectorDetailProps) {
+export default function SectorDetail({ sector, title, subtitle, icon, image, tag, locale }: SectorDetailProps) {
   const t = useTranslations("sectorDetail");
   const tNav = useTranslations("nav");
 
@@ -324,6 +327,11 @@ export default function SectorDetail({ sector, title, subtitle, icon, image }: S
           </div>
         </div>
       </section>
+
+      {/* ====== RELATED BLOG POSTS ====== */}
+      {tag && locale && (
+        <RelatedArticlesCarousel tag={tag} locale={locale} />
+      )}
 
       {/* ====== 7. CTA ====== */}
       <section className="bg-n2k-primary py-15 md:py-15">

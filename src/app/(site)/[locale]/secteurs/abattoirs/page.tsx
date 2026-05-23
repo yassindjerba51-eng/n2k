@@ -22,6 +22,8 @@ export default async function Abattoirs({ params }: { params: Promise<{ locale: 
       subtitle={t("desc")}
       icon={<Beef className="w-7 h-7" />}
       image="/images/hero_abattoirs.png"
+      tag="Abattoirs"
+      locale={locale}
     />
   );
 }

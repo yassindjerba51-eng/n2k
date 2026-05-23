@@ -7,6 +7,7 @@ import ProductStepCard from "@/components/zones/ProductStepCard";
 import AlertBlock from "@/components/zones/AlertBlock";
 import KpiCards from "@/components/zones/KpiCards";
 import FaqAccordion from "@/components/zones/FaqAccordion";
+import RelatedArticlesCarousel from "@/components/blog/RelatedArticlesCarousel";
 
 export async function generateMetadata() {
   return {
@@ -15,7 +16,8 @@ export async function generateMetadata() {
   };
 }
 
-export default async function BatimentPage() {
+export default async function BatimentPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
   const t = await getTranslations("zonesDetail");
   const z = await getTranslations("zonesDetail.batiment");
   const tNav = await getTranslations("nav");
@@ -315,6 +317,9 @@ export default async function BatimentPage() {
           <FaqAccordion items={faqItems} columns={2} />
         </div>
       </section>
+
+      {/* ====== RELATED BLOG POSTS ====== */}
+      <RelatedArticlesCarousel tag="Bâtiment" locale={locale} />
 
       {/* ====== CTA ====== */}
       <section className="bg-[#0D7ED0] py-15 md:py-15">
