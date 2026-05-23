@@ -177,6 +177,35 @@ export default async function AboutPage({
         </div>
       </section>
 
+      {/* ====== MANUFACTURER IDENTITY ====== */}
+      <section className="py-15 md:py-15 bg-white">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+          <div className="max-w">
+            <label className="text-n2k-secondary font-bold tracking-[0.2em] uppercase text-xs mb-4 block">
+              {t("manufacturerBadge")}
+            </label>
+            <h2 className="font-heading text-3xl md:text-4xl font-black text-n2k-primary mb-8">
+              {t("manufacturerTitle")}
+            </h2>
+            <div className="space-y-5 text-n2k-on-surface-variant text-lg leading-relaxed text-justify">
+              <p>{t("manufacturerDesc1")}</p>
+              <p>{t("manufacturerDesc2")}</p>
+              <p>{t("manufacturerDesc3")}</p>
+            </div>
+            <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {(["item1", "item2", "item3", "item4"] as const).map((key) => (
+                <div key={key} className="flex items-start gap-3 bg-n2k-surface-low p-5 border-l-2 border-n2k-secondary">
+                  <CheckCircle className="w-5 h-5 text-n2k-secondary shrink-0 mt-0.5" />
+                  <p className="text-sm text-n2k-primary font-body font-medium leading-snug">
+                    {t(`manufacturerItems.${key}`)}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ====== 4 PILLARS ====== */}
       <section className="py-15 md:py-15 bg-n2k-surface-low">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">

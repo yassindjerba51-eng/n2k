@@ -4,7 +4,7 @@ import Image from "next/image";
 import {
   ArrowRight, Building2, Droplets, Wind, Bird, Beef, Factory,
   Shield, ShieldPlus, Wrench, CheckCircle, Award, Users, FileCheck,
-  Microscope, FlaskConical, BookOpen,
+  Microscope, FlaskConical, BookOpen, Settings,
 } from "lucide-react";
 import StickyDiagnosticCTA from "@/components/ui/StickyDiagnosticCTA";
 import { HeroSlideshow } from "@/components/ui/HeroSlideshow";
@@ -127,6 +127,50 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
               </div>
               {/* Decorative glow behind image */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-n2k-secondary/20 blur-3xl -z-10 rounded-full mix-blend-screen" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ====== BLOC 1b — EXPERTISE INSTITUTIONNELLE ====== */}
+      <section className="bg-white py-15 md:py-15">
+        <div className="max-w-[1400px] mx-auto px-4 md:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            {/* Left — Text */}
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <span className="w-8 h-px bg-n2k-primary shrink-0"></span>
+                <span className="text-xs font-black tracking-[0.2em] text-n2k-primary uppercase">{t("homeExpertise.badge")}</span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-n2k-primary tracking-tight mb-6">
+                {t("homeExpertise.title")}{" "}
+                <span className="text-n2k-secondary">{t("homeExpertise.titleHighlight")}</span>
+              </h2>
+              <div className="space-y-4 text-n2k-on-surface-variant font-body text-lg leading-relaxed text-justify">
+                <p>{t("homeExpertise.desc1")}</p>
+                <p>{t("homeExpertise.desc2")}</p>
+                <p>{t("homeExpertise.desc3")}</p>
+              </div>
+            </div>
+
+            {/* Right — 4 pillars grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {(["dev", "fab", "terrain", "qualite"] as const).map((key) => {
+                const icons = {
+                  dev: FlaskConical,
+                  fab: Settings,
+                  terrain: Users,
+                  qualite: CheckCircle,
+                };
+                const IconComp = icons[key];
+                return (
+                  <div key={key} className="bg-n2k-surface-low rounded-xl p-6 border border-n2k-outline-variant/10">
+                    <IconComp className="w-6 h-6 text-n2k-secondary mb-3" />
+                    <h3 className="text-sm font-bold font-heading text-n2k-primary mb-1">{t(`homeExpertise.pillars.${key}.title`)}</h3>
+                    <p className="text-xs text-n2k-on-surface-variant font-body leading-relaxed">{t(`homeExpertise.pillars.${key}.desc`)}</p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>

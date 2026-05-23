@@ -314,6 +314,32 @@
       "products": "Produits : OXYLIS HOCl / BIONET"
     }
   },
+  "homeExpertise": {
+    "badge": "Notre identité",
+    "title": "Une expertise développée",
+    "titleHighlight": "en interne",
+    "desc1": "Chez N2K, nous développons et fabriquons nos propres solutions destinées aux secteurs agroalimentaire, élevage et environnement.",
+    "desc2": "Notre approche repose sur une maîtrise technique interne, une compréhension des contraintes terrain et une volonté de proposer des formulations adaptées aux usages professionnels réels.",
+    "desc3": "De la conception jusqu'à l'application, chaque solution est pensée pour allier efficacité, stabilité et simplicité d'utilisation.",
+    "pillars": {
+      "dev": {
+        "title": "Développement interne",
+        "desc": "Formulations conçues et optimisées par notre équipe technique, sans sous-traitance de R&D."
+      },
+      "fab": {
+        "title": "Fabrication maîtrisée",
+        "desc": "Production réalisée dans nos installations au Technopôle de Borj Cédria."
+      },
+      "terrain": {
+        "title": "Expertise terrain",
+        "desc": "Chaque produit est pensé à partir de retours d'expérience en conditions réelles."
+      },
+      "qualite": {
+        "title": "Contrôle qualité",
+        "desc": "Suivi rigoureux de chaque lot, de la matière première au produit fini."
+      }
+    }
+  },
   "credibility": {
     "badge": "Pourquoi N2K",
     "title": "La confiance se mérite",
@@ -1310,6 +1336,17 @@
     "specialistTitle": "Spécialiste en biotransformation & hygiène industrielle.",
     "specialistDesc1": "Les Laboratoires N2K se positionnent à l'intersection de la recherche scientifique et de l'efficacité opérationnelle. Basés au Technopôle de Borj Cédria, nous comprenons les défis uniques de l'élevage intensif en Tunisie.",
     "specialistDesc2": "Notre mission est de briser le cycle des contaminations en adressant les causes profondes, notamment le biofilm microbien, souvent ignoré par les solutions standards.",
+    "manufacturerBadge": "Notre démarche",
+    "manufacturerTitle": "Développer, formuler, fabriquer.",
+    "manufacturerDesc1": "N2K est une entreprise spécialisée dans le développement de solutions techniques destinées aux environnements professionnels.",
+    "manufacturerDesc2": "Notre démarche repose sur une maîtrise interne des formulations, une approche orientée terrain et une compréhension concrète des contraintes liées à l'hygiène, à l'environnement et aux usages industriels.",
+    "manufacturerDesc3": "Nous concevons des solutions pensées pour répondre aux réalités opérationnelles des secteurs que nous accompagnons.",
+    "manufacturerItems": {
+      "item1": "Solutions développées en interne — pas de sous-traitance de formulation",
+      "item2": "Compréhension terrain intégrée au processus de développement",
+      "item3": "Spécialisation en hygiène, environnement et biotechnologie appliquée",
+      "item4": "Production maîtrisée au Technopôle de Borj Cédria"
+    },
     "specialistBadge": "TUNISIE",
     "specialistBadgeSub": "Expertise Borj Cédria",
     "pillarsLabel": "Objectifs Stratégiques",
