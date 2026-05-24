@@ -43,7 +43,8 @@ async function findCategoryBySlug(slug: string) {
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }) {
-  const { locale, slug } = await params;
+  const { locale, slug: rawSlug } = await params;
+  const slug = decodeURIComponent(rawSlug);
   const post = await findPostBySlug(slug);
   const t = await getTranslations({ locale, namespace: "common" });
   
@@ -74,7 +75,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 export default async function BlogPostPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
-  const { locale, slug } = await params;
+  const { locale, slug: rawSlug } = await params;
+  const slug = decodeURIComponent(rawSlug);
   const t = await getTranslations("blog");
   const tNav = await getTranslations("nav");
 
@@ -83,7 +85,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ local
   if (post) {
     const localizedSlug = locale === "ar" ? post.slugAr : locale === "en" ? post.slugEn : post.slugFr;
     if (slug !== localizedSlug && localizedSlug) {
-      redirect({ href: `/blog/${localizedSlug}`, locale: locale as any });
+      redirect({ href: encodeURI(`/blog/${localizedSlug}`), locale: locale as any });
     }
   }
 
@@ -95,7 +97,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ local
 
     const localizedSlug = locale === "ar" ? category.slugAr : locale === "en" ? category.slugEn : category.slugFr;
     if (slug !== localizedSlug) {
-      redirect({ href: `/blog/${localizedSlug}`, locale: locale as any });
+      redirect({ href: encodeURI(`/blog/${localizedSlug}`), locale: locale as any });
     }
 
     // Render Category Listing
