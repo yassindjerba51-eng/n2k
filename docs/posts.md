@@ -58,7 +58,7 @@ Le protocole terrain recommandé
 
 Étape 02 : rinçage complet du réseau.
 
-Étape 03 : stabilisation continue de la qualité microbiologique de l’eau avec AQUACONTROL du réservoir jusqu’au dernier abreuvoir.
+Étape 03 : stabilisation continue de la qualité microbiologique de l’eau avec "OXYLIS HOCI" du réservoir jusqu’au dernier abreuvoir.
 
 Ce qu’il faut retenir
 
@@ -121,7 +121,7 @@ Le protocole utilisé dans les bâtiments les plus stables
 
 Étape 03 : désinfection finale structurée avec OPTIMAGRO.
 
-Étape 04 : maîtrise de l’ambiance du bâtiment par nébulisation contrôlée avec AIRSAN.
+Étape 04 : maîtrise de l’ambiance du bâtiment par nébulisation contrôlée avec OXYLIS HOCI.
 
 Ce qu’il faut retenir
 
@@ -179,8 +179,8 @@ Un protocole cohérent suit une logique simple :
 1. Dégradation organique avec BIOACTIVE.
 2. Décapage et nettoyage avec CLORAGRO.
 3. Désinfection finale avec OPTIMAGRO.
-4. Stabilisation continue des lignes avec AQUACONTROL.
-5. Gestion atmosphérique avec AIRSAN.
+4. Stabilisation continue des lignes avec OXYLIS HOCI.
+5. Gestion atmosphérique avec OXYLIS HOCI.
 
 Ce qu’il faut comprendre
 
@@ -236,7 +236,7 @@ Avant mise en place des poussins :
 
 Étape 02 : rinçage intégral des lignes.
 
-Étape 03 : maintien quotidien de la stabilité microbiologique avec AQUACONTROL.
+Étape 03 : maintien quotidien de la stabilité microbiologique avec OXYLIS HOCI.
 
 Ce qu’il faut retenir
 
@@ -298,7 +298,7 @@ Le protocole recommandé
 
 Étape 03 : traitement des circuits process avec BIONET.
 
-Étape 04 : stabilisation continue des eaux de process avec AQUACONTROL.
+Étape 04 : stabilisation continue des eaux de process avec OXYLIS HOCI.
 
 Ce qu’il faut retenir
 
@@ -348,7 +348,7 @@ Le protocole terrain
 
 Étape 02 : décapage technique avec CLORAGRO.
 
-Étape 03 : maîtrise atmosphérique avec AIRSAN.
+Étape 03 : maîtrise atmosphérique avec OXYLIS HOCI.
 
 Ce qu’il faut retenir
 
@@ -444,7 +444,7 @@ Le protocole conseillé
 
 Étape 03 : désinfection finale avec OPTIMAGRO.
 
-Étape 04 : stabilisation de l’ambiance avec AIRSAN.
+Étape 04 : stabilisation de l’ambiance avec OXYLIS HOCI.
 
 Ce qu’il faut retenir
 
@@ -492,7 +492,7 @@ OPTIMAGRO pour la désinfection finale.
 
 BIONET pour les circuits process.
 
-AQUACONTROL pour la stabilité des eaux de lavage.
+OXYLIS HOCI pour la stabilité des eaux de lavage.
 
 Ce qu’il faut retenir
 
@@ -542,9 +542,9 @@ Le protocole terrain recommandé
 
 Étape 04 : décapage des lignes avec BIONET.
 
-Étape 05 : stabilisation continue avec AQUACONTROL.
+Étape 05 : stabilisation continue avec OXYLIS HOCI.
 
-Étape 06 : maîtrise atmosphérique avec AIRSAN.
+Étape 06 : maîtrise atmosphérique avec OXYLIS HOCI.
 
 Ce qu’il faut retenir
 
@@ -601,7 +601,7 @@ Le protocole recommandé
 
 Étape 03 : désinfection finale avec OPTIMAGRO.
 
-Étape 04 : nébulisation atmosphérique ciblée avec AIRSAN dans les zones à risque.
+Étape 04 : nébulisation atmosphérique ciblée avec OXYLIS HOCI dans les zones à risque.
 
 Ce qu’il faut retenir
 
@@ -699,11 +699,11 @@ Le protocole recommandé
 
 BIONET pour le nettoyage des lignes.
 
-AQUACONTROL pour stabiliser l’eau.
+OXYLIS HOCI pour stabiliser l’eau.
 
 BIOACTIVE pour réduire les résidus organiques.
 
-AIRSAN pour la maîtrise de l’ambiance.
+OXYLIS HOCI pour la maîtrise de l’ambiance.
 
 Ce qu’il faut retenir
 
@@ -791,7 +791,7 @@ Le protocole recommandé
 
 Étape 01 : décapage technique avec BIONET.
 
-Étape 02 : stabilisation continue avec AQUACONTROL.
+Étape 02 : stabilisation continue avec OXYLIS HOCI.
 
 Ce qu’il faut retenir
 
@@ -834,7 +834,7 @@ Le protocole recommandé
 
 BIOACTIVE pour réduire les résidus organiques.
 
-AIRSAN pour la maîtrise atmosphérique.
+OXYLIS HOCI pour la maîtrise atmosphérique.
 
 Ce qu’il faut retenir
 
@@ -1001,7 +1001,7 @@ CLORAGRO pour le nettoyage structurel.
 
 OPTIMAGRO pour la désinfection finale.
 
-AIRSAN pour la maîtrise atmosphérique.
+OXYLIS HOCI pour la maîtrise atmosphérique.
 
 Ce qu’il faut retenir
 
@@ -1031,7 +1031,7 @@ Pourquoi cela devient dangereux
 
 Quand un désinfectant est appliqué :
 sur protéines, graisses ou sang,
-son efficacité chute fortement.  ￼
+son efficacité chute fortement. ￼
 
 Résultat :
 — contamination persistante
@@ -1152,9 +1152,9 @@ Le protocole recommandé
 
 BIONET pour le nettoyage des circuits.
 
-AQUACONTROL pour maintenir une eau stable.
+OXYLIS HOCI pour maintenir une eau stable.
 
-AIRSAN pour réduire la pression atmosphérique et l’ammoniac.
+OXYLIS HOCI pour réduire la pression atmosphérique et l’ammoniac.
 
 Ce qu’il faut retenir
 
@@ -1167,7 +1167,7 @@ ARTICLE 24
 Pourquoi certaines chambres froides deviennent des réservoirs à Listeria
 
 La plupart des contaminations environnementales à Listeria apparaissent dans :
-des zones froides, humides et mal séchées.  ￼
+des zones froides, humides et mal séchées. ￼
 
 Les zones les plus à risque
 
@@ -1202,7 +1202,7 @@ Le protocole recommandé
 
 Étape 03 : désinfection finale avec OPTIMAGRO.
 
-Étape 04 : nébulisation ciblée avec AIRSAN.
+Étape 04 : nébulisation ciblée avec AOYLIS HOCI.
 
 Ce qu’il faut retenir
 
@@ -1280,7 +1280,7 @@ Les conséquences
 — aérosols contaminés
 — recontamination environnementale.
 
-Le nettoyage humide excessif peut même favoriser certaines contaminations.  ￼
+Le nettoyage humide excessif peut même favoriser certaines contaminations. ￼
 
 Le protocole recommandé
 
@@ -1331,7 +1331,7 @@ Le protocole recommandé
 
 Étape 01 : décapage technique avec BIONET.
 
-Étape 02 : stabilisation continue avec AQUACONTROL.
+Étape 02 : stabilisation continue avec OXYLIS HOCI.
 
 Ce qu’il faut retenir
 
@@ -1378,7 +1378,7 @@ CLORAGRO pour le décapage.
 
 OPTIMAGRO pour la désinfection.
 
-AIRSAN pour la maîtrise de l’ambiance.
+OXYLIS HOCI pour la maîtrise de l’ambiance.
 
 Ce qu’il faut retenir
 
@@ -1469,7 +1469,7 @@ CLORAGRO pour le nettoyage structurel.
 
 OPTIMAGRO pour la désinfection.
 
-BIONET et AQUACONTROL pour les circuits d’eau.
+BIONET et OXYLIS HOCI pour les circuits d’eau.
 
 Ce qu’il faut retenir
 

@@ -1,7 +1,7 @@
 {
   "nav": {
     "home": "Home",
-    "secteurs": "Our Sectors",
+    "secteurs": "Activity Sectors",
     "problemesSolutions": "Problems & Solutions",
     "expertise": "Expertise",
     "produits": "Products",
@@ -28,7 +28,7 @@
     "imageAlt": "Professional hygiene industrial installation for the food industry"
   },
   "sectors": {
-    "badge": "Your Industries",
+    "badge": "Your Sectors",
     "title": "Your industry, our expertise",
     "subtitle": "Identify your field of activity. We adapt our protocols to your specific constraints.",
     "elevage": {
@@ -71,7 +71,7 @@
   "problemesSolutions": {
     "heroTitle": "Problems & Solutions",
     "heroSubtitle": "Each sector has its specific risks. Discover the protocol adapted to your situation.",
-    "metaTitle": "Problems & Solutions — Les Laboratoires N2K",
+    "metaTitle": "Problems & Solutions — N2K Laboratories",
     "metaDescription": "Sanitary control protocols adapted by sector: livestock, slaughterhouse, and food industry.",
     "tabs": {
       "elevage": "Livestock",
@@ -85,7 +85,7 @@
           "num": "01",
           "product": "CLORAGRO",
           "title": "Surface cleaning",
-          "context": "Sanitary void",
+          "context": "Sanitary downtime",
           "role": "Organic biofilm destruction, elimination of fats and proteins. Mandatory surface preparation before disinfection.",
           "dosage": "2% — minimum contact time 15 minutes",
           "constraint": "Complete rinsing mandatory before any subsequent step."
@@ -103,7 +103,7 @@
           "num": "03",
           "product": "OPTIMAGRO",
           "title": "Surface disinfection",
-          "context": "Sanitary void",
+          "context": "Sanitary downtime",
           "role": "Full-spectrum biocidal disinfection on rinsed surfaces. Elimination of residual pathogens.",
           "dosage": "2% — contact time 15 to 30 minutes",
           "constraint": "Minimum 4h ventilation before reintroducing animals. 7-day residual effect."
@@ -127,7 +127,7 @@
           "constraint": "No animal stress, no wetting of litter."
         }
       ],
-      "bioactiveNote": "BIOACTIVE is used as a complement to CLORAGRO during sanitary void on equipment with high organic load (dosage 5% to 10%). It is an enzymatic surface cleaner — never in nebulization."
+      "bioactiveNote": "BIOACTIVE is used as a complement to CLORAGRO during sanitary downtime on equipment with high organic load (dosage 5% to 10%). It is an enzymatic surface cleaner — never in nebulization."
     },
     "abattoir": {
       "accroche": "In slaughterhouses, microbial pressure is continuous and cross-contamination risks are at their highest. The N2K protocol covers surface cleaning and disinfection with sector-specific regulatory precautions.",
@@ -222,7 +222,7 @@
     "air": {
       "title": "Atmosphere and environment",
       "description": "Ammonia, dust, aerosolized germs, airborne microbial pressure.",
-      "impact": "Respiratory pathologies, ADG drop, odors, degraded animal welfare.",
+      "impact": "Respiratory pathologies, decreased ADG, odors, degraded animal welfare.",
       "risk": "Respiratory Impact",
       "riskPercent": "78"
     }
@@ -285,7 +285,7 @@
     },
     "techpark": {
       "name": "Borj Cédria Technology Park",
-      "description": "Located at the heart of Tunisian innovation, Les Laboratoires N2K benefit from a cutting-edge scientific ecosystem to guarantee the quality of each produced batch."
+      "description": "Located at the heart of Tunisian innovation, N2K Laboratories benefit from a cutting-edge scientific ecosystem to guarantee the quality of each produced batch."
     },
     "quote": "« Our mission is not to sell jerrycans, but to ensure the sanitary success of your flocks. »",
     "quoteAuthor": "— Dr. Mahmoud Naffati"
@@ -450,7 +450,7 @@
       "Tunis",
       "Zaghouan"
     ],
-    "activityType": "Secteur of Activity",
+    "activityType": "Activity Sector",
     "poultry": "Poultry Farming",
     "agrifood": "Agri-food Industry",
     "slaughterhouse": "Slaughterhouse & Processing",
@@ -480,10 +480,10 @@
     "pageSubtitle": "A rigorous scientific approach, rooted in applied research at Borj Cédria Technology Park.",
     "directorTitle": "Scientific Direction",
     "directorName": "Dr. Mahmoud Naffati",
-    "directorRole": "Associate — Director of Research and Production",
+    "directorRole": "Co-founder — Director of Research and Production",
     "directorBio": "With a PhD in chemistry and over 15 years of field experience, Dr. Naffati has developed a unique methodology that combines academic rigor with industrial pragmatism.",
     "techparkTitle": "Borj Cédria Technology Park",
-    "techparkDesc": "Les Laboratoires N2K are located within the Borj Cédria Technopark, one of Tunisia's largest scientific hubs.",
+    "techparkDesc": "N2K Laboratories are located within the Borj Cédria Technopark, one of Tunisia's largest scientific hubs.",
     "methodTitle": "Our Methodology",
     "steps": {
       "audit": {
@@ -503,7 +503,7 @@
         "desc": "Regular controls to guarantee long-term effectiveness."
       }
     },
-    "heroBadge": "Les Laboratoires N2K — Our Expertise",
+    "heroBadge": "N2K Laboratories — Our Expertise",
     "specialistDesc": "A recognized specialist in industrial and poultry hygiene, he developed the N2K protocols specifically addressing the climatic and bacteriological challenges of North Africa.",
     "methodSubtitle": "Expertise is nothing without rigor. We apply a 4-step monitoring protocol for each farm.",
     "cta": "Request a Certified Analysis",
@@ -550,7 +550,7 @@
     }
   },
   "footer": {
-    "brand": "Les Laboratoires N2K",
+    "brand": "N2K Laboratories",
     "tagline": "Scientific biosecurity expertise for Tunisian livestock farming. Borj Cédria Technopark.",
     "expertise": "Our Expertise",
     "expertiseLinks": {
@@ -570,7 +570,7 @@
     },
     "contactTitle": "Location & Contact",
     "address": "Borj Cédria Technology Park, Soliman, Nabeul",
-    "copyright": "© 2026 Les Laboratoires N2K. All rights reserved.",
+    "copyright": "© 2026 N2K Laboratories. All rights reserved.",
     "legal": "Legal Notice",
     "privacy": "Privacy Policy",
     "sectors": {
@@ -639,33 +639,33 @@
     "backHome": "Back to home"
   },
   "common": {
-    "brandName": "Les Laboratoires N2K",
+    "brandName": "N2K Laboratories",
     "notFound": "Page not found"
   },
   "meta": {
-    "homeTitle": "Les Laboratoires N2K — Poultry Biosecurity Tunisia",
+    "homeTitle": "N2K Laboratories — Poultry Biosecurity Tunisia",
     "homeDescription": "Scientific biosecurity solutions. 48h sequential protocol CLORAGRO + OPTIMAGRO.",
-    "solutionsTitle": "Our Solutions — Les Laboratoires N2K",
+    "solutionsTitle": "Our Solutions — N2K Laboratories",
     "solutionsDescription": "Discover our certified products and techniques for total biosecurity.",
-    "problemsTitle": "Your Problems — Les Laboratoires N2K",
+    "problemsTitle": "Your Problems — N2K Laboratories",
     "problemsDescription": "Understand the threats: Biofilm, water contamination and airborne pressure.",
     "expertiseTitle": "Our Expertise — Dr. Mahmoud Naffati",
     "expertiseDescription": "A rigorous scientific approach based on research at Borj Cédria Technopark.",
-    "diagnosticTitle": "Free Field Diagnostic — Les Laboratoires N2K",
+    "diagnosticTitle": "Free Field Diagnostic — N2K Laboratories",
     "diagnosticDescription": "Fill out our form for a personalized analysis of your farm.",
-    "referencesTitle": "Our References — Les Laboratoires N2K",
+    "referencesTitle": "Our References — N2K Laboratories",
     "referencesDescription": "Discover the major players in poultry and agri-food who trust N2K protocols.",
-    "produitsTitle": "Our Products — Les Laboratoires N2K",
+    "produitsTitle": "Our Products — N2K Laboratories",
     "produitsDescription": "Complete range of professional biosecurity solutions for poultry and agri-food industries.",
-    "aboutTitle": "About Us — Les Laboratoires N2K",
+    "aboutTitle": "About Us — N2K Laboratories",
     "aboutDescription": "Expertise in industrial disinfection at the Borj Cédria Technopark. Discover our unique scientific approach.",
-    "blogTitle": "Blog — Les Laboratoires N2K",
+    "blogTitle": "Blog — N2K Laboratories",
     "blogDescription": "Discover our latest technical publications, case studies and advice on industrial hygiene and biosecurity."
   },
   "references": {
-    "badge": "Les Laboratoires N2K — Our References",
+    "badge": "N2K Laboratories — Our References",
     "heroTitle": "They trust us in the field",
-    "heroSubtitle": "Solutions developed by Les Laboratoires N2K are used and tested in real conditions by major players in the Tunisian poultry and agri-food sector.",
+    "heroSubtitle": "Solutions developed by N2K Laboratories are used and tested in real conditions by major players in the Tunisian poultry and agri-food sector.",
     "heroHighlight": "Used in environments where sanitary requirements are at their highest.",
     "statsTitle": "The N2K impact in numbers",
     "stat1Value": "13+",
@@ -706,7 +706,7 @@
     ],
     "directorQuote": "Each partner is a validation ground. Our protocols don't exist in a lab — they are designed, tested, and optimized directly in the Tunisian field.",
     "directorName": "Naffati Mahmoud",
-    "directorRole": "Associate — Director of Research and Production",
+    "directorRole": "Co-founder — Director of Research and Production",
     "ctaTitle": "Request your field trial",
     "ctaSubtitle": "Test our protocols in your real conditions. Measurable results within 48h.",
     "ctaButton": "Request a field trial",
@@ -715,7 +715,7 @@
     "ctaFeature3": "Dedicated expert support"
   },
   "solutionsPage": {
-    "badge": "Les Laboratoires N2K — Our Solutions",
+    "badge": "N2K Laboratories — Our Solutions",
     "heroTitle": "The effectiveness of a product depends on its composition",
     "heroTitleHighlight": "as well as its usage protocol",
     "heroSubtitle": "Developed at the Borj Cédria Technology Park under the direction of Dr Mahmoud Naffati, our formulations are designed for Tunisian field realities. Each protocol follows a precise sequence: Cleaning → Disinfection or Stabilization.",
@@ -732,7 +732,7 @@
       "subtitle": "Biofilm is a microbial fortress. Disinfection applied directly on biofilm is a wasted investment. Our sequential protocols guarantee a truly sterile surface.",
       "product1": {
         "name": "CLORAGRO",
-        "type": "Disinfectant — Technical Cleaning",
+        "type": "Detergent — Technical Cleaning",
         "desc": "Ultra-powerful chlorinated alkaline designed to break down the organic matrix of biofilm and eliminate persistent fats in agricultural environments.",
         "features": [
           "Radical destruction of organic biofilm",
@@ -795,7 +795,7 @@
       "scienceNote": "Atmosphere control reduces respiratory pathologies by 15% in intensive farming.",
       "scienceNoteLabel": "Scientific Analysis"
     },
-    "authorityQuote": "\"A product without method is a cost. A product with our protocol is a profitable investment.\"",
+    "authorityQuote": "« A product without method is a cost. A product with our protocol is a profitable investment. »",
     "authorityQuoteAuthor": "— Dr Mahmoud Naffati",
     "authorityDesc": "Center of excellence in industrial and agricultural biosecurity at the heart of Borj Cédria Technopark."
   },
@@ -861,7 +861,7 @@
       "tableRows": [
         [
           "Frequency",
-          "Each sanitary void",
+          "Each sanitary downtime",
           "Daily",
           "Per PMS/HACCP"
         ],
@@ -910,7 +910,7 @@
       "faq": [
         {
           "q": "Can CLORAGRO be used in the presence of animals?",
-          "a": "No. CLORAGRO is a corrosive alkaline chlorinated product. It is used exclusively during the sanitary void, in the total absence of animals. Full PPE (goggles, gloves, boots, coverall) is mandatory for the operator."
+          "a": "No. CLORAGRO is a corrosive alkaline chlorinated product. It is used exclusively during the sanitary downtime, in the total absence of animals. Full PPE (goggles, gloves, boots, coverall) is mandatory for the operator."
         },
         {
           "q": "What is the mandatory delay between CLORAGRO and OPTIMAGRO?",
@@ -1256,7 +1256,7 @@
     },
     "leadership": {
       "name": "Dr. Mahmoud Naffati",
-      "role": "Associate — Director of Research and Production",
+      "role": "Co-founder — Director of Research and Production",
       "linkedin": "https://www.linkedin.com/company/laboratoires-n2k/",
       "linkedinText": "LinkedIn Profile"
     },
@@ -1322,7 +1322,7 @@
     "ctaSubtitle": "Download the complete documentation to integrate this product into your biosecurity protocol.",
     "ctaButton": "Download Technical Sheet (PDF)",
     "relatedTitle": "Products in the same zone",
-    "metaSuffix": "Les Laboratoires N2K"
+    "metaSuffix": "N2K Laboratories"
   },
   "about": {
     "heroBadge": "Hygiene Science",
@@ -1334,7 +1334,7 @@
     "heroCta2": "View our protocols",
     "specialistLabel": "About Us",
     "specialistTitle": "Specialist in biotransformation & industrial hygiene.",
-    "specialistDesc1": "Les Laboratoires N2K stand at the intersection of scientific research and operational efficiency. Based at the Borj Cédria Technopark, we understand the unique challenges of intensive farming in Tunisia.",
+    "specialistDesc1": "N2K Laboratories stand at the intersection of scientific research and operational efficiency. Based at the Borj Cédria Technopark, we understand the unique challenges of intensive farming in Tunisia.",
     "specialistDesc2": "Our mission is to break the cycle of contamination by addressing root causes, especially microbial biofilm, often overlooked by standard solutions.",
     "manufacturerBadge": "Our approach",
     "manufacturerTitle": "Develop, formulate, manufacture.",
@@ -1415,7 +1415,7 @@
     "resultsTitle": "Proof through results",
     "resultsDesc": "Data collected from our interventions in poultry farming and industrial settings.",
     "resultsStatTitle": "Bacterial load reduction",
-    "resultsStat": "Average observed after application of the N2K sequential protocol protocol on porous concrete surfaces infested with salmonella.",
+    "resultsStat": "Average observed after application of the N2K sequential protocol on porous concrete surfaces infested with salmonella.",
     "resultsBefore": "BEFORE",
     "resultsAfter": "AFTER",
     "errorsLabel": "Warning",
@@ -1458,7 +1458,7 @@
       "title": "Multidisciplinary expertise at your service",
       "subtitle": "N2K relies on a high-level team to guarantee the sanitary control of your facilities.",
       "directorName": "Dr Mahmoud Naffati",
-      "directorRole": "Associate — Director of Research and Production",
+      "directorRole": "Co-founder — Director of Research and Production",
       "directorDesc": "Doctor in industrial chemistry with over 20 years of experience in the formulation of biocidal solutions and R&D applied to industrial hygiene.",
       "staffTitle": "Field Experts & Scientists",
       "staffDesc": "Veterinary doctors, agri-food engineers and specialized technicians working in synergy to audit, advise and implement your protocols.",
@@ -1535,14 +1535,14 @@
     "bionet": {
       "problem": "Accumulation of scale, mineral deposits, and bacterial biofilm in drinking lines.",
       "where": "Water circuits, pipettes, nipples (Poultry farming only).",
-      "how": "Shock treatment (1% to 3%) during sanitary void. Leave to act in pipes.",
+      "how": "Shock treatment (1% to 3%) during sanitary downtime. Leave to act in pipes.",
       "why": "Dissolves minerals and breaks down internal biofilm. Prevents pipette leaks.",
       "results": "Restored water flow, elimination of internal bacterial nests.",
       "contactTime": "12 to 24 hours",
       "rinsing": "Complete and abundant pressure rinsing of each line is mandatory.",
       "aeration": "Not applicable.",
       "compliance": "Exclusively reserved for poultry farming.",
-      "whenAlone": "For periodic descaling during sanitary void.",
+      "whenAlone": "For periodic descaling during sanitary downtime.",
       "whenComplete": "To be followed by continuous OXYLIS HOCl when animals are placed.",
       "whenNot": "Never use in the presence of animals. Do not use in slaughterhouses or food industry."
     },
@@ -1577,7 +1577,7 @@
     "bioactive": {
       "problem": "Stubborn organic matter (fats, proteins) encrusted on equipment.",
       "where": "Heavily loaded surfaces and equipment (Poultry farming only).",
-      "how": "Enzymatic cleaning complementing sanitary void (5% to 10%).",
+      "how": "Enzymatic cleaning complementing sanitary downtime (5% to 10%).",
       "why": "Enzymes specifically digest complex organic matter.",
       "results": "Perfectly degreased surfaces ready for disinfection.",
       "contactTime": "20 to 30 minutes",
