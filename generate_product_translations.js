@@ -73,18 +73,18 @@ const translations = {
       whenNot: "Ne jamais mouiller directement les animaux ou la litière. Ne pas utiliser en abattoir ou IAA."
     },
     bioactive: {
-      problem: "Matière organique tenace (graisses, protéines) incrustée sur les équipements.",
-      where: "Surfaces et équipements fortement chargés (Élevage avicole uniquement).",
-      how: "Nettoyage enzymatique en complément du vide sanitaire (5% à 10%).",
-      why: "Les enzymes digèrent spécifiquement la matière organique complexe.",
-      results: "Surfaces parfaitement dégraissées et prêtes pour la désinfection.",
-      contactTime: "20 à 30 minutes",
-      rinsing: "Rinçage à haute pression obligatoire.",
-      aeration: "Non applicable.",
-      compliance: "Réservé à l'élevage avicole.",
-      whenAlone: "Pour les nettoyages d'équipements très encrassés.",
-      whenComplete: "À utiliser avec ou après CLORAGRO pour optimiser la préparation des surfaces.",
-      whenNot: "Ne jamais utiliser en nébulisation. Ne pas utiliser en abattoir ou IAA."
+      problem: "Accumulation de poussières organiques, résidus de litière et émanations ammoniacales nuisant à la santé respiratoire des animaux.",
+      where: "Environnement, ambiance et surfaces des bâtiments (Élevage avicole uniquement).",
+      how: "Pulvérisation ou brumisation régulière en ambiance et sur les surfaces du bâtiment.",
+      why: "Action biologique ciblée pour éliminer progressivement les dépôts organiques sans perturber le milieu d'élevage.",
+      results: "Amélioration notable de l'ambiance des bâtiments et stabilisation environnementale durable.",
+      contactTime: "Action progressive et continue",
+      rinsing: "Non applicable (sans rinçage, compatible présence animale).",
+      aeration: "Ventilation habituelle du bâtiment.",
+      compliance: "Entretien biologique environnemental. Produit non biocide, sûr pour les animaux. Réservé à l'élevage avicole.",
+      whenAlone: "Pour l'entretien biologique régulier et l'amélioration de la qualité de l'air des bâtiments.",
+      whenComplete: "S'intègre dans le programme de biosécurité entre les phases de vide sanitaire.",
+      whenNot: "Ne jamais utiliser comme désinfectant ou biocide. Ne pas utiliser en abattoir ou IAA."
     }
   },
   en: {
@@ -159,18 +159,18 @@ const translations = {
       whenNot: "Never spray directly on animals or wet the litter. Do not use in slaughterhouses or food industry."
     },
     bioactive: {
-      problem: "Stubborn organic matter (fats, proteins) encrusted on equipment.",
-      where: "Heavily loaded surfaces and equipment (Poultry farming only).",
-      how: "Enzymatic cleaning complementing sanitary void (5% to 10%).",
-      why: "Enzymes specifically digest complex organic matter.",
-      results: "Perfectly degreased surfaces ready for disinfection.",
-      contactTime: "20 to 30 minutes",
-      rinsing: "Mandatory high-pressure rinsing.",
-      aeration: "Not applicable.",
-      compliance: "Reserved for poultry farming.",
-      whenAlone: "For cleaning heavily soiled equipment.",
-      whenComplete: "To be used with or after CLORAGRO to optimize surface preparation.",
-      whenNot: "Never use in nebulization. Do not use in slaughterhouses or food industry."
+      problem: "Accumulation of organic dust, litter residues, and ammonia emissions harming animal respiratory health.",
+      where: "Environment, atmosphere, and building surfaces (Poultry farming only).",
+      how: "Regular spraying or misting in the atmosphere and on building surfaces.",
+      why: "Targeted biological action to progressively reduce organic accumulations without disrupting the rearing environment.",
+      results: "Noticeable improvement of building ambiance and sustainable environmental stability.",
+      contactTime: "Progressive and continuous action",
+      rinsing: "Not applicable (no-rinse, safe in the presence of animals).",
+      aeration: "Normal building ventilation.",
+      compliance: "Environmental biological maintenance. Non-biocidal product, safe for animals. Reserved for poultry farming.",
+      whenAlone: "For regular biological maintenance and improving building air quality.",
+      whenComplete: "Integrates into the global hygiene program between sanitary voids.",
+      whenNot: "Never use as a disinfectant or biocide. Do not use in slaughterhouses or food industry."
     }
   },
   ar: {
@@ -245,18 +245,18 @@ const translations = {
       whenNot: "لا ترش الحيوانات مباشرة أو تبلل الفرشة أبداً. لا يستخدم في المسالخ أو الصناعة الغذائية."
     },
     bioactive: {
-      problem: "مادة عضوية عنيدة (دهون، بروتينات) متراكمة على المعدات.",
-      where: "الأسطح والمعدات ذات الحمل العضوي العالي (للدواجن فقط).",
-      how: "تنظيف إنزيمي مكمل للفراغ الصحي (5% إلى 10%).",
-      why: "تهضم الإنزيمات المادة العضوية المعقدة بشكل خاص.",
-      results: "أسطح خالية من الدهون تماماً وجاهزة للتطهير.",
-      contactTime: "20 إلى 30 دقيقة",
-      rinsing: "شطف إلزامي بضغط عالي.",
-      aeration: "غير مطبق.",
-      compliance: "مخصص لتربية الدواجن.",
-      whenAlone: "لتنظيف المعدات شديدة الاتساخ.",
-      whenComplete: "يستخدم مع أو بعد CLORAGRO لتحسين تحضير الأسطح.",
-      whenNot: "لا يستخدم أبداً في التضبيب. لا يستخدم في المسالخ أو الصناعة الغذائية."
+      problem: "تراكم الأتربة العضوية، بقايا الفرشة، وانبعاثات الأمونيا التي تؤثر سلباً على الصحة التنفسية للحيوانات.",
+      where: "البيئة المحيطة، الجو العام، وأسطح المباني (لتربية الدواجن فقط).",
+      how: "رش أو تبخير منتظم في الجو العام وعلى أسطح المبنى.",
+      why: "عمل بيولوجي مستهدف للتقليل التدريجي من التراكمات العضوية دون الإخلال ببيئة التربية.",
+      results: "تحسن ملحوظ في الجو العام للمباني واستقرار بيئي مستدام.",
+      contactTime: "عمل تدريجي ومستمر",
+      rinsing: "غير مطبق (بدون شطف، آمن في وجود الحيوانات).",
+      aeration: "التهوية العادية للمبنى.",
+      compliance: "العناية البيولوجية البيئية. منتج غير مبيد للجراثيم، آمن للحيوانات. مخصص لتربية الدواجن.",
+      whenAlone: "للعناية البيولوجية المنتظمة وتحسين جودة الهواء في المباني.",
+      whenComplete: "يندمج في البرنامج الصحي الشامل بين فترات الفراغ الصحي.",
+      whenNot: "لا يستخدم أبداً كمطهر أو مبيد حيوي. لا يستخدم في المسالخ أو الصناعة الغذائية."
     }
   }
 };

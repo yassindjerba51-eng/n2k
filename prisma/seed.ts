@@ -86,11 +86,11 @@ async function main() {
       isDisinfectant: false,
       step: 2, // Nettoyage enzymatique
       description: {
-        fr: "Nettoyant enzymatique concentré. Dégradation des matières organiques (graisses, protéines, biofilms) avant désinfection.",
-        en: "Concentrated enzymatic cleaner. Degradation of organic matter (grease, proteins, biofilms) before disinfection.",
-        ar: "منظف إنزيمي مركز. تحلل المواد العضوية (الدهون، البروتينات، الأغشية الحيوية) قبل التطهير.",
+        fr: "Solution enzymatique d'entretien biologique des surfaces et de l'ambiance pour élevage avicole. Réduction progressive des accumulations organiques et amélioration de l'ambiance.",
+        en: "Enzymatic solution for biological maintenance of surfaces and atmosphere in poultry farming. Progressive reduction of organic accumulations and atmosphere improvement.",
+        ar: "محلول إنزيمي للعناية البيولوجية بالأسطح والجو الداخلي في مزارع الدواجن. تقليل تدريجي للتراكمات العضوية وتحسين الجو العام.",
       },
-      dosage: "1 à 3 % (standard) / 5 à 10 % (fort)",
+      dosage: "Brumisation / Pulvérisation régulière",
     },
   ];
 
