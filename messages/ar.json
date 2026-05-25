@@ -622,7 +622,10 @@
     "midCtaButton": "طلب تدقيق ميداني",
     "categoryBadge": "فئة",
     "noArticlesInCategory": "لا توجد مقالات في هذه الفئة حاليا.",
-    "viewMode": "عرض:"
+    "viewMode": "عرض:",
+    "paginationShowing": "عرض [start] إلى [end] من [total] مقال",
+    "paginationPrevious": "السابق",
+    "paginationNext": "التالي"
   },
   "relatedArticles": {
     "sectionTitle": "المقالات ذات الصلة",

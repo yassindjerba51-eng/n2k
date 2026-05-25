@@ -169,6 +169,9 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ loca
           librarySubtitle: t("librarySubtitle"),
           readArticle: t("readArticle"),
           noArticles: t("noArticlesInCategory"),
+          paginationShowing: t("paginationShowing"),
+          paginationPrevious: t("paginationPrevious"),
+          paginationNext: t("paginationNext"),
         }}
       />
 

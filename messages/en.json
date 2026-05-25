@@ -622,7 +622,10 @@
     "midCtaButton": "Request a Field Audit",
     "categoryBadge": "Category",
     "noArticlesInCategory": "No articles in this category at the moment.",
-    "viewMode": "View:"
+    "viewMode": "View:",
+    "paginationShowing": "Showing [start] to [end] of [total] articles",
+    "paginationPrevious": "Previous",
+    "paginationNext": "Next"
   },
   "relatedArticles": {
     "sectionTitle": "Related Articles",

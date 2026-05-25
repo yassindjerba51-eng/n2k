@@ -622,7 +622,10 @@
     "midCtaButton": "Demander un Audit Terrain",
     "categoryBadge": "Catégorie",
     "noArticlesInCategory": "Aucun article dans cette catégorie pour le moment.",
-    "viewMode": "Affichage :"
+    "viewMode": "Affichage :",
+    "paginationShowing": "Affichage de [start] à [end] sur [total] articles",
+    "paginationPrevious": "Précédent",
+    "paginationNext": "Suivant"
   },
   "relatedArticles": {
     "sectionTitle": "Les articles associés",

@@ -159,7 +159,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ local
             translations={{
               readStudy: t("readStudy"),
               noArticlesInCategory: t("noArticlesInCategory"),
-              viewMode: t("viewMode")
+              viewMode: t("viewMode"),
+              paginationShowing: t("paginationShowing"),
+              paginationPrevious: t("paginationPrevious"),
+              paginationNext: t("paginationNext")
             }} 
           />
         </section>
