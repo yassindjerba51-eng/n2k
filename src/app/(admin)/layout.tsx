@@ -14,6 +14,8 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
+import { Toaster } from "@/components/ui/sonner";
+
 export default function AdminRootLayout({
   children,
 }: {
@@ -23,6 +25,7 @@ export default function AdminRootLayout({
     <html lang="fr" dir="ltr" className={`${inter.variable} h-full antialiased`} suppressHydrationWarning>
       <body className="h-full bg-[#F5F5F5] font-[var(--font-body)]" style={{ fontFamily: "var(--font-body), sans-serif" }} suppressHydrationWarning>
         {children}
+        <Toaster />
       </body>
     </html>
   );

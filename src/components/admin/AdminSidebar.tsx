@@ -14,6 +14,8 @@ import {
   ChevronDown,
   FolderOpen,
   Layers,
+  Mail,
+  Settings,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -70,6 +72,16 @@ const navItems: NavItem[] = [
         icon: FolderOpen,
       },
     ],
+  },
+  {
+    href: "/webadmin/contacts",
+    label: "Contactez-nous",
+    icon: Mail,
+  },
+  {
+    href: "/webadmin/parametres",
+    label: "Paramètres",
+    icon: Settings,
   },
 ];
 

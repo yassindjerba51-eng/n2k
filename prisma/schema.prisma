@@ -161,3 +161,35 @@ enum Zone {
   EAU
   AMBIANCE
 }
+
+model SiteSettings {
+  id              String   @id @default("global")
+  siteName        String   @map("site_name") @db.VarChar(255)
+  logoUrl         String?  @map("logo_url") @db.VarChar(500)
+  
+  contactEmail    String?  @map("contact_email") @db.VarChar(255)
+  contactPhone    String?  @map("contact_phone") @db.VarChar(50)
+  contactFax      String?  @map("contact_fax") @db.VarChar(50)
+  physicalAddress String?  @map("physical_address") @db.Text
+  mainWebsiteUrl  String?  @map("main_website_url") @db.VarChar(255)
+
+  facebookUrl     String?  @map("facebook_url") @db.VarChar(255)
+  instagramUrl    String?  @map("instagram_url") @db.VarChar(255)
+  linkedinUrl     String?  @map("linkedin_url") @db.VarChar(255)
+  twitterUrl      String?  @map("twitter_url") @db.VarChar(255)
+
+  smtpFromEmail   String?  @map("smtp_from_email") @db.VarChar(255)
+  smtpFromName    String?  @map("smtp_from_name") @db.VarChar(255)
+  smtpHost        String?  @map("smtp_host") @db.VarChar(255)
+  smtpPort        Int?     @map("smtp_port")
+  smtpUser        String?  @map("smtp_user") @db.VarChar(255)
+  smtpPassword    String?  @map("smtp_password") @db.VarChar(255)
+
+  geminiApiKey       String?  @map("gemini_api_key") @db.VarChar(500)
+  geminiContentModel String?  @map("gemini_content_model") @db.VarChar(255)
+  geminiImageModel   String?  @map("gemini_image_model") @db.VarChar(255)
+
+  updatedAt       DateTime @updatedAt @map("updated_at")
+
+  @@map("site_settings")
+}

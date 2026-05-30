@@ -37,15 +37,19 @@ export async function POST(request: Request) {
       .substring(0, 50);
     const filename = `${safeName}_${timestamp}.${ext}`;
 
-    // Save to public/uploads/categories/
-    const uploadDir = path.join(process.cwd(), "public", "uploads", "categories");
+    const folder = formData.get("folder") as string || "categories";
+    // Ensure folder is safe (no path traversal)
+    const safeFolder = folder.replace(/[^a-zA-Z0-9_-]/g, "");
+    
+    // Save to public/uploads/[folder]/
+    const uploadDir = path.join(process.cwd(), "public", "uploads", safeFolder);
     await mkdir(uploadDir, { recursive: true });
 
     const filePath = path.join(uploadDir, filename);
     const bytes = await file.arrayBuffer();
     await writeFile(filePath, Buffer.from(bytes));
 
-    const url = `/uploads/categories/${filename}`;
+    const url = `/uploads/${safeFolder}/${filename}`;
 
     return NextResponse.json({ success: true, url }, { status: 200 });
   } catch (error) {
