@@ -189,6 +189,9 @@ model SiteSettings {
   geminiContentModel String?  @map("gemini_content_model") @db.VarChar(255)
   geminiImageModel   String?  @map("gemini_image_model") @db.VarChar(255)
 
+  pollinationsApiKey String?  @map("pollinations_api_key") @db.VarChar(500)
+  pollinationsModel  String?  @map("pollinations_model") @db.VarChar(255)
+
   updatedAt       DateTime @updatedAt @map("updated_at")
 
   @@map("site_settings")

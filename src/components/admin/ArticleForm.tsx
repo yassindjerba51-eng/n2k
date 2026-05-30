@@ -20,8 +20,10 @@ import {
   FolderOpen,
   Search,
   Tag,
+  Sparkles,
 } from "lucide-react";
 import Image from "next/image";
+import { toast } from "sonner";
 
 const TipTapEditor = lazy(() => import("@/components/admin/TipTapEditor"));
 
@@ -110,6 +112,47 @@ export default function ArticleForm({ initialData, mode }: Props) {
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
   const [activeContentTab, setActiveContentTab] = useState<"fr" | "en" | "ar">("fr");
+  const [generating, setGenerating] = useState(false);
+  const [generationStatus, setGenerationStatus] = useState("");
+
+  const handleGenerateImage = async () => {
+    if (!form.titleFr) {
+      toast.error("Le titre (FR) est obligatoire pour générer une image.");
+      return;
+    }
+    setGenerating(true);
+    setGenerationStatus("Génération de l'image...");
+    setError(null);
+    try {
+      const selectedCategoryNames = categories
+        .filter((cat) => form.categoryIds.includes(cat.id))
+        .map((cat) => cat.nameFr);
+
+      const res = await fetch("/api/blog/generate-image", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          titleFr: form.titleFr,
+          contentFr: form.contentFr || "",
+          categories: selectedCategoryNames,
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setError(data.error || "Erreur lors de la génération de l'image");
+        toast.error(data.error || "Échec de la génération.");
+        return;
+      }
+      updateField("coverImage", data.imageUrl);
+      toast.success("Image à la une générée par IA avec succès !");
+    } catch (err: any) {
+      setError("Erreur réseau lors de la génération");
+      toast.error("Une erreur réseau est survenue.");
+    } finally {
+      setGenerating(false);
+      setGenerationStatus("");
+    }
+  };
 
   // Fetch categories
   useEffect(() => {
@@ -548,7 +591,7 @@ export default function ArticleForm({ initialData, mode }: Props) {
                   variant="outline"
                   className="w-full"
                   onClick={() => fileInputRef.current?.click()}
-                  disabled={uploading}
+                  disabled={uploading || generating}
                 >
                   {uploading ? (
                     <Loader2 className="w-4 h-4 me-2 animate-spin" />
@@ -556,6 +599,20 @@ export default function ArticleForm({ initialData, mode }: Props) {
                     <Upload className="w-4 h-4 me-2" />
                   )}
                   {uploading ? "Upload en cours…" : "Uploader une image"}
+                </Button>
+                <Button
+                  variant="outline"
+                  type="button"
+                  className="w-full border-indigo-200 text-indigo-600 bg-indigo-50/50 hover:bg-indigo-50 hover:text-indigo-700 transition-colors"
+                  onClick={handleGenerateImage}
+                  disabled={uploading || generating || !form.titleFr}
+                >
+                  {generating ? (
+                    <Loader2 className="w-4 h-4 me-2 animate-spin" />
+                  ) : (
+                    <Sparkles className="w-4 h-4 me-2 text-indigo-500 animate-pulse" />
+                  )}
+                  {generating ? (generationStatus || "Génération…") : "Générer une image par IA"}
                 </Button>
                 <Separator />
                 <div>
