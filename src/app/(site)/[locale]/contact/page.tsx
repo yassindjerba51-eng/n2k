@@ -221,18 +221,22 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Map Placeholder */}
+            {/* Google Map */}
             <div className="relative w-full h-[400px] bg-slate-200 overflow-hidden rounded-xl group shadow-inner">
-              <div className="absolute inset-0 grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700">
-                <Image
-                  src="/images/map-bg.jpg"
-                  alt="Location Map"
-                  fill
-                  className="object-cover"
+              <div className="absolute inset-0 grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none">
+                <iframe
+                  src="https://maps.google.com/maps?ll=36.71119966027027,10.426816984405733&z=16&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen={false}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-full"
                 />
                 <div className="absolute inset-0 bg-n2k-primary/10" />
               </div>
-              <div className="absolute inset-0 flex items-center justify-center">
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 <div className="bg-n2k-primary p-4 rounded-full shadow-2xl animate-pulse">
                   <MapPin className="text-white w-10 h-10" />
                 </div>
@@ -247,7 +251,7 @@ export default function ContactPage() {
                   </p>
                 </div>
                 <a
-                  href="https://maps.google.com/?q=Pôle+Technologique+de+Borj+Cédria"
+                  href="https://www.google.com/maps/search/?api=1&query=36.71119966027027,10.426816984405733"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-n2k-primary hover:bg-n2k-primary/90 text-white text-xs font-bold px-4 py-2 rounded transition-colors"

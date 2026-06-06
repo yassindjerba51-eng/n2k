@@ -1,7 +1,7 @@
 "use client";
 
 import { ColumnDef } from "@tanstack/react-table";
-import { MockLead } from "@/lib/admin-mock-data";
+import { Lead } from "@prisma/client";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -12,8 +12,11 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
+  DropdownMenuSub,
+  DropdownMenuSubTrigger,
+  DropdownMenuSubContent,
 } from "@/components/ui/dropdown-menu";
-import { ArrowUpDown, MoreHorizontal, Eye, FileDown, RefreshCw } from "lucide-react";
+import { ArrowUpDown, MoreHorizontal, Eye, FileDown, RefreshCw, Trash2 } from "lucide-react";
 
 const statusConfig: Record<string, { label: string; className: string }> = {
   NEW: {
@@ -45,7 +48,7 @@ const zoneConfig: Record<string, { label: string; className: string }> = {
   },
 };
 
-export const leadsColumns: ColumnDef<MockLead>[] = [
+export const leadsColumns: ColumnDef<Lead>[] = [
   {
     accessorKey: "createdAt",
     header: ({ column }) => (
@@ -81,33 +84,39 @@ export const leadsColumns: ColumnDef<MockLead>[] = [
   },
   {
     accessorKey: "activityType",
-    header: "Type d'élevage",
+    header: "Secteur",
+    cell: ({ row }) => {
+      const sector = row.original.activityType;
+      const sectorLabels: Record<string, string> = {
+        ELEVAGE: "Élevage",
+        ABATTOIR: "Abattoir & Découpe",
+        AGROALIMENTAIRE: "Industrie Agroalimentaire",
+      };
+      return (
+        <span className="font-medium text-slate-800">
+          {sectorLabels[sector] || sector}
+        </span>
+      );
+    },
+  },
+  {
+    accessorKey: "requestType",
+    header: "Type de Demande",
     cell: ({ row }) => (
-      <span className="text-sm text-slate-600">{row.getValue("activityType")}</span>
+      <span className="text-sm text-slate-600">
+        {(row.original as any).requestType || "-"}
+      </span>
     ),
   },
   {
     accessorKey: "region",
-    header: "Région",
+    header: "Région / Ville",
     cell: ({ row }) => (
-      <span className="text-sm text-slate-600">{row.getValue("region")}</span>
+      <span className="text-sm text-slate-600">
+        {row.original.region}
+        {(row.original as any).city ? ` - ${(row.original as any).city}` : ""}
+      </span>
     ),
-  },
-  {
-    accessorKey: "problemType",
-    header: "Zone critique",
-    cell: ({ row }) => {
-      const zone = row.getValue("problemType") as string;
-      const config = zoneConfig[zone];
-      return (
-        <Badge variant="outline" className={config?.className}>
-          {config?.label ?? zone}
-        </Badge>
-      );
-    },
-    filterFn: (row, id, value) => {
-      return value === "ALL" || row.getValue(id) === value;
-    },
   },
   {
     accessorKey: "status",
@@ -129,7 +138,11 @@ export const leadsColumns: ColumnDef<MockLead>[] = [
     id: "actions",
     cell: ({ row, table }) => {
       const lead = row.original;
-      const meta = table.options.meta as { onViewDetail?: (lead: MockLead) => void } | undefined;
+      const meta = table.options.meta as { 
+        onViewDetail?: (lead: Lead) => void;
+        onChangeStatus?: (lead: Lead, newStatus: string) => void;
+        onDelete?: (lead: Lead) => void;
+      } | undefined;
 
       return (
         <DropdownMenu>
@@ -151,9 +164,30 @@ export const leadsColumns: ColumnDef<MockLead>[] = [
                 Exporter PDF
               </DropdownMenuItem>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>
-                <RefreshCw className="w-4 h-4 me-2" />
-                Changer le statut
+              <DropdownMenuSub>
+                <DropdownMenuSubTrigger>
+                  <RefreshCw className="w-4 h-4 me-2" />
+                  Changer le statut
+                </DropdownMenuSubTrigger>
+                <DropdownMenuSubContent>
+                  <DropdownMenuItem onClick={() => meta?.onChangeStatus?.(lead, "NEW")}>
+                    Nouveau
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => meta?.onChangeStatus?.(lead, "CONTACTED")}>
+                    Contacté
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => meta?.onChangeStatus?.(lead, "DONE")}>
+                    Terminé
+                  </DropdownMenuItem>
+                </DropdownMenuSubContent>
+              </DropdownMenuSub>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem 
+                onClick={() => meta?.onDelete?.(lead)}
+                className="text-red-600 focus:text-red-600 focus:bg-red-50"
+              >
+                <Trash2 className="w-4 h-4 me-2" />
+                Supprimer
               </DropdownMenuItem>
             </DropdownMenuGroup>
           </DropdownMenuContent>

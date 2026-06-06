@@ -473,7 +473,19 @@
     "previous": "Previous",
     "next": "Next",
     "submit": "Submit my request",
-    "sending": "Sending..."
+    "sending": "Sending...",
+    "step1Label": "General Information",
+    "step2Label": "Specific Questions",
+    "companyName": "Company / Farm Name",
+    "companyNamePlaceholder": "e.g. El Baraka Poultry Farm or Company Name",
+    "contactNameLabel": "Contact Person",
+    "contactNamePlaceholder": "Full name of the contact person",
+    "city": "City / Delegation",
+    "cityPlaceholder": "Select your city",
+    "citySelectRegionFirst": "Select a governorate first",
+    "requestTypeLabel": "Request Type",
+    "requestTypePlaceholder": "Select the request type",
+    "selectSectorFirst": "Please select an activity sector in the previous step."
   },
   "expertise": {
     "pageTitle": "Our Expertise",
@@ -1201,7 +1213,7 @@
       "imageAlt": "N2K Laboratory — Professional sanitary mastery"
     },
     "form": {
-      "title": "Diagnostic Request",
+      "title": "Support Request",
       "description": "Please provide the details of your technical needs to connect with our experts.",
       "nameLabel": "Full Name",
       "namePlaceholder": "John Doe",

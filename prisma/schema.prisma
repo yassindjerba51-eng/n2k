@@ -15,12 +15,16 @@ model Lead {
   message      String?  @db.Text
   createdAt    DateTime @default(now()) @map("created_at")
   activityType String   @map("activity_type") @db.VarChar(100)
-  capacity     String   @db.VarChar(100)
+  capacity     String   @default("") @db.VarChar(100)
   cycleInfo    String?  @map("cycle_info") @db.VarChar(100)
   name         String   @db.VarChar(255)
-  problemType  String   @map("problem_type") @db.Text
+  problemType  String   @default("") @map("problem_type") @db.Text
   region       String   @db.VarChar(255)
   status       String   @default("NEW") @db.VarChar(50)
+  contactName  String?  @map("contact_name") @db.VarChar(255)
+  city         String?  @db.VarChar(255)
+  requestType  String?  @map("request_type") @db.VarChar(100)
+  sectorData   Json?    @map("sector_data")
 
   @@map("leads")
 }

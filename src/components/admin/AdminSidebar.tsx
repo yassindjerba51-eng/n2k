@@ -43,7 +43,7 @@ const navItems: NavItem[] = [
   },
   {
     href: "/webadmin/leads",
-    label: "Leads & Diagnostics",
+    label: "Demande de diagnostic",
     icon: Users,
   },
   {

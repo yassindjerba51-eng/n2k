@@ -473,7 +473,19 @@
     "previous": "السابق",
     "next": "التالي",
     "submit": "إرسال طلبي",
-    "sending": "جاري الإرسال..."
+    "sending": "جاري الإرسال...",
+    "step1Label": "معلومات عامة",
+    "step2Label": "أسئلة محددة",
+    "companyName": "اسم الشركة / المزرعة",
+    "companyNamePlaceholder": "مثال: مزرعة البركة أو اسم الشركة",
+    "contactNameLabel": "مسؤول الاتصال",
+    "contactNamePlaceholder": "الاسم واللقب لمسؤول الاتصال",
+    "city": "المدينة / المعتمدية",
+    "cityPlaceholder": "اختر مدينتك",
+    "citySelectRegionFirst": "الرجاء اختيار الولاية أولاً",
+    "requestTypeLabel": "نوع الطلب",
+    "requestTypePlaceholder": "اختر نوع الطلب",
+    "selectSectorFirst": "الرجاء اختيار قطاع النشاط في المرحلة السابقة."
   },
   "expertise": {
     "pageTitle": "خبرتنا",
@@ -1201,7 +1213,7 @@
       "imageAlt": "مختبر N2K — التحكم الصحي المهني"
     },
     "form": {
-      "title": "طلب تشخيص",
+      "title": "طلب مساعدة",
       "description": "يرجى تقديم تفاصيل احتياجاتك الفنية للتواصل مع خبرائنا.",
       "nameLabel": "الاسم الكامل",
       "namePlaceholder": "محمد صالح",

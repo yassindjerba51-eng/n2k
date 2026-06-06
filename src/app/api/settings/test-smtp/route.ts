@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { auth } from "@/auth";
 import nodemailer from "nodemailer";
+import { prisma } from "@/lib/prisma";
 
 export async function POST(request: Request) {
   try {
@@ -14,6 +15,17 @@ export async function POST(request: Request) {
 
     if (!smtpHost || !smtpPort || !smtpUser || !smtpPassword || !smtpFromEmail) {
       return NextResponse.json({ error: "Veuillez remplir tous les champs SMTP pour tester." }, { status: 400 });
+    }
+
+    // Fetch the professional email from site settings
+    const settings = await prisma.siteSettings.findUnique({
+      where: { id: "global" },
+      select: { contactEmail: true }
+    });
+
+    const toEmail = settings?.contactEmail;
+    if (!toEmail) {
+      return NextResponse.json({ error: "Veuillez configurer 'E-mail professionnel' dans l'onglet Coordonnées d'abord." }, { status: 400 });
     }
 
     // Create a transporter
@@ -30,9 +42,7 @@ export async function POST(request: Request) {
     // Verify connection configuration
     await transporter.verify();
 
-    // Send a test email to the currently logged in admin user
-    const toEmail = session.user.email || "test@example.com";
-    
+    // Send a test email to the professional email
     await transporter.sendMail({
       from: `"${smtpFromName || 'N2K Admin'}" <${smtpFromEmail}>`,
       to: toEmail,

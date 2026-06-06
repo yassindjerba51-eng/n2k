@@ -25,7 +25,7 @@ import type { User } from "next-auth";
 
 const routeLabels: Record<string, string> = {
   webadmin: "Dashboard",
-  leads: "Leads & Diagnostics",
+  leads: "Demande de diagnostic",
   protocoles: "Protocoles",
   catalogue: "Catalogue",
   blog: "Blog",

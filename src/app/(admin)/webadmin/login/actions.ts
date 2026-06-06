@@ -2,11 +2,21 @@
 
 import { signIn, signOut } from "@/auth";
 import { AuthError } from "next-auth";
+import { verifyRecaptcha } from "@/lib/recaptcha";
 
 export async function authenticate(
   prevState: string | undefined,
   formData: FormData,
 ) {
+  // Verify reCAPTCHA
+  const recaptchaToken = formData.get("recaptchaToken") as string | null;
+  const recaptchaResult = await verifyRecaptcha(recaptchaToken, "login");
+
+  if (!recaptchaResult.success) {
+    console.warn("[Login] reCAPTCHA failed:", recaptchaResult.error);
+    return "Vérification de sécurité échouée. Veuillez réessayer.";
+  }
+
   try {
     await signIn("credentials", {
       ...Object.fromEntries(formData),

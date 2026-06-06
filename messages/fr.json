@@ -473,7 +473,19 @@
     "previous": "Précédent",
     "next": "Suivant",
     "submit": "Envoyer ma demande",
-    "sending": "Envoi en cours..."
+    "sending": "Envoi en cours...",
+    "step1Label": "Informations Générales",
+    "step2Label": "Questions Spécifiques",
+    "companyName": "Nom de l'entreprise / exploitation",
+    "companyNamePlaceholder": "Ex: Ferme Avicole El Baraka ou Nom de l'entreprise",
+    "contactNameLabel": "Responsable de contact",
+    "contactNamePlaceholder": "Nom et prénom du responsable",
+    "city": "Ville / Délégation",
+    "cityPlaceholder": "Sélectionnez votre ville",
+    "citySelectRegionFirst": "Sélectionnez d'abord un gouvernorat",
+    "requestTypeLabel": "Type de demande",
+    "requestTypePlaceholder": "Sélectionnez le type de demande",
+    "selectSectorFirst": "Veuillez sélectionner un secteur d'activité à l'étape précédente."
   },
   "expertise": {
     "pageTitle": "Notre Expertise",
@@ -1201,7 +1213,7 @@
       "imageAlt": "Laboratoire N2K — Maîtrise sanitaire professionnelle"
     },
     "form": {
-      "title": "Demande de Diagnostic",
+      "title": "Demande d'assistance",
       "description": "Veuillez renseigner les détails de votre besoin technique pour une mise en relation avec nos experts.",
       "nameLabel": "Nom Complet",
       "namePlaceholder": "Jean Dupont",

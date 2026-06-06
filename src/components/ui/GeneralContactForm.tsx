@@ -6,6 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { useTranslations } from "next-intl";
 import { Send, Loader2 } from "lucide-react";
+import ReCaptchaProvider, { useReCaptcha } from "@/components/ReCaptchaProvider";
 
 const contactSchema = z.object({
   name: z.string().min(2, { message: "Name is required" }),
@@ -20,7 +21,7 @@ const contactSchema = z.object({
 
 type ContactFormValues = z.infer<typeof contactSchema>;
 
-export default function GeneralContactForm() {
+function ContactFormInner() {
   const t = useTranslations("contactPage.form");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -44,13 +45,18 @@ export default function GeneralContactForm() {
     },
   });
 
+  const { executeRecaptcha } = useReCaptcha();
+
   const onSubmit = async (data: ContactFormValues) => {
     setIsSubmitting(true);
     try {
+      // Get reCAPTCHA token
+      const recaptchaToken = await executeRecaptcha("contact");
+
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, recaptchaToken }),
       });
 
       if (response.ok) {
@@ -244,5 +250,13 @@ export default function GeneralContactForm() {
         )}
       </button>
     </form>
+  );
+}
+
+export default function GeneralContactForm() {
+  return (
+    <ReCaptchaProvider>
+      <ContactFormInner />
+    </ReCaptchaProvider>
   );
 }

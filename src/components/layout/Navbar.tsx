@@ -4,10 +4,11 @@ import { useState, useRef, useEffect } from "react";
 
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
-import { Menu, ArrowRight, PhoneCall, ChevronRight, ChevronDown, Building2, Droplets, Wind } from "lucide-react";
+import { Menu, ArrowRight, PhoneCall, ChevronRight, ChevronDown, Building2, Droplets, Wind, Search } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import LocaleSwitcher from "./LocaleSwitcher";
 import Image from "next/image";
+import SearchModal from "./SearchModal";
 
 type NavLink = {
   name: string;
@@ -22,6 +23,7 @@ export default function Navbar({ locale }: { locale: string }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileSubOpen, setMobileSubOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   // Close dropdown on outside click
@@ -141,6 +143,14 @@ export default function Navbar({ locale }: { locale: string }) {
               </Link>
             );
           })}
+          
+          <button 
+            onClick={() => setSearchOpen(true)}
+            className="flex items-center justify-center w-10 h-10 rounded-full hover:bg-slate-100 transition-colors text-slate-700 header-search"
+            aria-label="Recherche"
+          >
+            <Search className="w-5 h-5" />
+          </button>
         </div>
 
         {/* Actions Desktop */}
@@ -256,6 +266,20 @@ export default function Navbar({ locale }: { locale: string }) {
                         </Link>
                       );
                     })}
+
+                    <button
+                      onClick={() => {
+                        setMobileOpen(false);
+                        setSearchOpen(true);
+                      }}
+                      className="flex items-center justify-between py-3 px-3 rounded-xl font-heading text-sm sm:text-base font-bold tracking-tight uppercase transition-all text-white/60 hover:text-white hover:bg-white/5 mt-2"
+                    >
+                      <div className="flex items-center gap-2">
+                        <Search className="w-5 h-5" />
+                        <span>Recherche</span>
+                      </div>
+                      <ChevronRight className="w-4 h-4 text-white/20" />
+                    </button>
                   </div>
 
                   {/* Separator */}
@@ -294,6 +318,8 @@ export default function Navbar({ locale }: { locale: string }) {
           </Sheet>
         </div>
       </div>
+
+      <SearchModal isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
     </nav>
   );
 }

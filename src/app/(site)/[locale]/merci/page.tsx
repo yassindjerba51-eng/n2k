@@ -51,7 +51,7 @@ export default async function MerciPage() {
             </Link>
 
             <a
-              href="https://wa.me/21600000000"
+              href="https://wa.me/21628717998"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-between p-4 rounded-xl border-2 border-border/50 hover:border-[#25D366] hover:bg-[#25D366]/5 transition-colors group"
