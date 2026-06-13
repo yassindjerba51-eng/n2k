@@ -1,4 +1,15 @@
 {
+  "search": {
+    "placeholder": "Recherche...",
+    "minChars": "Saisissez au moins 2 caractères pour rechercher.",
+    "noResults": "Aucun résultat trouvé pour \"{query}\"",
+    "tryOther": "Essayez d'autres mots-clés.",
+    "all": "Tout",
+    "pages": "Pages",
+    "products": "Produits",
+    "posts": "Articles de blog",
+    "loading": "Recherche en cours…"
+  },
   "nav": {
     "home": "Accueil",
     "secteurs": "Secteurs d'activité",

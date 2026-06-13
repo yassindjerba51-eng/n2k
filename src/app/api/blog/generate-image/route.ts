@@ -69,6 +69,7 @@ Image prompt rules to enforce:
 
 Output format:
 Return ONLY the final English prompt as a single paragraph. Do not include introductory text, code blocks, explanations, or quotes. Just output the prompt text directly.
+IMPORTANT: Keep the prompt concise and under 400 characters — image diffusion models reject long prompts. Be vivid but economical with words.
 `;
 
         const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${contentModel}:generateContent?key=${apiKey}`;
@@ -108,6 +109,20 @@ Right side (solution): showing an improved, pristine, sanitized clean state with
 Visual style: Split screen comparison, cinematic lighting, highly detailed, magazine cover quality, marketing style, no text overlay, no watermark, no logo.`;
     }
 
+    // Image diffusion models (FLUX and others on Pollinations) reject overly
+    // long prompts — an over-length prompt fails with HTTP 400
+    // ("Trying to create tensor with negative dimension" / tokenizer overflow),
+    // which surfaced as the generic "Échec de la génération d'image". The LLM
+    // step can emit 1500+ chars, so cap the prompt at a safe length, trimming
+    // on a word boundary to keep it coherent.
+    const MAX_PROMPT_LENGTH = 480;
+    if (generatedPrompt.length > MAX_PROMPT_LENGTH) {
+      const truncated = generatedPrompt.slice(0, MAX_PROMPT_LENGTH);
+      const lastSpace = truncated.lastIndexOf(" ");
+      generatedPrompt = (lastSpace > 0 ? truncated.slice(0, lastSpace) : truncated).trim();
+      console.log(`Image prompt truncated to ${generatedPrompt.length} chars for diffusion model compatibility.`);
+    }
+
     console.log("Image Prompt to be used:", generatedPrompt);
 
     // 3. Étape 2 : Génération d'image (Pollinations.ai ou Google Imagen)
@@ -116,17 +131,34 @@ Visual style: Split screen comparison, cinematic lighting, highly detailed, maga
     if (settings.pollinationsModel) {
       console.log("Generating image with Pollinations.ai using model:", settings.pollinationsModel);
       const model = settings.pollinationsModel;
-      const keyQuery = settings.pollinationsApiKey ? `&key=${settings.pollinationsApiKey}` : "";
+      const pollinationsKey = settings.pollinationsApiKey;
+      const keyQuery = pollinationsKey ? `&key=${encodeURIComponent(pollinationsKey)}` : "";
       const seed = Math.floor(Math.random() * 1000000);
-      const pollinationsUrl = `https://image.pollinations.ai/prompt/${encodeURIComponent(generatedPrompt)}?width=1200&height=630&model=${model}&nologo=true&seed=${seed}${keyQuery}`;
+      // Use the current host (gen.pollinations.ai/image/...). The legacy host
+      // (image.pollinations.ai/prompt/...) does not honor the new sk_/pk_ keys
+      // and rejects paid models (e.g. "kontext is only available on
+      // enter.pollinations.ai"), falling back to anonymous => HTTP 402
+      // "Queue full for IP". Server-side auth goes in the Authorization header.
+      const pollinationsUrl = `https://gen.pollinations.ai/image/${encodeURIComponent(generatedPrompt)}?width=1200&height=630&model=${model}&nologo=true&seed=${seed}${keyQuery}`;
 
-      const pollinationsRes = await fetch(pollinationsUrl);
+      const pollinationsRes = await fetch(pollinationsUrl, {
+        headers: pollinationsKey ? { Authorization: `Bearer ${pollinationsKey}` } : {},
+      });
 
       if (!pollinationsRes.ok) {
         const errText = await pollinationsRes.text().catch(() => "");
-        return NextResponse.json({ 
-          error: `Échec de la génération d'image avec Pollinations.ai (${model}).`, 
-          details: errText.slice(0, 100) || `HTTP ${pollinationsRes.status}` 
+        // Surface a clear, actionable message for the common failure modes.
+        let friendly = `Échec de la génération d'image avec Pollinations.ai (${model}).`;
+        if (pollinationsRes.status === 401) {
+          friendly = "Clé API Pollinations invalide ou non reconnue.";
+        } else if (pollinationsRes.status === 402) {
+          friendly = `Crédits (pollen) insuffisants pour le modèle « ${model} ». Rechargez votre solde sur enter.pollinations.ai ou choisissez un modèle gratuit (ex. flux).`;
+        } else if (pollinationsRes.status === 400) {
+          friendly = `Le modèle « ${model} » a refusé la requête (prompt invalide ou trop long). Réessayez ou changez de modèle.`;
+        }
+        return NextResponse.json({
+          error: friendly,
+          details: errText.slice(0, 150) || `HTTP ${pollinationsRes.status}`,
         }, { status: 400 });
       }
 

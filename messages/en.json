@@ -1,4 +1,15 @@
 {
+  "search": {
+    "placeholder": "Search...",
+    "minChars": "Type at least 2 characters to search.",
+    "noResults": "No results found for \"{query}\"",
+    "tryOther": "Try other keywords.",
+    "all": "All",
+    "pages": "Pages",
+    "products": "Products",
+    "posts": "Blog articles",
+    "loading": "Searching…"
+  },
   "nav": {
     "home": "Home",
     "secteurs": "Activity Sectors",
