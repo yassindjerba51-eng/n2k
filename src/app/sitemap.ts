@@ -25,9 +25,24 @@ export const revalidate = 3600;
  * `x-default` pointing at French), which is what Google requires: every URL in
  * a translation set must reference itself and all its alternates.
  */
+/**
+ * Format a date as a YYYY-MM-DD string (date-only).
+ *
+ * The sitemap protocol accepts either full W3C Datetime format or just the date.
+ * Using YYYY-MM-DD is extremely clean, takes less space, and is universally 
+ * supported by all strict XML validators (such as Google and Nuxt SEO) without
+ * any timezone/millisecond parsing issues.
+ */
+function formatLastmod(date: Date | null | undefined): string | undefined {
+  if (!date) return undefined;
+  const d = date instanceof Date ? date : new Date(date);
+  if (isNaN(d.getTime())) return undefined;
+  return d.toISOString().split("T")[0];
+}
+
 function localizedEntries(
   paths: Record<Locale, string>,
-  opts: { lastModified?: Date; changeFrequency?: ChangeFreq; priority?: number } = {}
+  opts: { lastModified?: Date | null; changeFrequency?: ChangeFreq; priority?: number } = {}
 ): MetadataRoute.Sitemap {
   const urls = {} as Record<Locale, string>;
   for (const locale of LOCALES) {
@@ -40,9 +55,11 @@ function localizedEntries(
     "x-default": urls[DEFAULT_LOCALE],
   };
 
+  const lastModified = formatLastmod(opts.lastModified);
+
   return LOCALES.map((locale) => ({
     url: urls[locale],
-    lastModified: opts.lastModified,
+    lastModified,
     changeFrequency: opts.changeFrequency,
     priority: opts.priority,
     alternates: { languages },
