@@ -399,7 +399,8 @@
     "title": "Articles techniques",
     "subtitle": "Conseils terrain, bonnes pratiques et actualités sanitaires.",
     "readMore": "Lire l'article",
-    "viewAll": "Voir tous les articles"
+    "viewAll": "Voir tous les articles",
+    "libraryText": "Consultez notre <link>bibliothèque technique</link> pour des études de cas, des conseils terrain et des actualités sanitaires."
   },
   "cta": {
     "title": "Choisissez une solution adaptée à votre réalité terrain",
@@ -496,7 +497,12 @@
     "citySelectRegionFirst": "Sélectionnez d'abord un gouvernorat",
     "requestTypeLabel": "Type de demande",
     "requestTypePlaceholder": "Sélectionnez le type de demande",
-    "selectSectorFirst": "Veuillez sélectionner un secteur d'activité à l'étape précédente."
+    "selectSectorFirst": "Veuillez sélectionner un secteur d'activité à l'étape précédente.",
+    "sectorOptions": {
+      "ELEVAGE": "Élevage",
+      "ABATTOIR": "Abattoir & Découpe",
+      "AGROALIMENTAIRE": "Industrie Agroalimentaire"
+    }
   },
   "expertise": {
     "pageTitle": "Notre Expertise",
@@ -823,7 +829,9 @@
     },
     "authorityQuote": "« Un produit sans méthode est un coût. Un produit avec notre protocole est un investissement rentable. »",
     "authorityQuoteAuthor": "— Dr Mahmoud Naffati",
-    "authorityDesc": "Pôle d'excellence en biosécurité industrielle et agricole au cœur du Technoparc de Borj Cédria."
+    "authorityDesc": "Pôle d'excellence en biosécurité industrielle et agricole au cœur du Technoparc de Borj Cédria.",
+    "rinseTitle": "Rinçage obligatoire — Étape intermédiaire",
+    "rinseDesc": "Après application de CLORAGRO, un rinçage complet à l'eau potable de toutes les surfaces est obligatoire avant l'application d'OPTIMAGRO (Phase 02). Cette exigence est chimique et réglementaire — elle n'est pas optionnelle."
   },
   "zonesDetail": {
     "backLink": "← Retour aux solutions",
@@ -928,7 +936,7 @@
           "icon": "clock"
         },
         {
-          "value": "15+ ans",
+          "value": "+5 ans",
           "label": "De validation terrain en conditions réelles tunisiennes",
           "icon": "shield"
         }
@@ -958,7 +966,8 @@
       "heroTitleStart": "Le Bâtiment :",
       "heroTitleHighlight": " Briser le cycle pathogène",
       "heroTitleEnd": " sur chaque surface",
-      "breadcrumbCurrent": "Le Bâtiment"
+      "breadcrumbCurrent": "Le Bâtiment",
+      "ctaTitle": "Prêt à sécuriser vos surfaces ?"
     },
     "canalisations": {
       "metaTitle": "Traitement des Canalisations d'Abreuvement — N2K Biosécurité",
@@ -1613,6 +1622,34 @@
       "whenAlone": "Pour l'entretien biologique régulier et l'amélioration de la qualité de l'air des bâtiments.",
       "whenComplete": "S'intègre dans le programme de biosécurité entre les phases de vide sanitaire.",
       "whenNot": "Ne jamais utiliser comme désinfectant ou biocide. Ne pas utiliser en abattoir ou IAA."
+    },
+    "oxylis-hoci": {
+      "problem": "Les circuits d'eau et réseaux d'abreuvement accumulent biofilms, algues et dépôts organiques qui dégradent la qualité de l'eau, tandis que les environnements de production (ambiances, chambres froides, salles de découpe) exigent un entretien sanitaire continu. Gérer ces deux problématiques avec des produits séparés complexifie les protocoles.",
+      "where": "Réseaux d'eau et d'abreuvement, ambiances de production, chambres froides et salles de conditionnement — en élevage et industrie agroalimentaire.",
+      "how": "Dosage en ligne pour l'eau (via pompe doseuse) et nébulisation / brumisation fine pour les environnements, selon le protocole.",
+      "why": "Une seule solution à base d'acide hypochloreux (HOCl) unifie l'entretien de l'eau et le traitement des environnements, y compris en présence des animaux.",
+      "results": "Eau de boisson saine jusqu'à la dernière pipette, environnements maîtrisés et pression sanitaire réduite, protocoles simplifiés.",
+      "contactTime": "Action continue ou ponctuelle selon le protocole.",
+      "rinsing": "Non applicable en usage continu sur l'eau ; non requis pour la nébulisation des ambiances.",
+      "aeration": "Ventilation normale des locaux après nébulisation.",
+      "compliance": "Compatible présence animale. Mesure analytique en temps réel pour la conformité aux audits IFS/BRC.",
+      "whenAlone": "Pour l'entretien quotidien d'un réseau d'eau sain et le maintien des ambiances de production.",
+      "whenComplete": "Après un nettoyage préalable des circuits (BIONET) ou des surfaces (CLORAGRO/OPTIMAGRO) pour une pleine efficacité.",
+      "whenNot": "Ne pas surdoser. Respecter les concentrations adaptées à chaque usage (eau vs environnement)."
+    },
+    "alcosept-pro": {
+      "problem": "Entre les opérations de production, les surfaces de travail, équipements et outils accumulent des résidus organiques. Le nettoyage complet au canon à mousse n'est pas toujours possible entre deux séries en raison des contraintes de cadence.",
+      "where": "Surfaces de travail, équipements inox et plastiques, outils et petits matériels — zones de préparation, conditionnement, abattoirs et environnements agroalimentaires.",
+      "how": "Pulvérisation directe ou application manuelle, sans rinçage prolongé.",
+      "why": "Formulation à évaporation rapide qui nettoie efficacement sans laisser de résidus significatifs, adaptée aux contraintes de cadence industrielle.",
+      "results": "Surfaces et équipements propres rapidement entre opérations, sans interruption longue de la production.",
+      "contactTime": "Court — évaporation rapide.",
+      "rinsing": "Pas de rinçage prolongé nécessaire (peu de résidus).",
+      "aeration": "Ventilation normale du local.",
+      "compliance": "Compatible avec inox et plastiques alimentaires. Usage en nettoyage intermédiaire.",
+      "whenAlone": "Pour un nettoyage rapide intermédiaire entre deux séries de production.",
+      "whenComplete": "Ne remplace pas le protocole complet CLORAGRO + OPTIMAGRO en fin de cycle ou nettoyage approfondi.",
+      "whenNot": "Ne pas utiliser comme désinfectant terminal ni en remplacement d'un nettoyage complet."
     }
   },
   "productDetailHeadings": {
@@ -1633,6 +1670,11 @@
     "actions": {
       "downloadTechSheet": "Télécharger la Fiche Technique",
       "downloadSDS": "Télécharger la Fiche de Données de Sécurité (FDS)"
+    },
+    "sections": {
+      "diagnostic": "Diagnostic et Application",
+      "protocol": "Protocole et Sécurité",
+      "positioning": "Positionnement Protocole"
     }
   },
   "homeInnovation": {
@@ -1666,5 +1708,45 @@
         "value": "98%"
       }
     ]
+  },
+  "extraProducts": {
+    "alcosept": {
+      "name": "ALCOSEPT PRO",
+      "type": "Nettoyage Rapide — Inter-Lots",
+      "desc": "Solution de nettoyage technique à évaporation rapide, conçue pour un usage entre les opérations de production en environnements agroalimentaires.",
+      "features": [
+        "Nettoyage rapide des surfaces de travail entre opérations",
+        "Entretien des équipements inox et plastiques techniques",
+        "Évaporation rapide sans laisser de résidus"
+      ]
+    },
+    "oxylis": {
+      "name": "OXYLIS HOCl",
+      "type": "Entretien des Réseaux d'Eau & Environnements",
+      "desc": "Solution technique polyvalente à base d'acide hypochloreux (HOCl) pour l'entretien continu des circuits d'eau et le traitement des environnements de production en élevage et industrie agroalimentaire.",
+      "features": [
+        "Entretien continu des canalisations d'eau et réseaux d'abreuvement",
+        "Nébulisation des ambiances de production",
+        "Dosage automatisé pour flux de production continu"
+      ]
+    }
+  },
+  "homologation": {
+    "badgeSante": "Homologué Ministère de la Santé",
+    "badgeAgriculture": "Autorisé Ministère de l'Agriculture",
+    "badgeSanteShort": "Homologué Min. Santé",
+    "badgeAgricultureShort": "Autorisé Min. Agriculture",
+    "shortMention": "Produit homologué par le Ministère de la Santé et autorisé par le Ministère de l'Agriculture.",
+    "blockTitle": "Homologations et conformité réglementaire",
+    "blockIntro": "OPTIMAGRO et CLORAGRO sont des solutions professionnelles développées par Les Laboratoires N2K.",
+    "benefitsLabel": "Ces produits bénéficient :",
+    "benefitSante": "D'une homologation du Ministère de la Santé",
+    "benefitAgriculture": "D'une autorisation du Ministère de l'Agriculture",
+    "blockConclusion": "Cette double reconnaissance garantit leur conformité aux exigences réglementaires applicables à leur domaine d'utilisation.",
+    "numberLabel": "Numéro d'homologation",
+    "homeBadge": "Conformité réglementaire",
+    "homeTitle": "Des produits officiellement reconnus",
+    "homeText": "Nos produits phares OPTIMAGRO et CLORAGRO bénéficient d'une homologation du Ministère de la Santé ainsi que d'une autorisation du Ministère de l'Agriculture, garantissant des solutions conformes aux exigences professionnelles du secteur.",
+    "sectorMention": "Solution professionnelle homologuée par le Ministère de la Santé et autorisée par le Ministère de l'Agriculture."
   }
 }

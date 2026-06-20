@@ -273,7 +273,7 @@ export const sectorsDataAr: Record<string, SectorData> = {
       { product: "AIRSAN", action: "تطهير الأجواء", description: "تبخير دقيق بوجود الحيوانات لتقليل العبء الميكروبي الجوي والأمونيا." }
     ],
     specificCases: [
-      { title: "دورة جديدة بعد تلوث السالمونيلا", description: "En cas de détection Salmonella sur le lot précédent, le protocole est renforcé.", protocol: "Double passage CLORAGRO + OPTIMAGRO en augmentant les concentrations de 30%. Analyse microbiologique de contrôle avant mise en place." },
+      { title: "دورة جديدة بعد تلوث السالمونيلا", description: "في حال اكتشاف السالمونيلا في الدفعة السابقة، يتم تعزيز البروتوكول.", protocol: "تمريرتان من CLORAGRO + OPTIMAGRO مع زيادة التراكيز بنسبة 30٪. تحليل ميكروبيولوجي للمراقبة قبل الإسكان." },
       { title: "التربية في مناخ حار (>35 درجة مئوية)", description: "درجات الحرارة المرتفعة تسرع التكاثر البكتيري وتدهور المياه.", protocol: "AQUACONTROL بجرعة معززة + AIRSAN يومياً. مراقبة درجة الحموضة والكلور المتبقي." },
       { title: "تدقيق الأمن الحيوي المخطط", description: "التحضير لتدقيقات الامتثال الصحي.", protocol: "البروتوكول الأساسي الكامل + أخذ عينات من الأسطح قبل التدقيق مع التحليل في مختبر N2K." }
     ],

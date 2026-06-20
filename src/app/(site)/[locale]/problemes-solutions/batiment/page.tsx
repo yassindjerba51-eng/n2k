@@ -22,6 +22,7 @@ export default async function BatimentPage({ params }: { params: Promise<{ local
   const z = await getTranslations("zonesDetail.batiment");
   const tNav = await getTranslations("nav");
   const tHero = await getTranslations("hero");
+  const te = await getTranslations("extraProducts");
 
   const faqItems = [0, 1, 2, 3, 4].map((i) => ({
     question: z(`faq.${i}.q`),
@@ -201,14 +202,10 @@ export default async function BatimentPage({ params }: { params: Promise<{ local
             <div className="w-full lg:w-3/5">
               <ProductStepCard
                 step=""
-                name="ALCOSEPT PRO"
-                type="Nettoyage Rapide — Inter-Lots"
-                description="Solution de nettoyage technique à évaporation rapide, conçue pour un usage entre les opérations de production en environnements agroalimentaires."
-                features={[
-                  "Nettoyage rapide des surfaces de travail entre opérations",
-                  "Entretien des équipements inox et plastiques techniques",
-                  "Évaporation rapide sans laisser de résidus"
-                ]}
+                name={te("alcosept.name")}
+                type={te("alcosept.type")}
+                description={te("alcosept.desc")}
+                features={te.raw("alcosept.features") as string[]}
                 accentColor="text-[#0D7ED0]"
                 accentBg="bg-[#0D7ED0]"
               />
@@ -234,14 +231,10 @@ export default async function BatimentPage({ params }: { params: Promise<{ local
             <div className="w-full lg:w-3/5">
               <ProductStepCard
                 step=""
-                name="OXYLIS HOCl"
-                type="Entretien des Réseaux d'Eau & Environnements"
-                description="Solution technique polyvalente à base d'acide hypochloreux (HOCl) pour l'entretien continu des circuits d'eau et le traitement des environnements de production en élevage et industrie agroalimentaire."
-                features={[
-                  "Entretien continu des canalisations d'eau et réseaux d'abreuvement",
-                  "Nébulisation des ambiances de production",
-                  "Dosage automatisé pour flux de production continu"
-                ]}
+                name={te("oxylis.name")}
+                type={te("oxylis.type")}
+                description={te("oxylis.desc")}
+                features={te.raw("oxylis.features") as string[]}
                 accentColor="text-[#0D7ED0]"
                 accentBg="bg-[#0D7ED0]"
               />
@@ -324,7 +317,7 @@ export default async function BatimentPage({ params }: { params: Promise<{ local
       {/* ====== CTA ====== */}
       <section className="bg-[#0D7ED0] py-15 md:py-15">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-black font-heading text-white tracking-tight mb-10">Prêt à sécuriser vos surfaces ?</h2>
+          <h2 className="text-3xl md:text-4xl font-black font-heading text-white tracking-tight mb-10">{z("ctaTitle")}</h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/diagnostic"

@@ -10,6 +10,9 @@ import StickyDiagnosticCTA from "@/components/ui/StickyDiagnosticCTA";
 import { HeroSlideshow } from "@/components/ui/HeroSlideshow";
 import SchemaOrg from "@/components/seo/SchemaOrg";
 import { products } from "@/data/products";
+import HomologationBadges from "@/components/ui/HomologationBadges";
+import { isHomologatedSlug } from "@/data/homologations";
+import { Landmark } from "lucide-react";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -323,6 +326,9 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
                 <p className="text-n2k-on-surface-variant font-body text-sm leading-relaxed">
                   {productRoles[product.slug] || product.subtitle}
                 </p>
+                {isHomologatedSlug(product.slug) && (
+                  <HomologationBadges variant="compact" className="mt-4" />
+                )}
               </Link>
             ))}
           </div>
@@ -330,6 +336,35 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             <Link href="/produits" className="inline-flex items-center gap-2 text-n2k-secondary font-bold text-sm uppercase tracking-wide hover:gap-3 transition-all">
               {t("homeProducts.viewAll")} <ArrowRight className="w-4 h-4" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ====== BLOC 6b — RÉASSURANCE RÉGLEMENTAIRE ====== */}
+      <section className="bg-white py-15 md:py-15">
+        <div className="max-w-[1400px] mx-auto px-4 md:px-8">
+          <div className="bg-n2k-primary rounded-3xl p-8 md:p-12 lg:p-16 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-n2k-secondary rounded-full blur-[200px] opacity-10 -translate-y-1/2 translate-x-1/3" />
+            <div className="relative flex flex-col lg:flex-row items-start lg:items-center gap-8 lg:gap-12">
+              <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center shrink-0">
+                <Landmark className="w-8 h-8 text-n2k-secondary-light" />
+              </div>
+              <div className="flex-1">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="w-8 h-px bg-n2k-secondary-light shrink-0"></span>
+                  <span className="text-xs font-black tracking-[0.2em] text-n2k-secondary-light uppercase">
+                    {t("homologation.homeBadge")}
+                  </span>
+                </div>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-black font-heading text-white tracking-tight mb-4">
+                  {t("homologation.homeTitle")}
+                </h2>
+                <p className="text-white/60 font-body text-base md:text-lg leading-relaxed mb-6 max-w-3xl">
+                  {t("homologation.homeText")}
+                </p>
+                <HomologationBadges tone="light" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -353,7 +388,13 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           <div className="bg-n2k-surface-low rounded-2xl p-8 md:p-12 border border-n2k-outline-variant/20 text-center">
             <BookOpen className="w-10 h-10 text-n2k-outline mx-auto mb-4" />
             <p className="text-n2k-on-surface-variant font-body">
-              Consultez notre <Link href="/blog" className="text-n2k-secondary font-bold hover:underline">bibliothèque technique</Link> pour des études de cas, des conseils terrain et des actualités sanitaires.
+              {t.rich("homeBlog.libraryText", {
+                link: (chunks) => (
+                  <Link href="/blog" className="text-n2k-secondary font-bold hover:underline">
+                    {chunks}
+                  </Link>
+                ),
+              })}
             </p>
           </div>
         </div>

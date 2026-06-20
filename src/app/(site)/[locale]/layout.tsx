@@ -7,6 +7,7 @@ import { Montserrat, Inter, IBM_Plex_Sans_Arabic } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { prisma } from "@/lib/prisma";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -33,6 +34,12 @@ const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://n2k-laboratoires.t
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   
+  const settings = await prisma.siteSettings.findUnique({
+    where: { id: "global" },
+  });
+  const logoUrl = settings?.logoUrl || "/images/n2k-logo.png";
+  const siteName = settings?.siteName || "Les Laboratoires N2K";
+  
   return {
     metadataBase: new URL(BASE_URL),
     alternates: {
@@ -46,8 +53,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     },
     openGraph: {
       type: "website",
-      siteName: "Les Laboratoires N2K",
+      siteName: siteName,
       locale: locale === "ar" ? "ar_TN" : locale === "en" ? "en_US" : "fr_FR",
+    },
+    icons: {
+      icon: logoUrl,
+      shortcut: logoUrl,
+      apple: logoUrl,
     },
   };
 }
@@ -69,6 +81,11 @@ export default async function LocaleLayout({
   const isRTL = locale === "ar";
   const dir = isRTL ? "rtl" : "ltr";
 
+  const settings = await prisma.siteSettings.findUnique({
+    where: { id: "global" },
+  });
+  const logoUrl = settings?.logoUrl || "/images/n2k-logo.png";
+
   return (
     <html
       lang={locale}
@@ -82,6 +99,7 @@ export default async function LocaleLayout({
           rel="stylesheet"
         />
         <meta name="apple-mobile-web-app-title" content="N2K" />
+        <link rel="icon" href={logoUrl} />
       </head>
       <body
         className={`min-h-full flex flex-col ${isRTL ? "font-[var(--font-arabic)]" : "font-[var(--font-body)]"}`}
@@ -89,7 +107,7 @@ export default async function LocaleLayout({
         suppressHydrationWarning
       >
         <NextIntlClientProvider messages={messages}>
-          <Navbar locale={locale} />
+          <Navbar locale={locale} logoUrl={logoUrl} />
           <main className="flex-1 pt-20">{children}</main>
           <Footer />
           <Toaster position={isRTL ? "bottom-left" : "bottom-right"} />

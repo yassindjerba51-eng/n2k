@@ -17,7 +17,7 @@ type NavLink = {
   subItems?: { name: string; path: string; icon: React.ReactNode }[];
 };
 
-export default function Navbar({ locale }: { locale: string }) {
+export default function Navbar({ locale, logoUrl }: { locale: string; logoUrl?: string | null }) {
   const t = useTranslations("nav");
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -59,7 +59,7 @@ export default function Navbar({ locale }: { locale: string }) {
         {/* Brand */}
         <Link href="/" className="flex items-center gap-2 shrink-0">
           <Image
-            src="/images/n2k-logo.png"
+            src={logoUrl || "/images/n2k-logo.png"}
             alt="Les Laboratoires N2K"
             width={40}
             height={40}
@@ -180,7 +180,7 @@ export default function Navbar({ locale }: { locale: string }) {
                 <div className="px-6 pt-8 pb-6 border-b border-white/10">
                   <div className="flex items-center gap-3">
                     <Image
-                      src="/images/n2k-logo.png"
+                      src={logoUrl || "/images/n2k-logo.png"}
                       alt="Les Laboratoires N2K"
                       width={44}
                       height={44}

@@ -12,7 +12,7 @@ export async function generateMetadata() {
 
 export default async function ElevagePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const sector = getSectorData("elevage", locale);
+  const sector = getSectorData("elevage-avicole", locale);
   const t = await getTranslations("sectors.elevage");
 
   return (

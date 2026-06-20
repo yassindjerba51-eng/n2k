@@ -3,7 +3,9 @@
 import { useState } from "react";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
-import { products, zones } from "@/data/products";
+import { getLocalizedProducts, getLocalizedZones } from "@/data/products";
+import { isHomologatedSlug } from "@/data/homologations";
+import HomologationBadges from "@/components/ui/HomologationBadges";
 import {
   Building2,
   Droplets,
@@ -19,9 +21,12 @@ const zoneIcons: Record<string, React.ElementType> = {
   "03": Wind,
 };
 
-export default function ProductFilter() {
+export default function ProductFilter({ locale }: { locale: string }) {
   const [activeZone, setActiveZone] = useState("all");
   const t = useTranslations("products");
+
+  const products = getLocalizedProducts(locale);
+  const zones = getLocalizedZones(locale);
 
   const filteredProducts =
     activeZone === "all"
@@ -95,6 +100,11 @@ export default function ProductFilter() {
                 <p className="text-sm text-n2k-on-surface-variant font-body leading-relaxed mb-6 line-clamp-3">
                   {product.subtitle}
                 </p>
+
+                {/* Regulatory approval badges */}
+                {isHomologatedSlug(product.slug) && (
+                  <HomologationBadges variant="compact" className="mb-6" />
+                )}
 
                 {/* Zone Name */}
                 <div className="flex items-center gap-2 mb-6 text-xs font-bold font-heading tracking-wider uppercase text-n2k-on-surface-variant/60">

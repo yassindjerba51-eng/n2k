@@ -399,7 +399,8 @@
     "title": "Technical articles",
     "subtitle": "Field advice, best practices, and sanitary news.",
     "readMore": "Read the article",
-    "viewAll": "View all articles"
+    "viewAll": "View all articles",
+    "libraryText": "Browse our <link>technical library</link> for case studies, field advice and sanitary news."
   },
   "cta": {
     "title": "Choose a solution adapted to your field reality",
@@ -496,7 +497,12 @@
     "citySelectRegionFirst": "Select a governorate first",
     "requestTypeLabel": "Request Type",
     "requestTypePlaceholder": "Select the request type",
-    "selectSectorFirst": "Please select an activity sector in the previous step."
+    "selectSectorFirst": "Please select an activity sector in the previous step.",
+    "sectorOptions": {
+      "ELEVAGE": "Livestock Farming",
+      "ABATTOIR": "Slaughterhouse & Cutting",
+      "AGROALIMENTAIRE": "Food Industry"
+    }
   },
   "expertise": {
     "pageTitle": "Our Expertise",
@@ -823,7 +829,9 @@
     },
     "authorityQuote": "« A product without method is a cost. A product with our protocol is a profitable investment. »",
     "authorityQuoteAuthor": "— Dr Mahmoud Naffati",
-    "authorityDesc": "Center of excellence in industrial and agricultural biosecurity at the heart of Borj Cédria Technopark."
+    "authorityDesc": "Center of excellence in industrial and agricultural biosecurity at the heart of Borj Cédria Technopark.",
+    "rinseTitle": "Mandatory Rinsing — Intermediate Step",
+    "rinseDesc": "After applying CLORAGRO, a complete rinse with potable water of all surfaces is mandatory before applying OPTIMAGRO (Phase 02). This requirement is chemical and regulatory — it is not optional."
   },
   "zonesDetail": {
     "backLink": "← Back to solutions",
@@ -928,7 +936,7 @@
           "icon": "clock"
         },
         {
-          "value": "15+ years",
+          "value": "+5 years",
           "label": "Field validation under real Tunisian conditions",
           "icon": "shield"
         }
@@ -958,7 +966,8 @@
       "heroTitleStart": "The Building:",
       "heroTitleHighlight": " Breaking the pathogen cycle",
       "heroTitleEnd": " on every surface",
-      "breadcrumbCurrent": "Building"
+      "breadcrumbCurrent": "Building",
+      "ctaTitle": "Ready to secure your surfaces?"
     },
     "canalisations": {
       "metaTitle": "Drinking Water Pipeline Treatment — N2K Biosecurity",
@@ -1613,6 +1622,34 @@
       "whenAlone": "For regular biological maintenance and improving building air quality.",
       "whenComplete": "Integrates into the global hygiene program between sanitary voids.",
       "whenNot": "Never use as a disinfectant or biocide. Do not use in slaughterhouses or food industry."
+    },
+    "oxylis-hoci": {
+      "problem": "Water circuits and watering networks accumulate biofilms, algae and organic deposits that degrade water quality, while production environments (atmospheres, cold rooms, cutting rooms) require continuous sanitary maintenance. Handling both with separate products complicates protocols.",
+      "where": "Water and watering networks, production atmospheres, cold rooms and packing areas — in farming and the food industry.",
+      "how": "In-line dosing for water (via metering pump) and fine misting / fogging for environments, according to the protocol.",
+      "why": "A single hypochlorous acid (HOCl) solution unifies water maintenance and environment treatment, including in the presence of animals.",
+      "results": "Healthy drinking water down to the last nipple, controlled environments and reduced sanitary pressure, simplified protocols.",
+      "contactTime": "Continuous or occasional action depending on the protocol.",
+      "rinsing": "Not applicable for continuous water use; not required for environment misting.",
+      "aeration": "Normal ventilation of premises after misting.",
+      "compliance": "Compatible with animal presence. Real-time analytical measurement for IFS/BRC audit compliance.",
+      "whenAlone": "For daily maintenance of a healthy water network and upkeep of production atmospheres.",
+      "whenComplete": "After prior cleaning of circuits (BIONET) or surfaces (CLORAGRO/OPTIMAGRO) for full efficiency.",
+      "whenNot": "Do not overdose. Respect the concentrations appropriate for each use (water vs environment)."
+    },
+    "alcosept-pro": {
+      "problem": "Between production operations, work surfaces, equipment and tools accumulate organic residues. Full foam-cannon cleaning is not always possible between batches due to pace constraints.",
+      "where": "Work surfaces, stainless steel and plastic equipment, tools and small materials — preparation and packing areas, slaughterhouses and food processing environments.",
+      "how": "Direct spraying or manual application, without prolonged rinsing.",
+      "why": "Fast-evaporation formulation that cleans effectively without leaving significant residue, suited to industrial pace constraints.",
+      "results": "Surfaces and equipment cleaned quickly between operations, with no long production interruption.",
+      "contactTime": "Short — fast evaporation.",
+      "rinsing": "No prolonged rinsing required (little residue).",
+      "aeration": "Normal ventilation of the premises.",
+      "compliance": "Compatible with stainless steel and food-grade plastics. Used for intermediate cleaning.",
+      "whenAlone": "For quick intermediate cleaning between two production runs.",
+      "whenComplete": "Does not replace the full CLORAGRO + OPTIMAGRO protocol for end-of-cycle or deep cleaning.",
+      "whenNot": "Do not use as a terminal disinfectant or as a replacement for full cleaning."
     }
   },
   "productDetailHeadings": {
@@ -1633,6 +1670,11 @@
     "actions": {
       "downloadTechSheet": "Download Technical Sheet",
       "downloadSDS": "Download Safety Data Sheet (SDS)"
+    },
+    "sections": {
+      "diagnostic": "Diagnosis and Application",
+      "protocol": "Protocol and Safety",
+      "positioning": "Protocol Positioning"
     }
   },
   "homeInnovation": {
@@ -1666,5 +1708,45 @@
         "value": "98%"
       }
     ]
+  },
+  "extraProducts": {
+    "alcosept": {
+      "name": "ALCOSEPT PRO",
+      "type": "Rapid Cleaning — Between Batches",
+      "desc": "Fast-evaporation technical cleaning solution, designed for use between production operations in food processing environments.",
+      "features": [
+        "Rapid cleaning of work surfaces between operations",
+        "Maintenance of stainless steel and technical plastic equipment",
+        "Fast evaporation leaving no residue"
+      ]
+    },
+    "oxylis": {
+      "name": "OXYLIS HOCl",
+      "type": "Water Network & Environment Maintenance",
+      "desc": "Versatile technical solution based on hypochlorous acid (HOCl) for continuous maintenance of water circuits and treatment of production environments in farming and the food industry.",
+      "features": [
+        "Continuous maintenance of water pipes and watering networks",
+        "Misting of production atmospheres",
+        "Automated dosing for continuous production flow"
+      ]
+    }
+  },
+  "homologation": {
+    "badgeSante": "Approved by the Ministry of Health",
+    "badgeAgriculture": "Authorized by the Ministry of Agriculture",
+    "badgeSanteShort": "Min. of Health Approved",
+    "badgeAgricultureShort": "Min. of Agriculture Authorized",
+    "shortMention": "Product approved by the Ministry of Health and authorized by the Ministry of Agriculture.",
+    "blockTitle": "Approvals and regulatory compliance",
+    "blockIntro": "OPTIMAGRO and CLORAGRO are professional solutions developed by Les Laboratoires N2K.",
+    "benefitsLabel": "These products benefit from:",
+    "benefitSante": "An approval from the Ministry of Health",
+    "benefitAgriculture": "An authorization from the Ministry of Agriculture",
+    "blockConclusion": "This dual recognition guarantees their compliance with the regulatory requirements applicable to their field of use.",
+    "numberLabel": "Approval number",
+    "homeBadge": "Regulatory compliance",
+    "homeTitle": "Officially recognized products",
+    "homeText": "Our flagship products OPTIMAGRO and CLORAGRO are approved by the Ministry of Health and authorized by the Ministry of Agriculture, ensuring solutions that meet the sector's professional requirements.",
+    "sectorMention": "Professional solution approved by the Ministry of Health and authorized by the Ministry of Agriculture."
   }
 }

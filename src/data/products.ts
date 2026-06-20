@@ -284,6 +284,43 @@ const subtitleOverrides: Record<string, Record<string, string>> = {
   },
 };
 
+// ─── Multilingual zoneName / zoneLabel overrides ──────
+const zoneNameOverrides: Record<string, Record<string, string>> = {
+  en: {
+    "Le Bâtiment": "The Building",
+    "Canalisation d'Eau": "Water Piping",
+    "Bâtiment - Eau - Ambiance": "Building - Water - Atmosphere",
+    "L'Ambiance": "The Atmosphere",
+  },
+  ar: {
+    "Le Bâtiment": "المبنى",
+    "Canalisation d'Eau": "شبكة المياه",
+    "Bâtiment - Eau - Ambiance": "المبنى - المياه - الجو العام",
+    "L'Ambiance": "الجو العام",
+  },
+};
+
+const zoneLabelOverrides: Record<string, Record<string, string>> = {
+  ar: {
+    "Zone 01": "المنطقة 01",
+    "Zone 02": "المنطقة 02",
+    "Zone 03": "المنطقة 03",
+    "Zone 01 - Zone 02 - Zone 03": "المنطقة 01 - المنطقة 02 - المنطقة 03",
+  },
+};
+
+// Apply all locale overrides (subtitle, zoneName, zoneLabel) to a product.
+export function localizeProduct(product: Product, locale: string): Product {
+  const p = { ...product };
+  const sub = subtitleOverrides[locale];
+  if (sub && sub[p.slug]) p.subtitle = sub[p.slug];
+  const zn = zoneNameOverrides[locale];
+  if (zn && zn[p.zoneName]) p.zoneName = zn[p.zoneName];
+  const zl = zoneLabelOverrides[locale];
+  if (zl && zl[p.zoneLabel]) p.zoneLabel = zl[p.zoneLabel];
+  return p;
+}
+
 export function getProductBySlug(slug: string): Product | undefined {
   return products.find((p) => p.slug === slug);
 }
@@ -291,11 +328,7 @@ export function getProductBySlug(slug: string): Product | undefined {
 export function getLocalizedProduct(slug: string, locale: string): Product | undefined {
   const product = getProductBySlug(slug);
   if (!product) return undefined;
-  const overrides = subtitleOverrides[locale];
-  if (overrides && overrides[slug]) {
-    return { ...product, subtitle: overrides[slug] };
-  }
-  return product;
+  return localizeProduct(product, locale);
 }
 
 export function getProductsByZone(zone: string): Product[] {
@@ -303,12 +336,10 @@ export function getProductsByZone(zone: string): Product[] {
   return products.filter((p) => p.zone === zone || (p.additionalZones && p.additionalZones.includes(zone as "01" | "02" | "03")));
 }
 
+export function getLocalizedProductsByZone(zone: string, locale: string): Product[] {
+  return getProductsByZone(zone).map((p) => localizeProduct(p, locale));
+}
+
 export function getLocalizedProducts(locale: string): Product[] {
-  return products.map((p) => {
-    const overrides = subtitleOverrides[locale];
-    if (overrides && overrides[p.slug]) {
-      return { ...p, subtitle: overrides[p.slug] };
-    }
-    return p;
-  });
+  return products.map((p) => localizeProduct(p, locale));
 }

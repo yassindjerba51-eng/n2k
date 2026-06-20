@@ -2,7 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { getProductBySlug, getLocalizedProduct, getProductsByZone } from "@/data/products";
+import { getProductBySlug, getLocalizedProduct, getLocalizedProductsByZone } from "@/data/products";
 import {
   ArrowRight,
   ArrowLeft,
@@ -24,6 +24,9 @@ import {
   ChevronRight
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import HomologationBadges from "@/components/ui/HomologationBadges";
+import HomologationBlock from "@/components/ui/HomologationBlock";
+import { isHomologatedSlug } from "@/data/homologations";
 
 import RelatedArticlesCarousel from "@/components/blog/RelatedArticlesCarousel";
 
@@ -40,6 +43,14 @@ const SLUG_TO_TAG: Record<string, string> = {
   "oxylis-hoci": "OXYLIS HOCl",
   "bionet": "BIONET",
   "bioactive": "BIOACTIVE",
+};
+
+const PRODUCT_PDFS: Record<string, string> = {
+  "cloragro": "/uploads/n2k-pdf/CLORAGRO-Fiche-technique .pdf",
+  "optimagro": "/uploads/n2k-pdf/OPTIMAGRO-Fiche-technique.pdf",
+  "bionet": "/uploads/n2k-pdf/BIONET_PRO_Fiche_Technique.pdf",
+  "alcosept-pro": "/uploads/n2k-pdf/ALCOSEPT-PRO_Fiche_Technique.pdf",
+  "oxylis-hoci": "/uploads/n2k-pdf/OXYLIS_HOCL_Fiche_Technique.pdf",
 };
 
 export async function generateMetadata({
@@ -74,9 +85,11 @@ export default async function ProductDetailPage({
   const tHero = await getTranslations("hero");
 
   const ZoneIcon = zoneIcons[product.zone] || FlaskConical;
-  const relatedProducts = getProductsByZone(product.zone).filter(
+  const relatedProducts = getLocalizedProductsByZone(product.zone, locale).filter(
     (p) => p.slug !== product.slug
   );
+
+  console.log("DEBUG_PRODUCT_INFO:", { slug: product.slug, pdf: PRODUCT_PDFS[product.slug] });
 
   return (
     <div className="bg-surface min-h-[calc(100vh-80px)]">
@@ -115,6 +128,11 @@ export default async function ProductDetailPage({
               <p className="text-xl md:text-2xl text-white/90 font-body leading-relaxed max-w text-justify mb-8">
                 {product.subtitle}
               </p>
+
+              {/* Regulatory approval badges */}
+              {isHomologatedSlug(product.slug) && (
+                <HomologationBadges tone="light" className="mb-8" />
+              )}
 
               <div className="flex flex-col sm:flex-row gap-4 w-full">
                 <Link
@@ -189,7 +207,7 @@ export default async function ProductDetailPage({
               <div className="space-y-6">
                 <h2 className="text-3xl font-black font-heading text-n2k-primary flex items-center gap-3 border-b border-border/30 pb-4">
                   <Beaker className="w-8 h-8 text-n2k-secondary" />
-                  Diagnostic et Application
+                  {ph("sections.diagnostic")}
                 </h2>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -243,7 +261,7 @@ export default async function ProductDetailPage({
               <div className="space-y-6">
                 <h2 className="text-3xl font-black font-heading text-n2k-primary flex items-center gap-3 border-b border-border/30 pb-4">
                   <ShieldAlert className="w-8 h-8 text-n2k-secondary" />
-                  Protocole et Sécurité
+                  {ph("sections.protocol")}
                 </h2>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -294,7 +312,7 @@ export default async function ProductDetailPage({
               
               {/* POSITIONNEMENT */}
               <div className="bg-white rounded-3xl border border-border/30 shadow-ambient p-6 space-y-6">
-                <h3 className="font-heading font-black text-xl text-n2k-primary border-b border-border/30 pb-3">Positionnement Protocole</h3>
+                <h3 className="font-heading font-black text-xl text-n2k-primary border-b border-border/30 pb-3">{ph("sections.positioning")}</h3>
                 
                 {/* 10. Quand seul suffit */}
                 <div>
@@ -323,7 +341,13 @@ export default async function ProductDetailPage({
 
               {/* DOCUMENTATION & CTA (13) */}
               <div className="space-y-4">
-                <a href="/documents/fiche-technique.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 w-full bg-white hover:bg-slate-50 text-n2k-primary border border-border/30 px-6 py-4 rounded-xl font-bold font-heading text-sm shadow-sm transition-all">
+                <a
+                  href={PRODUCT_PDFS[product.slug] || "/documents/fiche-technique.pdf"}
+                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 w-full bg-white hover:bg-slate-50 text-n2k-primary border border-border/30 px-6 py-4 rounded-xl font-bold font-heading text-sm shadow-sm transition-all"
+                >
                   <Download className="w-5 h-5 text-n2k-secondary" />
                   {ph("actions.downloadTechSheet")}
                 </a>
@@ -344,6 +368,15 @@ export default async function ProductDetailPage({
           </div>
         </div>
       </section>
+
+      {/* ====== HOMOLOGATIONS & REGULATORY COMPLIANCE ====== */}
+      {isHomologatedSlug(product.slug) && (
+        <section className="bg-n2k-surface-low py-15 md:py-15">
+          <div className="max-w-[1400px] mx-auto px-4 md:px-8">
+            <HomologationBlock highlightSlug={product.slug} />
+          </div>
+        </section>
+      )}
 
       {/* ====== RELATED PRODUCTS ====== */}
       {relatedProducts.length > 0 && (
@@ -386,6 +419,9 @@ export default async function ProductDetailPage({
                     <p className="text-sm text-n2k-on-surface-variant font-body line-clamp-2 mb-4">
                       {rp.subtitle}
                     </p>
+                    {isHomologatedSlug(rp.slug) && (
+                      <HomologationBadges variant="compact" className="mb-4" />
+                    )}
                     <span className="flex items-center gap-2 text-sm font-bold font-heading text-n2k-secondary">
                       {t("viewProduct")}
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform rtl:rotate-180 rtl:group-hover:-translate-x-1" />

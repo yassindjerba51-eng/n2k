@@ -13,7 +13,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default async function ProduitsPage() {
+export default async function ProduitsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
   const t = await getTranslations("products");
   const tNav = await getTranslations("nav");
   const tHero = await getTranslations("hero");
@@ -144,7 +145,7 @@ export default async function ProduitsPage() {
             ))}
           </div>
 
-          <ProductFilter />
+          <ProductFilter locale={locale} />
         </div>
       </section>
     </div>

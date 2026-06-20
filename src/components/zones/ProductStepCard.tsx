@@ -1,4 +1,6 @@
 import { CheckCircle } from "lucide-react";
+import { isHomologatedName } from "@/data/homologations";
+import HomologationBadges from "@/components/ui/HomologationBadges";
 
 export default function ProductStepCard({
   step,
@@ -59,6 +61,11 @@ export default function ProductStepCard({
           </li>
         ))}
       </ul>
+
+      {/* Regulatory approval badges (homologated products only) */}
+      {isHomologatedName(name) && (
+        <HomologationBadges variant="compact" className="mt-5" />
+      )}
     </div>
   );
 }

@@ -1,8 +1,10 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { CalendarDays, Bell } from "lucide-react";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import Link from "next/link";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -33,6 +35,28 @@ const routeLabels: Record<string, string> = {
 
 export default function AdminTopbar({ user }: { user?: User }) {
   const pathname = usePathname();
+  const [currentUser, setCurrentUser] = useState<any>(user);
+
+  useEffect(() => {
+    const fetchLatestUser = async () => {
+      try {
+        const res = await fetch("/api/user/profile");
+        if (res.ok) {
+          const data = await res.json();
+          setCurrentUser(data.user);
+        }
+      } catch (err) {
+        console.error("Failed to fetch latest user info:", err);
+      }
+    };
+
+    fetchLatestUser();
+
+    window.addEventListener("profile-updated", fetchLatestUser);
+    return () => {
+      window.removeEventListener("profile-updated", fetchLatestUser);
+    };
+  }, []);
 
   const segments = pathname
     .split("/")
@@ -99,21 +123,27 @@ export default function AdminTopbar({ user }: { user?: User }) {
         <DropdownMenu>
           <DropdownMenuTrigger className="flex items-center gap-2.5 rounded-lg px-2 py-1.5 hover:bg-slate-100 transition-colors outline-none">
             <Avatar className="w-8 h-8">
+              {currentUser?.image && (
+                <AvatarImage src={currentUser.image} alt={currentUser.name || "Avatar"} />
+              )}
               <AvatarFallback className="bg-[#0A2540] text-white text-xs font-bold uppercase">
-                {user?.name?.substring(0, 2) || "MN"}
+                {currentUser?.name?.substring(0, 2) || "MN"}
               </AvatarFallback>
             </Avatar>
             <div className="hidden sm:flex flex-col items-start leading-tight">
-              <span className="text-sm font-semibold text-slate-800">{user?.name || "Administrateur"}</span>
-              <span className="text-[10px] text-slate-500">{user?.email || "Admin"}</span>
+              <span className="text-sm font-semibold text-slate-800">{currentUser?.name || "Administrateur"}</span>
+              <span className="text-[10px] text-slate-500">{currentUser?.email || "Admin"}</span>
             </div>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end" className="w-48">
             <DropdownMenuGroup>
               <DropdownMenuLabel>Mon compte</DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Profil</DropdownMenuItem>
-              <DropdownMenuItem>Paramètres</DropdownMenuItem>
+              <DropdownMenuItem className="p-0">
+                <Link href="/webadmin/parametres" className="flex w-full px-1.5 py-1">
+                  Paramètres
+                </Link>
+              </DropdownMenuItem>
               <DropdownMenuSeparator />
               <form action={logout}>
                 <button type="submit" className="w-full text-left">

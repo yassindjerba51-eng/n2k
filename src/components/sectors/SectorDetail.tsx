@@ -17,6 +17,8 @@ import {
   ChevronRight,
 } from "lucide-react";
 import RelatedArticlesCarousel from "@/components/blog/RelatedArticlesCarousel";
+import HomologationBadges from "@/components/ui/HomologationBadges";
+import { isHomologatedName } from "@/data/homologations";
 
 interface SectorDetailProps {
   sector: SectorData;
@@ -213,6 +215,9 @@ export default function SectorDetail({ sector, title, subtitle, icon, image, tag
                     <p className="text-n2k-on-surface-variant font-body text-sm leading-relaxed">
                       {step.description}
                     </p>
+                    {isHomologatedName(step.product) && (
+                      <HomologationBadges variant="compact" className="mt-4" />
+                    )}
                   </div>
                 </div>
               ))}
@@ -254,6 +259,9 @@ export default function SectorDetail({ sector, title, subtitle, icon, image, tag
                 <p className="text-white/60 font-body text-sm leading-relaxed">
                   {step.description}
                 </p>
+                {isHomologatedName(step.product) && (
+                  <HomologationBadges variant="compact" tone="light" className="mt-4" />
+                )}
               </div>
             ))}
           </div>

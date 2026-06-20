@@ -66,7 +66,7 @@ export default function TabProfil() {
     try {
       // Create form data to upload image
       const formData = new FormData();
-      formData.append("file", croppedBlob, "avatar.jpg");
+      formData.append("file", croppedBlob, "avatar.png");
       formData.append("folder", "avatars");
 
       const uploadRes = await fetch("/api/upload", {
@@ -90,6 +90,7 @@ export default function TabProfil() {
       if (updateRes.ok) {
         toast.success("Photo de profil mise à jour avec succès.");
         fetchProfile();
+        window.dispatchEvent(new Event("profile-updated"));
       } else {
         throw new Error("Erreur lors de la mise à jour du profil");
       }
@@ -132,6 +133,7 @@ export default function TabProfil() {
         setNewPassword("");
         setConfirmPassword("");
         fetchProfile();
+        window.dispatchEvent(new Event("profile-updated"));
       } else {
         toast.error(data.error || "Erreur lors de la mise à jour.");
       }

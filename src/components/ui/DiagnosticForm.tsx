@@ -376,7 +376,7 @@ function DiagnosticFormInner() {
                       >
                         <span className="mb-2">{SECTOR_ICONS[opt.key]}</span>
                         <span className="font-heading font-bold text-sm sm:text-base">
-                          {opt.label}
+                          {t(`sectorOptions.${opt.key}`)}
                         </span>
                       </button>
                     ))}

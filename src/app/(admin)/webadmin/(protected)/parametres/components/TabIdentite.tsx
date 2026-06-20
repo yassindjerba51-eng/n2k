@@ -113,7 +113,7 @@ export default function TabIdentite({ settings, onUpdate }: TabIdentiteProps) {
           <div className="space-y-3">
             <Label>Logo</Label>
             <div className="flex items-start gap-6">
-              <div className="w-48 h-32 border-2 border-dashed border-slate-200 rounded-xl flex items-center justify-center bg-slate-50 relative overflow-hidden group">
+              <div className="w-32 h-32 border-2 border-dashed border-slate-200 rounded-xl flex items-center justify-center bg-slate-50 relative overflow-hidden group">
                 {logoUrl ? (
                   <>
                     <Image src={logoUrl} alt="Logo" fill className="object-contain p-4" />
@@ -144,7 +144,7 @@ export default function TabIdentite({ settings, onUpdate }: TabIdentiteProps) {
                 </Button>
                 <p className="text-xs text-slate-500 max-w-xs">
                   Format recommandé : PNG avec fond transparent ou SVG.
-                  Idéalement un format rectangulaire ou carré (max 5MB).
+                  Idéalement un format carré (max 5MB).
                 </p>
               </div>
             </div>
@@ -163,7 +163,7 @@ export default function TabIdentite({ settings, onUpdate }: TabIdentiteProps) {
           imageSrc={imageSrc}
           onCropComplete={handleCropComplete}
           onCancel={() => setImageSrc(null)}
-          aspect={16 / 9} // Usually logos are wide, we can adjust this or remove strict aspect ratio
+          aspect={1} // Square aspect ratio for logo
         />
       )}
     </div>

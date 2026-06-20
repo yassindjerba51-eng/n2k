@@ -10,11 +10,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import SectorTabs from "@/components/ui/SectorTabs";
-import {
-  batimentSectors,
-  eauSectors,
-  ambianceSectors,
-} from "@/data/sectors";
+import { getSectorsData } from "@/data/sectors";
 import type { Sector } from "@/data/sectors";
 
 export async function generateMetadata({
@@ -32,11 +28,19 @@ export async function generateMetadata({
 
 /* ─── Main Page ─────────────────────────────────────────────────────── */
 
-export default async function ProblemesSolutionsHub() {
+export default async function ProblemesSolutionsHub({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
   const t = await getTranslations("solutionsPage");
   const tCta = await getTranslations("cta");
   const tNav = await getTranslations("nav");
   const tHero = await getTranslations("hero");
+  const te = await getTranslations("extraProducts");
+
+  const sectors = getSectorsData(locale);
 
   const sectorLabels: Record<Sector, string> = {
     elevage: t("sectorTabs.elevage"),
@@ -137,7 +141,7 @@ export default async function ProblemesSolutionsHub() {
 
           {/* Sector Tabs */}
           <SectorTabs
-            zoneData={batimentSectors}
+            zoneData={sectors.batiment}
             stepLabel={t("step")}
             colorClass="text-n2k-secondary"
             bgClass="bg-n2k-secondary"
@@ -152,10 +156,10 @@ export default async function ProblemesSolutionsHub() {
               <Microscope className="w-8 h-8 text-blue-200 shrink-0 mt-1" />
               <div>
                 <span className="text-xs font-black uppercase tracking-[0.15em] text-blue-200 font-heading mb-2 block">
-                  Rinçage obligatoire — Étape intermédiaire
+                  {t("rinseTitle")}
                 </span>
                 <p className="text-white font-body text-sm md:text-base leading-relaxed">
-                  Après application de CLORAGRO, un rinçage complet à l&apos;eau potable de toutes les surfaces est obligatoire avant l&apos;application d&apos;OPTIMAGRO (Phase 02). Cette exigence est chimique et réglementaire — elle n&apos;est pas optionnelle.
+                  {t("rinseDesc")}
                 </p>
               </div>
             </div>
@@ -169,32 +173,26 @@ export default async function ProblemesSolutionsHub() {
                 {/* Header */}
                 <div className="mb-4 mt-1">
                   <h3 className="text-lg md:text-xl font-black font-heading text-n2k-primary">
-                    ALCOSEPT PRO
+                    {te("alcosept.name")}
                   </h3>
                   <p className="text-n2k-secondary font-bold uppercase tracking-widest text-[10px] font-heading">
-                    Nettoyage Rapide — Inter-Lots
+                    {te("alcosept.type")}
                   </p>
                 </div>
 
                 {/* Description */}
                 <p className="text-n2k-on-surface-variant font-body text-sm leading-relaxed mb-4">
-                  Solution de nettoyage technique à évaporation rapide, conçue pour un usage entre les opérations de production en environnements agroalimentaires.
+                  {te("alcosept.desc")}
                 </p>
 
                 {/* Features */}
                 <ul className="space-y-2 font-body text-sm">
-                  <li className="flex items-start gap-2 text-n2k-on-surface-variant leading-snug">
-                    <CheckCircle className="text-n2k-secondary shrink-0 w-4 h-4 mt-0.5" />
-                    <span className="text-xs md:text-sm">Nettoyage rapide des surfaces de travail entre opérations</span>
-                  </li>
-                  <li className="flex items-start gap-2 text-n2k-on-surface-variant leading-snug">
-                    <CheckCircle className="text-n2k-secondary shrink-0 w-4 h-4 mt-0.5" />
-                    <span className="text-xs md:text-sm">Entretien des équipements inox et plastiques techniques</span>
-                  </li>
-                  <li className="flex items-start gap-2 text-n2k-on-surface-variant leading-snug">
-                    <CheckCircle className="text-n2k-secondary shrink-0 w-4 h-4 mt-0.5" />
-                    <span className="text-xs md:text-sm">Évaporation rapide sans laisser de résidus</span>
-                  </li>
+                  {(te.raw("alcosept.features") as string[]).map((feature, fIdx) => (
+                    <li key={fIdx} className="flex items-start gap-2 text-n2k-on-surface-variant leading-snug">
+                      <CheckCircle className="text-n2k-secondary shrink-0 w-4 h-4 mt-0.5" />
+                      <span className="text-xs md:text-sm">{feature}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -221,32 +219,26 @@ export default async function ProblemesSolutionsHub() {
                 {/* Header */}
                 <div className="mb-4 mt-1">
                   <h3 className="text-lg md:text-xl font-black font-heading text-n2k-primary">
-                    OXYLIS HOCl
+                    {te("oxylis.name")}
                   </h3>
                   <p className="text-n2k-secondary font-bold uppercase tracking-widest text-[10px] font-heading">
-                    Entretien des Réseaux d&apos;Eau & Environnements
+                    {te("oxylis.type")}
                   </p>
                 </div>
 
                 {/* Description */}
                 <p className="text-n2k-on-surface-variant font-body text-sm leading-relaxed mb-4">
-                  Solution technique polyvalente à base d&apos;acide hypochloreux (HOCl) pour l&apos;entretien continu des circuits d&apos;eau et le traitement des environnements de production en élevage et industrie agroalimentaire.
+                  {te("oxylis.desc")}
                 </p>
 
                 {/* Features */}
                 <ul className="space-y-2 font-body text-sm">
-                  <li className="flex items-start gap-2 text-n2k-on-surface-variant leading-snug">
-                    <CheckCircle className="text-n2k-secondary shrink-0 w-4 h-4 mt-0.5" />
-                    <span className="text-xs md:text-sm">Entretien continu des canalisations d&apos;eau et réseaux d&apos;abreuvement</span>
-                  </li>
-                  <li className="flex items-start gap-2 text-n2k-on-surface-variant leading-snug">
-                    <CheckCircle className="text-n2k-secondary shrink-0 w-4 h-4 mt-0.5" />
-                    <span className="text-xs md:text-sm">Nébulisation des ambiances de production</span>
-                  </li>
-                  <li className="flex items-start gap-2 text-n2k-on-surface-variant leading-snug">
-                    <CheckCircle className="text-n2k-secondary shrink-0 w-4 h-4 mt-0.5" />
-                    <span className="text-xs md:text-sm">Dosage automatisé pour flux de production continu</span>
-                  </li>
+                  {(te.raw("oxylis.features") as string[]).map((feature, fIdx) => (
+                    <li key={fIdx} className="flex items-start gap-2 text-n2k-on-surface-variant leading-snug">
+                      <CheckCircle className="text-n2k-secondary shrink-0 w-4 h-4 mt-0.5" />
+                      <span className="text-xs md:text-sm">{feature}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -299,7 +291,7 @@ export default async function ProblemesSolutionsHub() {
 
           {/* Sector Tabs */}
           <SectorTabs
-            zoneData={eauSectors}
+            zoneData={sectors.eau}
             stepLabel={t("step")}
             colorClass="text-n2k-primary"
             bgClass="bg-n2k-primary"
@@ -341,7 +333,7 @@ export default async function ProblemesSolutionsHub() {
 
           {/* Sector Tabs */}
           <SectorTabs
-            zoneData={ambianceSectors}
+            zoneData={sectors.ambiance}
             stepLabel={t("step")}
             colorClass="text-n2k-orange"
             bgClass="bg-n2k-orange"

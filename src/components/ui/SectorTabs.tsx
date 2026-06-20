@@ -10,6 +10,8 @@ import {
   UtensilsCrossed,
 } from "lucide-react";
 import type { Sector, ZoneSectorMap } from "@/data/sectors";
+import { isHomologatedName } from "@/data/homologations";
+import HomologationBadges from "@/components/ui/HomologationBadges";
 
 const sectorIcons: Record<Sector, React.ElementType> = {
   elevage: Warehouse,
@@ -80,6 +82,11 @@ function SectorProductCard({
           </li>
         ))}
       </ul>
+
+      {/* Regulatory approval badges (homologated products only) */}
+      {isHomologatedName(name) && (
+        <HomologationBadges variant="compact" className="mt-4" />
+      )}
     </div>
   );
 }
