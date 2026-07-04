@@ -3,9 +3,13 @@ import SectorDetail from "@/components/sectors/SectorDetail";
 import { Factory } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
-export async function generateMetadata() {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
   return {
     title: "Industrie Agroalimentaire — Hygiène Industrielle | Les Laboratoires N2K",
+    alternates: {
+      canonical: `/${locale}/secteurs/industrie-agroalimentaire`,
+    },
     description: "Protocoles d'hygiène industrielle pour l'agroalimentaire : nettoyage CIP, désinfection des lignes, traitement de l'air. Normes IFS/BRC, maîtrise Listeria.",
   };
 }

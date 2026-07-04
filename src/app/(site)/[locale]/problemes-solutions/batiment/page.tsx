@@ -9,9 +9,13 @@ import KpiCards from "@/components/zones/KpiCards";
 import FaqAccordion from "@/components/zones/FaqAccordion";
 import RelatedArticlesCarousel from "@/components/blog/RelatedArticlesCarousel";
 
-export async function generateMetadata() {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
   return {
     title: "Hygiène des Surfaces & Sols en Élevage — Protocole Biosécurité N2K",
+    alternates: {
+      canonical: `/${locale}/problemes-solutions/batiment`,
+    },
     description: "Protocole séquentiel CLORAGRO + OPTIMAGRO pour la destruction du biofilm et la désinfection des surfaces en élevage, abattoir et industrie agroalimentaire.",
   };
 }

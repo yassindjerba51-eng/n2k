@@ -8,6 +8,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const t = await getTranslations({ locale, namespace: "meta" });
   return {
     title: "Secteurs d'activité — Les Laboratoires N2K",
+    alternates: {
+      canonical: `/${locale}/secteurs`,
+    },
     description: "Élevage, abattoirs, industrie agroalimentaire : découvrez nos protocoles de maîtrise sanitaire adaptés à votre secteur.",
   };
 }

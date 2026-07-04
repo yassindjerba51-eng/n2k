@@ -65,6 +65,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: `${title} | ${t("brandName")}`,
     description: description || undefined,
+    alternates: {
+      canonical: `/${locale}/blog/${slug}`,
+    },
     openGraph: {
       title: title,
       type: "article",

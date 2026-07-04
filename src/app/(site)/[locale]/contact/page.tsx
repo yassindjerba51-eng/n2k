@@ -3,6 +3,16 @@ import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { Link as LinkIcon, MapPin, Phone, Clock, Mail, ArrowRight, Home, ChevronRight } from "lucide-react";
 import GeneralContactForm from "@/components/ui/GeneralContactForm";
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return {
+    alternates: {
+      canonical: `/${locale}/contact`,
+    },
+  };
+}
 
 export default function ContactPage() {
   const t = useTranslations("contactPage");

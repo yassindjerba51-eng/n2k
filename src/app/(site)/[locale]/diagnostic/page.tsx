@@ -9,6 +9,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const t = await getTranslations({ locale, namespace: "meta" });
   return {
     title: t("diagnosticTitle"),
+    alternates: {
+      canonical: `/${locale}/diagnostic`,
+    },
     description: t("diagnosticDescription"),
   };
 }

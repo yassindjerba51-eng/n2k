@@ -24,6 +24,9 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "meta" });
   return {
     title: t("aboutTitle"),
+    alternates: {
+      canonical: `/${locale}/a-propos`,
+    },
     description: t("aboutDescription"),
   };
 }

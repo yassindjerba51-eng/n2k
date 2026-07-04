@@ -3,9 +3,13 @@ import SectorDetail from "@/components/sectors/SectorDetail";
 import { Bird } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
-export async function generateMetadata() {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
   return {
     title: "Élevage — Protocoles de Biosécurité | Les Laboratoires N2K",
+    alternates: {
+      canonical: `/${locale}/secteurs/elevage`,
+    },
     description: "Protocoles de maîtrise sanitaire pour l'élevage : nettoyage technique, traitement de l'eau, contrôle de l'ambiance. Réduisez la mortalité et améliorez vos performances.",
   };
 }

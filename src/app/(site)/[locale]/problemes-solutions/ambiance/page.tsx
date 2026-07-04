@@ -8,9 +8,13 @@ import KpiCards from "@/components/zones/KpiCards";
 import FaqAccordion from "@/components/zones/FaqAccordion";
 import RelatedArticlesCarousel from "@/components/blog/RelatedArticlesCarousel";
 
-export async function generateMetadata() {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
   return {
     title: "Contrôle de l'Ambiance & Entretien des Environnements en Élevage — N2K",
+    alternates: {
+      canonical: `/${locale}/problemes-solutions/ambiance`,
+    },
     description: "Protocole OXYLIS HOCl + BIOACTIVE pour l'entretien des environnements d'élevage et la maîtrise des conditions d'ambiance en bâtiments.",
   };
 }

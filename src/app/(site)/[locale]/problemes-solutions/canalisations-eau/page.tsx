@@ -8,9 +8,13 @@ import KpiCards from "@/components/zones/KpiCards";
 import FaqAccordion from "@/components/zones/FaqAccordion";
 import RelatedArticlesCarousel from "@/components/blog/RelatedArticlesCarousel";
 
-export async function generateMetadata() {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
   return {
     title: "Traitement des Canalisations d'Abreuvement — N2K Hygiène Opérationnelle",
+    alternates: {
+      canonical: `/${locale}/problemes-solutions/canalisations-eau`,
+    },
     description: "Protocole BIONET + OXYLIS HOCl pour le nettoyage et l'entretien des réseaux d'eau en élevage. Élimination du biofilm et du tartre dans les canalisations.",
   };
 }

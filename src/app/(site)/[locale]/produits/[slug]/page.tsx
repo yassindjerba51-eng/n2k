@@ -64,6 +64,9 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "products" });
   return {
     title: `${product.name} — ${t("metaSuffix")}`,
+    alternates: {
+      canonical: `/${locale}/produits/${slug}`,
+    },
     description: product.subtitle,
   };
 }
