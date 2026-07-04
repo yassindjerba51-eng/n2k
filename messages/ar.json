@@ -654,7 +654,8 @@
     "viewMode": "عرض:",
     "paginationShowing": "عرض [start] إلى [end] من [total] مقال",
     "paginationPrevious": "السابق",
-    "paginationNext": "التالي"
+    "paginationNext": "التالي",
+    "shareOn": "شارك على:"
   },
   "relatedArticles": {
     "sectionTitle": "المقالات ذات الصلة",

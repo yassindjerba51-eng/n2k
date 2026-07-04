@@ -634,7 +634,9 @@ OPTIMAGRO pour finaliser la désinfection.
 
 Ce qu’il faut retenir
 
-Une contamination protégée par la matière organique résiste souvent beaucoup plus qu’attendu. ARTICLE 51
+Une contamination protégée par la matière organique résiste souvent beaucoup plus qu’attendu.
+
+ARTICLE 51
 
 Pourquoi certaines chambres froides sentent encore “l’humide” malgré des températures correctes
 

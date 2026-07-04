@@ -654,7 +654,8 @@
     "viewMode": "Affichage :",
     "paginationShowing": "Affichage de [start] à [end] sur [total] articles",
     "paginationPrevious": "Précédent",
-    "paginationNext": "Suivant"
+    "paginationNext": "Suivant",
+    "shareOn": "Partager sur :"
   },
   "relatedArticles": {
     "sectionTitle": "Les articles associés",

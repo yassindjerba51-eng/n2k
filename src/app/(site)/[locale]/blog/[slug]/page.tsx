@@ -6,7 +6,7 @@ import { Calendar, Clock, ArrowRight, Download, Beaker, ChevronRight, Home } fro
 import { prisma } from "@/lib/prisma";
 import SchemaOrg from "@/components/seo/SchemaOrg";
 import CategoryPostsList from "@/components/blog/CategoryPostsList";
-
+import ShareButtons from "@/components/blog/ShareButtons";
 function calculateReadingTime(text: string): number {
   const wordsPerMinute = 200;
   const noOfWords = text.split(/\s+/g).length;
@@ -244,30 +244,40 @@ export default async function BlogPostPage({ params }: { params: Promise<{ local
                 {t("readingTime", { minutes: readingTime })}
               </span>
             </div>
-            {/* Breadcrumb */}
-            <nav className="flex items-center gap-3 text-white text-xs uppercase tracking-widest font-bold mt-6 md:mt-10 overflow-hidden whitespace-nowrap">
-              <Link href="/" className="hover:text-n2k-secondary transition-colors flex items-center gap-1.5 shrink-0">
-                <Home size={14} />
-                {tNav("home")}
-              </Link>
-              <ChevronRight size={12} className="opacity-50 shrink-0" />
-              <Link href="/blog" className="hover:text-n2k-secondary transition-colors shrink-0">{tNav("blog")}</Link>
-              {post.categories && post.categories.length > 0 && (
-                <>
-                  <ChevronRight size={12} className="opacity-50 shrink-0" />
-                  <Link
-                    href={`/blog/${locale === "ar" ? post.categories[0].slugAr : locale === "en" ? post.categories[0].slugEn : post.categories[0].slugFr}`}
-                    className="hover:text-n2k-secondary transition-colors shrink-0"
-                  >
-                    {locale === "ar" ? post.categories[0].nameAr : locale === "en" ? post.categories[0].nameEn : post.categories[0].nameFr}
-                  </Link>
-                </>
-              )}
-              <ChevronRight size={12} className="opacity-50 shrink-0" />
-              <span className="text-n2k-secondary-light truncate min-w-0">
-                {title}
-              </span>
-            </nav>
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mt-6 md:mt-10">
+              {/* Breadcrumb */}
+              <nav className="flex items-center gap-3 text-white text-xs uppercase tracking-widest font-bold overflow-hidden whitespace-nowrap">
+                <Link href="/" className="hover:text-n2k-secondary transition-colors flex items-center gap-1.5 shrink-0">
+                  <Home size={14} />
+                  {tNav("home")}
+                </Link>
+                <ChevronRight size={12} className="opacity-50 shrink-0" />
+                <Link href="/blog" className="hover:text-n2k-secondary transition-colors shrink-0">{tNav("blog")}</Link>
+                {post.categories && post.categories.length > 0 && (
+                  <>
+                    <ChevronRight size={12} className="opacity-50 shrink-0" />
+                    <Link
+                      href={`/blog/${locale === "ar" ? post.categories[0].slugAr : locale === "en" ? post.categories[0].slugEn : post.categories[0].slugFr}`}
+                      className="hover:text-n2k-secondary transition-colors shrink-0"
+                    >
+                      {locale === "ar" ? post.categories[0].nameAr : locale === "en" ? post.categories[0].nameEn : post.categories[0].nameFr}
+                    </Link>
+                  </>
+                )}
+                <ChevronRight size={12} className="opacity-50 shrink-0" />
+                <span className="text-n2k-secondary-light truncate min-w-0">
+                  {title}
+                </span>
+              </nav>
+
+              <ShareButtons 
+                shareText={t("shareOn") || "Share on:"} 
+                title={title}
+                className="shrink-0 md:ml-auto rtl:md:ml-0 rtl:md:mr-auto"
+                textClassName="text-white/70"
+                iconBgClassName="bg-white/10 text-white hover:bg-white/20"
+              />
+            </div>
           </div>
         </div>
       </section>
