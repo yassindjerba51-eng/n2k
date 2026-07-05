@@ -52,8 +52,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     const category = await findCategoryBySlug(slug);
     if (category) {
       const title = locale === "ar" ? category.titleAr : locale === "en" ? category.titleEn : category.titleFr;
+      const subtitle = locale === "ar" ? category.subtitleAr : locale === "en" ? category.subtitleEn : category.subtitleFr;
+      const localizedSlug = locale === "ar" ? category.slugAr : locale === "en" ? category.slugEn : category.slugFr;
       return {
         title: `${title} | ${t("brandName")}`,
+        description: subtitle || undefined,
+        alternates: {
+          canonical: `/${locale}/blog/${localizedSlug || slug}`,
+        },
       };
     }
     return { title: t("notFound") };
@@ -61,12 +67,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
   const title = locale === "ar" ? (post.metaTitleAr || post.titleAr) : locale === "en" ? (post.metaTitleEn || post.titleEn) : (post.metaTitleFr || post.titleFr);
   const description = locale === "ar" ? post.metaDescAr : locale === "en" ? post.metaDescEn : post.metaDescFr;
+  const localizedSlug = locale === "ar" ? post.slugAr : locale === "en" ? post.slugEn : post.slugFr;
   
   return {
     title: `${title} | ${t("brandName")}`,
     description: description || undefined,
     alternates: {
-      canonical: `/${locale}/blog/${slug}`,
+      canonical: `/${locale}/blog/${localizedSlug || slug}`,
     },
     openGraph: {
       title: title,
