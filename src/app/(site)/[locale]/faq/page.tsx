@@ -94,7 +94,7 @@ export default async function FAQPage({ params }: { params: Promise<{ locale: st
 
       {/* FAQ Content */}
       <section className="py-15 md:py-15">
-        <div className="max-w-[900px] mx-auto px-4 md:px-8">
+        <div className="max-w-[1400px] mx-auto px-4 md:px-8">
           <FAQ
             items={data.items}
           />

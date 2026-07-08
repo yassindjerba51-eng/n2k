@@ -2,14 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { User, Image as ImageIcon, MapPin, Share2, Mail, Key, Sparkles } from "lucide-react";
+import { User, Image as ImageIcon, Mail, Key } from "lucide-react";
 import TabProfil from "./components/TabProfil";
 import TabIdentite from "./components/TabIdentite";
-import TabCoordonnees from "./components/TabCoordonnees";
-import TabSocialMedia from "./components/TabSocialMedia";
 import TabSmtp from "./components/TabSmtp";
 import TabApi from "./components/TabApi";
-import TabPollinations from "./components/TabPollinations";
 import { toast } from "sonner";
 
 export default function ParametresPage() {
@@ -50,27 +47,18 @@ export default function ParametresPage() {
       </div>
 
       <Tabs defaultValue="profil" className="w-full">
-        <TabsList className="mb-6 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 h-auto bg-slate-100/50 p-1 rounded-xl gap-1">
+        <TabsList className="mb-6 grid grid-cols-2 sm:grid-cols-4 h-auto bg-slate-100/50 p-1 rounded-xl gap-1">
           <TabsTrigger value="profil" className="py-2.5 rounded-lg data-[state=active]:shadow-sm">
             <User className="w-4 h-4 me-2" /> Profil
           </TabsTrigger>
           <TabsTrigger value="identite" className="py-2.5 rounded-lg data-[state=active]:shadow-sm">
             <ImageIcon className="w-4 h-4 me-2" /> Identité
           </TabsTrigger>
-          <TabsTrigger value="coordonnees" className="py-2.5 rounded-lg data-[state=active]:shadow-sm">
-            <MapPin className="w-4 h-4 me-2" /> Coordonnées
-          </TabsTrigger>
-          <TabsTrigger value="social" className="py-2.5 rounded-lg data-[state=active]:shadow-sm">
-            <Share2 className="w-4 h-4 me-2" /> Social Media
-          </TabsTrigger>
           <TabsTrigger value="smtp" className="py-2.5 rounded-lg data-[state=active]:shadow-sm">
             <Mail className="w-4 h-4 me-2" /> SMTP
           </TabsTrigger>
           <TabsTrigger value="api" className="py-2.5 rounded-lg data-[state=active]:shadow-sm">
             <Key className="w-4 h-4 me-2" /> API
-          </TabsTrigger>
-          <TabsTrigger value="pollinations" className="py-2.5 rounded-lg data-[state=active]:shadow-sm">
-            <Sparkles className="w-4 h-4 me-2 text-indigo-500" /> Pollinations
           </TabsTrigger>
         </TabsList>
 
@@ -80,22 +68,14 @@ export default function ParametresPage() {
         <TabsContent value="identite" className="outline-none">
           <TabIdentite settings={settings} onUpdate={fetchSettings} />
         </TabsContent>
-        <TabsContent value="coordonnees" className="outline-none">
-          <TabCoordonnees settings={settings} onUpdate={fetchSettings} />
-        </TabsContent>
-        <TabsContent value="social" className="outline-none">
-          <TabSocialMedia settings={settings} onUpdate={fetchSettings} />
-        </TabsContent>
         <TabsContent value="smtp" className="outline-none">
           <TabSmtp settings={settings} onUpdate={fetchSettings} />
         </TabsContent>
         <TabsContent value="api" className="outline-none">
           <TabApi settings={settings} onUpdate={fetchSettings} />
         </TabsContent>
-        <TabsContent value="pollinations" className="outline-none">
-          <TabPollinations settings={settings} onUpdate={fetchSettings} />
-        </TabsContent>
       </Tabs>
     </div>
   );
 }
+

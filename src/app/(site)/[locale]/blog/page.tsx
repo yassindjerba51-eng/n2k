@@ -240,14 +240,14 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ loca
                 {/* Stats row */}
                 <div className="flex items-center gap-6 flex-wrap">
                   <div className="text-center">
-                    <p className="text-2xl md:text-3xl font-heading font-black text-n2k-secondary-light">ISO</p>
+                    <p className="text-2xl md:text-3xl font-heading font-black text-n2k-secondary-light">100%</p>
                     <p className="text-[10px] font-bold uppercase tracking-wider text-n2k-on-surface-variant">
-                      {locale === "ar" ? "شهادات" : "Certifications"}
+                      {locale === "ar" ? "حلول مطورة داخلياً" : locale === "en" ? "Internally Developed Solutions" : "Solutions Développées en Interne"}
                     </p>
                   </div>
                   <div className="w-px h-10 bg-n2k-outline-variant" />
                   <div className="text-center">
-                    <p className="text-2xl md:text-3xl font-heading font-black text-n2k-secondary-light">15+</p>
+                    <p className="text-2xl md:text-3xl font-heading font-black text-n2k-secondary-light">5+</p>
                     <p className="text-[10px] font-bold uppercase tracking-wider text-n2k-on-surface-variant">
                       {locale === "ar" ? "سنوات الخبرة" : locale === "en" ? "Years of Expertise" : "Années d'Expertise"}
                     </p>
